@@ -1,5 +1,6 @@
 **<h1> AUTOMATION MANIFESTO </h1>**
-![automation_wiki.png](/src/standard-wiki.png)
+
+![automation_wiki.png](Src/standard-wiki.png)
 
 
 ## <span style="color:#555555"><u> **OVERVIEW** </u></span>

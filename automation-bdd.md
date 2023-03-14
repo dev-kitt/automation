@@ -1,5 +1,6 @@
 **<h1> STANDARD: Automation w/Behavior-Driven Development (BDD) </h1>**
-![standard-automation.png](/src/standard-automation.png)
+
+![standard-automation.png](Src/standard-automation.png)
 
 
 
@@ -23,7 +24,7 @@ When issues arise for any of the below mentioned areas, please contact the assoc
 
 
 ## <span style="color:#555555"><u> **BDD TAGGING** </u></span>
-BDD Project Backlog Items and Test Cases will use the same tagging features in Azure as described in the [STANDARD: Automation Wiki](../README.md) in addition to the main tag referenced below:
+BDD Project Backlog Items and Test Cases will use the same tagging features in Azure as described in the [MADE: Automation Wiki](automation-manifesto.md) in addition to the main tag referenced below:
 - <span style="color:hotpink"> [@]_BDD</span> 
 
 

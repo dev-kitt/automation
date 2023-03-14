@@ -1,6 +1,6 @@
 **<h1> MADE: DevOps</h1>**
-![MADE: DevOps](./src/standard-automation.png "Made, LLC")
 
+![MADE: DevOps](Src/standard-automation.png "Made, LLC")
 
 #### **TABLE OF CONTENTS**
 

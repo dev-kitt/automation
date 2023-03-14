@@ -1,5 +1,6 @@
 **<h1> AGILE MANIFESTO </h1>**
-![automation_wiki.png](/src/standard-wiki.png)
+
+![automation_wiki.png](Src/standard-wiki.png)
 
 
 ## <span style="color:#555555"><u> **PROCESS** </u></span>
@@ -71,8 +72,7 @@ Week 3 :  c1, 2023-01-16, 5d
 
 ### <span style="color:orange"> Flow </span>
 
-![Sprint Process Flow](../../src/assets/sprint_process_flow.png)
-
+![Sprint Process Flow](Src/assets/sprint_process_flow.png)
 
 ## <span style="color:#555555"><u> **TASK LISTS** </u></span>
 
@@ -198,9 +198,7 @@ The creation of a product backlog and management. This process should outline th
 
 
 Please use the following references for more information: 
-- [Product Backlog Standards Prioritization Matrix and Implementation Workflow](pbi-standards.md)
-- [Product Implementation Workflow VSDX](../../src/assets/Product%20Implementation%20Workflow_SE_10.03-7036fae5-f0aa-45cc-ae6e-8a44ed9b5467.vsdx)
-
+- [Product Implementation Workflow VSDX](Src/assets/Product-Implementation-Workflow.vsdx)
 
 
 
