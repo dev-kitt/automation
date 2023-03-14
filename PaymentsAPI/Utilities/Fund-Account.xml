@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<con:testCase failOnError="true" failTestCaseOnErrors="true" id="00000000-0000-0000-0000-000000000000" keepSession="false" maxResults="0" name="Fund Account" searchProperties="true" xmlns:con="http://eviware.com/soapui/config"><con:settings><con:setting id="00000000-0000-0000-0000-000000000000fileName">Fund-Account</con:setting></con:settings><con:testStep id="00000000-0000-0000-0000-000000000000" name="Properties" type="properties"><con:settings/><con:config xsi:type="con:PropertiesStep" saveFirst="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:properties><con:property><con:name>MID</con:name><con:value>232LE0152JLL4G3Y</con:value></con:property><con:property><con:name>TS</con:name></con:property></con:properties></con:config></con:testStep><con:testStep id="00000000-0000-0000-0000-000000000000" name="executeBusinessFlow - MT103" type="request"><con:settings/><con:config xsi:type="con:RequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:interface>BusinessFlowSelectorServiceSoap12Binding</con:interface><con:operation>executeBusinessFlow</con:operation><con:request id="00000000-0000-0000-0000-000000000000" incomingWss="" name="executeBusinessFlow - MT103" outgoingWss="Submit" sslKeystore="" timeout="" useWsAddressing="false" useWsReliableMessaging="false" wssPasswordType=""><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting></con:settings><con:encoding>UTF-8</con:encoding><con:endpoint>${#Project#Active_URL}/gppold/services/BusinessFlowSelectorService</con:endpoint><con:request><![CDATA[<soap:Envelope xmlns:soap="http://www.w3.org/2003/05/soap-envelope" xmlns:bus="http://fundtech.com/SCL/BusinessFlowSelectorService">\r
+     <soap:Header>
+      <q2:FndtHeader xmlns:q2="http://fundtech.com/SCL/CommonTypes">
+         <q2:credentials>
+            <q2:UserID>${#Project#SecurityUser2}</q2:UserID>
+            <!--q2:Role>SOAP</q2:Rol-->
+         </q2:credentials>
+      </q2:FndtHeader>
+   </soap:Header>
+   <soap:Body>\r
+      <bus:BusinessFlowSelectorRequest>\r
+         <bus:message>
+{1:F00000000-0000-0000-0000-000000000000}
+{2:v00000000-0000-0000-0000-000000000000}
+{3:{108:00000000-0000-0000-0000-000000000000}{119:STP}{121:00000000-0000-0000-0000-000000000000}}
+{4:
+:20:${#Project#DateS}${#Project#Rand}
+:23B:CRED
+:32A:${#Project#DateS}USD1000000<!--{#Project#sAMT}-->
+:33B:USD1000000
+:50K:/00000000-0000-0000-0000-000000000000
+BF Customer
+abc
+His address
+LI
+:52A:DEUTDEF0XXX
+:57A:MADEUS60XXX
+:59:/5091010117<!--1049200114-->
+Test name
+adress 1
+:70:fld70data
+1
+2
+3
+:71A:SHA
+:72:/INS/BARCGB22XXX
+-}{5:{CHK:668EC04C40CF}}
+</bus:message>\r
+         <bus:inMsgContext>SWIFT_IN</bus:inMsgContext>\r
+         <!--Optional:-->\r
+         <bus:office>US1</bus:office>\r
+         <bus:debitmop>SWIFT</bus:debitmop>
+      </bus:BusinessFlowSelectorRequest>\r
+   </soap:Body>\r
+   
+</soap:Envelope>]]></con:request><con:assertion id="00000000-0000-0000-0000-000000000000" name="SOAP Response" type="SOAP Response"/><con:credentials><con:selectedAuthProfile>Basic</con:selectedAuthProfile><con:addedBasicAuthenticationTypes>Basic</con:addedBasicAuthenticationTypes><con:authType>Global HTTP Settings</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:wsaConfig action="http://fundtech.com/SCL/BusinessFlowSelectorService/BusinessFlowSelectorServicePortType/executeBusinessFlowRequest" mustUnderstand="NONE" version="200508"/><con:wsrmConfig version="1.2"/><con:environmentSpec><con:entry environmentId="00000000-0000-0000-0000-000000000000"><con:authProfile>Basic</con:authProfile></con:entry><con:entry environmentId="00000000-0000-0000-0000-000000000000"><con:authProfile>Inherit From Parent</con:authProfile></con:entry></con:environmentSpec></con:request></con:config></con:testStep><con:testStep id="00000000-0000-0000-0000-000000000000" name="Property Transfer" type="transfer"><con:settings/><con:config xsi:type="con:PropertyTransfersStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:transfers entitize="false" failOnError="true" ignoreEmpty="false" setNullOnMissingSource="true" transferChildNodes="false" transferTextContent="true" transferToAll="false"><con:name>MID</con:name><con:sourceType>Response</con:sourceType><con:sourceStep>executeBusinessFlow - MT103</con:sourceStep><con:sourcePath>declare namespace soap='http://www.w3.org/2003/05/soap-envelope';
+declare namespace ns1='http://fundtech.com/SCL/CommonTypes';
+declare namespace ns2='http://fundtech.com/SCL/BusinessFlowSelectorService';
+//ns1:P_MID</con:sourcePath><con:targetType>MID</con:targetType><con:targetStep>Properties</con:targetStep><con:targetTransferType>XPATH</con:targetTransferType><con:upgraded>true</con:upgraded></con:transfers></con:config></con:testStep><con:testStep id="00000000-0000-0000-0000-000000000000" name="2500" type="delay"><con:settings/><con:config><delay>15000</delay></con:config></con:testStep><con:testStep id="00000000-0000-0000-0000-000000000000" name="Load" type="request"><con:settings/><con:config xsi:type="con:RequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:interface>MessageLoadServiceSoap12Binding</con:interface><con:operation>loadMessage</con:operation><con:request id="00000000-0000-0000-0000-000000000000" incomingWss="" name="Load" outgoingWss="Submit" sslKeystore="" timeout="" useWsAddressing="false" useWsReliableMessaging="false" wssPasswordType=""><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting></con:settings><con:encoding>UTF-8</con:encoding><con:endpoint>${#Project#Active_URL}/gpp/services/MessageLoadService</con:endpoint><con:request><![CDATA[<soap:Envelope xmlns:wsse="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-secext-1.0.xsd" xmlns:soap="http://www.w3.org/2003/05/soap-envelope" xmlns:mes="http://fundtech.com/SCL/MessageLoadService" xmlns:com="http://fundtech.com/SCL/CommonTypes">
+   <soap:Header>
+      <q2:FndtHeader xmlns:q2="http://fundtech.com/SCL/CommonTypes">
+         <q2:credentials>
+            <q2:UserID>${#Project#SecurityUser}</q2:UserID>
+            <!--q2:Role>SOAP</q2:Rol-->
+         </q2:credentials>
+      </q2:FndtHeader>
+   </soap:Header>
+   <soap:Body>
+      <PerformMessageLoadRequest xmlns="http://fundtech.com/SCL/MessageLoadService">
+         <com:P_MID>${Properties#MID}</com:P_MID>
+         <fndtMsgSubset>
+            <com:document id="X_FNDT_MSG_PMNT" conversionType="FULL"/>
+            <com:document id="X_FNDT_MSG_EXT">
+               <com:field id="M_MSG_NOTES_GRID"/>
+               <com:field id="X_EXTN_DEBIT_SIDE"/>
+               <com:field id="X_EXTN_CREDIT_SIDE"/>
+               <com:field id="M_CDT_CUST_PROFILE">
+                  <com:field id="F_CDT_CUST_ABA"/>
+                  <com:field id="F_CDT_CUST_ALIAS"/>
+                  <com:field id="F_CDT_CUST_ADDRESS4"/>
+                  <com:field id="F_CDT_CUST_CUST_NAME"/>
+                  <com:field id="P_MSG_STS,P_OFFICE,P_DEPARTMENT"/>
+                  <com:field id="P_ACK_STS"/>
+                  <com:field id="P_MSG_STS"/>
+                  <com:field id="P_PAYMENT_TP"/>
+               </com:field>
+               <com:field id="X_EXTN_USR_DEF"/>
+            </com:document>
+         </fndtMsgSubset>
+      </PerformMessageLoadRequest>
+   </soap:Body>
+</soap:Envelope>]]></con:request><con:assertion id="00000000-0000-0000-0000-000000000000" name="SOAP Response" type="SOAP Response"/><con:assertion id="00000000-0000-0000-0000-000000000000" name="Status - FXRATE" type="Simple Contains"><con:configuration><token>&lt;P_MSG_STS>COMPLETE&lt;/P_MSG_STS></token><ignoreCase>false</ignoreCase><useRegEx>false</useRegEx></con:configuration></con:assertion><con:assertion id="00000000-0000-0000-0000-000000000000" name="Credit mop = Book" type="Simple Contains"><con:configuration><token>&lt;P_CDT_MOP>BOOK&lt;/P_CDT_MOP></token><ignoreCase>false</ignoreCase><useRegEx>false</useRegEx></con:configuration></con:assertion><con:credentials><con:selectedAuthProfile>Basic</con:selectedAuthProfile><con:addedBasicAuthenticationTypes>Basic</con:addedBasicAuthenticationTypes><con:authType>Global HTTP Settings</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:wsaConfig action="" mustUnderstand="NONE" version="200508"/><con:wsrmConfig version="1.2"/><con:environmentSpec><con:entry environmentId="00000000-0000-0000-0000-000000000000"><con:authProfile>Basic</con:authProfile></con:entry><con:entry environmentId="00000000-0000-0000-0000-000000000000"><con:authProfile>Inherit From Parent</con:authProfile></con:entry></con:environmentSpec></con:request></con:config></con:testStep><con:testStep disabled="true" id="00000000-0000-0000-0000-000000000000" name="Copy of executeBusinessFlow - MT103" type="request"><con:settings/><con:config xsi:type="con:RequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:interface>BusinessFlowSelectorServiceSoap12Binding</con:interface><con:operation>executeBusinessFlow</con:operation><con:request id="00000000-0000-0000-0000-000000000000" incomingWss="" name="Copy of executeBusinessFlow - MT103" outgoingWss="Submit" sslKeystore="" timeout="" useWsAddressing="false" useWsReliableMessaging="false" wssPasswordType=""><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting></con:settings><con:encoding>UTF-8</con:encoding><con:endpoint>${#Project#Active_URL}/gppold/services/BusinessFlowSelectorService</con:endpoint><con:request><![CDATA[<soap:Envelope xmlns:soap="http://www.w3.org/2003/05/soap-envelope" xmlns:bus="http://fundtech.com/SCL/BusinessFlowSelectorService">\r
+     <soap:Header>
+      <q2:FndtHeader xmlns:q2="http://fundtech.com/SCL/CommonTypes">
+         <q2:credentials>
+            <q2:UserID>${#Project#SecurityUser2}</q2:UserID>
+            <!--q2:Role>SOAP</q2:Rol-->
+         </q2:credentials>
+      </q2:FndtHeader>
+   </soap:Header>
+   <soap:Body>\r
+      <bus:BusinessFlowSelectorRequest>\r
+         <bus:message>
+{1:00000000-0000-0000-0000-000000000000}
+{2:v00000000-0000-0000-0000-000000000000}
+{3:{108:191202FTX1TJ0301}{119:STP}{121:00000000-0000-0000-0000-000000000000}}
+{4:
+:20:0075355561891
+:23B:CRED
+:32A:200831EUR55,54
+:50K:/30000360
+NAV WIRE
+20030 S MAIN STREET
+ORLANDO NC 02300-2003
+:52A:SIVGUS66XXX
+:59:/45769242345
+MICHAEL EIDINOV
+123 SAN DIEGO ST
+SAN DIEGO CA 92101
+:71A:OUR
+:72:/RETN/
+/AC01/Incorrect Account Number 
+/MREF/0075355
+-}{5:{CHK:668EC04C40CF}}
+</bus:message>\r
+         <bus:inMsgContext>SWIFT_IN</bus:inMsgContext>\r
+         <!--Optional:-->\r
+         <bus:office>US1</bus:office>\r
+         <bus:debitmop>SWIFT</bus:debitmop>
+      </bus:BusinessFlowSelectorRequest>\r
+   </soap:Body>\r
+   
+</soap:Envelope>]]></con:request><con:assertion id="00000000-0000-0000-0000-000000000000" name="SOAP Response" type="SOAP Response"/><con:credentials><con:selectedAuthProfile>Basic</con:selectedAuthProfile><con:addedBasicAuthenticationTypes>Basic</con:addedBasicAuthenticationTypes><con:authType>Global HTTP Settings</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:wsaConfig action="http://fundtech.com/SCL/BusinessFlowSelectorService/BusinessFlowSelectorServicePortType/executeBusinessFlowRequest" mustUnderstand="NONE" version="200508"/><con:wsrmConfig version="1.2"/><con:environmentSpec><con:entry environmentId="00000000-0000-0000-0000-000000000000"><con:authProfile>Basic</con:authProfile></con:entry><con:entry environmentId="00000000-0000-0000-0000-000000000000"><con:authProfile>Inherit From Parent</con:authProfile></con:entry></con:environmentSpec></con:request></con:config></con:testStep><con:properties/><con:reportParameters/><con:environmentSpec><con:entry environmentId="00000000-0000-0000-0000-000000000000"><con:authProfile>Inherit From Parent</con:authProfile></con:entry><con:entry environmentId="00000000-0000-0000-0000-000000000000"><con:authProfile>Inherit From Parent</con:authProfile></con:entry></con:environmentSpec></con:testCase>

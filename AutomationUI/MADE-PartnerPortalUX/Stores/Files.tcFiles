@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Root signature="{AA2F3067-5C9B-4CCF-89D4-1F93CE1C510F}" version="15.0">
+	<children>
+		<child name="clearInternetData_ps1" key="{EA1FB67C-6E60-4329-9CAA-BAF73C6167AD}">
+			<data signature="{FC92F8D9-8A57-4D74-B8B4-479AA50BF647}" version="15.0" caption="clearInternetData_ps1" ID="{EA1FB67C-6E60-4329-9CAA-BAF73C6167AD}" FileName="Files\clearInternetData.ps1" Update="False" />
+		</child>
+		<child name="killBrowsers_ps1" key="{9D502EAD-62A0-40BE-9E01-CFDDE3167EC8}">
+			<data signature="{FC92F8D9-8A57-4D74-B8B4-479AA50BF647}" version="15.0" caption="killBrowsers_ps1" ID="{9D502EAD-62A0-40BE-9E01-CFDDE3167EC8}" FileName="Files\killBrowsers.ps1" Update="False" />
+		</child>
+		<child name="Run_ChromeIncognito_bat" key="{CF19F8C1-0166-4896-840E-3BF1F7F6507C}">
+			<data signature="{FC92F8D9-8A57-4D74-B8B4-479AA50BF647}" version="15.0" caption="Run_ChromeIncognito_bat" ID="{CF19F8C1-0166-4896-840E-3BF1F7F6507C}" FileName="Files\Run_ChromeIncognito.bat" Update="False" />
+		</child>
+		<child name="testRecordSet_xlsx" key="{B8712314-803F-42F9-8526-B26CBE209FEA}">
+			<data signature="{FC92F8D9-8A57-4D74-B8B4-479AA50BF647}" version="15.0" caption="testRecordSet_xlsx" ID="{B8712314-803F-42F9-8526-B26CBE209FEA}" FileName="Files\testRecordSet.xlsx" Update="False" />
+		</child>
+		<child name="refresh_entitlements_sql" key="{11E66CAE-CE6A-4A16-A43F-5AFD5C873C66}">
+			<data signature="{FC92F8D9-8A57-4D74-B8B4-479AA50BF647}" version="15.0" caption="refresh_entitlements_sql" ID="{11E66CAE-CE6A-4A16-A43F-5AFD5C873C66}" FileName="Files\refresh_entitlements.sql" Update="False" />
+		</child>
+	</children>
+</Root>

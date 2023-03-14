@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE Nodes [
+
+<!ENTITY % NameValue "CDATA">
+<!ENTITY % PropType "(I|S|D|L|H|B)">
+<!ENTITY % VersionValue "CDATA">
+
+<!ELEMENT Prp (#PCDATA)>
+<!ELEMENT Node (Node|Prp)*>
+<!ELEMENT Nodes (Node)+>
+
+<!ATTLIST Nodes version CDATA "1">
+
+<!ATTLIST Node name CDATA #REQUIRED>
+
+<!ATTLIST Prp name CDATA #REQUIRED>
+<!ATTLIST Prp type CDATA #REQUIRED>
+<!ATTLIST Prp value CDATA #REQUIRED>
+]>
+<Nodes version="1">
+	<Node name="root">
+		<Node name="data">
+			<Node name="logs">
+				<Prp name="key" type="S" value="{BAFA5B83-5802-4395-9E22-2AAD9BD97891}"/>
+				<Prp name="relpath" type="S" value="Log"/>
+			</Node>
+			<Node name="variables">
+				<Node name="datav4">
+					<Node name="var0">
+						<Node name="value">
+							<Prp name="strvalue" type="H" value="4B0045004900540048004800"/>
+						</Node>
+						<Prp name="name" type="S" value="gppUsername"/>
+					</Node>
+					<Node name="var1">
+						<Node name="value">
+							<Prp name="strvalue" type="H" value="5500410054003100"/>
+						</Node>
+						<Prp name="name" type="S" value="gppEnvironment"/>
+					</Node>
+					<Node name="var2">
+						<Node name="value">
+							<Prp name="strvalue" type="H" value="380039003600310044003300440031004600340044003800410042004600320041004300390043003600370039003700340032004600430030003300370046003800450031004500450032003700380037003400300035004400340030004600350045004400380038003500340036003300430043004600390034004300330035003100370030003900440031004500300032004400380044004400330032004300350045003500"/>
+						</Node>
+						<Prp name="name" type="S" value="gppPassword"/>
+					</Node>
+					<Node name="var3">
+						<Node name="value">
+							<Prp name="strvalue" type="H" value="680074007400700073003A002F002F00730067002D0075006100740031002E00660069006E00610073007400720061007000610079006D0065006E00740073002E0063006C006F00750064002F006700700070002F00230021002F0075007300650072002F007300690067006E0069006E00"/>
+						</Node>
+						<Prp name="name" type="S" value="gppURL"/>
+					</Node>
+					<Node name="var4">
+						<Node name="value">
+							<Prp name="strvalue" type="H" value="4D0030003900380041003200370030003400370053003900360056005A003200"/>
+						</Node>
+						<Prp name="name" type="S" value="gppPaymentId"/>
+					</Node>
+					<Node name="var5">
+						<Node name="value">
+							<Prp name="strvalue" type="H" value="300031003300350030003000300031003000300032003300330039003800"/>
+						</Node>
+						<Prp name="name" type="S" value="gppAccount"/>
+					</Node>
+				</Node>
+				<Prp name="version" type="I" value="4"/>
+			</Node>
+		</Node>
+		<Prp name="signature" type="S" value="{49FC0C30-9EF7-4DBD-97A8-B7A00E79A2AF}"/>
+	</Node>
+</Nodes>

@@ -1,0 +1,399 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Root signature="{24B6FA0B-0143-461A-9758-AEB9E9A9428B}" version="15.0" key="{4598955B-C19F-4C69-905A-683618CF5E12}">
+	<children>
+		<child name="MADE-PartnerPortal" key="{68613F6C-EF18-40D6-A323-C9208D8D3AB4}" path="MADE-PartnerPortal\MADE-PartnerPortal.mds" />
+		<child name="MADE-FinastraUX" key="{3C890A71-799F-4003-BA1A-8EC1C0F569C0}" path="MADE-FinastraUX\MADE-FinastraUX.mds" />
+		<child name="MADE-PartnerPortalUX" key="{E4A66D1F-416A-4B45-AE76-88213285106A}" path="MADE-PartnerPortalUX\MADE-PartnerPortalUX.mds" />
+		<child name="MADE-PartnerPortalQDAS" key="{58397A65-220B-4851-89ED-6D3B05785F50}" path="MADE-PartnerPortalQDAS\MADE-PartnerPortalQDAS.mds" />
+	</children>
+	<testItems key="{127A55DB-3B85-44BF-A4E3-15932FCFE950}">
+		<children>
+			<testItem key="{68613F6C-EF18-40D6-A323-C9208D8D3AB4}" enabled="True" timeout="0" stopOnError="True" description="" />
+			<testItem key="{3C890A71-799F-4003-BA1A-8EC1C0F569C0}" enabled="True" timeout="0" stopOnError="True" description="" />
+			<testItem key="{E4A66D1F-416A-4B45-AE76-88213285106A}" enabled="True" timeout="0" stopOnError="True" description="" />
+			<testItem key="{58397A65-220B-4851-89ED-6D3B05785F50}" enabled="True" timeout="0" stopOnError="True" description="" />
+		</children>
+	</testItems>
+	<variables key="{C5FC7791-1597-417C-88A4-8A4D57094423}">
+		<data Version="4">
+			<Items>
+				<Variable Name="ActiveUserType" Type="String" Local="True">
+					<DefValue StrValue="Trader" />
+				</Variable>
+				<Variable Name="AdminPass" Type="Password" Local="True">
+					<DefValue StrValue="3800390036003100310033004400330046003400440038003800420046003300440034003900410039004600390035003600320046003800450033003700430039003600310038004500320037003800430043003000360035003400300044004100360044004500380035003400340046004300430045003900340041003200330033003300350041003600390037003000300039004100" />
+				</Variable>
+				<Variable Name="AdminUser" Type="String" Local="True">
+					<DefValue StrValue="sample1@made.llc" />
+				</Variable>
+				<Variable Name="BackOfficePass" Type="Password" Local="True">
+					<DefValue StrValue="3800390036003100310033004400330046003400440038003800420046003300440034003900410039004600390035003600320046003800450033003700430039003600310038004500320037003800430043003000360035003400300044004100360044004500380035003400340046004300430045003900340041003400330033003300350041003600390031003000300039004200" />
+				</Variable>
+				<Variable Name="BackOfficeUser" Type="String" Local="True">
+					<DefValue StrValue="sample2@made.llc" />
+				</Variable>
+				<Variable Name="Counter" Type="Integer" Local="True">
+					<DefValue IntValue="0" />
+				</Variable>
+				<Variable Name="Currency1" Type="String" Local="True">
+					<DefValue StrValue="USD" />
+				</Variable>
+				<Variable Name="dboEntitlementsDB" Type="String" Local="True">
+					<DefValue StrValue="sqldb-entitlements-qa" />
+				</Variable>
+				<Variable Name="dboEntitlementsPassQA" Type="Password" Local="True">
+					<DefValue StrValue="38003900360031004400330044003100460034004400380030004200460031004400340039004300360037004600370038003000350044003800420032004200330035004400380034004500440039003800370032004100450036003500450033003600420042003900300045004400420035003800310043004200430030003300330035003600420046003500300038003600" />
+				</Variable>
+				<Variable Name="dboEntitlementsUser" Type="String" Local="True">
+					<DefValue StrValue="entitlements_sa" />
+				</Variable>
+				<Variable Name="DynamicVarInt" Type="Integer" Local="True">
+					<DefValue IntValue="0" />
+				</Variable>
+				<Variable Name="DynamicVarStr" Type="String" Local="True">
+					<DefValue />
+				</Variable>
+				<Variable Name="Currency2" Type="String" Local="True">
+					<DefValue />
+				</Variable>
+				<Variable Name="BeneficiaryAddress" Type="String" Local="True">
+					<DefValue />
+				</Variable>
+				<Variable Name="BeneficiaryCity" Type="String" Local="True">
+					<DefValue />
+				</Variable>
+				<Variable Name="BeneficiaryCountry" Type="String" Local="True">
+					<DefValue />
+				</Variable>
+				<Variable Name="BeneficiaryState" Type="String" Local="True">
+					<DefValue />
+				</Variable>
+				<Variable Name="BeneficiaryBankType" Type="String" Local="True">
+					<DefValue />
+				</Variable>
+				<Variable Name="BeneficiaryZip" Type="String" Local="True">
+					<DefValue />
+				</Variable>
+				<Variable Name="ProfileAccountAlias" Type="String" Local="True">
+					<DefValue StrValue="Brannen Crafting" />
+				</Variable>
+				<Variable Name="ProfileAccountId" Type="Integer" Local="True">
+					<DefValue IntValue="0" />
+				</Variable>
+				<Variable Name="ProfileBank" Type="String" Local="True">
+					<DefValue StrValue="322286803" />
+				</Variable>
+				<Variable Name="ProfileBAN" Type="String" Local="True">
+					<DefValue StrValue="4400009901" />
+				</Variable>
+				<Variable Name="BeneficiaryAccountType" Type="String" Local="True">
+					<DefValue StrValue="Account Analysis Standard" />
+				</Variable>
+				<Variable Name="ProfileBebId" Type="Integer" Local="True">
+					<DefValue IntValue="2722" />
+				</Variable>
+				<Variable Name="ProfileId" Type="Integer" Local="True">
+					<DefValue IntValue="17" />
+				</Variable>
+				<Variable Name="ProfileName" Type="String" Local="True">
+					<DefValue StrValue="TestComplete Automation" />
+				</Variable>
+				<Variable Name="ProfileRN" Type="String" Local="True">
+					<DefValue StrValue="322286803" />
+				</Variable>
+				<Variable Name="ProfileUserFirst" Type="String" Local="True">
+					<DefValue StrValue="Test Complete" />
+				</Variable>
+				<Variable Name="ProfileUserLast" Type="String" Local="True">
+					<DefValue StrValue="User 4" />
+				</Variable>
+				<Variable Name="ServiceId" Type="Integer" Local="True">
+					<DefValue IntValue="0" />
+				</Variable>
+				<Variable Name="ServiceType" Type="String" Local="True">
+					<DefValue StrValue="FX Trade Execution" />
+				</Variable>
+				<Variable Name="TradeFrom" Type="String" Local="True">
+					<DefValue StrValue="Brannen Crafting" />
+				</Variable>
+				<Variable Name="TransactionMemo" Type="String" Local="True">
+					<DefValue StrValue="Transfer between Own Accounts" />
+				</Variable>
+				<Variable Name="TradeTo" Type="String" Local="True">
+					<DefValue />
+				</Variable>
+				<Variable Name="TraderPass" Type="Password" Local="True">
+					<DefValue StrValue="3800390036003100310033004400330046003400440038003800420046003300440034003900410039004600390035003600320046003800450033003700430039003600310038004500320031003800360036003400300039004100320038004500380041004600440033003400330031003400410030004100340046003900430039003300310033004200" />
+				</Variable>
+				<Variable Name="TraderUser" Type="String" Local="True">
+					<DefValue StrValue="sample4@made.llc" />
+				</Variable>
+				<Variable Name="urlBackOfficeQA" Type="String" Local="True">
+					<DefValue StrValue="https://backoffice-qa.made.llc/" />
+				</Variable>
+				<Variable Name="urlIdentity" Type="String" Local="True">
+					<DefValue StrValue="https://identity-dev.made.llc/" />
+				</Variable>
+				<Variable Name="urlPortalQA" Type="String" Local="True">
+					<DefValue StrValue="https://portal-qa.made.llc/" />
+				</Variable>
+				<Variable Name="BeneficiaryBAN" Type="String" Local="True">
+					<DefValue />
+				</Variable>
+				<Variable Name="BeneficiaryBIC" Type="String" Local="True">
+					<DefValue />
+				</Variable>
+				<Variable Name="dboFXDB" Type="String" Local="True">
+					<DefValue StrValue="sqldb-fx-qa" />
+				</Variable>
+				<Variable Name="dboFXUser" Type="String" Local="True">
+					<DefValue StrValue="fx_sa" />
+				</Variable>
+				<Variable Name="dboFXPassQA" Type="Password" Local="True">
+					<DefValue StrValue="38003900360031004400330044003100460034004400380034004200460036003900340039004100450037003900320033004100390043003100390043003700420032003900370039003200340045003900320037003200300037003600440031003700440044003900350037003800460045004200440036003400430036003300330035003400410044003500300037003500" />
+				</Variable>
+				<Variable Name="dboConnectionsDB" Type="String" Local="True">
+					<DefValue StrValue="sqldb-connections-qa" />
+				</Variable>
+				<Variable Name="dboConnectionsUser" Type="String" Local="True">
+					<DefValue StrValue="connections_sa" />
+				</Variable>
+				<Variable Name="dboConnectionsPassQA" Type="Password" Local="True">
+					<DefValue StrValue="3800390036003100440033004400310046003400440038004300420039003700360036003800390036003900430042003900340041003800340044003100350042003800320041003500340034004300300032003600380039004100350045003400450033003500420035004400300035003200440044004300350033003600350036004600440046003900350035003000340042003400380032004100380044003700" />
+				</Variable>
+				<Variable Name="dboPaymentsDB" Type="String" Local="True">
+					<DefValue StrValue="sqldb-payments-qa" />
+				</Variable>
+				<Variable Name="dboPaymentsUser" Type="String" Local="True">
+					<DefValue StrValue="payments_sa" />
+				</Variable>
+				<Variable Name="dboPaymentsPassQA" Type="Password" Local="True">
+					<DefValue StrValue="380039003600310044003300440031004600340044003800420033004600320045004300390045004100370039003300320032004600410043003300370046003000450031004400410032003700440034004300360030004100450032004500370037003600370043004400420032003200430031004600420044003300410032004200410039003800330031003900310043004400380044004500380032004300350038004600" />
+				</Variable>
+				<Variable Name="dboTransactionsDB" Type="String" Local="True">
+					<DefValue StrValue="sqldb-transactions-qa" />
+				</Variable>
+				<Variable Name="dboTransactionsUser" Type="String" Local="True">
+					<DefValue StrValue="transactions_sa" />
+				</Variable>
+				<Variable Name="dboTransactionsPassQA" Type="Password" Local="True">
+					<DefValue StrValue="38003900360031004400330044003100460034004400380033003300460035003800430039003900450037003900350032003200460046003300420037004600310036003100390031004100370041004600340030003300440034003000460043003600440039003900440034003600310043004300450035003400410033003100420033003000350031004300300033003500440038003800380043004400350037003600300030003800" />
+				</Variable>
+				<Variable Name="BeneficiaryAlias" Type="String" Local="True">
+					<DefValue StrValue="Brannen Crafting" />
+				</Variable>
+				<Variable Name="TransactionType" Type="String" Local="True">
+					<DefValue StrValue="Transfer" />
+				</Variable>
+				<Variable Name="dbo1ODBC" Type="String" Local="True">
+					<DefValue />
+				</Variable>
+				<Variable Name="BeneficiaryBank" Type="String" Local="True">
+					<DefValue />
+				</Variable>
+				<Variable Name="BeneficiaryRN" Type="String" Local="True">
+					<DefValue />
+				</Variable>
+				<Variable Name="TransactionPurpose" Type="String" Local="True">
+					<DefValue />
+				</Variable>
+				<Variable Name="BeneficiaryType" Type="String" Local="True">
+					<DefValue />
+				</Variable>
+				<Variable Name="ProfileEntitlementId" Type="Integer" Local="True">
+					<DefValue IntValue="366" />
+				</Variable>
+				<Variable Name="SubServiceId" Type="Integer" Local="True">
+					<DefValue IntValue="3" />
+				</Variable>
+				<Variable Name="ProfileUserId" Type="Integer" Local="True">
+					<DefValue IntValue="0" />
+				</Variable>
+				<Variable Name="ProfileAccountUserId" Type="Integer" Local="True">
+					<DefValue IntValue="633" />
+				</Variable>
+				<Variable Name="ProfileSubServiceId" Type="Integer" Local="True">
+					<DefValue IntValue="0" />
+				</Variable>
+				<Variable Name="limitTransaction" Type="String" Local="True">
+					<DefValue />
+				</Variable>
+				<Variable Name="limitDaily" Type="String" Local="True">
+					<DefValue />
+				</Variable>
+				<Variable Name="limitService" Type="Integer" Local="True">
+					<DefValue IntValue="0" />
+				</Variable>
+				<Variable Name="limitAccount" Type="Integer" Local="True">
+					<DefValue IntValue="0" />
+				</Variable>
+				<Variable Name="limitUser" Type="Integer" Local="True">
+					<DefValue IntValue="0" />
+				</Variable>
+				<Variable Name="limitSubscription" Type="Integer" Local="True">
+					<DefValue IntValue="0" />
+				</Variable>
+				<Variable Name="dboDatabaseServer" Type="String" Local="True">
+					<DefValue StrValue="sql-silvergate-apis-shared-" />
+				</Variable>
+				<Variable Name="dboDatabase" Type="String" Local="True">
+					<DefValue StrValue="sqldb-entitlements-qa" />
+				</Variable>
+				<Variable Name="dboDatabaseUser" Type="String" Local="True">
+					<DefValue StrValue="entitlements_sa" />
+				</Variable>
+				<Variable Name="dboDatabasePass" Type="Password" Local="True">
+					<DefValue StrValue="38003900360031004400330044003100460034004400380030004200460031004400340039004300360037004600370038003000350044003800420032004200330035004400380034004500440039003800370032004100450036003500450033003600420042003900300045004400420035003800310043004200430030003300330035003600420046003500300038003600" />
+				</Variable>
+				<Variable Name="Date1" Type="String" Local="True">
+					<DefValue />
+				</Variable>
+				<Variable Name="Date2" Type="String" Local="True">
+					<DefValue />
+				</Variable>
+				<Variable Name="limitType" Type="String" Local="True">
+					<DefValue />
+				</Variable>
+				<Variable Name="AutoQuoting" Type="Integer" Local="True">
+					<DefValue IntValue="0" />
+				</Variable>
+				<Variable Name="TradeExecution" Type="Integer" Local="True">
+					<DefValue IntValue="0" />
+				</Variable>
+				<Variable Name="ProfileLimitTrans" Type="String" Local="True">
+					<DefValue />
+				</Variable>
+				<Variable Name="ProfileLimitDaily" Type="String" Local="True">
+					<DefValue />
+				</Variable>
+				<Variable Name="SubServiceType" Type="String" Local="True">
+					<DefValue StrValue="Domestic USD Payment" />
+				</Variable>
+				<Variable Name="ProfileServiceId" Type="Integer" Local="True">
+					<DefValue IntValue="0" />
+				</Variable>
+				<Variable Name="ProfileServiceTL" Type="String" Local="True">
+					<DefValue StrValue="0" />
+				</Variable>
+				<Variable Name="ProfileServiceDL" Type="String" Local="True">
+					<DefValue />
+				</Variable>
+				<Variable Name="ProfileAccountServiceTL" Type="String" Local="True">
+					<DefValue />
+				</Variable>
+				<Variable Name="ProfileAccountServiceDL" Type="String" Local="True">
+					<DefValue />
+				</Variable>
+				<Variable Name="AccountId" Type="Integer" Local="True">
+					<DefValue IntValue="0" />
+				</Variable>
+				<Variable Name="AccountTypeId" Type="Integer" Local="True">
+					<DefValue IntValue="0" />
+				</Variable>
+				<Variable Name="BeneficiaryBool" Type="Boolean" Local="True">
+					<DefValue BoolValue="True" />
+				</Variable>
+				<Variable Name="ServiceApprovalType" Type="String" Local="True">
+					<DefValue />
+				</Variable>
+				<Variable Name="ProfileUserConnectionEnum" Type="Integer" Local="True">
+					<DefValue IntValue="0" />
+				</Variable>
+				<Variable Name="ProfileUserOkta" Type="String" Local="True">
+					<DefValue />
+				</Variable>
+				<Variable Name="dboConnectionsPassSTG" Type="Password" Local="True">
+					<DefValue StrValue="3800390036003100440033004400310046003400440038004100420046003100410043003900450034003700390035003300410046004200420042003700430037003600310043004500320037003900380043003000340032004300300042003100450044004600390044003400320046004300430046003900340041003300420042003500310039003300330035003400430042004200380038004100450041003400300039004600380031004600" />
+				</Variable>
+				<Variable Name="dboEntitlementsPassSTG" Type="Password" Local="True">
+					<DefValue StrValue="3800390036003100440033004400310046003400440038004200330046003400360043004600440032004400450037003100340044003300430044003300450033003800300042004400340032004200410034004300390039004300410044004600390039004100340045003000310042004300360043003300460045003700410032003900340030004200350034003000340038003500420032004100420034004400" />
+				</Variable>
+				<Variable Name="dboPaymentsPassSTG" Type="Password" Local="True">
+					<DefValue StrValue="380039003600310044003300440031004600340044003800420033004600320045004300390045004100370039003300320032004600410043003300370046003000450031004400410032003700440034004300360030004100450032004500370037003600370043004400420032003200430031004600420044003300410032004200410039003800330031003900310043004400380044004500380032004300350038004600" />
+				</Variable>
+				<Variable Name="dboFXPassSTG" Type="Password" Local="True">
+					<DefValue StrValue="380039003600310044003300440031004600340044003800420033004600320038004300390041003600370039003700320032004600410046004200370043003000450031003900310041003700450038004300300034004500430030004600360036004400430037004400340032003400340043004500410043004100360037004200350036003300330035003500440036004400380044003100320034004300340033003800" />
+				</Variable>
+				<Variable Name="dboTransactionsPassSTG" Type="Password" Local="True">
+					<DefValue StrValue="38003900360031004400330044003100460034004400380033003300460035003800430039003900450037003900350032003200460046003300420037004600310036003100390031004100370041004600340030003300440034003000460043003600440039003900440034003600310043004300450035003400410033003100420033003000350031004300300033003500440038003800380043004400350037003600300030003800" />
+				</Variable>
+				<Variable Name="urlBackOfficeSTG" Type="String" Local="True">
+					<DefValue StrValue="https://backoffice-stg.made.llc/" />
+				</Variable>
+				<Variable Name="urlPortalSTG" Type="String" Local="True">
+					<DefValue StrValue="https://portal-stg.made.llc/" />
+				</Variable>
+				<Variable Name="Site" Type="String" Local="True">
+					<DefValue StrValue="Portal" />
+				</Variable>
+				<Variable Name="Environment" Type="String" Local="True">
+					<DefValue StrValue="QA" />
+				</Variable>
+				<Variable Name="adHocProfile" Type="String" Local="True">
+					<DefValue StrValue="Tacobout TestComplete" />
+				</Variable>
+				<Variable Name="adHocVar" Type="String" Local="True">
+					<DefValue />
+				</Variable>
+				<Variable Name="adHocUsers" Type="Integer" Local="True">
+					<DefValue IntValue="0" />
+				</Variable>
+				<Variable Name="adHocAcct" Type="Integer" Local="True">
+					<DefValue IntValue="0" />
+				</Variable>
+				<Variable Name="PostmanPass" Type="Password" Local="True">
+					<DefValue StrValue="3800390036003100440033004400310046003400440038004300420046003400450043003900380039004600460037003800300039004400430037003100460046004500450031003100310046003800340032003800320044003500380043004100300035004200310034003300300046003600300044004100360044003000330032003300350043003000360031003000300031003800" />
+				</Variable>
+				<Variable Name="PostmanUser" Type="String" Local="True">
+					<DefValue StrValue="khudson@made.llc" />
+				</Variable>
+				<Variable Name="adHocBAN1" Type="String" Local="True">
+					<DefValue />
+				</Variable>
+				<Variable Name="adHocBAN2" Type="String" Local="True">
+					<DefValue />
+				</Variable>
+				<Variable Name="ProfileUserApprovalReq" Type="Boolean" Local="True">
+					<DefValue BoolValue="False" />
+				</Variable>
+				<Variable Name="SubServiceAlias" Type="String" Local="True">
+					<DefValue StrValue="QA v3 - TCA" />
+				</Variable>
+				<Variable Name="SubServiceEmail" Type="String" Local="True">
+					<DefValue StrValue="khudson@made.llc" />
+				</Variable>
+				<Variable Name="SubPrimaryKey" Type="Password" Local="True">
+					<DefValue />
+				</Variable>
+				<Variable Name="SubSecondaryKey" Type="Password" Local="True">
+					<DefValue />
+				</Variable>
+				<Variable Name="SubClientSecret" Type="Password" Local="True">
+					<DefValue />
+				</Variable>
+				<Variable Name="FrontOfficeUser" Type="String" Local="True">
+					<DefValue StrValue="sample3@made.llc" />
+				</Variable>
+				<Variable Name="FrontOfficePass" Type="Password" Local="True">
+					<DefValue StrValue="380039003600310031003300440031004600340044003800380042004600330044003400390041003900460039003500360032004600380045003300370043003900360031003800450032003700380043004300300031003300340036004500460043004300320039003500310036003300340039003800440045004300320030004200" />
+				</Variable>
+				<Variable Name="EmailPass" Type="Password" Local="True">
+					<DefValue StrValue="380039003600310039003300440030004600340044003800410042004600340041004300390039004100370039003000360032004600430045003300370039003000450031003900460041003700450042003400300030003100340036004200440043004200410046004400450041003300370043004100" />
+				</Variable>
+				<Variable Name="UserId" Type="Integer" Local="True">
+					<DefValue IntValue="0" />
+				</Variable>
+				<Variable Name="ActiveTestSuite" Type="String" Local="True">
+					<DefValue />
+				</Variable>
+				<Variable Name="ComplaintData" Type="String" Local="True">
+					<DefValue />
+				</Variable>
+			</Items>
+		</data>
+	</variables>
+	<analysis key="{F99DD556-B254-4E1A-B2B5-C735E4D02BD2}" />
+	<scc key="{C900492B-D218-429C-9AA0-264B7D78CA88}" name="Git Plugin">
+		<data />
+	</scc>
+</Root>

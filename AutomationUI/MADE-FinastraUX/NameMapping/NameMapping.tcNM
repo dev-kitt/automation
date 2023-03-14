@@ -1,0 +1,1003 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Root Signature="{5DCBAC3B-D39C-497C-9BE8-744CBADD37AA}" NameMappingVersion="7" SaveImages="0">
+	<Storages Current="0">
+		<Child Name="Default Configuration" />
+	</Storages>
+	<Nodes Name="NameMapping" Key="{BE401E45-B2D6-4FBA-931A-C2117D5C51AD}">
+		<Children>
+			<Child Name="Sys" Key="{3FA58B97-1FBD-410B-BB0A-AFD4DDC7F99B}">
+				<Properties>
+					<Property Name="Name">
+						<Value Value="Sys" />
+					</Property>
+				</Properties>
+				<Children>
+					<Child Name="Browser" Key="{252C0CFC-41BD-48C8-8262-710BB6D30854}">
+						<Properties>
+							<Property Name="ObjectType">
+								<Value Value="Browser" />
+							</Property>
+						</Properties>
+						<Children>
+							<Child Name="gppFinastra_Main" Key="{7D53596D-E9DC-4337-B21D-BC5F41E2DA14}">
+								<Properties>
+									<Property Name="ObjectType">
+										<Value Value="Page" />
+									</Property>
+									<Property Name="URL">
+										<Value Value="https://backoffice-qa.silvergate.com/profiles" />
+									</Property>
+									<FilterCriteria>
+										<Root Group="AND">
+											<Item Operation="stdopequal">
+												<Left Value="DispValue:ObjectType" />
+												<Right Value="ConstStr:Page" />
+											</Item>
+											<Item Group="OR">
+												<Item Operation="stdopequal">
+													<Left Value="DispValue:URL" />
+													<Right Value="ConstStr:https://sg-uat1.finastrapayments.cloud/gpp/*" />
+												</Item>
+												<Item Operation="stdopequal">
+													<Left Value="DispValue:URL" />
+													<Right Value="ConstStr:https://sg-uat1.finastrapayments.cloud/gpp/#!/user/signin" />
+												</Item>
+											</Item>
+										</Root>
+									</FilterCriteria>
+								</Properties>
+								<Children>
+									<Child Name="Auth" Key="{D3EDCFCD-9D40-4622-B493-6E2E171EB7C0}">
+										<Image FileName="1953789351" Left="248" Top="399" Right="713" Bottom="661" />
+										<Selectors>
+											<Selector>
+												<Value Value="//form[contains(., &apos;Fusion Global PayPlus&apos;)]" />
+											</Selector>
+											<Selector>
+												<Value Value="//form[contains(@class, &apos;dh-signin-form&apos;)]" />
+											</Selector>
+											<Selector>
+												<Value Value="//form" />
+											</Selector>
+										</Selectors>
+										<Children>
+											<Child Name="Password" Key="{48749AFB-1F87-4A66-B39F-D69FB277A1E4}">
+												<Image FileName="-1181174145" Left="248" Top="592" Right="713" Bottom="610" />
+												<TypeInfo Item0="{FA0E4BC7-C946-4A9A-BFD5-C17D5F31E29B}" />
+												<Selectors>
+													<Selector>
+														<Value Value="//input[@id=(//label[.=&apos;Password&apos;]/@for)]" />
+													</Selector>
+													<Selector>
+														<Value Value="//input[@aria-describedby=(//mat-hint[.=&apos;Enter password&apos;]/@id)]" />
+													</Selector>
+													<Selector>
+														<Value Value="#signin-password-field" />
+													</Selector>
+													<Selector>
+														<Value Value="//input[@type=&apos;password&apos;]" />
+													</Selector>
+													<Selector>
+														<Value Value="//app-login/form/mat-form-field[2]//input" />
+													</Selector>
+												</Selectors>
+											</Child>
+											<Child Name="Login" Key="{24044482-78E5-459A-B804-8093DB8CBAFA}">
+												<Image FileName="1317347365" Left="638" Top="662" Right="713" Bottom="698" />
+												<TypeInfo Item0="{7FBC4187-1287-4DE7-98C2-555019ED5BA1}" />
+												<Selectors>
+													<Selector>
+														<Value Value="#signin-login-button" />
+													</Selector>
+													<Selector>
+														<Value Value="//button[.=&apos;LOGIN&apos;]" />
+													</Selector>
+													<Selector>
+														<Value Value="//button[@type=&apos;submit&apos;]" />
+													</Selector>
+													<Selector>
+														<Value Value="//button[contains(@class, &apos;login-button&apos;)]" />
+													</Selector>
+													<Selector>
+														<Value Value="//button" />
+													</Selector>
+												</Selectors>
+											</Child>
+											<Child Name="User" Key="{69762A8E-A3A4-4A78-AC19-63A71AF7E1E7}">
+												<Image FileName="1953789351" Left="248" Top="501" Right="713" Bottom="519" />
+												<TypeInfo Item0="{FA0E4BC7-C946-4A9A-BFD5-C17D5F31E29B}" />
+												<Selectors>
+													<Selector>
+														<Value Value="//input[@id=(//label[.=&apos;User ID&apos;]/@for)]" />
+													</Selector>
+													<Selector>
+														<Value Value="//input[@aria-describedby=(//mat-hint[.=&apos;Enter user ID&apos;]/@id)]" />
+													</Selector>
+													<Selector>
+														<Value Value="#signin-username-field" />
+													</Selector>
+													<Selector>
+														<Value Value="//app-login/form/mat-form-field//input" />
+													</Selector>
+												</Selectors>
+											</Child>
+										</Children>
+									</Child>
+									<Child Name="Nav" Key="{BB664CFD-C82D-499A-AA94-22F1A79FD5BC}">
+										<Image FileName="2111278782" Left="1802" Top="105" Right="1920" Bottom="155" />
+										<TypeInfo Item0="{7FBC4187-1287-4DE7-98C2-555019ED5BA1}" />
+										<Selectors>
+											<Selector>
+												<Value Value="#btn-user-dropdown" />
+											</Selector>
+											<Selector>
+												<Value Value="//button[contains(., &apos;perm_identity&apos;)]" />
+											</Selector>
+											<Selector>
+												<Value Value="//button[contains(@class, &apos;dh-user-box-button&apos;)]" />
+											</Selector>
+											<Selector>
+												<Value Value="//div[@id=&apos;navigation-right-side-wrapper&apos;]/div[3]/button" />
+											</Selector>
+										</Selectors>
+										<Children>
+											<Child Name="Select" Key="{2626CD13-121E-46A7-9FED-A60F01AE9118}">
+												<Image FileName="-494298710" Left="1789" Top="155" Right="1916" Bottom="303" />
+												<Selectors>
+													<Selector>
+														<Value Value="//ul[contains(., &apos;Setting&apos;)]" />
+													</Selector>
+													<Selector>
+														<Value Value="//ui-view/div//div[@id=&apos;navigation-right-side-wrapper&apos;]//ul[@role=&apos;menu&apos;]" />
+													</Selector>
+													<Selector>
+														<Value Value="//ui-view/div//div[@id=&apos;navigation-right-side-wrapper&apos;]//ul[contains(@class, &apos;dh-dropdown-menu&apos;)]" />
+													</Selector>
+													<Selector>
+														<Value Value="//div[@id=&apos;navigation-right-side-wrapper&apos;]//ul" />
+													</Selector>
+													<Selector>
+														<Value Value="//ui-view/div//div[@id=&apos;navigation-right-side-wrapper&apos;]//ul" />
+													</Selector>
+												</Selectors>
+												<Children>
+													<Child Name="Logout" Key="{D0D2455E-DCF5-4322-AEC7-7DC7F6E9A529}">
+														<Image FileName="-1906013069" Left="1832" Top="270" Right="1891" Bottom="287" />
+														<TypeInfo Item0="{48A5C558-F96A-40ED-8C8E-B2A5361984EC}" />
+														<Selectors>
+															<Selector>
+																<Value Value="#logout-btn" />
+															</Selector>
+															<Selector>
+																<Value Value="//span[.=&apos;Logout&apos;]" />
+															</Selector>
+															<Selector>
+																<Value Value="//li[4]/a/span[contains(@class, &apos;dh-text-label&apos;)]" />
+															</Selector>
+															<Selector>
+																<Value Value="//div[@id=&apos;navigation-right-side-wrapper&apos;]//ul[@role=&apos;menu&apos;]/li[4]/a/span" />
+															</Selector>
+															<Selector>
+																<Value Value="//ul[@role=&apos;menu&apos;]/li[4]/a/span" />
+															</Selector>
+														</Selectors>
+													</Child>
+													<Child Name="Settings" Key="{8472BDD0-4CCD-4A0F-86D3-79D06799160D}">
+														<Image FileName="-494298710" Left="1838" Top="170" Right="1897" Bottom="187" />
+														<TypeInfo Item0="{48A5C558-F96A-40ED-8C8E-B2A5361984EC}" />
+														<Selectors>
+															<Selector>
+																<Value Value="#setting-btn" />
+															</Selector>
+															<Selector>
+																<Value Value="//span[.=&apos;Setting&apos;]" />
+															</Selector>
+															<Selector>
+																<Value Value="//a/span[contains(@class, &apos;dh-text-label&apos;)]" />
+															</Selector>
+															<Selector>
+																<Value Value="//div[@id=&apos;navigation-right-side-wrapper&apos;]//ul[@role=&apos;menu&apos;]/li/a/span" />
+															</Selector>
+															<Selector>
+																<Value Value="//ul[@role=&apos;menu&apos;]/li/a/span" />
+															</Selector>
+														</Selectors>
+														<Children>
+															<Child Name="Localization" Key="{94F1242F-072B-41B7-9656-C9816FB168E3}">
+																<Image FileName="-1382275714" Left="680" Top="343" Right="820" Bottom="381" />
+																<TypeInfo Item0="{7FBC4187-1287-4DE7-98C2-555019ED5BA1}" />
+																<Selectors>
+																	<Selector>
+																		<Value Value="#set-view-localization" />
+																	</Selector>
+																	<Selector>
+																		<Value Value="//button[contains(., &apos;Localization&apos;)]" />
+																	</Selector>
+																	<Selector>
+																		<Value Value="//div[@role=&apos;dialog&apos;]//div[2]//div/ul/li[2]/button[contains(@class, &apos;btn&apos;)]" />
+																	</Selector>
+																	<Selector>
+																		<Value Value="//div[@role=&apos;dialog&apos;]//div[2]//div/ul/li[2]/button" />
+																	</Selector>
+																</Selectors>
+															</Child>
+															<Child Name="Password" Key="{3C4807DE-B607-4783-82BB-F1DA50049657}">
+																<Image FileName="314509522" Left="680" Top="305" Right="820" Bottom="727" />
+																<Selectors>
+																	<Selector>
+																		<Value Value="//ul[contains(., &apos;Password&apos;)]" />
+																	</Selector>
+																	<Selector>
+																		<Value Value="//div[@role=&apos;dialog&apos;]//ul[contains(@class, &apos;dh-navigation-pane&apos;)]" />
+																	</Selector>
+																	<Selector>
+																		<Value Value="//div[@role=&apos;dialog&apos;]//div/ul" />
+																	</Selector>
+																</Selectors>
+															</Child>
+															<Child Name="Display" Key="{42DF62C5-4FA4-49BF-B7F5-C7025B476755}">
+																<Image FileName="314509522" Left="680" Top="381" Right="820" Bottom="419" />
+																<TypeInfo Item0="{7FBC4187-1287-4DE7-98C2-555019ED5BA1}" />
+																<Selectors>
+																	<Selector>
+																		<Value Value="#set-view-display" />
+																	</Selector>
+																	<Selector>
+																		<Value Value="//button[contains(., &apos;Display&apos;)]" />
+																	</Selector>
+																	<Selector>
+																		<Value Value="//div[@role=&apos;dialog&apos;]//div[2]//div/ul/li[3]/button[contains(@class, &apos;btn&apos;)]" />
+																	</Selector>
+																	<Selector>
+																		<Value Value="//div[@role=&apos;dialog&apos;]//div[2]//div/ul/li[3]/button" />
+																	</Selector>
+																</Selectors>
+															</Child>
+															<Child Name="Close" Key="{F2CC528D-BC66-4FA9-8673-CA51709C2D75}">
+																<Image FileName="-1008824358" Left="1198" Top="257" Right="1224" Bottom="311" />
+																<TypeInfo Item0="{7FBC4187-1287-4DE7-98C2-555019ED5BA1}" />
+																<Selectors>
+																	<Selector>
+																		<Value Value="//button[contains(., &apos;close&apos;)]" />
+																	</Selector>
+																	<Selector>
+																		<Value Value="//div/div/button[contains(@class, &apos;btn&apos;)]" />
+																	</Selector>
+																	<Selector>
+																		<Value Value="//div/div/button" />
+																	</Selector>
+																</Selectors>
+															</Child>
+														</Children>
+													</Child>
+												</Children>
+											</Child>
+										</Children>
+									</Child>
+									<Child Name="Search" Key="{F27454F7-D30F-493C-A97A-A55FEEAE391F}">
+										<Image FileName="-1781064155" Left="1460" Top="105" Right="1752" Bottom="155" />
+										<TypeInfo Item0="{48A5C558-F96A-40ED-8C8E-B2A5361984EC}" />
+										<Selectors>
+											<Selector>
+												<Value Value="//div[contains(@class, &apos;dh-search-box-wrapper&apos;)]" />
+											</Selector>
+										</Selectors>
+										<Children>
+											<Child Name="Icon" Key="{057E4F73-2ACE-442F-9AE2-7EAA1DBA9CCF}">
+												<Image FileName="-1647094166" Left="1460" Top="116" Right="1499" Bottom="147" />
+												<TypeInfo Item0="{7FBC4187-1287-4DE7-98C2-555019ED5BA1}" />
+												<Selectors>
+													<Selector>
+														<Value Value="#search-box-button" />
+													</Selector>
+													<Selector>
+														<Value Value="//button[contains(., &apos;search&apos;)]" />
+													</Selector>
+													<Selector>
+														<Value Value="//button[contains(@class, &apos;dh-search-box-button&apos;)]" />
+													</Selector>
+													<Selector>
+														<Value Value="//div[@id=&apos;navigation-right-side-wrapper&apos;]/div/button" />
+													</Selector>
+												</Selectors>
+											</Child>
+											<Child Name="Input" Key="{685A8397-2B08-4FD7-A1B3-73609CF51D86}">
+												<Image FileName="-1684013844" Left="1502" Top="105" Right="1752" Bottom="155" />
+												<TypeInfo Item0="{FA0E4BC7-C946-4A9A-BFD5-C17D5F31E29B}" />
+												<Selectors>
+													<Selector>
+														<Value Value="#dh-search-box-input" />
+													</Selector>
+													<Selector>
+														<Value Value="//input[@type=&apos;text&apos;]" />
+													</Selector>
+													<Selector>
+														<Value Value="//input[contains(@class, &apos;dh-search-box-input&apos;)]" />
+													</Selector>
+													<Selector>
+														<Value Value="//div[@id=&apos;navigation-right-side-wrapper&apos;]//input" />
+													</Selector>
+													<Selector>
+														<Value Value="//ui-view//input" />
+													</Selector>
+												</Selectors>
+											</Child>
+											<Child Name="Payment" Key="{71D8629F-62D8-46FB-BC38-1BDB2FC3298C}">
+												<Image FileName="1111020795" Left="990" Top="552" Right="1186" Bottom="588" />
+												<TypeInfo Item0="{7FBC4187-1287-4DE7-98C2-555019ED5BA1}" />
+												<Selectors>
+													<Selector>
+														<Value Value="#landing-page-search-a-payment" />
+													</Selector>
+													<Selector>
+														<Value Value="//button[contains(., &apos;Search a payment&apos;)]" />
+													</Selector>
+												</Selectors>
+											</Child>
+											<Child Name="Result" Key="{E4A91E0E-458C-4A2B-8A92-2C7605051172}">
+												<Image FileName="-358263770" Left="1226" Top="258" Right="1338" Bottom="274" />
+												<TypeInfo Item0="{48A5C558-F96A-40ED-8C8E-B2A5361984EC}" />
+												<Selectors>
+													<Selector>
+														<Value Value="xpath=//div[@class=&apos;ui-grid-row ng-scope&apos;]//div[@id=&apos;P_END_TO_END_ID-0&apos;]" />
+													</Selector>
+													<Selector>
+														<Value Value="//div[@id=&apos;P_END_TO_END_ID-0&apos;]//span[contains(@class, &apos;ft-grid-click&apos;)]" />
+													</Selector>
+													<Selector>
+														<Value Value="//div[@id=&apos;P_END_TO_END_ID-0&apos;]//span" />
+													</Selector>
+													<Selector>
+														<Value Value="//div[2]//div[@id=&apos;P_END_TO_END_ID-0&apos;]//span" />
+													</Selector>
+												</Selectors>
+											</Child>
+										</Children>
+									</Child>
+									<Child Name="tourClose" Key="{65BCB3A9-49CD-4EDF-A784-206E037C7702}">
+										<Image FileName="-779742799" Left="601" Top="193" Right="622" Bottom="243" />
+										<TypeInfo Item0="{7FBC4187-1287-4DE7-98C2-555019ED5BA1}" />
+										<Selectors>
+											<Selector>
+												<Value Value="//button[contains(., &apos;close&apos;)]" />
+											</Selector>
+											<Selector>
+												<Value Value="//div/div/div/div/button[contains(@class, &apos;ng-scope&apos;)]" />
+											</Selector>
+										</Selectors>
+									</Child>
+									<Child Name="tourGotIt" Key="{BC23F836-B7E6-425F-96AF-322B949A5602}">
+										<Image FileName="-2125477175" Left="916" Top="385" Right="1057" Bottom="421" />
+										<TypeInfo Item0="{7FBC4187-1287-4DE7-98C2-555019ED5BA1}" />
+										<Selectors>
+											<Selector>
+												<Value Value="//button[contains(., &apos;Thanks, got it!&apos;)]" />
+											</Selector>
+											<Selector>
+												<Value Value="//div[@role=&apos;dialog&apos;]/div/div/div/div/div/button[contains(@class, &apos;dh-action-secondary-button&apos;)]" />
+											</Selector>
+										</Selectors>
+									</Child>
+									<Child Name="tourOk" Key="{AB6DCAE1-E674-411E-A03A-96DA6FDD9632}">
+										<Image FileName="-1574503654" Left="1054" Top="404" Right="1100" Bottom="440" />
+										<TypeInfo Item0="{7FBC4187-1287-4DE7-98C2-555019ED5BA1}" />
+										<Selectors>
+											<Selector>
+												<Value Value="//button[contains(., &apos;Ok&apos;)]" />
+											</Selector>
+											<Selector>
+												<Value Value="//div[@role=&apos;dialog&apos;]/div/div/div/div/button[contains(@class, &apos;dh-action-primary-button&apos;)]" />
+											</Selector>
+										</Selectors>
+									</Child>
+								</Children>
+							</Child>
+							<Child Name="gppFinastra_Transaction" Key="{C98FC6C8-CC86-43F6-9894-6E1E9B6E0424}">
+								<Properties>
+									<Property Name="ObjectType">
+										<Value Value="Page" />
+									</Property>
+									<Property Name="URL">
+										<Value Value="https://backoffice-qa.silvergate.com/profiles" />
+									</Property>
+									<FilterCriteria>
+										<Root Group="AND">
+											<Item Operation="stdopequal">
+												<Left Value="DispValue:ObjectType" />
+												<Right Value="ConstStr:Page" />
+											</Item>
+											<Item Group="OR">
+												<Item Operation="stdopequal">
+													<Left Value="DispValue:URL" />
+													<Right Value="ConstStr:https://sg-uat1.finastrapayments.cloud/gppold/servlet/MainServlet" />
+												</Item>
+												<Item Operation="stdopequal">
+													<Left Value="DispValue:URL" />
+													<Right Value="ConstStr:https://sg-uat1.finastrapayments.cloud/gppold/servlet/*" />
+												</Item>
+												<Item Operation="stdopequal">
+													<Left Value="CustomDispValue:URL" />
+													<Right Value="ConstStr:https://sg-uat1.finastrapayments.cloud/gppold/*" />
+												</Item>
+											</Item>
+										</Root>
+									</FilterCriteria>
+								</Properties>
+								<Children>
+									<Child Name="Nav" Key="{50CEF6D8-2D44-42EC-ABDA-E1D42CD5A967}">
+										<Selectors>
+											<Selector>
+												<Value Value="//ul[contains(@class, &apos;sidebar-nav&apos;)]" />
+											</Selector>
+										</Selectors>
+										<Children>
+											<Child Name="Accounts" Key="{0EF9A8AF-143A-4AEA-AED6-ABE5D2B89C8C}">
+												<Selectors>
+													<Selector>
+														<Value Value="#sidebar-link-2" />
+													</Selector>
+													<Selector>
+														<Value Value="//a[@name=&apos;sidenav-accounts&apos;]" />
+													</Selector>
+													<Selector>
+														<Value Value="//li[3]/a[contains(@class, &apos;sidebar-link&apos;)]" />
+													</Selector>
+													<Selector>
+														<Value Value="//aside//nav//ul/li[3]/a" />
+													</Selector>
+												</Selectors>
+											</Child>
+											<Child Name="LegalEntities" Key="{D6AE1086-1F57-42A0-918E-93B10E36E10D}">
+												<Selectors>
+													<Selector>
+														<Value Value="#sidebar-link-3" />
+													</Selector>
+													<Selector>
+														<Value Value="//a[@name=&apos;sidenav-legalentities&apos;]" />
+													</Selector>
+													<Selector>
+														<Value Value="//li[4]/a[contains(@class, &apos;sidebar-link&apos;)]" />
+													</Selector>
+													<Selector>
+														<Value Value="//aside//nav//ul/li[4]/a" />
+													</Selector>
+												</Selectors>
+											</Child>
+											<Child Name="Users" Key="{21D2AFEC-8DF6-46A2-AC27-31ACEDD4D76C}">
+												<Selectors>
+													<Selector>
+														<Value Value="#sidebar-link-1" />
+													</Selector>
+													<Selector>
+														<Value Value="//a[@name=&apos;sidenav-users&apos;]" />
+													</Selector>
+													<Selector>
+														<Value Value="//li[2]/a[contains(@class, &apos;sidebar-link&apos;)]" />
+													</Selector>
+													<Selector>
+														<Value Value="//aside//nav//ul/li[2]/a" />
+													</Selector>
+												</Selectors>
+											</Child>
+											<Child Name="Profiles" Key="{A0702B74-FAB3-4A0C-8B52-C1623EE4D906}">
+												<Selectors>
+													<Selector>
+														<Value Value="#sidebar-link-0" />
+													</Selector>
+													<Selector>
+														<Value Value="//a[@name=&apos;sidenav-profiles&apos;]" />
+													</Selector>
+													<Selector>
+														<Value Value="//li/a[contains(@class, &apos;sidebar-link&apos;)]" />
+													</Selector>
+													<Selector>
+														<Value Value="//aside//nav//ul/li/a" />
+													</Selector>
+												</Selectors>
+											</Child>
+											<Child Name="Approvals" Key="{11FAC29C-12B3-4F86-B7DC-37BEE9C12F97}">
+												<Selectors>
+													<Selector>
+														<Value Value="#sidebar-link-4" />
+													</Selector>
+													<Selector>
+														<Value Value="//a[@name=&apos;sidenav-approvals&apos;]" />
+													</Selector>
+													<Selector>
+														<Value Value="//li[5]/a[contains(@class, &apos;sidebar-link&apos;)]" />
+													</Selector>
+													<Selector>
+														<Value Value="//aside//nav//ul/li[5]/a" />
+													</Selector>
+												</Selectors>
+											</Child>
+											<Child Name="Settings" Key="{078F32D0-6315-4BEC-98AC-521071E416D9}">
+												<Selectors>
+													<Selector>
+														<Value Value="#sidebar-link-5" />
+													</Selector>
+													<Selector>
+														<Value Value="//a[@name=&apos;sidenav-settings&apos;]" />
+													</Selector>
+													<Selector>
+														<Value Value="//li[6]/a[contains(@class, &apos;sidebar-link&apos;)]" />
+													</Selector>
+													<Selector>
+														<Value Value="//aside//nav//ul/li[6]/a" />
+													</Selector>
+												</Selectors>
+											</Child>
+											<Child Name="TradingDesk" Key="{4B0DF4F3-EF42-4E66-9E1E-DFBDD4F87FDA}">
+												<Selectors>
+													<Selector>
+														<Value Value="#sidebar-link-4" />
+													</Selector>
+													<Selector>
+														<Value Value="xpath=//a[@name=&apos;sidenav-Trading Desk&apos;]" />
+													</Selector>
+													<Selector>
+														<Value Value="//aside//nav//ul/li[5]/a" />
+													</Selector>
+												</Selectors>
+											</Child>
+										</Children>
+									</Child>
+									<Child Name="Message" Key="{D6DD657D-7AB4-410E-AF93-2D1AA774DFE1}">
+										<Selectors>
+											<Selector>
+												<Value Value="xpath=//div[@class=&apos;modal show-modal info-modal&apos;]/div[1]" />
+											</Selector>
+											<Selector>
+												<Value Value="xpath=//div[contains(@class, &apos;modal-content&apos;)]" />
+											</Selector>
+											<Selector>
+												<Value Value="xpath=//div[contains(@class, &apos;show-modal&apos;)]/div[1]" />
+											</Selector>
+										</Selectors>
+										<Children>
+											<Child Name="Dismiss" Key="{D4E6CD11-4891-4175-A734-E9A1B5FCF438}">
+												<Selectors>
+													<Selector>
+														<Value Value="xpath=//div[contains(@class, &apos;show-modal&apos;)]//div[contains(@class, &apos;dismiss&apos;)]" />
+													</Selector>
+												</Selectors>
+											</Child>
+										</Children>
+									</Child>
+									<Child Name="addInfo_CustomFields" Key="{94E85BD2-2756-470A-9AA1-B0DED3443306}">
+										<Image FileName="-2095494484" Left="20" Top="529" Right="96" Bottom="551" />
+										<TypeInfo Item0="{7FBC4187-1287-4DE7-98C2-555019ED5BA1}" />
+										<Selectors>
+											<Selector>
+												<Value Value="#Msg_UDFs_btn" />
+											</Selector>
+											<Selector>
+												<Value Value="//button[contains(., &apos;Custom Fields&apos;)]" />
+											</Selector>
+										</Selectors>
+									</Child>
+									<Child Name="addInfo_Notes" Key="{3522AD6E-AA9B-4675-AF07-F08014992595}">
+										<Image FileName="-588595705" Left="683" Top="707" Right="723" Bottom="729" />
+										<TypeInfo Item0="{7FBC4187-1287-4DE7-98C2-555019ED5BA1}" />
+										<Selectors>
+											<Selector>
+												<Value Value="#PN_Notes_btn" />
+											</Selector>
+											<Selector>
+												<Value Value="//button[contains(., &apos;Notes&apos;)]" />
+											</Selector>
+										</Selectors>
+									</Child>
+									<Child Name="Attributes" Key="{F35D3ED1-B7F0-4435-B9D4-1FFC62034D55}">
+										<Image FileName="120119198" Left="22" Top="65" Right="891" Bottom="191" />
+										<Selectors>
+											<Selector>
+												<Value Value="xpath=//tbody/tr/td/div[contains(., &apos;Basic attributes&apos;)]" />
+											</Selector>
+											<Selector>
+												<Value Value="(//table)[15]" />
+											</Selector>
+										</Selectors>
+										<Children>
+											<Child Name="Department" Key="{B2009316-9B7A-48E2-8749-F06A19B2A6DF}">
+												<Image FileName="370705780" Left="120" Top="143" Right="198" Bottom="160" />
+												<TypeInfo Item0="{73CEC4A9-62A1-4E60-8B9D-5A21D9F91FBC}" />
+												<Selectors>
+													<Selector>
+														<Value Value="//select[@name=&apos;P_DEPARTMENT&apos;]" />
+													</Selector>
+													<Selector>
+														<Value Value="//select[@value=&apos;WD1&apos;]" />
+													</Selector>
+													<Selector>
+														<Value Value="//td/select[contains(@class, &apos;default&apos;)]" />
+													</Selector>
+													<Selector>
+														<Value Value="//tbody[@id=&apos;PN_Office_Dep_body&apos;]//td/select" />
+													</Selector>
+													<Selector>
+														<Value Value="//td/select" />
+													</Selector>
+												</Selectors>
+											</Child>
+											<Child Name="Mop" Key="{43A20CB9-74C1-47BC-BC47-4425A569DCE0}">
+												<Image FileName="-810569076" Left="387" Top="186" Right="507" Bottom="203" />
+												<TypeInfo Item0="{C4B7E01C-E691-4E27-BE68-E8509831FD74}" />
+												<Selectors>
+													<Selector>
+														<Value Value="//input[@name=&apos;P_DBT_MOP&apos;]" />
+													</Selector>
+													<Selector>
+														<Value Value="//input[@value=&apos;BOOK&apos;]" />
+													</Selector>
+													<Selector>
+														<Value Value="//td[4]/div/input[contains(@class, &apos;default&apos;)]" />
+													</Selector>
+													<Selector>
+														<Value Value="//tbody[@id=&apos;Misc11_body&apos;]//td//tr[3]/td[4]//input" />
+													</Selector>
+													<Selector>
+														<Value Value="//td[4]/div/input" />
+													</Selector>
+												</Selectors>
+											</Child>
+											<Child Name="Office" Key="{14CB532E-B444-4B79-A980-CEFEB63B5347}">
+												<Image FileName="-810569076" Left="120" Top="160" Right="198" Bottom="177" />
+												<TypeInfo Item0="{73CEC4A9-62A1-4E60-8B9D-5A21D9F91FBC}" />
+												<Selectors>
+													<Selector>
+														<Value Value="//select[@name=&apos;P_OFFICE&apos;]" />
+													</Selector>
+													<Selector>
+														<Value Value="//select[@value=&apos;US1&apos;]" />
+													</Selector>
+													<Selector>
+														<Value Value="//tr/td[2]/select[contains(@class, &apos;default&apos;)]" />
+													</Selector>
+													<Selector>
+														<Value Value="//tbody[@id=&apos;PN_Office_Dep_body&apos;]//td[2]/select" />
+													</Selector>
+													<Selector>
+														<Value Value="//tr/td[2]/select" />
+													</Selector>
+												</Selectors>
+											</Child>
+											<Child Name="PaySource" Key="{3EECF7A3-2DF4-45A8-B866-55ECDF98DB77}">
+												<Image FileName="828997351" Left="387" Top="210" Right="507" Bottom="227" />
+												<TypeInfo Item0="{C4B7E01C-E691-4E27-BE68-E8509831FD74}" />
+												<Selectors>
+													<Selector>
+														<Value Value="//tr[2]//table/tbody/tr/td/input[@name=&apos;P_PMNT_SRC&apos;]" />
+													</Selector>
+													<Selector>
+														<Value Value="//tr[2]//table/tbody/tr/td/input[@value=&apos;PORTAL&apos;]" />
+													</Selector>
+													<Selector>
+														<Value Value="//td[4]/input[contains(@class, &apos;default&apos;)]" />
+													</Selector>
+													<Selector>
+														<Value Value="//tbody[@id=&apos;Misc11_body&apos;]//td[4]/input" />
+													</Selector>
+													<Selector>
+														<Value Value="//tr[4]/td/input" />
+													</Selector>
+												</Selectors>
+											</Child>
+											<Child Name="Status" Key="{FB40592A-EDE0-49CF-8E4A-CE653C9ADA67}">
+												<Image FileName="-810569076" Left="120" Top="186" Right="300" Bottom="203" />
+												<TypeInfo Item0="{73CEC4A9-62A1-4E60-8B9D-5A21D9F91FBC}" />
+												<Selectors>
+													<Selector>
+														<Value Value="//select[@name=&apos;P_MSG_STS&apos;]" />
+													</Selector>
+													<Selector>
+														<Value Value="//select[@value=&apos;DUPEX&apos;]" />
+													</Selector>
+													<Selector>
+														<Value Value="//tr[3]/td[2]/select[contains(@class, &apos;default&apos;)]" />
+													</Selector>
+													<Selector>
+														<Value Value="//tbody[@id=&apos;Misc11_body&apos;]//tr[3]/td[2]/select" />
+													</Selector>
+													<Selector>
+														<Value Value="//tr[3]/td[2]/select" />
+													</Selector>
+												</Selectors>
+											</Child>
+										</Children>
+									</Child>
+									<Child Name="ref_Acct" Key="{1A59BA59-AD4A-47F4-AF67-4EAC767240E4}">
+										<Image FileName="-801393713" Left="103" Top="495" Right="354" Bottom="512" />
+										<TypeInfo Item0="{FA0E4BC7-C946-4A9A-BFD5-C17D5F31E29B}" />
+										<Selectors>
+											<Selector>
+												<Value Value="//tr[2]//tbody/tr/td/div/input[@name=&apos;P_DBT_ACCT_NB&apos;]" />
+											</Selector>
+											<Selector>
+												<Value Value="//tr[2]//tbody/tr/td/div/input[@value=&apos;013500010023398&apos;]" />
+											</Selector>
+											<Selector>
+												<Value Value="xpath=//input[@value=&apos;%gppAccount%&apos;]" />
+											</Selector>
+											<Selector>
+												<Value Value="//tr[4]//tbody/tr/td/div/input[contains(@class, &apos;default&apos;)]" />
+											</Selector>
+											<Selector>
+												<Value Value="//tbody[@id=&apos;PN_DEBIT_INFO_body&apos;]//td//tr[2]/td[2]//input" />
+											</Selector>
+											<Selector>
+												<Value Value="//tr[4]//tbody/tr/td/div/input" />
+											</Selector>
+										</Selectors>
+									</Child>
+									<Child Name="Errors" Key="{4C6C315C-4678-4AAD-9123-537A0078D2D9}">
+										<Image FileName="-104050450" Left="12" Top="634" Right="914" Bottom="786" />
+										<Selectors>
+											<Selector>
+												<Value Value="//iframe[@name=&apos;PAIN001.Error_Message&apos;]" />
+											</Selector>
+											<Selector>
+												<Value Value="//tr[4]/td/iframe[contains(@src, &apos;PopUpEindow.html&apos;)]" />
+											</Selector>
+											<Selector>
+												<Value Value="//iframe[contains(@class, &apos;innerHTML&apos;)]" />
+											</Selector>
+											<Selector>
+												<Value Value="//tbody[@id=&apos;PAIN001_body&apos;]//tr[4]/td/iframe" />
+											</Selector>
+											<Selector>
+												<Value Value="//tr[4]/td/iframe" />
+											</Selector>
+										</Selectors>
+										<Children>
+											<Child Name="Message" Key="{21E8B68E-B130-4500-BA68-671BD451EFE4}">
+												<Image FileName="637121387" Left="15" Top="688" Right="896" Bottom="703" />
+												<Selectors>
+													<Selector>
+														<Value Value="//div[@id=&apos;grdTable&apos;]//tr[3]/td" />
+													</Selector>
+													<Selector>
+														<Value Value="//tr[3]/td" />
+													</Selector>
+												</Selectors>
+											</Child>
+										</Children>
+									</Child>
+									<Child Name="Exit" Key="{A1E61727-2DCC-43E1-8D13-AD3C6FBC2FAD}">
+										<Image FileName="-211847875" Left="981" Top="173" Right="1081" Bottom="213" />
+										<TypeInfo Item0="{7FBC4187-1287-4DE7-98C2-555019ED5BA1}" />
+										<Selectors>
+											<Selector>
+												<Value Value="//button[@name=&apos;Close&apos;]" />
+											</Selector>
+											<Selector>
+												<Value Value="//button[.=&apos;Exit&apos;]" />
+											</Selector>
+										</Selectors>
+									</Child>
+									<Child Name="outMessage" Key="{639DA0D3-59BD-452C-B97D-4709461A24C5}">
+										<Image FileName="370705780" Left="471" Top="347" Right="901" Bottom="446" />
+										<Selectors>
+											<Selector>
+												<Value Value="//tbody[@id=&apos;PN_XML_INFO_body&apos;]//table" />
+											</Selector>
+										</Selectors>
+										<Children>
+											<Child Name="instructedAmt" Key="{F3E328AC-3FE1-42F7-8141-FF0BB174C445}">
+												<Image FileName="370705780" Left="561" Top="400" Right="681" Bottom="417" />
+												<TypeInfo Item0="{C4B7E01C-E691-4E27-BE68-E8509831FD74}" />
+												<Selectors>
+													<Selector>
+														<Value Value="//input[@name=&apos;X_INSTD_AMT&apos;]" />
+													</Selector>
+													<Selector>
+														<Value Value="//td[2]//table/tbody/tr[3]/td/input[@value=&apos;1.47&apos;]" />
+													</Selector>
+													<Selector>
+														<Value Value="//tbody[@id=&apos;PN_XML_INFO_body&apos;]//tr[3]/td/input" />
+													</Selector>
+												</Selectors>
+											</Child>
+											<Child Name="settlementAmt" Key="{B87C9CEC-89FC-408C-BC86-02B5527ECEC1}">
+												<Image FileName="370705780" Left="123" Top="370" Right="243" Bottom="387" />
+												<TypeInfo Item0="{C4B7E01C-E691-4E27-BE68-E8509831FD74}" />
+												<Selectors>
+													<Selector>
+														<Value Value="//tr//table/tbody/tr/td/input[@name=&apos;OX_STTLM_AMT&apos;]" />
+													</Selector>
+													<Selector>
+														<Value Value="//td//table/tbody/tr[2]/td/input[@value=&apos;1.47&apos;]" />
+													</Selector>
+													<Selector>
+														<Value Value="//tr[3]//table/tbody/tr/td/input[contains(@class, &apos;default&apos;)]" />
+													</Selector>
+													<Selector>
+														<Value Value="//tbody[@id=&apos;PN_XML_ORIG_INFO_body&apos;]//td[2]/input" />
+													</Selector>
+													<Selector>
+														<Value Value="//tr[3]//table/tbody/tr/td/input" />
+													</Selector>
+												</Selectors>
+											</Child>
+											<Child Name="settlementDate" Key="{93E51E21-F60A-44DF-89B5-1E6E067225DF}">
+												<Image FileName="340283632" Left="765" Top="370" Right="885" Bottom="387" />
+												<TypeInfo Item0="{C4B7E01C-E691-4E27-BE68-E8509831FD74}" />
+												<Selectors>
+													<Selector>
+														<Value Value="//input[@name=&apos;X_STTLM_DT_1B&apos;]" />
+													</Selector>
+													<Selector>
+														<Value Value="xpath=//td[2]//tbody/tr/td/div/input" />
+													</Selector>
+													<Selector>
+														<Value Value="//tbody[@id=&apos;PN_XML_INFO_body&apos;]//div/input" />
+													</Selector>
+												</Selectors>
+											</Child>
+											<Child Name="instructedCcy" Key="{B8B89FB7-4044-46F4-9F63-9A692CB8189E}">
+												<Image FileName="370705780" Left="123" Top="400" Right="243" Bottom="417" />
+												<TypeInfo Item0="{73CEC4A9-62A1-4E60-8B9D-5A21D9F91FBC}" />
+												<Selectors>
+													<Selector>
+														<Value Value="//input[@name=&apos;OX_INSTD_AMT&apos;]" />
+													</Selector>
+													<Selector>
+														<Value Value="//td//table/tbody/tr[3]/td/input[@value=&apos;1.47&apos;]" />
+													</Selector>
+													<Selector>
+														<Value Value="//tbody[@id=&apos;PN_XML_ORIG_INFO_body&apos;]//tr[3]/td/input" />
+													</Selector>
+												</Selectors>
+											</Child>
+										</Children>
+									</Child>
+									<Child Name="ref_MID" Key="{DE6550F8-601A-4850-8EF5-0F305B000624}">
+										<Image FileName="-1099568989" Left="518" Top="238" Right="634" Bottom="255" />
+										<TypeInfo Item0="{C4B7E01C-E691-4E27-BE68-E8509831FD74}" />
+										<Selectors>
+											<Selector>
+												<Value Value="//td/input[@name=&apos;P_MID&apos;]" />
+											</Selector>
+											<Selector>
+												<Value Value="xpath=//td[6]/input[@value=&apos;%gppPaymentId%&apos;]" />
+											</Selector>
+											<Selector>
+												<Value Value="//tbody[@id=&apos;PN_References_body&apos;]//tr[2]/td[6]/input" />
+											</Selector>
+										</Selectors>
+									</Child>
+									<Child Name="ref_OrigId" Key="{F928F687-E01A-47F7-A6FF-22208CA28AA5}">
+										<Image FileName="1156341143" Left="121" Top="238" Right="237" Bottom="255" />
+										<TypeInfo Item0="{C4B7E01C-E691-4E27-BE68-E8509831FD74}" />
+										<Selectors>
+											<Selector>
+												<Value Value="//input[@name=&apos;OX_INSTR_ID&apos;]" />
+											</Selector>
+											<Selector>
+												<Value Value="//td[2]/input[@value=&apos;659294&apos;]" />
+											</Selector>
+											<Selector>
+												<Value Value="//tbody[@id=&apos;PN_References_body&apos;]//tr[2]/td[2]/input" />
+											</Selector>
+										</Selectors>
+									</Child>
+									<Child Name="ref_PayId" Key="{98C642C5-6D2E-487D-8C41-21B76AD13535}">
+										<Image FileName="1156341143" Left="769" Top="257" Right="885" Bottom="274" />
+										<TypeInfo Item0="{C4B7E01C-E691-4E27-BE68-E8509831FD74}" />
+										<Selectors>
+											<Selector>
+												<Value Value="//input[@name=&apos;X_PMT_INF_ID&apos;]" />
+											</Selector>
+											<Selector>
+												<Value Value="//tr[3]/td/input[@value=&apos;M098A27047S96VZ2&apos;]" />
+											</Selector>
+											<Selector>
+												<Value Value="//tr[3]/td[8]/input[contains(@class, &apos;default&apos;)]" />
+											</Selector>
+											<Selector>
+												<Value Value="//tbody[@id=&apos;PN_References_body&apos;]//tr[3]/td[8]/input" />
+											</Selector>
+											<Selector>
+												<Value Value="//tr[3]/td[8]/input" />
+											</Selector>
+										</Selectors>
+									</Child>
+									<Child Name="ref_TransId" Key="{8EDD8C90-DDFB-45FF-B090-0583AE8F1651}">
+										<Image FileName="1156341143" Left="769" Top="238" Right="885" Bottom="255" />
+										<TypeInfo Item0="{C4B7E01C-E691-4E27-BE68-E8509831FD74}" />
+										<Selectors>
+											<Selector>
+												<Value Value="//input[@name=&apos;X_TX_ID&apos;]" />
+											</Selector>
+											<Selector>
+												<Value Value="//td[8]/input[@value=&apos;M098A27047S96VZ2&apos;]" />
+											</Selector>
+											<Selector>
+												<Value Value="//td[8]/input[contains(@class, &apos;default&apos;)]" />
+											</Selector>
+											<Selector>
+												<Value Value="//tbody[@id=&apos;PN_References_body&apos;]//tr[2]/td[8]/input" />
+											</Selector>
+											<Selector>
+												<Value Value="//td[8]/input" />
+											</Selector>
+										</Selectors>
+									</Child>
+								</Children>
+							</Child>
+						</Children>
+					</Child>
+				</Children>
+			</Child>
+		</Children>
+	</Nodes>
+	<LogicalNodes Name="Aliases" Owner="{BE401E45-B2D6-4FBA-931A-C2117D5C51AD}">
+		<Child Name="Browser" Owner="{252C0CFC-41BD-48C8-8262-710BB6D30854}">
+			<Child Name="gppFinastra_Main" Owner="{7D53596D-E9DC-4337-B21D-BC5F41E2DA14}">
+				<Child Name="Auth" Owner="{D3EDCFCD-9D40-4622-B493-6E2E171EB7C0}">
+					<Child Name="Password" Owner="{48749AFB-1F87-4A66-B39F-D69FB277A1E4}" />
+					<Child Name="Login" Owner="{24044482-78E5-459A-B804-8093DB8CBAFA}" />
+					<Child Name="User" Owner="{69762A8E-A3A4-4A78-AC19-63A71AF7E1E7}" />
+				</Child>
+				<Child Name="Nav" Owner="{BB664CFD-C82D-499A-AA94-22F1A79FD5BC}">
+					<Child Name="Select" Owner="{2626CD13-121E-46A7-9FED-A60F01AE9118}">
+						<Child Name="Logout" Owner="{D0D2455E-DCF5-4322-AEC7-7DC7F6E9A529}" />
+						<Child Name="Settings" Owner="{8472BDD0-4CCD-4A0F-86D3-79D06799160D}">
+							<Child Name="Localization" Owner="{94F1242F-072B-41B7-9656-C9816FB168E3}" />
+							<Child Name="Password" Owner="{3C4807DE-B607-4783-82BB-F1DA50049657}" />
+							<Child Name="Display" Owner="{42DF62C5-4FA4-49BF-B7F5-C7025B476755}" />
+							<Child Name="Close" Owner="{F2CC528D-BC66-4FA9-8673-CA51709C2D75}" />
+						</Child>
+					</Child>
+				</Child>
+				<Child Name="Search" Owner="{F27454F7-D30F-493C-A97A-A55FEEAE391F}">
+					<Child Name="Icon" Owner="{057E4F73-2ACE-442F-9AE2-7EAA1DBA9CCF}" />
+					<Child Name="Input" Owner="{685A8397-2B08-4FD7-A1B3-73609CF51D86}" />
+					<Child Name="Payment" Owner="{71D8629F-62D8-46FB-BC38-1BDB2FC3298C}" />
+					<Child Name="Result" Owner="{E4A91E0E-458C-4A2B-8A92-2C7605051172}" />
+				</Child>
+				<Child Name="tourClose" Owner="{65BCB3A9-49CD-4EDF-A784-206E037C7702}" />
+				<Child Name="tourGotIt" Owner="{BC23F836-B7E6-425F-96AF-322B949A5602}" />
+				<Child Name="tourOk" Owner="{AB6DCAE1-E674-411E-A03A-96DA6FDD9632}" />
+			</Child>
+			<Child Name="gppFinastra_Transaction" Owner="{C98FC6C8-CC86-43F6-9894-6E1E9B6E0424}">
+				<Child Name="Nav" Owner="{50CEF6D8-2D44-42EC-ABDA-E1D42CD5A967}">
+					<Child Name="Accounts" Owner="{0EF9A8AF-143A-4AEA-AED6-ABE5D2B89C8C}" />
+					<Child Name="LegalEntities" Owner="{D6AE1086-1F57-42A0-918E-93B10E36E10D}" />
+					<Child Name="Users" Owner="{21D2AFEC-8DF6-46A2-AC27-31ACEDD4D76C}" />
+					<Child Name="Profiles" Owner="{A0702B74-FAB3-4A0C-8B52-C1623EE4D906}" />
+					<Child Name="Approvals" Owner="{11FAC29C-12B3-4F86-B7DC-37BEE9C12F97}" />
+					<Child Name="Settings" Owner="{078F32D0-6315-4BEC-98AC-521071E416D9}" />
+					<Child Name="TradingDesk" Owner="{4B0DF4F3-EF42-4E66-9E1E-DFBDD4F87FDA}" />
+				</Child>
+				<Child Name="Message" Owner="{D6DD657D-7AB4-410E-AF93-2D1AA774DFE1}">
+					<Child Name="Dismiss" Owner="{D4E6CD11-4891-4175-A734-E9A1B5FCF438}" />
+				</Child>
+				<Child Name="addInfo_CustomFields" Owner="{94E85BD2-2756-470A-9AA1-B0DED3443306}" />
+				<Child Name="addInfo_Notes" Owner="{3522AD6E-AA9B-4675-AF07-F08014992595}" />
+				<Child Name="Attributes" Owner="{F35D3ED1-B7F0-4435-B9D4-1FFC62034D55}">
+					<Child Name="Department" Owner="{B2009316-9B7A-48E2-8749-F06A19B2A6DF}" />
+					<Child Name="Mop" Owner="{43A20CB9-74C1-47BC-BC47-4425A569DCE0}" />
+					<Child Name="Office" Owner="{14CB532E-B444-4B79-A980-CEFEB63B5347}" />
+					<Child Name="PaySource" Owner="{3EECF7A3-2DF4-45A8-B866-55ECDF98DB77}" />
+					<Child Name="Status" Owner="{FB40592A-EDE0-49CF-8E4A-CE653C9ADA67}" />
+				</Child>
+				<Child Name="ref_Acct" Owner="{1A59BA59-AD4A-47F4-AF67-4EAC767240E4}" />
+				<Child Name="Errors" Owner="{4C6C315C-4678-4AAD-9123-537A0078D2D9}">
+					<Child Name="Message" Owner="{21E8B68E-B130-4500-BA68-671BD451EFE4}" />
+				</Child>
+				<Child Name="Exit" Owner="{A1E61727-2DCC-43E1-8D13-AD3C6FBC2FAD}" />
+				<Child Name="outMessage" Owner="{639DA0D3-59BD-452C-B97D-4709461A24C5}">
+					<Child Name="instructedAmt" Owner="{F3E328AC-3FE1-42F7-8141-FF0BB174C445}" />
+					<Child Name="settlementAmt" Owner="{B87C9CEC-89FC-408C-BC86-02B5527ECEC1}" />
+					<Child Name="settlementDate" Owner="{93E51E21-F60A-44DF-89B5-1E6E067225DF}" />
+					<Child Name="instructedCcy" Owner="{B8B89FB7-4044-46F4-9F63-9A692CB8189E}" />
+				</Child>
+				<Child Name="ref_MID" Owner="{DE6550F8-601A-4850-8EF5-0F305B000624}" />
+				<Child Name="ref_OrigId" Owner="{F928F687-E01A-47F7-A6FF-22208CA28AA5}" />
+				<Child Name="ref_PayId" Owner="{98C642C5-6D2E-487D-8C41-21B76AD13535}" />
+				<Child Name="ref_TransId" Owner="{8EDD8C90-DDFB-45FF-B090-0583AE8F1651}" />
+			</Child>
+		</Child>
+	</LogicalNodes>
+</Root>

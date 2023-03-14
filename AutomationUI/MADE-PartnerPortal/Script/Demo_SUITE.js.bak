@@ -1,0 +1,43 @@
+﻿//USEUNIT CommonMAIN
+//USEUNIT DemoMAIN
+
+function firstTest_DeleteOldLogs() {
+  CommonMAIN.verifyFiles_MHT();
+}
+
+
+function test_LogMessage1() {
+  Log.Checkpoint("Test1");
+}
+
+function test_LogMessage2() {
+  Log.Checkpoint("Test2");
+}
+
+function test_LogMessage3() {
+  Log.Checkpoint("Test3");
+}
+
+function test_LogMessage4() {
+  Log.Checkpoint("Test4");
+}
+
+function test_LogMessage5() {
+  Log.Checkpoint("Test5");
+}
+
+function EventControls_OnStopTest(Sender)
+{
+  var foundFiles, aFile;
+  var DateTime = aqConvert.DateTimeToFormatStr(aqDateTime.Today(), aqString.Replace("%m/%d/%y", "/", "-"));
+  var fName = Project.Path + "MHT_Files\\Summary-" + DateTime + ".mht";
+  foundFiles = aqFileSystem.FindFiles(Project.Path + "MHT_Files\\", "*.mht");
+  Log.SaveResultsAs(fName, lsMHT, true, 0);
+  
+  if (foundFiles != null) {
+    Log.Checkpoint("Summary Report Saved - " + Project.Path + "MHT_Files\\");
+  }
+  else {
+    Log.Message("No files were found.");
+  }  
+}

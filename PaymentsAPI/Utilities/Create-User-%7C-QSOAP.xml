@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<con:testCase failOnError="true" failTestCaseOnErrors="true" id="00000000-0000-0000-0000-000000000000" keepSession="false" maxResults="0" name="Create User | QSOAP" searchProperties="true" xmlns:con="http://eviware.com/soapui/config"><con:settings><con:setting id="00000000-0000-0000-0000-000000000000fileName">Create-User-%7C-QSOAP</con:setting></con:settings><con:testStep id="00000000-0000-0000-0000-000000000000" name="Properties" type="properties"><con:settings/><con:config xsi:type="con:PropertiesStep" saveFirst="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:properties><con:property><con:name>DEPARTMENT</con:name><con:value>...</con:value></con:property><con:property><con:name>OFFICE</con:name><con:value>***</con:value></con:property><con:property><con:name>USER</con:name><con:value>SRYAN</con:value></con:property><con:property><con:name>AUTH_TYPE</con:name><con:value>D</con:value></con:property><con:property><con:name>EMP_TYPE</con:name><con:value>P</con:value></con:property><con:property><con:name>EMAIL_ADDRESS</con:name><con:value/></con:property><con:property><con:name>LANG</con:name><con:value>ENGLISH</con:value></con:property><con:property><con:name>U_ENT_NAME</con:name><con:value>QSOAP</con:value></con:property><con:property><con:name>LOGGED_IN</con:name><con:value>0</con:value></con:property><con:property><con:name>SUSPENDED</con:name><con:value>0</con:value></con:property><con:property><con:name>V_USERPASSWD</con:name><con:value>ABC123</con:value></con:property><con:property><con:name>USERPASSWD</con:name><con:value>ABC123</con:value></con:property><con:property><con:name>FIRST_NAME</con:name><con:value>TEST</con:value></con:property><con:property><con:name>USER_NAME</con:name><con:value>TEST</con:value></con:property></con:properties></con:config></con:testStep><con:testStep id="00000000-0000-0000-0000-000000000000" name="Create User" type="request"><con:settings/><con:config xsi:type="con:RequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:interface>ProfileActionsServiceSoap12Binding</con:interface><con:operation>profileSave</con:operation><con:request id="00000000-0000-0000-0000-000000000000" name="Create User" outgoingWss="Submit"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting></con:settings><con:encoding>UTF-8</con:encoding><con:endpoint>${#Project#Active_URL}/gppold/services/ProfileActionsService</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://www.w3.org/2003/05/soap-envelope" xmlns:q0="http://fundtech.com/SCL/ProfileActionsService" xmlns:q1="http://fundtech.com/SCL/StaticDataCommonTypes" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+<soapenv:Header>
+<q2:FndtHeader xmlns:q2="http://fundtech.com/SCL/CommonTypes">
+<q2:credentials>
+<q2:UserID>${#Project#SecurityUser}</q2:UserID>
+<q2:Role>ALL1</q2:Role>
+</q2:credentials>
+</q2:FndtHeader>
+</soapenv:Header>
+<soapenv:Body>
+<q0:ProfileSaveRequest>
+<q1:header>
+<q1:UserID>${#Project#SecurityUser}</q1:UserID>
+<q1:Role>ALL1</q1:Role>
+</q1:header>
+<q0:profileID>3</q0:profileID>
+<q0:effectiveDate>${#Project#Date}</q0:effectiveDate>
+<q0:profileRecordUniqueID>${Properties#USER}</q0:profileRecordUniqueID>
+<q0:record>
+<q1:field dataType="" name="USERS.DEPARTMENT">${Properties#DEPARTMENT}</q1:field>
+<q1:field dataType="" name="USERS.OFFICE">${Properties#OFFICE}</q1:field>
+<q1:field dataType="" name="USERS.USER_ID">${Properties#USER}</q1:field>
+<q1:field dataType="" name="USERS.AUTH_TYPE">${Properties#AUTH_TYPE}</q1:field>
+<!--Note: D = Default-->
+<q1:field dataType="" name="USERS.EMP_TYPE">${Properties#EMP_TYPE}</q1:field>
+<q1:field dataType="" name="USERS.EMAIL_ADDRESS">${Properties#EMAIL_ADDRESS}</q1:field>
+<q1:field dataType="" name="USERS.LANG">${Properties#LANG}</q1:field>
+<q1:field dataType="" name="USERS.U_ENT_NAME">${Properties#U_ENT_NAME}</q1:field>
+<q1:field dataType="" name="USERS.LOGGED_IN">${Properties#LOGGED_IN}</q1:field>
+<q1:field dataType="" name="USERS.SUSPENDED">${Properties#SUSPENDED}</q1:field>
+<q1:field dataType="" name="USERS.V_USERPASSWD">${Properties#V_USERPASSWD}</q1:field>
+<q1:field dataType="" name="USERS.USERPASSWD">${Properties#USERPASSWD}</q1:field>
+<q1:field dataType="" name="USERS.FIRST_NAME">${Properties#FIRST_NAME}</q1:field>
+<q1:field dataType="" name="USERS.USER_NAME">${Properties#USER_NAME}</q1:field>
+
+
+<!--Note: U.ENT_NAME = Role-->
+</q0:record>
+</q0:ProfileSaveRequest>
+</soapenv:Body>
+</soapenv:Envelope>]]></con:request><con:assertion id="00000000-0000-0000-0000-000000000000" type="SOAP Response"/><con:credentials><con:selectedAuthProfile>Basic</con:selectedAuthProfile><con:addedBasicAuthenticationTypes>Basic</con:addedBasicAuthenticationTypes><con:authType>Global HTTP Settings</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:wsaConfig mustUnderstand="NONE" version="200508"/><con:wsrmConfig version="1.2"/><con:environmentSpec><con:entry environmentId="00000000-0000-0000-0000-000000000000"><con:authProfile>Basic</con:authProfile></con:entry><con:entry environmentId="00000000-0000-0000-0000-000000000000"><con:authProfile>Inherit From Parent</con:authProfile></con:entry></con:environmentSpec></con:request></con:config></con:testStep><con:testStep id="00000000-0000-0000-0000-000000000000" name="Approve User" type="request"><con:settings/><con:config xsi:type="con:RequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:interface>ProfileActionsServiceSoap12Binding</con:interface><con:operation>profileSave</con:operation><con:request id="00000000-0000-0000-0000-000000000000" name="Approve User" outgoingWss="Submit"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting></con:settings><con:encoding>UTF-8</con:encoding><con:endpoint>${#Project#Active_URL}/gppold/services/ProfileActionsService</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://www.w3.org/2003/05/soap-envelope" xmlns:q0="http://fundtech.com/SCL/ProfileActionsService" xmlns:q1="http://fundtech.com/SCL/StaticDataCommonTypes" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+<soapenv:Header>
+<q2:FndtHeader xmlns:q2="http://fundtech.com/SCL/CommonTypes">
+<q2:credentials>
+<q2:UserID>${#Project#SecurityUser}</q2:UserID>
+<q2:Role>ALL1</q2:Role>
+</q2:credentials>
+</q2:FndtHeader>
+</soapenv:Header>
+<soapenv:Body>
+<q0:ProfileApproveRequest>
+<q1:header>
+<q1:UserID>${#Project#SecurityUser}</q1:UserID>
+<q1:Role>ALL1</q1:Role>
+</q1:header> 
+<q0:profileID>3</q0:profileID>
+<q0:effectiveDate>${#Project#Date}</q0:effectiveDate>
+<q0:profileRecordUniqueID>${Properties#USER}</q0:profileRecordUniqueID>
+</q0:ProfileApproveRequest>
+</soapenv:Body>
+</soapenv:Envelope>]]></con:request><con:assertion id="00000000-0000-0000-0000-000000000000" type="SOAP Response"/><con:credentials><con:selectedAuthProfile>Basic</con:selectedAuthProfile><con:addedBasicAuthenticationTypes>Basic</con:addedBasicAuthenticationTypes><con:authType>Global HTTP Settings</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:wsaConfig mustUnderstand="NONE" version="200508"/><con:wsrmConfig version="1.2"/><con:environmentSpec><con:entry environmentId="00000000-0000-0000-0000-000000000000"><con:authProfile>Basic</con:authProfile></con:entry><con:entry environmentId="00000000-0000-0000-0000-000000000000"><con:authProfile>Inherit From Parent</con:authProfile></con:entry></con:environmentSpec></con:request></con:config></con:testStep><con:testStep id="00000000-0000-0000-0000-000000000000" name="Apply Changes" type="request"><con:settings/><con:config xsi:type="con:RequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:interface>ProfileListServiceSoap12Binding</con:interface><con:operation>getProfileList</con:operation><con:request id="00000000-0000-0000-0000-000000000000" incomingWss="" name="Apply Changes" outgoingWss="Submit" sslKeystore="" timeout="" useWsAddressing="false" useWsReliableMessaging="false" wssPasswordType=""><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting></con:settings><con:encoding>UTF-8</con:encoding><con:endpoint>${#Project#Active_URL}/gppold/services/ApplyChangesService</con:endpoint><con:request><![CDATA[<soap:Envelope xmlns:soap="http://www.w3.org/2003/05/soap-envelope" xmlns:app="http://fundtech.com/SCL/ApplyChangesService" xmlns:stat="http://fundtech.com/SCL/StaticDataCommonTypes">
+     <soap:Header>
+    <q2:FndtHeader xmlns:q2="http://fundtech.com/SCL/CommonTypes">
+      <q2:credentials>
+        <q2:UserID>${#Project#SecurityUser}</q2:UserID>
+        <q2:Role>ALL1</q2:Role>
+      </q2:credentials>
+    </q2:FndtHeader>
+  </soap:Header>
+   <soap:Body>
+      <app:ApplyChangesRequest>
+         <!--Optional:-->
+         <stat:header>
+            <stat:UserID>${#Project#SecurityUser}</stat:UserID>
+         </stat:header>
+         <app:effectiveDate>2022-05-01</app:effectiveDate>
+         <!--Optional:-->
+			<app:fullmode>1</app:fullmode>
+      </app:ApplyChangesRequest>
+   </soap:Body>
+</soap:Envelope>]]></con:request><con:assertion id="00000000-0000-0000-0000-000000000000" name="SOAP Response" type="SOAP Response"/><con:credentials><con:selectedAuthProfile>Basic</con:selectedAuthProfile><con:addedBasicAuthenticationTypes>Basic</con:addedBasicAuthenticationTypes><con:authType>Global HTTP Settings</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:wsaConfig action="http://fundtech.com/SCL/internal/ProfileListService/ProfileListServicePortType/getProfileListRequest" mustUnderstand="NONE" version="200508"/><con:wsrmConfig version="1.2"/><con:environmentSpec><con:entry environmentId="00000000-0000-0000-0000-000000000000"><con:authProfile>Basic</con:authProfile></con:entry><con:entry environmentId="00000000-0000-0000-0000-000000000000"><con:authProfile>Inherit From Parent</con:authProfile></con:entry></con:environmentSpec></con:request></con:config></con:testStep><con:properties/><con:reportParameters/><con:environmentSpec><con:entry environmentId="00000000-0000-0000-0000-000000000000"><con:authProfile>Inherit From Parent</con:authProfile></con:entry><con:entry environmentId="00000000-0000-0000-0000-000000000000"><con:authProfile>Inherit From Parent</con:authProfile></con:entry></con:environmentSpec></con:testCase>

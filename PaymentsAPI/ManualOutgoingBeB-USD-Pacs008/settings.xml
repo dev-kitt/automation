@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<con:testSuite id="00000000-0000-0000-0000-000000000000" name="Manual | Outgoing | BeB | USD | Pacs008" xmlns:con="http://eviware.com/soapui/config"><con:settings><con:setting id="00000000-0000-0000-0000-000000000000fileName">Manual-%7C-Outgoing-%7C-BeB-%7C-USD-%7C-Pacs008</con:setting></con:settings><con:runType>SEQUENTIAL</con:runType><con:properties><con:property><con:name>Source</con:name><con:value>FEEDER_BEB</con:value></con:property><con:property><con:name>Date</con:name><con:value>${#Project#Date}</con:value></con:property><con:property><con:name>Date -2</con:name><con:value>${#Project#Date-2}</con:value></con:property><con:property><con:name>FinalStatus</con:name><con:value>WAIT_ACK</con:value></con:property><con:property><con:name>Msg_Type</con:name><con:value>FED_10</con:value></con:property><con:property><con:name>Msg_Type_Pacs</con:name><con:value>Pacs_008</con:value></con:property><con:property><con:name>Date+1</con:name><con:value>${#Project#Date+1}</con:value></con:property></con:properties><con:setupScript/><con:tearDownScript>def groovyUtils = new com.eviware.soapui.support.GroovyUtils(context) 
+def dataFolder = groovyUtils.projectPath
+def failedTestCases = 0
+def succeedTestCases = 0
+def totalTestCases = 0
+def testCaseFailed = ""
+def testCaseSucceed = ""
+def date = new Date()
+def folderTime = date.format("yyyy-MM-dd HH-mm-ss")
+def hotelId = context.getProperty('hotelid')
+def hotelname = context.getProperty('hotelname')
+def hoteltype = context.getProperty('hoteltype')
+//def propertyValues = ""
+//def correlationid = messageExchange.modelItem.testStep.testCase.testSuite.Project.namegetPropertyValue("correlationid")
+//Create a folder directory for the responses
+RootResultFolder = dataFolder + "\\Test Reports" + "\\xxx_WebAPI - " + folderTime + "\\"
+CreateResultFolder = new File(RootResultFolder)
+CreateResultFolder.mkdir()
+
+//context.setProperty("RootResultFolder", RootResultFolder)
+
+def fileName = "WebAPI Test Report.txt"
+def rootFolder = RootResultFolder + fileName 
+def logFile = new File(rootFolder)
+
+
+
+if(logFile.exists())
+{
+
+ log.info("Error a file named " + fileName + "already exisits")
+}
+    else
+{
+runner.results.each { testCaseResult ->
+    def name = testCaseResult.testCase.name
+    totalTestCases++
+    if(testCaseResult.status.toString() == 'FAILED'){
+        failedTestCases ++
+        testCaseFailed += "- $name - HAS FAILED \n\n"
+       //propertyValues += "hotelid - $hotelid, hotelname - $hotelname, hoteltype - $hoteltype \n\n"
+        testCaseResult.results.each{ testStepResults ->
+            testStepResults.messages.each() { msg -> log.info msg } 
+        }
+    }else{
+        succeedTestCases ++
+        testCaseSucceed += "- $name - SUCCEED \n\n"
+        testCaseResult.results.each{ testStepResults ->
+        testStepResults.messages.each() { msg -> log.info msg } 
+        }
+    }
+}
+}
+
+
+logFile.write   "TOTAL TEST CASES SUCCEED: $succeedTestCases of $totalTestCases" + "\n\n" +
+            testCaseSucceed + "---\n\n" +
+            "TOTAL TEST CASES FAILED: $failedTestCases of $totalTestCases" + "\n\n" +
+            testCaseFailed + "\n\n"</con:tearDownScript><con:reportParameters/><con:environmentSpec><con:entry environmentId="00000000-0000-0000-0000-000000000000"><con:authProfile>Inherit From Parent</con:authProfile></con:entry><con:entry environmentId="00000000-0000-0000-0000-000000000000"><con:authProfile>Inherit From Parent</con:authProfile></con:entry></con:environmentSpec></con:testSuite>

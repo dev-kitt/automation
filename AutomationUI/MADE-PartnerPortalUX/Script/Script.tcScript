@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Root signature="{9252F941-DB23-4FCA-AA50-858B33BB4A19}" version="11.40">
+	<children>
+		<folder name="Bdd">
+			<child name="bddAuth" key="{E574E532-E70D-4418-9DDC-1F9BD67C90E7}" path="bddAuth.js" />
+			<child name="bddPayments" key="{BE05C1D5-E8A0-4377-AC64-FFAC265DD5EA}" path="bddPayments.js" />
+			<child name="bddSecurity" key="{A5250F95-7E3C-4220-B445-7941ADDBDC9C}" path="bddSecurity.js" />
+		</folder>
+		<folder name="Common">
+			<child name="Data" key="{697E05FD-A79A-413C-B05D-88D9187936B5}" path="Data.js" />
+			<child name="Main" key="{630D6008-4C27-4F2B-AAF7-C22DDC57AA7C}" path="Main.js" />
+			<child name="Sql" key="{82F370DC-5BEF-4B33-8102-0E3CA6DBCFD1}" path="Sql.js" />
+			<child name="Actions" key="{6DD45559-0111-4706-904A-8F45425BD76D}" path="Actions.js" />
+			<child name="Auth" key="{C827C26F-6E08-4B47-B646-060688FC160B}" path="Auth.js" />
+		</folder>
+		<folder name="TestSuites">
+			<folder name="Demo">
+				<child name="Demo" key="{781AA4FA-686E-4ABD-9641-0480FE85F4DC}" path="Demo.js" />
+			</folder>
+			<child name="RegressionSUITE" key="{E1414140-3825-44AD-806D-7308640D9BC3}" path="RegressionSUITE.js" />
+		</folder>
+		<folder name="Portal" />
+		<folder name="BackOffice" />
+		<folder name="Data">
+			<child name="Driver" key="{DA327F2B-5E3B-4F37-BDB7-D88CE6B20F0B}" path="Driver.js" />
+		</folder>
+		<folder name="Events">
+			<child name="onStart" key="{4A353FC2-9AFF-49D5-85FC-B9A05DECBEF5}" path="onStart.js" />
+			<child name="onStop" key="{2ED237D1-FD8A-4C13-A865-7A4F3E43A56C}" path="onStop.js" />
+			<child name="onLog" key="{4E6FE5A3-A71E-45A9-AC76-ABDF13D92531}" path="onLog.js" />
+		</folder>
+	</children>
+</Root>

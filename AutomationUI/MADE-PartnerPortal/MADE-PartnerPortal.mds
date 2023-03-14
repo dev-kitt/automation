@@ -1,0 +1,1813 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Root signature="{362A8EE5-675E-43A9-869D-06ECE80B0CB4}" version="15.0">
+	<children>
+		<child name="Script" key="{887A36E8-096E-4D93-B1B2-4B17D630D300}" type="Script" typeId="{9252F941-DB23-4FCA-AA50-858B33BB4A19}" pluginName="Script" path="Script\Script.tcScript" />
+		<child name="UserForms" key="{11F2094C-D196-4A80-B0F2-AFE80D0EBBCC}" type="User Forms" typeId="{1C914193-A452-48E8-A8FD-BCA13ACFF263}" pluginName="User Forms" path="UserForms\UserForms.tcUsrFms" />
+		<child name="Stores" key="{E322BFC8-A8FB-4814-8F0C-9A3FA28DA9BE}" type="Stores" typeId="{5238AF17-5FE2-48FF-8BCC-9803A975A4F4}" pluginName="Stores" path="Stores\Stores.tcStores" />
+		<child name="Events" key="{9E8EED91-C391-49B0-A381-50DEB010EE4F}" type="Events" typeId="{E7ABA87F-E873-4452-9921-6F4BAAEB2BCC}" pluginName="" path="Events\Events.tcAX" />
+	</children>
+	<config language="{90F89436-9452-4F95-9882-6B5210079F13}" />
+	<testItems key="{F62F17A8-A7D3-4FAA-ACA7-84E8DC0582B1}" version="14">
+		<children>
+			<testItem name="SetEnvironment" key="{6F1B22CD-0F23-4DBE-887F-20922A4263C3}" group="True" parallel="False" enabled="True" testMoniker="" count="1" timeout="0" stopOnError="3" stopOnException="2" description="" tmsData="" testCase="True">
+				<testParameters />
+				<children>
+					<testItem name="SetQAEnvironment" key="{DDFABF90-BD12-44AF-90FE-EFF66AEDCC0D}" group="False" parallel="False" enabled="True" testMoniker="{C206FF81-CFCC-4884-A88C-D9E657EAB6CA}setEnvironment" count="1" timeout="0" stopOnError="4" stopOnException="1" description="Set Test Automation Runtime Environment - QA" tmsData="" testCase="True">
+						<testParameters>
+							<param0 name="envt" type="3" localVarName="" varType="8" value="QA" />
+						</testParameters>
+						<environments activeCloud="CBT" />
+						<children />
+					</testItem>
+					<testItem name="SetSTGEnvironment" key="{028EC6F0-FEC3-4F73-97AF-DB30CE3F5BCD}" group="False" parallel="False" enabled="True" testMoniker="{C206FF81-CFCC-4884-A88C-D9E657EAB6CA}setEnvironment" count="1" timeout="0" stopOnError="4" stopOnException="1" description="Outbound Trade - To 3rd Party - Happy" tmsData="" testCase="True">
+						<testParameters>
+							<param0 name="envt" type="3" localVarName="" varType="8" value="STG" />
+						</testParameters>
+						<environments activeCloud="CBT" />
+						<children />
+					</testItem>
+				</children>
+			</testItem>
+			<testItem name="Profile_Suite" key="{31527B3E-AB91-4E4C-9DAD-8D1C05B38902}" group="True" parallel="False" enabled="True" testMoniker="" count="1" timeout="0" stopOnError="3" stopOnException="2" description="" tmsData="" testCase="True">
+				<testParameters />
+				<children>
+					<testItem name="profSuiteLogin" key="{20F7E383-38CA-4140-A694-C1A6302FBBA9}" group="False" parallel="False" enabled="True" testMoniker="{A618D154-CF97-498A-B7A0-97A5FF2957E2}profSuiteLogin" count="1" timeout="0" stopOnError="2" stopOnException="2" description="Back Office Login as BOA" tmsData="" testCase="True">
+						<testParameters />
+						<environments activeCloud="CBT" />
+						<children />
+					</testItem>
+					<testItem name="TestCase14964" key="{6D6D50AC-28C7-45C1-9FA1-A5B74F8AEB23}" group="False" parallel="False" enabled="True" testMoniker="{A618D154-CF97-498A-B7A0-97A5FF2957E2}testCase_14964" count="1" timeout="0" stopOnError="2" stopOnException="2" description="Profile: Role Permission - Admin User" tmsData="" testCase="True">
+						<testParameters />
+						<environments activeCloud="CBT" />
+						<children />
+					</testItem>
+					<testItem name="TestCase14965" key="{76D390AD-25BA-4570-82B8-195522E2C28D}" group="False" parallel="False" enabled="True" testMoniker="{A618D154-CF97-498A-B7A0-97A5FF2957E2}testCase_14965" count="1" timeout="0" stopOnError="2" stopOnException="2" description="Profile: Role Permission - Admin Password" tmsData="" testCase="True">
+						<testParameters />
+						<environments activeCloud="CBT" />
+						<children />
+					</testItem>
+					<testItem name="TestCase14972" key="{A4F9CA13-6C29-4D94-8352-11343FA9FE6B}" group="False" parallel="False" enabled="True" testMoniker="{A618D154-CF97-498A-B7A0-97A5FF2957E2}testCase_14972" count="1" timeout="0" stopOnError="2" stopOnException="2" description="Profile: Role Permission - User" tmsData="" testCase="True">
+						<testParameters />
+						<environments activeCloud="CBT" />
+						<children />
+					</testItem>
+					<testItem name="TestCase14973" key="{444581C1-9C11-4F0D-A76F-01C108A8D108}" group="False" parallel="False" enabled="True" testMoniker="{A618D154-CF97-498A-B7A0-97A5FF2957E2}testCase_14973" count="1" timeout="0" stopOnError="2" stopOnException="2" description="Profile: Role Permission - Add User" tmsData="" testCase="True">
+						<testParameters />
+						<environments activeCloud="CBT" />
+						<children />
+					</testItem>
+					<testItem name="TestCase14974" key="{37F6D5CF-020D-44AC-A8FD-07124D89621B}" group="False" parallel="False" enabled="True" testMoniker="{A618D154-CF97-498A-B7A0-97A5FF2957E2}testCase_14974" count="1" timeout="0" stopOnError="2" stopOnException="2" description="Profile: Role Permission - Add BO User" tmsData="" testCase="True">
+						<testParameters />
+						<environments activeCloud="CBT" />
+						<children />
+					</testItem>
+					<testItem name="TestCase14975" key="{FBF4C6EE-F5A4-40FC-88CC-EE25BEB19986}" group="False" parallel="False" enabled="True" testMoniker="{A618D154-CF97-498A-B7A0-97A5FF2957E2}testCase_14975" count="1" timeout="0" stopOnError="2" stopOnException="2" description="Profile: Role Permission - Add Account" tmsData="" testCase="True">
+						<testParameters />
+						<environments activeCloud="CBT" />
+						<children />
+					</testItem>
+					<testItem name="TestCase14976" key="{789B5B74-8157-4919-93D0-DF1CD69D5289}" group="False" parallel="False" enabled="True" testMoniker="{A618D154-CF97-498A-B7A0-97A5FF2957E2}testCase_14976" count="1" timeout="0" stopOnError="2" stopOnException="2" description="Profile: Role Permission - Trader" tmsData="" testCase="True">
+						<testParameters />
+						<environments activeCloud="CBT" />
+						<children />
+					</testItem>
+					<testItem name="TestCase14977" key="{20113390-7752-461A-80DD-F0808AC63F64}" group="False" parallel="False" enabled="True" testMoniker="{A618D154-CF97-498A-B7A0-97A5FF2957E2}testCase_14977" count="1" timeout="0" stopOnError="2" stopOnException="2" description="Profile: Role Permission - Super BO User" tmsData="" testCase="True">
+						<testParameters />
+						<environments activeCloud="CBT" />
+						<children />
+					</testItem>
+					<testItem name="TestCase14978" key="{AE03FF25-6CBE-4D41-8D55-3747114E4061}" group="False" parallel="False" enabled="True" testMoniker="{A618D154-CF97-498A-B7A0-97A5FF2957E2}testCase_14978" count="1" timeout="0" stopOnError="2" stopOnException="2" description="Profile: Role Permission - BO User" tmsData="" testCase="True">
+						<testParameters />
+						<environments activeCloud="CBT" />
+						<children />
+					</testItem>
+					<testItem name="TestCase14979" key="{5645FE5A-B14B-4333-A1EE-F7D50934B52B}" group="False" parallel="False" enabled="True" testMoniker="{A618D154-CF97-498A-B7A0-97A5FF2957E2}testCase_14979" count="1" timeout="0" stopOnError="2" stopOnException="2" description="Profile: Role Permission - FO User" tmsData="" testCase="True">
+						<testParameters />
+						<environments activeCloud="CBT" />
+						<children />
+					</testItem>
+					<testItem name="TestCase14992" key="{E75AB08B-B07E-4AA9-9D97-3C2929F9D437}" group="False" parallel="False" enabled="True" testMoniker="{A618D154-CF97-498A-B7A0-97A5FF2957E2}testCase_14992" count="1" timeout="0" stopOnError="2" stopOnException="2" description="Profile: New Profile - Button Permissions" tmsData="" testCase="True">
+						<testParameters />
+						<environments activeCloud="CBT" />
+						<children />
+					</testItem>
+					<testItem name="TestCase14993" key="{9E8D7EFF-1F70-49CF-9AD5-6528A7EA23BA}" group="False" parallel="False" enabled="True" testMoniker="{A618D154-CF97-498A-B7A0-97A5FF2957E2}testCase_14993" count="1" timeout="0" stopOnError="2" stopOnException="2" description="Profile: New Profile - Add New" tmsData="" testCase="True">
+						<testParameters />
+						<environments activeCloud="CBT" />
+						<children />
+					</testItem>
+					<testItem name="TestCase14994" key="{3D17667C-A5AF-403D-B961-6CB68183B759}" group="False" parallel="False" enabled="True" testMoniker="{A618D154-CF97-498A-B7A0-97A5FF2957E2}testCase_14994" count="1" timeout="0" stopOnError="2" stopOnException="2" description="Profile: New Profile - Pending Profile" tmsData="" testCase="True">
+						<testParameters />
+						<environments activeCloud="CBT" />
+						<children />
+					</testItem>
+					<testItem name="TestCase14995" key="{336CF09A-CEEA-4434-BB11-6CA994EFA338}" group="False" parallel="False" enabled="True" testMoniker="{A618D154-CF97-498A-B7A0-97A5FF2957E2}testCase_14995" count="1" timeout="0" stopOnError="2" stopOnException="2" description="Profile: New Profile - Pending Permissions" tmsData="" testCase="True">
+						<testParameters />
+						<environments activeCloud="CBT" />
+						<children />
+					</testItem>
+					<testItem name="TestCase14996" key="{62415AA5-6E02-48A4-BA93-9CE19B9FBBC8}" group="False" parallel="False" enabled="True" testMoniker="{A618D154-CF97-498A-B7A0-97A5FF2957E2}testCase_14996" count="1" timeout="0" stopOnError="2" stopOnException="2" description="Profile: New Profile - Pending Profile Deny" tmsData="" testCase="True">
+						<testParameters />
+						<environments activeCloud="CBT" />
+						<children />
+					</testItem>
+					<testItem name="TestCase14997" key="{8A588799-174D-4AB4-9B64-C4F75E67A01E}" group="False" parallel="False" enabled="True" testMoniker="{A618D154-CF97-498A-B7A0-97A5FF2957E2}testCase_14997" count="1" timeout="0" stopOnError="2" stopOnException="2" description="Profile: New Profile - Profile Permissions Approve" tmsData="" testCase="True">
+						<testParameters />
+						<environments activeCloud="CBT" />
+						<children />
+					</testItem>
+					<testItem name="TestCase15012" key="{CC8555DF-A1A1-49CD-831D-C980B6ACBEBA}" group="False" parallel="False" enabled="True" testMoniker="{A618D154-CF97-498A-B7A0-97A5FF2957E2}testCase_15012" count="1" timeout="0" stopOnError="2" stopOnException="2" description="" tmsData="" testCase="True">
+						<testParameters />
+						<environments activeCloud="CBT" />
+						<children />
+					</testItem>
+					<testItem name="TestCase15013" key="{EA4C83FC-F52E-4BB9-8D9A-34EF330E70C3}" group="False" parallel="False" enabled="True" testMoniker="{A618D154-CF97-498A-B7A0-97A5FF2957E2}testCase_15013" count="1" timeout="0" stopOnError="2" stopOnException="2" description="" tmsData="" testCase="True">
+						<testParameters />
+						<environments activeCloud="CBT" />
+						<children />
+					</testItem>
+					<testItem name="TestCase15014" key="{D65F216F-7140-49C0-822F-A40AB377043C}" group="False" parallel="False" enabled="True" testMoniker="{A618D154-CF97-498A-B7A0-97A5FF2957E2}testCase_15014" count="1" timeout="0" stopOnError="2" stopOnException="2" description="" tmsData="" testCase="True">
+						<testParameters />
+						<environments activeCloud="CBT" />
+						<children />
+					</testItem>
+					<testItem name="TestCase15015" key="{32DEED2C-37EB-40BD-923B-3C4653110163}" group="False" parallel="False" enabled="True" testMoniker="{A618D154-CF97-498A-B7A0-97A5FF2957E2}testCase_15015" count="1" timeout="0" stopOnError="2" stopOnException="2" description="" tmsData="" testCase="True">
+						<testParameters />
+						<environments activeCloud="CBT" />
+						<children />
+					</testItem>
+					<testItem name="TestCase15016" key="{36CC9016-5CFC-4069-88F3-A07C7428B182}" group="False" parallel="False" enabled="True" testMoniker="{A618D154-CF97-498A-B7A0-97A5FF2957E2}testCase_15016" count="1" timeout="0" stopOnError="2" stopOnException="2" description="" tmsData="" testCase="True">
+						<testParameters />
+						<environments activeCloud="CBT" />
+						<children />
+					</testItem>
+					<testItem name="TestCase15017" key="{71FF8BA6-28AC-4413-B4E8-1A3C8E55AD95}" group="False" parallel="False" enabled="True" testMoniker="{A618D154-CF97-498A-B7A0-97A5FF2957E2}testCase_15017" count="1" timeout="0" stopOnError="2" stopOnException="2" description="" tmsData="" testCase="True">
+						<testParameters />
+						<environments activeCloud="CBT" />
+						<children />
+					</testItem>
+					<testItem name="TestCase15018" key="{BB838384-1C0F-40E8-9751-38BBE8A87B01}" group="False" parallel="False" enabled="True" testMoniker="{A618D154-CF97-498A-B7A0-97A5FF2957E2}testCase_15018" count="1" timeout="0" stopOnError="2" stopOnException="2" description="" tmsData="" testCase="True">
+						<testParameters />
+						<environments activeCloud="CBT" />
+						<children />
+					</testItem>
+					<testItem name="TestCase25288" key="{A99631E7-0FE2-424F-9E7E-D989232838D1}" group="False" parallel="False" enabled="True" testMoniker="{A618D154-CF97-498A-B7A0-97A5FF2957E2}testCase_25288" count="1" timeout="0" stopOnError="2" stopOnException="2" description="" tmsData="" testCase="True">
+						<testParameters />
+						<environments activeCloud="CBT" />
+						<children />
+					</testItem>
+					<testItem name="profSuiteLogout" key="{79C2CC29-793E-47E8-9CD7-BD43F1AACAB6}" group="False" parallel="False" enabled="True" testMoniker="{A618D154-CF97-498A-B7A0-97A5FF2957E2}profSuiteLogout" count="1" timeout="0" stopOnError="2" stopOnException="2" description="Profile: Profile Suite Logout" tmsData="" testCase="True">
+						<testParameters />
+						<environments activeCloud="CBT" />
+						<children />
+					</testItem>
+				</children>
+			</testItem>
+			<testItem name="Subscription_Suite" key="{6F2E1107-2422-4DF5-866F-059FE8A2AB0D}" group="True" parallel="False" enabled="True" testMoniker="" count="1" timeout="0" stopOnError="3" stopOnException="2" description="" tmsData="" testCase="True">
+				<testParameters />
+				<children>
+					<testItem name="subsSuiteLogin" key="{74FD4C7E-3300-4758-BA3E-98490AFF994C}" group="False" parallel="False" enabled="True" testMoniker="{CDDD9A0C-4E28-44FC-A8E4-AB1EC8F1B5B2}subsSuiteLogin" count="1" timeout="0" stopOnError="2" stopOnException="2" description="Subscription Suite Login" tmsData="" testCase="True">
+						<testParameters />
+						<environments activeCloud="CBT" />
+						<children />
+					</testItem>
+					<testItem name="TestCase14931" key="{D9EF2550-6368-4DF5-91F2-1A4FEC0FC002}" group="False" parallel="False" enabled="True" testMoniker="{CDDD9A0C-4E28-44FC-A8E4-AB1EC8F1B5B2}testCase_14931" count="1" timeout="0" stopOnError="2" stopOnException="2" description="Profile API Subscription: Edit Alias" tmsData="" testCase="True">
+						<testParameters />
+						<environments activeCloud="CBT" />
+						<children />
+					</testItem>
+					<testItem name="TestCase14932" key="{B14E129E-44B6-467D-8DB6-8815046FA51A}" group="False" parallel="False" enabled="True" testMoniker="{CDDD9A0C-4E28-44FC-A8E4-AB1EC8F1B5B2}testCase_14932" count="1" timeout="0" stopOnError="2" stopOnException="2" description="Profile API Subscription: Edit Email" tmsData="" testCase="True">
+						<testParameters />
+						<environments activeCloud="CBT" />
+						<children />
+					</testItem>
+					<testItem name="TestCase14933" key="{79F60E2C-9E45-4939-BB93-D3C50D13DB5E}" group="False" parallel="False" enabled="True" testMoniker="{CDDD9A0C-4E28-44FC-A8E4-AB1EC8F1B5B2}testCase_14933" count="1" timeout="0" stopOnError="2" stopOnException="2" description="Profile API Subscription: Verify Keys" tmsData="" testCase="True">
+						<testParameters />
+						<environments activeCloud="CBT" />
+						<children />
+					</testItem>
+					<testItem name="TestCase14934" key="{34AF853E-4D55-4C42-A49C-5525A97996DC}" group="False" parallel="False" enabled="True" testMoniker="{CDDD9A0C-4E28-44FC-A8E4-AB1EC8F1B5B2}testCase_14934" count="1" timeout="0" stopOnError="2" stopOnException="2" description="Profile API Subscription: Edit Keys" tmsData="" testCase="True">
+						<testParameters />
+						<environments activeCloud="CBT" />
+						<children />
+					</testItem>
+					<testItem name="TestCase14936" key="{4BE93A68-5117-4A16-ADD2-C443AF454B37}" group="False" parallel="False" enabled="True" testMoniker="{CDDD9A0C-4E28-44FC-A8E4-AB1EC8F1B5B2}testCase_14936" count="1" timeout="0" stopOnError="2" stopOnException="2" description="Profile API Subscription: Create New Subscription Client Secret " tmsData="" testCase="True">
+						<testParameters />
+						<environments activeCloud="CBT" />
+						<children />
+					</testItem>
+					<testItem name="TestCase14938" key="{CECF2C4C-1661-4DE2-A8D9-AA52D636C74A}" group="False" parallel="False" enabled="True" testMoniker="{CDDD9A0C-4E28-44FC-A8E4-AB1EC8F1B5B2}testCase_14938" count="1" timeout="0" stopOnError="2" stopOnException="2" description="Profile API Subscription: Change Permissions" tmsData="" testCase="True">
+						<testParameters />
+						<environments activeCloud="CBT" />
+						<children />
+					</testItem>
+					<testItem name="TestCase14939" key="{E4635FA3-5461-4E55-8606-4A095ACC7508}" group="False" parallel="False" enabled="True" testMoniker="{CDDD9A0C-4E28-44FC-A8E4-AB1EC8F1B5B2}testCase_14939" count="1" timeout="0" stopOnError="2" stopOnException="2" description="Profile API Subscription: Change Services" tmsData="" testCase="True">
+						<testParameters />
+						<environments activeCloud="CBT" />
+						<children />
+					</testItem>
+					<testItem name="TestCase14940" key="{AFD97476-1BC5-4615-852B-A4A39E0618E3}" group="False" parallel="False" enabled="True" testMoniker="{CDDD9A0C-4E28-44FC-A8E4-AB1EC8F1B5B2}testCase_14940" count="1" timeout="0" stopOnError="2" stopOnException="2" description="Profile API Subscription: Suspend Subscription" tmsData="" testCase="True">
+						<testParameters />
+						<environments activeCloud="CBT" />
+						<children />
+					</testItem>
+					<testItem name="TestCase14998" key="{A2192D6D-517E-4E93-8ECC-F3B9DFF6B9DB}" group="False" parallel="False" enabled="True" testMoniker="{CDDD9A0C-4E28-44FC-A8E4-AB1EC8F1B5B2}testCase_14998" count="1" timeout="0" stopOnError="2" stopOnException="2" description="Profile API Subscription: View Existing" tmsData="" testCase="True">
+						<testParameters />
+						<environments activeCloud="CBT" />
+						<children />
+					</testItem>
+					<testItem name="TestCase14999" key="{916EC777-DA2F-42AF-A063-19787B2C7377}" group="False" parallel="False" enabled="True" testMoniker="{CDDD9A0C-4E28-44FC-A8E4-AB1EC8F1B5B2}testCase_14999" count="1" timeout="0" stopOnError="2" stopOnException="2" description="Profile API Subscription: Permissions - Display Name" tmsData="" testCase="True">
+						<testParameters />
+						<environments activeCloud="CBT" />
+						<children />
+					</testItem>
+					<testItem name="TestCase15000" key="{48B45F4A-A2AC-4A06-A34E-A631F362F26E}" group="False" parallel="False" enabled="True" testMoniker="{CDDD9A0C-4E28-44FC-A8E4-AB1EC8F1B5B2}testCase_15000" count="1" timeout="0" stopOnError="2" stopOnException="2" description="Profile API Subscription: Permissions - Change Owner Email" tmsData="" testCase="True">
+						<testParameters />
+						<environments activeCloud="CBT" />
+						<children />
+					</testItem>
+					<testItem name="TestCase15001" key="{C715EBF4-297B-4C97-9480-EFBC82C7A44A}" group="False" parallel="False" enabled="True" testMoniker="{CDDD9A0C-4E28-44FC-A8E4-AB1EC8F1B5B2}testCase_15001" count="1" timeout="0" stopOnError="2" stopOnException="2" description="Profile API Subscription: Permissions - View/Copy Keys" tmsData="" testCase="True">
+						<testParameters />
+						<environments activeCloud="CBT" />
+						<children />
+					</testItem>
+					<testItem name="TestCase15002" key="{1FD4E6D2-14F6-48F7-861D-8BC796B59A47}" group="False" parallel="False" enabled="True" testMoniker="{CDDD9A0C-4E28-44FC-A8E4-AB1EC8F1B5B2}testCase_15002" count="1" timeout="0" stopOnError="2" stopOnException="2" description="Profile API Subscription: Permissions - Regenerate Keys" tmsData="" testCase="True">
+						<testParameters />
+						<environments activeCloud="CBT" />
+						<children />
+					</testItem>
+					<testItem name="TestCase15003" key="{D067AFD7-F50B-4311-8D56-6C07A332F224}" group="False" parallel="False" enabled="True" testMoniker="{CDDD9A0C-4E28-44FC-A8E4-AB1EC8F1B5B2}testCase_15003" count="1" timeout="0" stopOnError="2" stopOnException="2" description="Profile API Subscription: Permissions - Permissions" tmsData="" testCase="True">
+						<testParameters />
+						<environments activeCloud="CBT" />
+						<children />
+					</testItem>
+					<testItem name="TestCase15004" key="{B91B9B79-B578-43B5-9D14-6B559D64D39B}" group="False" parallel="False" enabled="True" testMoniker="{CDDD9A0C-4E28-44FC-A8E4-AB1EC8F1B5B2}testCase_15004" count="1" timeout="0" stopOnError="2" stopOnException="2" description="Profile API Subscription: Permissions - Change Permissions" tmsData="" testCase="True">
+						<testParameters />
+						<environments activeCloud="CBT" />
+						<children />
+					</testItem>
+					<testItem name="TestCase15005" key="{4548D247-CAD6-4033-AF6C-72C73698D7B2}" group="False" parallel="False" enabled="True" testMoniker="{CDDD9A0C-4E28-44FC-A8E4-AB1EC8F1B5B2}testCase_15005" count="1" timeout="0" stopOnError="2" stopOnException="2" description="Profile API Subscription: Permissions - Disable" tmsData="" testCase="True">
+						<testParameters />
+						<environments activeCloud="CBT" />
+						<children />
+					</testItem>
+					<testItem name="TestCase15006" key="{2A5CB942-D080-47D7-9150-02A1F1B07877}" group="False" parallel="False" enabled="True" testMoniker="{CDDD9A0C-4E28-44FC-A8E4-AB1EC8F1B5B2}testCase_15006" count="1" timeout="0" stopOnError="2" stopOnException="2" description="Profile API Subscription: Permissions - ReEnable" tmsData="" testCase="True">
+						<testParameters />
+						<environments activeCloud="CBT" />
+						<children />
+					</testItem>
+					<testItem name="TestCase15007" key="{CBDBB34D-4E9F-4650-A7C5-40C9932E8D02}" group="False" parallel="False" enabled="True" testMoniker="{CDDD9A0C-4E28-44FC-A8E4-AB1EC8F1B5B2}testCase_15007" count="1" timeout="0" stopOnError="2" stopOnException="2" description="Profile API Subscription: Permissions - Client Secret" tmsData="" testCase="True">
+						<testParameters />
+						<environments activeCloud="CBT" />
+						<children />
+					</testItem>
+					<testItem name="TestCase15008" key="{2B4F44BD-7B4E-49DE-8ED3-7A185CCFBEB8}" group="False" parallel="False" enabled="True" testMoniker="{CDDD9A0C-4E28-44FC-A8E4-AB1EC8F1B5B2}testCase_15008" count="1" timeout="0" stopOnError="2" stopOnException="2" description="Profile API Subscription: Permissions - Regenerate Keys" tmsData="" testCase="True">
+						<testParameters />
+						<environments activeCloud="CBT" />
+						<children />
+					</testItem>
+					<testItem name="TestCase15009" key="{902C8159-A199-4F83-8890-4D27AC39482D}" group="False" parallel="False" enabled="True" testMoniker="{CDDD9A0C-4E28-44FC-A8E4-AB1EC8F1B5B2}testCase_15009" count="1" timeout="0" stopOnError="2" stopOnException="2" description="Profile API Subscription: Permissions - Regenerate Client Secret" tmsData="" testCase="True">
+						<testParameters />
+						<environments activeCloud="CBT" />
+						<children />
+					</testItem>
+					<testItem name="TestCase15010" key="{92D8F157-1CCB-4044-90F1-8682A0BF2F8F}" group="False" parallel="False" enabled="True" testMoniker="{CDDD9A0C-4E28-44FC-A8E4-AB1EC8F1B5B2}testCase_15010" count="1" timeout="0" stopOnError="2" stopOnException="2" description="Profile API Subscription: Permissions - Add Button" tmsData="" testCase="True">
+						<testParameters />
+						<environments activeCloud="CBT" />
+						<children />
+					</testItem>
+					<testItem name="TestCase15011" key="{C2AE8059-1A20-4A93-9BC9-A8A9461B743E}" group="False" parallel="False" enabled="True" testMoniker="{CDDD9A0C-4E28-44FC-A8E4-AB1EC8F1B5B2}testCase_15011" count="1" timeout="0" stopOnError="2" stopOnException="2" description="Profile API Subscription: Permissions - Add" tmsData="" testCase="True">
+						<testParameters />
+						<environments activeCloud="CBT" />
+						<children />
+					</testItem>
+					<testItem name="subsSuiteLogout" key="{3DD28BAD-F76F-4F39-8872-BF12BC97831E}" group="False" parallel="False" enabled="True" testMoniker="{CDDD9A0C-4E28-44FC-A8E4-AB1EC8F1B5B2}subsSuiteLogout" count="1" timeout="0" stopOnError="2" stopOnException="2" description="Subscription Suite Login" tmsData="" testCase="True">
+						<testParameters />
+						<environments activeCloud="CBT" />
+						<children />
+					</testItem>
+				</children>
+			</testItem>
+			<testItem name="Limits_Suite" key="{A0BB9965-920B-4EC3-BAA8-BE04783AE175}" group="True" parallel="False" enabled="True" testMoniker="" count="1" timeout="0" stopOnError="3" stopOnException="2" description="" tmsData="" testCase="True">
+				<testParameters />
+				<children>
+					<testItem name="limitSuiteLogin" key="{CF6EB6AD-5D7A-4823-932E-4E4BDD4FBC68}" group="False" parallel="False" enabled="True" testMoniker="{08C12E71-97E5-45B0-87EC-7CD4D361A734}limitSuiteLogin" count="1" timeout="0" stopOnError="2" stopOnException="1" description="Back Office Login as BOA" tmsData="" testCase="True">
+						<testParameters />
+						<environments activeCloud="CBT" />
+						<children />
+					</testItem>
+					<testItem name="TestCase17270" key="{A682BDD0-68BE-4E24-BE1E-3875C8469EC2}" group="False" parallel="False" enabled="True" testMoniker="{08C12E71-97E5-45B0-87EC-7CD4D361A734}testCase_17270" count="1" timeout="0" stopOnError="2" stopOnException="2" description="Daily Limit Inabilities on Profile Service Account Enrollment" tmsData="" testCase="True">
+						<testParameters />
+						<environments activeCloud="CBT" />
+						<children />
+					</testItem>
+					<testItem name="TestCase17271" key="{D9624CC4-0D00-49F0-806E-B136D5627B97}" group="False" parallel="False" enabled="True" testMoniker="{08C12E71-97E5-45B0-87EC-7CD4D361A734}testCase_17271" count="1" timeout="0" stopOnError="2" stopOnException="2" description="Over Daily Limit (SEN Only)" tmsData="" testCase="True">
+						<testParameters />
+						<environments activeCloud="CBT" />
+						<children />
+					</testItem>
+					<testItem name="TestCase17272" key="{133B910E-FD43-4232-AAA8-CA119E07E9C9}" group="False" parallel="False" enabled="True" testMoniker="{08C12E71-97E5-45B0-87EC-7CD4D361A734}testCase_17272" count="1" timeout="0" stopOnError="2" stopOnException="2" description="Limit Changes Applied" tmsData="" testCase="True">
+						<testParameters />
+						<environments activeCloud="CBT" />
+						<children />
+					</testItem>
+					<testItem name="TestCase17274" key="{8B132C36-4A87-4456-89A9-F80DF254E4BD}" group="False" parallel="False" enabled="True" testMoniker="{08C12E71-97E5-45B0-87EC-7CD4D361A734}testCase_17274" count="1" timeout="0" stopOnError="2" stopOnException="2" description="FC Payment Limit Math - STP" tmsData="" testCase="True">
+						<testParameters />
+						<environments activeCloud="CBT" />
+						<children />
+					</testItem>
+					<testItem name="TestCase17275" key="{4FA631E0-E996-490D-86E3-72E6B660964B}" group="False" parallel="False" enabled="True" testMoniker="{08C12E71-97E5-45B0-87EC-7CD4D361A734}testCase_17275" count="1" timeout="0" stopOnError="2" stopOnException="2" description="FC Payment Limit Math - Submit: 1 Approval" tmsData="" testCase="True">
+						<testParameters />
+						<environments activeCloud="CBT" />
+						<children />
+					</testItem>
+					<testItem name="TestCase17276" key="{831A4E8A-0911-4AC8-98DB-549E114FC076}" group="False" parallel="False" enabled="True" testMoniker="{08C12E71-97E5-45B0-87EC-7CD4D361A734}testCase_17276" count="1" timeout="0" stopOnError="2" stopOnException="2" description="FC Payment Limit Math - Approve: 1 Approval" tmsData="" testCase="True">
+						<testParameters />
+						<environments activeCloud="CBT" />
+						<children />
+					</testItem>
+					<testItem name="TestCase17277" key="{22829D9E-C7E4-46D4-BFC3-24C06D2E49EC}" group="False" parallel="False" enabled="True" testMoniker="{08C12E71-97E5-45B0-87EC-7CD4D361A734}testCase_17277" count="1" timeout="0" stopOnError="2" stopOnException="2" description="FC Payment Limit Math - Approve: 2 Approvals" tmsData="" testCase="True">
+						<testParameters />
+						<environments activeCloud="CBT" />
+						<children />
+					</testItem>
+					<testItem name="TestCase17278" key="{98FC86F7-E39E-4521-BD4A-9904A5F1ADD0}" group="False" parallel="False" enabled="True" testMoniker="{08C12E71-97E5-45B0-87EC-7CD4D361A734}testCase_17278" count="1" timeout="0" stopOnError="2" stopOnException="2" description="FC Payment Limit Math - Submit: 1 Approval" tmsData="" testCase="True">
+						<testParameters />
+						<environments activeCloud="CBT" />
+						<children />
+					</testItem>
+					<testItem name="TestCase17279" key="{26DB0EC9-F7E1-4933-8684-A19404E31286}" group="False" parallel="False" enabled="True" testMoniker="{08C12E71-97E5-45B0-87EC-7CD4D361A734}testCase_17279" count="1" timeout="0" stopOnError="2" stopOnException="2" description="FC Payment Limit Math - Approve: 1 Approval" tmsData="" testCase="True">
+						<testParameters />
+						<environments activeCloud="CBT" />
+						<children />
+					</testItem>
+					<testItem name="TestCase17280" key="{50606600-7E0E-402C-9E4D-888859AE3648}" group="False" parallel="False" enabled="True" testMoniker="{08C12E71-97E5-45B0-87EC-7CD4D361A734}testCase_17280" count="1" timeout="0" stopOnError="2" stopOnException="2" description="FC Payment Limit Math - Approve: 2 Approvals" tmsData="" testCase="True">
+						<testParameters />
+						<environments activeCloud="CBT" />
+						<children />
+					</testItem>
+					<testItem name="TestCase5813" key="{BBA38BDA-2401-45FC-9C6B-8049D1FEED57}" group="False" parallel="False" enabled="True" testMoniker="{08C12E71-97E5-45B0-87EC-7CD4D361A734}testCase_5813" count="1" timeout="0" stopOnError="2" stopOnException="2" description="Daily Limit Inabilities on Profile Service Account Enrollment" tmsData="" testCase="True">
+						<testParameters />
+						<environments activeCloud="CBT" />
+						<children />
+					</testItem>
+					<testItem name="TestCase15517" key="{FF5A45BF-E32A-4016-A22F-330EB6D8D325}" group="False" parallel="False" enabled="True" testMoniker="{08C12E71-97E5-45B0-87EC-7CD4D361A734}testCase_15517" count="1" timeout="0" stopOnError="2" stopOnException="2" description="INT Transfer - Limit Test" tmsData="" testCase="True">
+						<testParameters />
+						<environments activeCloud="CBT" />
+						<children />
+					</testItem>
+					<testItem name="TestCase17204" key="{DC158C62-93BA-4C8A-9774-8D4CEF77784D}" group="False" parallel="False" enabled="True" testMoniker="{08C12E71-97E5-45B0-87EC-7CD4D361A734}testCase_17204" count="1" timeout="0" stopOnError="2" stopOnException="2" description="Payment Service/Subservice - Limit Test" tmsData="" testCase="True">
+						<testParameters />
+						<environments activeCloud="CBT" />
+						<children />
+					</testItem>
+					<testItem name="limitSuiteLogout" key="{94922F85-675E-4CFD-A82B-63129A36F223}" group="False" parallel="False" enabled="True" testMoniker="{08C12E71-97E5-45B0-87EC-7CD4D361A734}limitSuiteLogout" count="1" timeout="0" stopOnError="2" stopOnException="2" description="Limit Suite Logout" tmsData="" testCase="True">
+						<testParameters />
+						<environments activeCloud="CBT" />
+						<children />
+					</testItem>
+				</children>
+			</testItem>
+			<testItem name="INT_Suite" key="{A5F3A4C2-1DF7-4BBB-9722-A80F75613964}" group="True" parallel="False" enabled="True" testMoniker="" count="1" timeout="0" stopOnError="3" stopOnException="2" description="" tmsData="" testCase="True">
+				<testParameters />
+				<children>
+					<testItem name="intSuiteLogin" key="{53915DEB-A746-42A1-8AA2-079345916898}" group="False" parallel="False" enabled="True" testMoniker="{6E084C5E-7531-4273-9A2F-334D71480D2D}intSuiteLogin" count="1" timeout="0" stopOnError="2" stopOnException="2" description="" tmsData="" testCase="True">
+						<testParameters />
+						<environments activeCloud="CBT" />
+						<children />
+					</testItem>
+					<testItem name="TestCase15268" key="{D3EBC894-7955-4802-B3A3-01C03B72412D}" group="False" parallel="False" enabled="True" testMoniker="{6E084C5E-7531-4273-9A2F-334D71480D2D}testCase_15268" count="1" timeout="0" stopOnError="2" stopOnException="2" description="INT Transfer EUR&gt;EUR - STP" tmsData="" testCase="True">
+						<testParameters />
+						<environments activeCloud="CBT" />
+						<children />
+					</testItem>
+					<testItem name="intSuiteLogout" key="{D3044367-D3B9-40A6-B32C-C75FB4BF5E48}" group="False" parallel="False" enabled="True" testMoniker="{6E084C5E-7531-4273-9A2F-334D71480D2D}intSuiteLogout" count="1" timeout="0" stopOnError="2" stopOnException="2" description="" tmsData="" testCase="True">
+						<testParameters />
+						<environments activeCloud="CBT" />
+						<children />
+					</testItem>
+				</children>
+			</testItem>
+			<testItem name="PAY_Suite" key="{08C7378A-6DBB-4788-B43D-7F2A22CC8FE7}" group="True" parallel="False" enabled="True" testMoniker="" count="1" timeout="0" stopOnError="3" stopOnException="2" description="" tmsData="" testCase="True">
+				<testParameters />
+				<children>
+					<testItem name="paySuiteLogin" key="{2BB50829-CDD2-4D65-AF80-B90CA206F61B}" group="False" parallel="False" enabled="True" testMoniker="{27506758-2DE2-44D8-9275-5183F808CB92}paySuiteLogin" count="1" timeout="0" stopOnError="2" stopOnException="2" description="" tmsData="" testCase="True">
+						<testParameters />
+						<environments activeCloud="CBT" />
+						<children />
+					</testItem>
+					<testItem name="TestCase15564" key="{C59DFCAA-90B7-403E-A57B-C47A40BD2F18}" group="False" parallel="False" enabled="True" testMoniker="{27506758-2DE2-44D8-9275-5183F808CB92}testCase_15564" count="1" timeout="0" stopOnError="2" stopOnException="2" description="Payments Reporting" tmsData="" testCase="True">
+						<testParameters />
+						<environments activeCloud="CBT" />
+						<children />
+					</testItem>
+					<testItem name="TestCase16218" key="{4CFDB454-FF6C-476E-9537-02AE82224922}" group="False" parallel="False" enabled="True" testMoniker="{27506758-2DE2-44D8-9275-5183F808CB92}testCase_16218" count="1" timeout="0" stopOnError="2" stopOnException="2" description="FC Payment - STP" tmsData="" testCase="True">
+						<testParameters />
+						<environments activeCloud="CBT" />
+						<children />
+					</testItem>
+					<testItem name="TestCase16219" key="{9E9550B8-7E46-40B4-A01B-4E0ACA635B15}" group="False" parallel="False" enabled="True" testMoniker="{27506758-2DE2-44D8-9275-5183F808CB92}testCase_16219" count="1" timeout="0" stopOnError="2" stopOnException="2" description="FC Payment - 1 Approval" tmsData="" testCase="True">
+						<testParameters />
+						<environments activeCloud="CBT" />
+						<children />
+					</testItem>
+					<testItem name="paySuiteLogout" key="{CD662094-9657-4750-BD6F-F3CB9E0ABD28}" group="False" parallel="False" enabled="True" testMoniker="{27506758-2DE2-44D8-9275-5183F808CB92}paySuiteLogout" count="1" timeout="0" stopOnError="2" stopOnException="2" description="" tmsData="" testCase="True">
+						<testParameters />
+						<environments activeCloud="CBT" />
+						<children />
+					</testItem>
+				</children>
+			</testItem>
+			<testItem name="SEN_Suite" key="{79209573-F1DB-42B3-B2D8-2DCE7B6636A8}" group="True" parallel="False" enabled="True" testMoniker="" count="1" timeout="0" stopOnError="3" stopOnException="2" description="" tmsData="" testCase="True">
+				<testParameters />
+				<children>
+					<testItem name="senSuiteLogin" key="{0FF19F9E-A94A-4A58-8BF6-B2081EE04F27}" group="False" parallel="False" enabled="True" testMoniker="{39089ADA-1A5F-44DA-BF19-2FDA2DC57BDD}senSuiteLogin" count="1" timeout="0" stopOnError="2" stopOnException="1" description="" tmsData="" testCase="True">
+						<testParameters />
+						<environments activeCloud="CBT" />
+						<children />
+					</testItem>
+					<testItem name="TestCase25305" key="{91848B48-53E6-4A2C-999E-DCF21A97DF75}" group="False" parallel="False" enabled="True" testMoniker="{39089ADA-1A5F-44DA-BF19-2FDA2DC57BDD}testCase_25305" count="1" timeout="0" stopOnError="3" stopOnException="2" description="" tmsData="" testCase="True">
+						<testParameters />
+						<environments activeCloud="CBT" />
+						<children />
+					</testItem>
+					<testItem name="TestCase17538" key="{76310A42-5981-4950-AF92-EC771FD0EFCE}" group="False" parallel="False" enabled="True" testMoniker="{39089ADA-1A5F-44DA-BF19-2FDA2DC57BDD}testCase_17538" count="1" timeout="0" stopOnError="2" stopOnException="2" description="" tmsData="" testCase="True">
+						<testParameters />
+						<environments activeCloud="CBT" />
+						<children />
+					</testItem>
+					<testItem name="TestCase17539" key="{851563D5-7233-4398-8A4C-70C1DECA1878}" group="False" parallel="False" enabled="True" testMoniker="{39089ADA-1A5F-44DA-BF19-2FDA2DC57BDD}testCase_17539" count="1" timeout="0" stopOnError="2" stopOnException="2" description="" tmsData="" testCase="True">
+						<testParameters />
+						<environments activeCloud="CBT" />
+						<children />
+					</testItem>
+					<testItem name="TestCase17540" key="{99C8479E-E367-4F04-A331-3A8714520F41}" group="False" parallel="False" enabled="True" testMoniker="{39089ADA-1A5F-44DA-BF19-2FDA2DC57BDD}testCase_17540" count="1" timeout="0" stopOnError="2" stopOnException="2" description="" tmsData="" testCase="True">
+						<testParameters />
+						<environments activeCloud="CBT" />
+						<children />
+					</testItem>
+					<testItem name="TestCase17543" key="{61A1C256-239F-45B9-AF82-AA723CC6D085}" group="False" parallel="False" enabled="True" testMoniker="{39089ADA-1A5F-44DA-BF19-2FDA2DC57BDD}testCase_17543" count="1" timeout="0" stopOnError="2" stopOnException="2" description="" tmsData="" testCase="True">
+						<testParameters />
+						<environments activeCloud="CBT" />
+						<children />
+					</testItem>
+					<testItem name="TestCase16217" key="{740F0B00-F6F0-4E04-AA84-B097AA0BD4CE}" group="False" parallel="False" enabled="True" testMoniker="{39089ADA-1A5F-44DA-BF19-2FDA2DC57BDD}testCase_16217" count="1" timeout="0" stopOnError="2" stopOnException="2" description="" tmsData="" testCase="True">
+						<testParameters />
+						<environments activeCloud="CBT" />
+						<children />
+					</testItem>
+					<testItem name="TestCase15671" key="{F17CD43A-B537-4291-B46F-AE41799B8CAA}" group="False" parallel="False" enabled="True" testMoniker="{39089ADA-1A5F-44DA-BF19-2FDA2DC57BDD}testCase_15671" count="1" timeout="0" stopOnError="3" stopOnException="2" description="" tmsData="" testCase="True">
+						<testParameters />
+						<environments activeCloud="CBT" />
+						<children />
+					</testItem>
+					<testItem name="senSuiteLogout" key="{9D5786A8-1E84-4190-B783-3E9D66948234}" group="False" parallel="False" enabled="True" testMoniker="{39089ADA-1A5F-44DA-BF19-2FDA2DC57BDD}senSuiteLogout" count="1" timeout="0" stopOnError="2" stopOnException="2" description="SEN Suite Logout" tmsData="" testCase="True">
+						<testParameters />
+						<environments activeCloud="CBT" />
+						<children />
+					</testItem>
+				</children>
+			</testItem>
+			<testItem name="Regression_Suite" key="{CF0A1037-9908-4190-976F-3FB3C1E30A52}" group="True" parallel="False" enabled="True" testMoniker="" count="1" timeout="0" stopOnError="3" stopOnException="2" description="" tmsData="" testCase="True">
+				<testParameters />
+				<children>
+					<testItem name="RegressionTest13721" key="{D3C88D4A-7E63-4CAE-9935-DA61EDBF2007}" group="False" parallel="False" enabled="True" testMoniker="{0EBBC5D7-C908-4CF7-9FD9-14FAC414BD6B}regressionTest_13721" count="1" timeout="0" stopOnError="4" stopOnException="1" description="Portal Regression Login as Trader" tmsData="" testCase="True">
+						<testParameters />
+						<environments activeCloud="CBT" />
+						<children />
+					</testItem>
+					<testItem name="RegressionTest15822" key="{83CEC5F7-66A1-433A-9244-4E96FC748B56}" group="False" parallel="False" enabled="True" testMoniker="{0EBBC5D7-C908-4CF7-9FD9-14FAC414BD6B}regressionTest_15822" count="1" timeout="0" stopOnError="4" stopOnException="2" description="Portal Logout/Login" tmsData="" testCase="True">
+						<testParameters />
+						<environments activeCloud="CBT" />
+						<children />
+					</testItem>
+					<testItem name="RegressionTest13724" key="{DFD00076-2F52-47AA-AB72-407369A367D7}" group="False" parallel="False" enabled="True" testMoniker="{0EBBC5D7-C908-4CF7-9FD9-14FAC414BD6B}regressionTest_13724" count="1" timeout="0" stopOnError="4" stopOnException="2" description="Wallet View" tmsData="" testCase="True">
+						<testParameters />
+						<environments activeCloud="CBT" />
+						<children />
+					</testItem>
+					<testItem name="RegressionTest13454" key="{CA5CA209-631F-4946-9C62-27349C50DDA4}" group="False" parallel="False" enabled="True" testMoniker="{0EBBC5D7-C908-4CF7-9FD9-14FAC414BD6B}regressionTest_13454" count="1" timeout="0" stopOnError="4" stopOnException="2" description="SEN Enabled Connections" tmsData="" testCase="True">
+						<testParameters />
+						<environments activeCloud="CBT" />
+						<children />
+					</testItem>
+					<testItem name="RegressionTest14956" key="{8FFF6918-43FA-49AA-8EA6-8397D78482CE}" group="False" parallel="False" enabled="True" testMoniker="{0EBBC5D7-C908-4CF7-9FD9-14FAC414BD6B}regressionTest_14956" count="1" timeout="0" stopOnError="4" stopOnException="2" description="SEN Transfer Eligibility" tmsData="" testCase="True">
+						<testParameters />
+						<environments activeCloud="CBT" />
+						<children />
+					</testItem>
+					<testItem name="RegressionTest16214" key="{E8ABB299-BE37-4BED-A856-AE6AC2023158}" group="False" parallel="False" enabled="True" testMoniker="{0EBBC5D7-C908-4CF7-9FD9-14FAC414BD6B}regressionTest_16214" count="1" timeout="0" stopOnError="4" stopOnException="2" description="INT Transfer USD&gt;USD" tmsData="" testCase="True">
+						<testParameters />
+						<environments activeCloud="CBT" />
+						<children />
+					</testItem>
+					<testItem name="RegressionTest16215" key="{97249E12-4983-48F4-8ABE-9807B6C659ED}" group="False" parallel="False" enabled="True" testMoniker="{0EBBC5D7-C908-4CF7-9FD9-14FAC414BD6B}regressionTest_16215" count="1" timeout="0" stopOnError="4" stopOnException="2" description="SEN Transfer USD&gt;USD" tmsData="" testCase="True">
+						<testParameters />
+						<environments activeCloud="CBT" />
+						<children />
+					</testItem>
+					<testItem name="RegressionTest16216" key="{FFA4D416-3668-4D22-B44C-FF035AD4FF85}" group="False" parallel="False" enabled="True" testMoniker="{0EBBC5D7-C908-4CF7-9FD9-14FAC414BD6B}regressionTest_16216" count="1" timeout="0" stopOnError="4" stopOnException="2" description="SEN Transfer USD&gt;USD - 1 Approval" tmsData="" testCase="True">
+						<testParameters />
+						<environments activeCloud="CBT" />
+						<children />
+					</testItem>
+					<testItem name="RegressionTest15398" key="{33830810-1AB2-4DD1-8947-2307BE4E5CAF}" group="False" parallel="False" enabled="True" testMoniker="{0EBBC5D7-C908-4CF7-9FD9-14FAC414BD6B}regressionTest_15398" count="1" timeout="0" stopOnError="4" stopOnException="2" description="Trade/Payment Status Buttons - Add Bene - Permissioned" tmsData="" testCase="True">
+						<testParameters />
+						<environments activeCloud="CBT" />
+						<children />
+					</testItem>
+					<testItem name="RegressionTest6447" key="{15B9ADB5-91C0-4213-B781-D5BF9BE34260}" group="False" parallel="False" enabled="True" testMoniker="{0EBBC5D7-C908-4CF7-9FD9-14FAC414BD6B}regressionTest_6447" count="1" timeout="0" stopOnError="4" stopOnException="2" description="View Connections" tmsData="" testCase="True">
+						<testParameters />
+						<environments activeCloud="SWT" />
+						<children />
+					</testItem>
+					<testItem name="RegressionTest6471" key="{995C4EDC-8D34-44F0-99D3-297981B2C5C6}" group="False" parallel="False" enabled="True" testMoniker="{0EBBC5D7-C908-4CF7-9FD9-14FAC414BD6B}regressionTest_6471" count="1" timeout="0" stopOnError="4" stopOnException="2" description="Add Contact - Not Permissioned" tmsData="" testCase="True">
+						<testParameters />
+						<environments activeCloud="CBT" />
+						<children />
+					</testItem>
+					<testItem name="RegressionTest6476" key="{652B4929-13C6-49CC-94DF-DD883639D453}" group="False" parallel="False" enabled="True" testMoniker="{0EBBC5D7-C908-4CF7-9FD9-14FAC414BD6B}regressionTest_6476" count="1" timeout="0" stopOnError="4" stopOnException="2" description="Add Existing Contact - Not Permissioned" tmsData="" testCase="True">
+						<testParameters />
+						<environments activeCloud="CBT" />
+						<children />
+					</testItem>
+					<testItem name="RegressionTest6477" key="{31B85C28-C6DC-4CF0-A217-8C5F4099AABB}" group="False" parallel="False" enabled="True" testMoniker="{0EBBC5D7-C908-4CF7-9FD9-14FAC414BD6B}regressionTest_6477" count="1" timeout="0" stopOnError="4" stopOnException="2" description="Delete Existing Contact - Not Permissioned" tmsData="" testCase="True">
+						<testParameters />
+						<environments activeCloud="CBT" />
+						<children />
+					</testItem>
+					<testItem name="RegressionTest7881" key="{28A9B0F4-4D57-43B0-93E4-0B1FCD05B3B3}" group="False" parallel="False" enabled="True" testMoniker="{0EBBC5D7-C908-4CF7-9FD9-14FAC414BD6B}regressionTest_7881" count="1" timeout="0" stopOnError="4" stopOnException="1" description="Service Level Approval Settings" tmsData="" testCase="True">
+						<testParameters />
+						<environments activeCloud="CBT" />
+						<children />
+					</testItem>
+					<testItem name="RegressionTest18692" key="{55CE2469-05E3-4E84-91DC-E366DDD24A81}" group="False" parallel="False" enabled="True" testMoniker="{0EBBC5D7-C908-4CF7-9FD9-14FAC414BD6B}regressionTest_18692" count="1" timeout="0" stopOnError="4" stopOnException="2" description="Service Level Approval Settings" tmsData="" testCase="True">
+						<testParameters />
+						<environments activeCloud="CBT" />
+						<children />
+					</testItem>
+					<testItem name="RegressionTest18198" key="{592A3B7B-0AE3-43E6-AED9-4C409656A91D}" group="False" parallel="False" enabled="True" testMoniker="{0EBBC5D7-C908-4CF7-9FD9-14FAC414BD6B}regressionTest_18198" count="1" timeout="0" stopOnError="4" stopOnException="2" description="Regression Suite Logout" tmsData="" testCase="True">
+						<testParameters />
+						<environments activeCloud="CBT" />
+						<children />
+					</testItem>
+				</children>
+			</testItem>
+			<testItem name="AdHoc-RunAll" key="{1BE7AC6A-B07D-4295-9820-52E055F86564}" group="True" parallel="False" enabled="True" testMoniker="" count="1" timeout="0" stopOnError="3" stopOnException="2" description="" tmsData="" testCase="True">
+				<testParameters />
+				<children>
+					<testItem name="SetSTGEnvironment_1" key="{DFED738E-9480-4B0C-AC8A-A0BBB119A71A}" group="False" parallel="False" enabled="True" testMoniker="{C206FF81-CFCC-4884-A88C-D9E657EAB6CA}setEnvironment" count="1" timeout="0" stopOnError="4" stopOnException="1" description="Outbound Trade - To 3rd Party - Happy" tmsData="" testCase="True">
+						<testParameters>
+							<param0 name="envt" type="3" localVarName="" varType="8" value="STG" />
+						</testParameters>
+						<environments activeCloud="CBT" />
+						<children />
+					</testItem>
+					<testItem name="profSuiteLogin_1" key="{BBBE0699-22CF-4544-A73A-18A025181890}" group="False" parallel="False" enabled="True" testMoniker="{A618D154-CF97-498A-B7A0-97A5FF2957E2}profSuiteLogin" count="1" timeout="0" stopOnError="2" stopOnException="2" description="Back Office Login as BOA" tmsData="" testCase="True">
+						<testParameters />
+						<environments activeCloud="CBT" />
+						<children />
+					</testItem>
+					<testItem name="TestCase14964_1" key="{F4EDA598-CE0B-4DD9-AE6D-0E24426DAAFC}" group="False" parallel="False" enabled="True" testMoniker="{A618D154-CF97-498A-B7A0-97A5FF2957E2}testCase_14964" count="1" timeout="0" stopOnError="2" stopOnException="2" description="Profile: Role Permission - Admin User" tmsData="" testCase="True">
+						<testParameters />
+						<environments activeCloud="CBT" />
+						<children />
+					</testItem>
+					<testItem name="TestCase14965_1" key="{349AF2EA-854E-45DD-AEE8-5AA28D56EF5D}" group="False" parallel="False" enabled="True" testMoniker="{A618D154-CF97-498A-B7A0-97A5FF2957E2}testCase_14965" count="1" timeout="0" stopOnError="2" stopOnException="2" description="Profile: Role Permission - Admin Password" tmsData="" testCase="True">
+						<testParameters />
+						<environments activeCloud="CBT" />
+						<children />
+					</testItem>
+					<testItem name="TestCase14972_1" key="{1634002A-F831-4C92-B2CE-F02C9864564F}" group="False" parallel="False" enabled="True" testMoniker="{A618D154-CF97-498A-B7A0-97A5FF2957E2}testCase_14972" count="1" timeout="0" stopOnError="2" stopOnException="2" description="Profile: Role Permission - User" tmsData="" testCase="True">
+						<testParameters />
+						<environments activeCloud="CBT" />
+						<children />
+					</testItem>
+					<testItem name="TestCase14973_1" key="{4244A66A-7F88-4740-A34D-9AABA06C5395}" group="False" parallel="False" enabled="True" testMoniker="{A618D154-CF97-498A-B7A0-97A5FF2957E2}testCase_14973" count="1" timeout="0" stopOnError="2" stopOnException="2" description="Profile: Role Permission - Add User" tmsData="" testCase="True">
+						<testParameters />
+						<environments activeCloud="CBT" />
+						<children />
+					</testItem>
+					<testItem name="TestCase14974_1" key="{1CB9EC98-D60F-4C2E-BA00-B4A81F48C87C}" group="False" parallel="False" enabled="True" testMoniker="{A618D154-CF97-498A-B7A0-97A5FF2957E2}testCase_14974" count="1" timeout="0" stopOnError="2" stopOnException="2" description="Profile: Role Permission - Add BO User" tmsData="" testCase="True">
+						<testParameters />
+						<environments activeCloud="CBT" />
+						<children />
+					</testItem>
+					<testItem name="TestCase14975_1" key="{9FF4695D-B4D1-49B2-85C8-02751BC29315}" group="False" parallel="False" enabled="True" testMoniker="{A618D154-CF97-498A-B7A0-97A5FF2957E2}testCase_14975" count="1" timeout="0" stopOnError="2" stopOnException="2" description="Profile: Role Permission - Add Account" tmsData="" testCase="True">
+						<testParameters />
+						<environments activeCloud="CBT" />
+						<children />
+					</testItem>
+					<testItem name="TestCase14976_1" key="{54C2771B-511B-4885-B683-075BC3D8DAE7}" group="False" parallel="False" enabled="True" testMoniker="{A618D154-CF97-498A-B7A0-97A5FF2957E2}testCase_14976" count="1" timeout="0" stopOnError="2" stopOnException="2" description="Profile: Role Permission - Trader" tmsData="" testCase="True">
+						<testParameters />
+						<environments activeCloud="CBT" />
+						<children />
+					</testItem>
+					<testItem name="TestCase14977_1" key="{687FC5CB-1B59-47DA-8647-E75326ED95DE}" group="False" parallel="False" enabled="True" testMoniker="{A618D154-CF97-498A-B7A0-97A5FF2957E2}testCase_14977" count="1" timeout="0" stopOnError="2" stopOnException="2" description="Profile: Role Permission - Super BO User" tmsData="" testCase="True">
+						<testParameters />
+						<environments activeCloud="CBT" />
+						<children />
+					</testItem>
+					<testItem name="TestCase14978_1" key="{6B6A844D-E602-45CA-9679-5D4240CE6BAA}" group="False" parallel="False" enabled="True" testMoniker="{A618D154-CF97-498A-B7A0-97A5FF2957E2}testCase_14978" count="1" timeout="0" stopOnError="2" stopOnException="2" description="Profile: Role Permission - BO User" tmsData="" testCase="True">
+						<testParameters />
+						<environments activeCloud="CBT" />
+						<children />
+					</testItem>
+					<testItem name="TestCase14979_1" key="{8D146C8E-E489-4AC6-9B94-A76914083E18}" group="False" parallel="False" enabled="True" testMoniker="{A618D154-CF97-498A-B7A0-97A5FF2957E2}testCase_14979" count="1" timeout="0" stopOnError="2" stopOnException="2" description="Profile: Role Permission - FO User" tmsData="" testCase="True">
+						<testParameters />
+						<environments activeCloud="CBT" />
+						<children />
+					</testItem>
+					<testItem name="TestCase14992_1" key="{6EF16BB3-18E3-4AA6-965E-E2AB5A799EF9}" group="False" parallel="False" enabled="True" testMoniker="{A618D154-CF97-498A-B7A0-97A5FF2957E2}testCase_14992" count="1" timeout="0" stopOnError="2" stopOnException="2" description="Profile: New Profile - Button Permissions" tmsData="" testCase="True">
+						<testParameters />
+						<environments activeCloud="CBT" />
+						<children />
+					</testItem>
+					<testItem name="TestCase14993_1" key="{76523AF5-926C-48D4-9AA8-CC1C20713D19}" group="False" parallel="False" enabled="True" testMoniker="{A618D154-CF97-498A-B7A0-97A5FF2957E2}testCase_14993" count="1" timeout="0" stopOnError="2" stopOnException="2" description="Profile: New Profile - Add New" tmsData="" testCase="True">
+						<testParameters />
+						<environments activeCloud="CBT" />
+						<children />
+					</testItem>
+					<testItem name="TestCase14994_1" key="{3F7EEEA6-A351-4801-9E10-9456C2FA701E}" group="False" parallel="False" enabled="True" testMoniker="{A618D154-CF97-498A-B7A0-97A5FF2957E2}testCase_14994" count="1" timeout="0" stopOnError="2" stopOnException="2" description="Profile: New Profile - Pending Profile" tmsData="" testCase="True">
+						<testParameters />
+						<environments activeCloud="CBT" />
+						<children />
+					</testItem>
+					<testItem name="TestCase14995_1" key="{432AFC62-C925-48FD-AC1C-6C8D6DB37D1F}" group="False" parallel="False" enabled="True" testMoniker="{A618D154-CF97-498A-B7A0-97A5FF2957E2}testCase_14995" count="1" timeout="0" stopOnError="2" stopOnException="2" description="Profile: New Profile - Pending Permissions" tmsData="" testCase="True">
+						<testParameters />
+						<environments activeCloud="CBT" />
+						<children />
+					</testItem>
+					<testItem name="TestCase14996_1" key="{A4E4D949-A46A-44E1-BA76-97EA7198EC3A}" group="False" parallel="False" enabled="True" testMoniker="{A618D154-CF97-498A-B7A0-97A5FF2957E2}testCase_14996" count="1" timeout="0" stopOnError="2" stopOnException="2" description="Profile: New Profile - Pending Profile Deny" tmsData="" testCase="True">
+						<testParameters />
+						<environments activeCloud="CBT" />
+						<children />
+					</testItem>
+					<testItem name="TestCase14997_1" key="{EBE287A3-93F5-4109-AC69-A40A25FFBD88}" group="False" parallel="False" enabled="True" testMoniker="{A618D154-CF97-498A-B7A0-97A5FF2957E2}testCase_14997" count="1" timeout="0" stopOnError="2" stopOnException="2" description="Profile: New Profile - Profile Permissions Approve" tmsData="" testCase="True">
+						<testParameters />
+						<environments activeCloud="CBT" />
+						<children />
+					</testItem>
+					<testItem name="TestCase15012_1" key="{BB31EC99-8F8C-4A00-BD9D-CA840737396B}" group="False" parallel="False" enabled="True" testMoniker="{A618D154-CF97-498A-B7A0-97A5FF2957E2}testCase_15012" count="1" timeout="0" stopOnError="2" stopOnException="2" description="" tmsData="" testCase="True">
+						<testParameters />
+						<environments activeCloud="CBT" />
+						<children />
+					</testItem>
+					<testItem name="TestCase15013_1" key="{1428B51D-D46C-4358-91A8-E2F048941CC8}" group="False" parallel="False" enabled="True" testMoniker="{A618D154-CF97-498A-B7A0-97A5FF2957E2}testCase_15013" count="1" timeout="0" stopOnError="2" stopOnException="2" description="" tmsData="" testCase="True">
+						<testParameters />
+						<environments activeCloud="CBT" />
+						<children />
+					</testItem>
+					<testItem name="TestCase15014_1" key="{D79309EB-F9CC-4084-BD60-66264875313B}" group="False" parallel="False" enabled="True" testMoniker="{A618D154-CF97-498A-B7A0-97A5FF2957E2}testCase_15014" count="1" timeout="0" stopOnError="2" stopOnException="2" description="" tmsData="" testCase="True">
+						<testParameters />
+						<environments activeCloud="CBT" />
+						<children />
+					</testItem>
+					<testItem name="TestCase15015_1" key="{2783753C-6BAF-4D6B-B7DF-19B832465DF0}" group="False" parallel="False" enabled="True" testMoniker="{A618D154-CF97-498A-B7A0-97A5FF2957E2}testCase_15015" count="1" timeout="0" stopOnError="2" stopOnException="2" description="" tmsData="" testCase="True">
+						<testParameters />
+						<environments activeCloud="CBT" />
+						<children />
+					</testItem>
+					<testItem name="TestCase15016_1" key="{C6271CB6-1CB3-46A5-B70B-8E7DF640A909}" group="False" parallel="False" enabled="True" testMoniker="{A618D154-CF97-498A-B7A0-97A5FF2957E2}testCase_15016" count="1" timeout="0" stopOnError="2" stopOnException="2" description="" tmsData="" testCase="True">
+						<testParameters />
+						<environments activeCloud="CBT" />
+						<children />
+					</testItem>
+					<testItem name="TestCase15017_1" key="{5638E6D3-64B3-4F1E-B230-505AE58E18B2}" group="False" parallel="False" enabled="True" testMoniker="{A618D154-CF97-498A-B7A0-97A5FF2957E2}testCase_15017" count="1" timeout="0" stopOnError="2" stopOnException="2" description="" tmsData="" testCase="True">
+						<testParameters />
+						<environments activeCloud="CBT" />
+						<children />
+					</testItem>
+					<testItem name="TestCase15018_1" key="{9AF2505A-C99A-4D61-BCB7-5F49B8AF34DD}" group="False" parallel="False" enabled="True" testMoniker="{A618D154-CF97-498A-B7A0-97A5FF2957E2}testCase_15018" count="1" timeout="0" stopOnError="2" stopOnException="2" description="" tmsData="" testCase="True">
+						<testParameters />
+						<environments activeCloud="CBT" />
+						<children />
+					</testItem>
+					<testItem name="TestCase25288_1" key="{B8623C47-463E-41B2-B933-38C3B0A129F9}" group="False" parallel="False" enabled="True" testMoniker="{A618D154-CF97-498A-B7A0-97A5FF2957E2}testCase_25288" count="1" timeout="0" stopOnError="2" stopOnException="2" description="" tmsData="" testCase="True">
+						<testParameters />
+						<environments activeCloud="CBT" />
+						<children />
+					</testItem>
+					<testItem name="profSuiteLogout_1" key="{E099F693-7C20-43B1-AF5A-E86ADEC5CD5D}" group="False" parallel="False" enabled="True" testMoniker="{A618D154-CF97-498A-B7A0-97A5FF2957E2}profSuiteLogout" count="1" timeout="0" stopOnError="2" stopOnException="2" description="Profile: Profile Suite Logout" tmsData="" testCase="True">
+						<testParameters />
+						<environments activeCloud="CBT" />
+						<children />
+					</testItem>
+					<testItem name="subsSuiteLogin_1" key="{F12CD0D6-3BE7-426C-9648-818917F304FD}" group="False" parallel="False" enabled="True" testMoniker="{CDDD9A0C-4E28-44FC-A8E4-AB1EC8F1B5B2}subsSuiteLogin" count="1" timeout="0" stopOnError="2" stopOnException="2" description="Subscription Suite Login" tmsData="" testCase="True">
+						<testParameters />
+						<environments activeCloud="CBT" />
+						<children />
+					</testItem>
+					<testItem name="TestCase14931_1" key="{4AEE90B5-DF21-4791-A3F3-EC7E141EE0DC}" group="False" parallel="False" enabled="True" testMoniker="{CDDD9A0C-4E28-44FC-A8E4-AB1EC8F1B5B2}testCase_14931" count="1" timeout="0" stopOnError="2" stopOnException="2" description="Profile API Subscription: Edit Alias" tmsData="" testCase="True">
+						<testParameters />
+						<environments activeCloud="CBT" />
+						<children />
+					</testItem>
+					<testItem name="TestCase14932_1" key="{61D2F96E-DAE2-4062-ADD8-D46B1C14C97F}" group="False" parallel="False" enabled="True" testMoniker="{CDDD9A0C-4E28-44FC-A8E4-AB1EC8F1B5B2}testCase_14932" count="1" timeout="0" stopOnError="2" stopOnException="2" description="Profile API Subscription: Edit Email" tmsData="" testCase="True">
+						<testParameters />
+						<environments activeCloud="CBT" />
+						<children />
+					</testItem>
+					<testItem name="TestCase14933_1" key="{EBCD77D9-B4A0-4A91-AF1B-EF8C0F76C34F}" group="False" parallel="False" enabled="True" testMoniker="{CDDD9A0C-4E28-44FC-A8E4-AB1EC8F1B5B2}testCase_14933" count="1" timeout="0" stopOnError="2" stopOnException="2" description="Profile API Subscription: Verify Keys" tmsData="" testCase="True">
+						<testParameters />
+						<environments activeCloud="CBT" />
+						<children />
+					</testItem>
+					<testItem name="TestCase14934_1" key="{6153304E-1935-4686-8187-F9AA38714FC3}" group="False" parallel="False" enabled="True" testMoniker="{CDDD9A0C-4E28-44FC-A8E4-AB1EC8F1B5B2}testCase_14934" count="1" timeout="0" stopOnError="2" stopOnException="2" description="Profile API Subscription: Edit Keys" tmsData="" testCase="True">
+						<testParameters />
+						<environments activeCloud="CBT" />
+						<children />
+					</testItem>
+					<testItem name="TestCase14936_1" key="{B02AFF79-F2F6-4885-BC28-B1AE018CFE6E}" group="False" parallel="False" enabled="True" testMoniker="{CDDD9A0C-4E28-44FC-A8E4-AB1EC8F1B5B2}testCase_14936" count="1" timeout="0" stopOnError="2" stopOnException="2" description="Profile API Subscription: Create New Subscription Client Secret " tmsData="" testCase="True">
+						<testParameters />
+						<environments activeCloud="CBT" />
+						<children />
+					</testItem>
+					<testItem name="TestCase14938_1" key="{6069914A-C6A7-439E-9DA6-9E4EEAED7DDB}" group="False" parallel="False" enabled="True" testMoniker="{CDDD9A0C-4E28-44FC-A8E4-AB1EC8F1B5B2}testCase_14938" count="1" timeout="0" stopOnError="2" stopOnException="2" description="Profile API Subscription: Change Permissions" tmsData="" testCase="True">
+						<testParameters />
+						<environments activeCloud="CBT" />
+						<children />
+					</testItem>
+					<testItem name="TestCase14939_1" key="{66BE8846-4233-484D-9BD9-DB9EF43F02D9}" group="False" parallel="False" enabled="True" testMoniker="{CDDD9A0C-4E28-44FC-A8E4-AB1EC8F1B5B2}testCase_14939" count="1" timeout="0" stopOnError="2" stopOnException="2" description="Profile API Subscription: Change Services" tmsData="" testCase="True">
+						<testParameters />
+						<environments activeCloud="CBT" />
+						<children />
+					</testItem>
+					<testItem name="TestCase14940_1" key="{DDB47795-28BC-4A63-ADC7-459DC7FFA791}" group="False" parallel="False" enabled="True" testMoniker="{CDDD9A0C-4E28-44FC-A8E4-AB1EC8F1B5B2}testCase_14940" count="1" timeout="0" stopOnError="2" stopOnException="2" description="Profile API Subscription: Suspend Subscription" tmsData="" testCase="True">
+						<testParameters />
+						<environments activeCloud="CBT" />
+						<children />
+					</testItem>
+					<testItem name="TestCase14998_1" key="{C086DA8D-D48F-44DF-BD77-B79AD31C83A7}" group="False" parallel="False" enabled="True" testMoniker="{CDDD9A0C-4E28-44FC-A8E4-AB1EC8F1B5B2}testCase_14998" count="1" timeout="0" stopOnError="2" stopOnException="2" description="Profile API Subscription: View Existing" tmsData="" testCase="True">
+						<testParameters />
+						<environments activeCloud="CBT" />
+						<children />
+					</testItem>
+					<testItem name="TestCase14999_1" key="{3D171BE8-76B5-4E68-BCE0-3ACF95FA0B7F}" group="False" parallel="False" enabled="True" testMoniker="{CDDD9A0C-4E28-44FC-A8E4-AB1EC8F1B5B2}testCase_14999" count="1" timeout="0" stopOnError="2" stopOnException="2" description="Profile API Subscription: Permissions - Display Name" tmsData="" testCase="True">
+						<testParameters />
+						<environments activeCloud="CBT" />
+						<children />
+					</testItem>
+					<testItem name="TestCase15000_1" key="{485B4453-9FEC-4FC5-92FE-918B3A7CA832}" group="False" parallel="False" enabled="True" testMoniker="{CDDD9A0C-4E28-44FC-A8E4-AB1EC8F1B5B2}testCase_15000" count="1" timeout="0" stopOnError="2" stopOnException="2" description="Profile API Subscription: Permissions - Change Owner Email" tmsData="" testCase="True">
+						<testParameters />
+						<environments activeCloud="CBT" />
+						<children />
+					</testItem>
+					<testItem name="TestCase15001_1" key="{3F49CAC7-FC50-48B5-8C17-888096B99B3D}" group="False" parallel="False" enabled="True" testMoniker="{CDDD9A0C-4E28-44FC-A8E4-AB1EC8F1B5B2}testCase_15001" count="1" timeout="0" stopOnError="2" stopOnException="2" description="Profile API Subscription: Permissions - View/Copy Keys" tmsData="" testCase="True">
+						<testParameters />
+						<environments activeCloud="CBT" />
+						<children />
+					</testItem>
+					<testItem name="TestCase15002_1" key="{99C1E270-56F9-496E-9C2D-122C2D1BEDE8}" group="False" parallel="False" enabled="True" testMoniker="{CDDD9A0C-4E28-44FC-A8E4-AB1EC8F1B5B2}testCase_15002" count="1" timeout="0" stopOnError="2" stopOnException="2" description="Profile API Subscription: Permissions - Regenerate Keys" tmsData="" testCase="True">
+						<testParameters />
+						<environments activeCloud="CBT" />
+						<children />
+					</testItem>
+					<testItem name="TestCase15003_1" key="{59C69364-928A-4744-9271-344FEB254B9B}" group="False" parallel="False" enabled="True" testMoniker="{CDDD9A0C-4E28-44FC-A8E4-AB1EC8F1B5B2}testCase_15003" count="1" timeout="0" stopOnError="2" stopOnException="2" description="Profile API Subscription: Permissions - Permissions" tmsData="" testCase="True">
+						<testParameters />
+						<environments activeCloud="CBT" />
+						<children />
+					</testItem>
+					<testItem name="TestCase15004_1" key="{2D91A14A-8445-4971-9ED2-814B30BEC422}" group="False" parallel="False" enabled="True" testMoniker="{CDDD9A0C-4E28-44FC-A8E4-AB1EC8F1B5B2}testCase_15004" count="1" timeout="0" stopOnError="2" stopOnException="2" description="Profile API Subscription: Permissions - Change Permissions" tmsData="" testCase="True">
+						<testParameters />
+						<environments activeCloud="CBT" />
+						<children />
+					</testItem>
+					<testItem name="TestCase15005_1" key="{25218F3B-0A6B-43C2-A4FA-220625E27736}" group="False" parallel="False" enabled="True" testMoniker="{CDDD9A0C-4E28-44FC-A8E4-AB1EC8F1B5B2}testCase_15005" count="1" timeout="0" stopOnError="2" stopOnException="2" description="Profile API Subscription: Permissions - Disable" tmsData="" testCase="True">
+						<testParameters />
+						<environments activeCloud="CBT" />
+						<children />
+					</testItem>
+					<testItem name="TestCase15006_1" key="{9F9D3489-2675-4EFF-B968-EB41C9696C55}" group="False" parallel="False" enabled="True" testMoniker="{CDDD9A0C-4E28-44FC-A8E4-AB1EC8F1B5B2}testCase_15006" count="1" timeout="0" stopOnError="2" stopOnException="2" description="Profile API Subscription: Permissions - ReEnable" tmsData="" testCase="True">
+						<testParameters />
+						<environments activeCloud="CBT" />
+						<children />
+					</testItem>
+					<testItem name="TestCase15007_1" key="{A5FCD57C-1D9A-4723-AF66-6CB5B134E788}" group="False" parallel="False" enabled="True" testMoniker="{CDDD9A0C-4E28-44FC-A8E4-AB1EC8F1B5B2}testCase_15007" count="1" timeout="0" stopOnError="2" stopOnException="2" description="Profile API Subscription: Permissions - Client Secret" tmsData="" testCase="True">
+						<testParameters />
+						<environments activeCloud="CBT" />
+						<children />
+					</testItem>
+					<testItem name="TestCase15008_1" key="{4FE802DE-3D85-4B42-A23E-18A515BF2B82}" group="False" parallel="False" enabled="True" testMoniker="{CDDD9A0C-4E28-44FC-A8E4-AB1EC8F1B5B2}testCase_15008" count="1" timeout="0" stopOnError="2" stopOnException="2" description="Profile API Subscription: Permissions - Regenerate Keys" tmsData="" testCase="True">
+						<testParameters />
+						<environments activeCloud="CBT" />
+						<children />
+					</testItem>
+					<testItem name="TestCase15009_1" key="{85BAFAD8-22E6-4BB2-B322-467042E04614}" group="False" parallel="False" enabled="True" testMoniker="{CDDD9A0C-4E28-44FC-A8E4-AB1EC8F1B5B2}testCase_15009" count="1" timeout="0" stopOnError="2" stopOnException="2" description="Profile API Subscription: Permissions - Regenerate Client Secret" tmsData="" testCase="True">
+						<testParameters />
+						<environments activeCloud="CBT" />
+						<children />
+					</testItem>
+					<testItem name="TestCase15010_1" key="{807AF82B-6155-4210-9C7C-823A9624BC53}" group="False" parallel="False" enabled="True" testMoniker="{CDDD9A0C-4E28-44FC-A8E4-AB1EC8F1B5B2}testCase_15010" count="1" timeout="0" stopOnError="2" stopOnException="2" description="Profile API Subscription: Permissions - Add Button" tmsData="" testCase="True">
+						<testParameters />
+						<environments activeCloud="CBT" />
+						<children />
+					</testItem>
+					<testItem name="TestCase15011_1" key="{BEC6BAD6-7638-4FE3-A019-D699E20933F2}" group="False" parallel="False" enabled="True" testMoniker="{CDDD9A0C-4E28-44FC-A8E4-AB1EC8F1B5B2}testCase_15011" count="1" timeout="0" stopOnError="2" stopOnException="2" description="Profile API Subscription: Permissions - Add" tmsData="" testCase="True">
+						<testParameters />
+						<environments activeCloud="CBT" />
+						<children />
+					</testItem>
+					<testItem name="subsSuiteLogout_1" key="{14B305CC-4CAB-4499-B885-7099C9BCBB09}" group="False" parallel="False" enabled="True" testMoniker="{CDDD9A0C-4E28-44FC-A8E4-AB1EC8F1B5B2}subsSuiteLogout" count="1" timeout="0" stopOnError="2" stopOnException="2" description="Subscription Suite Login" tmsData="" testCase="True">
+						<testParameters />
+						<environments activeCloud="CBT" />
+						<children />
+					</testItem>
+					<testItem name="limitSuiteLogin_1" key="{15C2E667-29AD-4A62-9402-5BFEBE037323}" group="False" parallel="False" enabled="True" testMoniker="{08C12E71-97E5-45B0-87EC-7CD4D361A734}limitSuiteLogin" count="1" timeout="0" stopOnError="2" stopOnException="1" description="Back Office Login as BOA" tmsData="" testCase="True">
+						<testParameters />
+						<environments activeCloud="CBT" />
+						<children />
+					</testItem>
+					<testItem name="TestCase17270_1" key="{6A64EC74-04D7-4294-9F73-423F1F9BC667}" group="False" parallel="False" enabled="True" testMoniker="{08C12E71-97E5-45B0-87EC-7CD4D361A734}testCase_17270" count="1" timeout="0" stopOnError="2" stopOnException="2" description="Daily Limit Inabilities on Profile Service Account Enrollment" tmsData="" testCase="True">
+						<testParameters />
+						<environments activeCloud="CBT" />
+						<children />
+					</testItem>
+					<testItem name="TestCase17271_1" key="{10E88E39-AC5F-4697-BF22-221A659F95C0}" group="False" parallel="False" enabled="True" testMoniker="{08C12E71-97E5-45B0-87EC-7CD4D361A734}testCase_17271" count="1" timeout="0" stopOnError="2" stopOnException="2" description="Over Daily Limit (SEN Only)" tmsData="" testCase="True">
+						<testParameters />
+						<environments activeCloud="CBT" />
+						<children />
+					</testItem>
+					<testItem name="TestCase17272_1" key="{25804B7E-11AC-4E35-A32D-41F217B8E8F0}" group="False" parallel="False" enabled="True" testMoniker="{08C12E71-97E5-45B0-87EC-7CD4D361A734}testCase_17272" count="1" timeout="0" stopOnError="2" stopOnException="2" description="Limit Changes Applied" tmsData="" testCase="True">
+						<testParameters />
+						<environments activeCloud="CBT" />
+						<children />
+					</testItem>
+					<testItem name="TestCase17274_1" key="{D4C53757-8195-41EA-A9B0-7DE30BD65056}" group="False" parallel="False" enabled="True" testMoniker="{08C12E71-97E5-45B0-87EC-7CD4D361A734}testCase_17274" count="1" timeout="0" stopOnError="2" stopOnException="2" description="FC Payment Limit Math - STP" tmsData="" testCase="True">
+						<testParameters />
+						<environments activeCloud="CBT" />
+						<children />
+					</testItem>
+					<testItem name="TestCase17275_1" key="{988689BB-31D3-453E-8A70-E645AE1116F4}" group="False" parallel="False" enabled="True" testMoniker="{08C12E71-97E5-45B0-87EC-7CD4D361A734}testCase_17275" count="1" timeout="0" stopOnError="2" stopOnException="2" description="FC Payment Limit Math - Submit: 1 Approval" tmsData="" testCase="True">
+						<testParameters />
+						<environments activeCloud="CBT" />
+						<children />
+					</testItem>
+					<testItem name="TestCase17276_1" key="{AF222CF8-6C9D-4F08-81D2-78F61815EE3F}" group="False" parallel="False" enabled="True" testMoniker="{08C12E71-97E5-45B0-87EC-7CD4D361A734}testCase_17276" count="1" timeout="0" stopOnError="2" stopOnException="2" description="FC Payment Limit Math - Approve: 1 Approval" tmsData="" testCase="True">
+						<testParameters />
+						<environments activeCloud="CBT" />
+						<children />
+					</testItem>
+					<testItem name="TestCase17277_1" key="{CB2D4EF8-53D2-4AE2-82A5-EAED27CCB002}" group="False" parallel="False" enabled="True" testMoniker="{08C12E71-97E5-45B0-87EC-7CD4D361A734}testCase_17277" count="1" timeout="0" stopOnError="2" stopOnException="2" description="FC Payment Limit Math - Approve: 2 Approvals" tmsData="" testCase="True">
+						<testParameters />
+						<environments activeCloud="CBT" />
+						<children />
+					</testItem>
+					<testItem name="TestCase17278_1" key="{1AB7323A-1379-466E-B296-B2ACD0E7FBD9}" group="False" parallel="False" enabled="True" testMoniker="{08C12E71-97E5-45B0-87EC-7CD4D361A734}testCase_17278" count="1" timeout="0" stopOnError="2" stopOnException="2" description="FC Payment Limit Math - Submit: 1 Approval" tmsData="" testCase="True">
+						<testParameters />
+						<environments activeCloud="CBT" />
+						<children />
+					</testItem>
+					<testItem name="TestCase17279_1" key="{428511D0-D0D3-47A5-B318-D299F7D2D871}" group="False" parallel="False" enabled="True" testMoniker="{08C12E71-97E5-45B0-87EC-7CD4D361A734}testCase_17279" count="1" timeout="0" stopOnError="2" stopOnException="2" description="FC Payment Limit Math - Approve: 1 Approval" tmsData="" testCase="True">
+						<testParameters />
+						<environments activeCloud="CBT" />
+						<children />
+					</testItem>
+					<testItem name="TestCase17280_1" key="{38C1E444-9217-4CEC-9412-5F581C36115F}" group="False" parallel="False" enabled="True" testMoniker="{08C12E71-97E5-45B0-87EC-7CD4D361A734}testCase_17280" count="1" timeout="0" stopOnError="2" stopOnException="2" description="FC Payment Limit Math - Approve: 2 Approvals" tmsData="" testCase="True">
+						<testParameters />
+						<environments activeCloud="CBT" />
+						<children />
+					</testItem>
+					<testItem name="TestCase5813_1" key="{E7255631-A5F1-43C1-857B-FDB70CEA812C}" group="False" parallel="False" enabled="True" testMoniker="{08C12E71-97E5-45B0-87EC-7CD4D361A734}testCase_5813" count="1" timeout="0" stopOnError="2" stopOnException="2" description="Daily Limit Inabilities on Profile Service Account Enrollment" tmsData="" testCase="True">
+						<testParameters />
+						<environments activeCloud="CBT" />
+						<children />
+					</testItem>
+					<testItem name="TestCase15517_1" key="{9D42199E-E455-4123-8CB4-7E1CA062B51C}" group="False" parallel="False" enabled="True" testMoniker="{08C12E71-97E5-45B0-87EC-7CD4D361A734}testCase_15517" count="1" timeout="0" stopOnError="2" stopOnException="2" description="INT Transfer - Limit Test" tmsData="" testCase="True">
+						<testParameters />
+						<environments activeCloud="CBT" />
+						<children />
+					</testItem>
+					<testItem name="TestCase17204_1" key="{1ABE16FB-F48E-4CAE-8E2E-84F1B9A6C136}" group="False" parallel="False" enabled="True" testMoniker="{08C12E71-97E5-45B0-87EC-7CD4D361A734}testCase_17204" count="1" timeout="0" stopOnError="2" stopOnException="2" description="Payment Service/Subservice - Limit Test" tmsData="" testCase="True">
+						<testParameters />
+						<environments activeCloud="CBT" />
+						<children />
+					</testItem>
+					<testItem name="limitSuiteLogout_1" key="{3D601478-40FA-4036-9A9A-15E6E6070C6A}" group="False" parallel="False" enabled="True" testMoniker="{08C12E71-97E5-45B0-87EC-7CD4D361A734}limitSuiteLogout" count="1" timeout="0" stopOnError="2" stopOnException="2" description="Limit Suite Logout" tmsData="" testCase="True">
+						<testParameters />
+						<environments activeCloud="CBT" />
+						<children />
+					</testItem>
+					<testItem name="intSuiteLogin_1" key="{E031E2AB-40C9-4053-9A44-9854474166E5}" group="False" parallel="False" enabled="True" testMoniker="{6E084C5E-7531-4273-9A2F-334D71480D2D}intSuiteLogin" count="1" timeout="0" stopOnError="2" stopOnException="2" description="" tmsData="" testCase="True">
+						<testParameters />
+						<environments activeCloud="CBT" />
+						<children />
+					</testItem>
+					<testItem name="TestCase15268_1" key="{4C46D4D4-B7EB-4BF5-B26D-3C6A264335C6}" group="False" parallel="False" enabled="True" testMoniker="{6E084C5E-7531-4273-9A2F-334D71480D2D}testCase_15268" count="1" timeout="0" stopOnError="2" stopOnException="2" description="INT Transfer EUR&gt;EUR - STP" tmsData="" testCase="True">
+						<testParameters />
+						<environments activeCloud="CBT" />
+						<children />
+					</testItem>
+					<testItem name="intSuiteLogout_1" key="{62B85B6A-E844-4A7D-9469-5A39AE6B3D5A}" group="False" parallel="False" enabled="True" testMoniker="{6E084C5E-7531-4273-9A2F-334D71480D2D}intSuiteLogout" count="1" timeout="0" stopOnError="2" stopOnException="2" description="" tmsData="" testCase="True">
+						<testParameters />
+						<environments activeCloud="CBT" />
+						<children />
+					</testItem>
+					<testItem name="paySuiteLogin_1" key="{B5CEFEC9-4C53-48F3-9E8C-47A7700ED509}" group="False" parallel="False" enabled="True" testMoniker="{27506758-2DE2-44D8-9275-5183F808CB92}paySuiteLogin" count="1" timeout="0" stopOnError="2" stopOnException="2" description="" tmsData="" testCase="True">
+						<testParameters />
+						<environments activeCloud="CBT" />
+						<children />
+					</testItem>
+					<testItem name="TestCase15564_1" key="{44763EDE-466F-4A0B-921C-B10BE173A0F5}" group="False" parallel="False" enabled="True" testMoniker="{27506758-2DE2-44D8-9275-5183F808CB92}testCase_15564" count="1" timeout="0" stopOnError="2" stopOnException="2" description="Payments Reporting" tmsData="" testCase="True">
+						<testParameters />
+						<environments activeCloud="CBT" />
+						<children />
+					</testItem>
+					<testItem name="TestCase16218_1" key="{3DEB30BB-4BB7-41F9-A725-207E1F3F9BF3}" group="False" parallel="False" enabled="True" testMoniker="{27506758-2DE2-44D8-9275-5183F808CB92}testCase_16218" count="1" timeout="0" stopOnError="2" stopOnException="2" description="FC Payment - STP" tmsData="" testCase="True">
+						<testParameters />
+						<environments activeCloud="CBT" />
+						<children />
+					</testItem>
+					<testItem name="TestCase16219_1" key="{23993565-DD27-469D-8644-F39579740BB2}" group="False" parallel="False" enabled="True" testMoniker="{27506758-2DE2-44D8-9275-5183F808CB92}testCase_16219" count="1" timeout="0" stopOnError="2" stopOnException="2" description="FC Payment - 1 Approval" tmsData="" testCase="True">
+						<testParameters />
+						<environments activeCloud="CBT" />
+						<children />
+					</testItem>
+					<testItem name="paySuiteLogout_1" key="{A94FA39A-6C5A-4DAB-A29F-85D7A3BA3AAC}" group="False" parallel="False" enabled="True" testMoniker="{27506758-2DE2-44D8-9275-5183F808CB92}paySuiteLogout" count="1" timeout="0" stopOnError="2" stopOnException="2" description="" tmsData="" testCase="True">
+						<testParameters />
+						<environments activeCloud="CBT" />
+						<children />
+					</testItem>
+					<testItem name="senSuiteLogin_1" key="{329889FE-FBF7-4317-B75D-71F7D5DD8933}" group="False" parallel="False" enabled="True" testMoniker="{39089ADA-1A5F-44DA-BF19-2FDA2DC57BDD}senSuiteLogin" count="1" timeout="0" stopOnError="2" stopOnException="1" description="" tmsData="" testCase="True">
+						<testParameters />
+						<environments activeCloud="CBT" />
+						<children />
+					</testItem>
+					<testItem name="TestCase25305_1" key="{2165A22D-353E-4CF2-881F-07F257A92264}" group="False" parallel="False" enabled="True" testMoniker="{39089ADA-1A5F-44DA-BF19-2FDA2DC57BDD}testCase_25305" count="1" timeout="0" stopOnError="3" stopOnException="2" description="" tmsData="" testCase="True">
+						<testParameters />
+						<environments activeCloud="CBT" />
+						<children />
+					</testItem>
+					<testItem name="TestCase17538_1" key="{BB28F58E-B476-4309-A3CB-5300EF5EF8D5}" group="False" parallel="False" enabled="True" testMoniker="{39089ADA-1A5F-44DA-BF19-2FDA2DC57BDD}testCase_17538" count="1" timeout="0" stopOnError="2" stopOnException="2" description="" tmsData="" testCase="True">
+						<testParameters />
+						<environments activeCloud="CBT" />
+						<children />
+					</testItem>
+					<testItem name="TestCase17539_1" key="{56D718CD-2601-46E7-849F-13B95C35527F}" group="False" parallel="False" enabled="True" testMoniker="{39089ADA-1A5F-44DA-BF19-2FDA2DC57BDD}testCase_17539" count="1" timeout="0" stopOnError="2" stopOnException="2" description="" tmsData="" testCase="True">
+						<testParameters />
+						<environments activeCloud="CBT" />
+						<children />
+					</testItem>
+					<testItem name="TestCase17540_1" key="{2217FA11-00DB-47A8-815C-B55786646990}" group="False" parallel="False" enabled="True" testMoniker="{39089ADA-1A5F-44DA-BF19-2FDA2DC57BDD}testCase_17540" count="1" timeout="0" stopOnError="2" stopOnException="2" description="" tmsData="" testCase="True">
+						<testParameters />
+						<environments activeCloud="CBT" />
+						<children />
+					</testItem>
+					<testItem name="TestCase17543_1" key="{844CD5EE-9726-4BCA-8D4E-15E3FEFC570C}" group="False" parallel="False" enabled="True" testMoniker="{39089ADA-1A5F-44DA-BF19-2FDA2DC57BDD}testCase_17543" count="1" timeout="0" stopOnError="2" stopOnException="2" description="" tmsData="" testCase="True">
+						<testParameters />
+						<environments activeCloud="CBT" />
+						<children />
+					</testItem>
+					<testItem name="TestCase16217_1" key="{373489E1-9944-41EC-A3BB-EEB8291C4692}" group="False" parallel="False" enabled="True" testMoniker="{39089ADA-1A5F-44DA-BF19-2FDA2DC57BDD}testCase_16217" count="1" timeout="0" stopOnError="2" stopOnException="2" description="" tmsData="" testCase="True">
+						<testParameters />
+						<environments activeCloud="CBT" />
+						<children />
+					</testItem>
+					<testItem name="TestCase15671_1" key="{F84E67D5-5997-49B8-90D5-709602EB7CE8}" group="False" parallel="False" enabled="True" testMoniker="{39089ADA-1A5F-44DA-BF19-2FDA2DC57BDD}testCase_15671" count="1" timeout="0" stopOnError="3" stopOnException="2" description="" tmsData="" testCase="True">
+						<testParameters />
+						<environments activeCloud="CBT" />
+						<children />
+					</testItem>
+					<testItem name="senSuiteLogout_1" key="{5D9523C5-03E7-4295-994C-687D4E49ECC7}" group="False" parallel="False" enabled="True" testMoniker="{39089ADA-1A5F-44DA-BF19-2FDA2DC57BDD}senSuiteLogout" count="1" timeout="0" stopOnError="2" stopOnException="2" description="SEN Suite Logout" tmsData="" testCase="True">
+						<testParameters />
+						<environments activeCloud="CBT" />
+						<children />
+					</testItem>
+				</children>
+			</testItem>
+			<testItem name="AdHoc-HorizonXE" key="{043A73EF-2B67-4A62-BBAC-2C5DF3C0E2B3}" group="True" parallel="False" enabled="True" testMoniker="" count="1" timeout="0" stopOnError="3" stopOnException="2" description="" tmsData="" testCase="True">
+				<testParameters />
+				<children>
+					<testItem name="Setup" key="{3C102423-A6F2-4D39-B04B-F515AFDD1932}" group="False" parallel="False" enabled="True" testMoniker="{C206FF81-CFCC-4884-A88C-D9E657EAB6CA}setEnvironment" count="1" timeout="0" stopOnError="4" stopOnException="2" description="" tmsData="" testCase="True">
+						<testParameters>
+							<param0 name="envt" type="3" localVarName="" varType="8" value="STG" />
+						</testParameters>
+						<environments activeCloud="CBT" />
+						<children />
+					</testItem>
+					<testItem name="Login" key="{549EE67D-8E89-411F-80EF-E0F8A0296D77}" group="False" parallel="False" enabled="True" testMoniker="{39089ADA-1A5F-44DA-BF19-2FDA2DC57BDD}senSuiteLogin" count="1" timeout="0" stopOnError="4" stopOnException="2" description="" tmsData="" testCase="True">
+						<testParameters />
+						<environments activeCloud="CBT" />
+						<children />
+					</testItem>
+					<testItem name="SEN Enabled Connection Test" key="{256D9466-807C-4606-8CCC-23D2301BE8A4}" group="False" parallel="False" enabled="True" testMoniker="{0EBBC5D7-C908-4CF7-9FD9-14FAC414BD6B}regressionTest_13454" count="1" timeout="0" stopOnError="4" stopOnException="2" description="" tmsData="" testCase="True">
+						<testParameters />
+						<environments activeCloud="CBT" />
+						<children />
+					</testItem>
+					<testItem name="Account History View" key="{49F299A6-EA1F-458A-8277-E2C920CA8474}" group="False" parallel="False" enabled="True" testMoniker="{0EBBC5D7-C908-4CF7-9FD9-14FAC414BD6B}regressionTest_13729" count="1" timeout="0" stopOnError="4" stopOnException="2" description="" tmsData="" testCase="True">
+						<testParameters />
+						<environments activeCloud="CBT" />
+						<children />
+					</testItem>
+					<testItem name="SEN Transfer - Eligibility Test" key="{BDB94C4B-E124-45B8-B6FF-4F9873C2BF8B}" group="False" parallel="False" enabled="True" testMoniker="{0EBBC5D7-C908-4CF7-9FD9-14FAC414BD6B}regressionTest_14956" count="1" timeout="0" stopOnError="4" stopOnException="2" description="" tmsData="" testCase="True">
+						<testParameters />
+						<environments activeCloud="CBT" />
+						<children />
+					</testItem>
+					<testItem name="Submit USD_USD SEN Transfer - STP" key="{E4EBCF6C-C337-4D27-98C9-DB20B9F80FE0}" group="False" parallel="False" enabled="True" testMoniker="{0EBBC5D7-C908-4CF7-9FD9-14FAC414BD6B}regressionTest_16215" count="1" timeout="0" stopOnError="4" stopOnException="2" description="" tmsData="" testCase="True">
+						<testParameters />
+						<environments activeCloud="CBT" />
+						<children />
+					</testItem>
+					<testItem name="SEN Connections - Back Office" key="{5F286487-6305-4F68-96E4-610FB8EF4E4F}" group="False" parallel="False" enabled="True" testMoniker="{39089ADA-1A5F-44DA-BF19-2FDA2DC57BDD}testCase_17540" count="1" timeout="0" stopOnError="4" stopOnException="2" description="" tmsData="" testCase="True">
+						<testParameters />
+						<environments activeCloud="CBT" />
+						<children />
+					</testItem>
+					<testItem name="Submit EUR_EUR SEN Transfer - STP" key="{297B6DA5-4BE2-4381-B751-CA024D3FA2CB}" group="False" parallel="False" enabled="True" testMoniker="{39089ADA-1A5F-44DA-BF19-2FDA2DC57BDD}testCase_17541" count="1" timeout="0" stopOnError="4" stopOnException="2" description="" tmsData="" testCase="True">
+						<testParameters />
+						<environments activeCloud="CBT" />
+						<children />
+					</testItem>
+					<testItem name="Logout" key="{EC5DEEE8-50AD-46EF-97B9-6CAFF8AFDEF6}" group="False" parallel="False" enabled="True" testMoniker="{39089ADA-1A5F-44DA-BF19-2FDA2DC57BDD}senSuiteLogout" count="1" timeout="0" stopOnError="4" stopOnException="2" description="" tmsData="" testCase="True">
+						<testParameters />
+						<environments activeCloud="CBT" />
+						<children />
+					</testItem>
+					<testItem name="TearDown" key="{2341E1AE-89D3-4B8C-92F5-ED2D63E56C4D}" group="False" parallel="False" enabled="True" testMoniker="{C206FF81-CFCC-4884-A88C-D9E657EAB6CA}cleanUpEnvironment" count="1" timeout="0" stopOnError="4" stopOnException="2" description="" tmsData="" testCase="True">
+						<testParameters />
+						<environments activeCloud="CBT" />
+						<children />
+					</testItem>
+				</children>
+			</testItem>
+			<testItem name="CleanUp" key="{F8E0976C-D480-4727-8954-3F134B65526B}" group="True" parallel="False" enabled="True" testMoniker="" count="1" timeout="0" stopOnError="3" stopOnException="2" description="" tmsData="" testCase="True">
+				<testParameters />
+				<children>
+					<testItem name="cleanUpEnvironment" key="{31957B01-4A7C-4828-A026-033E259D3DB3}" group="False" parallel="False" enabled="True" testMoniker="{C206FF81-CFCC-4884-A88C-D9E657EAB6CA}cleanUpEnvironment" count="1" timeout="0" stopOnError="1" stopOnException="1" description="Post-Automation CleanUp" tmsData="" testCase="True">
+						<testParameters />
+						<environments activeCloud="CBT" />
+						<children />
+					</testItem>
+				</children>
+			</testItem>
+			<testItem name="AdHoc-Demo" key="{F5829E67-3F58-4ABD-9BE7-6DC17D59DEED}" group="True" parallel="False" enabled="True" testMoniker="" count="1" timeout="0" stopOnError="3" stopOnException="2" description="" tmsData="" testCase="True">
+				<testParameters />
+				<children>
+					<testItem name="start" key="{215F956C-EF67-47C2-8F49-48F109E572F3}" group="False" parallel="False" enabled="True" testMoniker="{B2D39C68-9774-4B47-8634-BE29138FA8F3}firstTest_DeleteOldLogs" count="1" timeout="0" stopOnError="3" stopOnException="2" description="" tmsData="" testCase="False">
+						<testParameters />
+						<environments activeCloud="CBT" />
+						<children />
+					</testItem>
+					<testItem name="ProjectTestItem1" key="{51440CBF-37A2-4335-9FA8-6B41F00B4749}" group="False" parallel="False" enabled="True" testMoniker="{B2D39C68-9774-4B47-8634-BE29138FA8F3}test_LogMessage1" count="1" timeout="0" stopOnError="3" stopOnException="2" description="" tmsData="" testCase="False">
+						<testParameters />
+						<environments activeCloud="CBT" />
+						<children />
+					</testItem>
+					<testItem name="ProjectTestItem2" key="{F1640B1B-B4B6-4567-8F77-F840C6F4ECFB}" group="False" parallel="False" enabled="True" testMoniker="{B2D39C68-9774-4B47-8634-BE29138FA8F3}test_LogMessage2" count="1" timeout="0" stopOnError="3" stopOnException="2" description="" tmsData="" testCase="False">
+						<testParameters />
+						<environments activeCloud="CBT" />
+						<children />
+					</testItem>
+					<testItem name="ProjectTestItem3" key="{2DD87A75-ECC9-441C-9FC5-A7FC07284063}" group="False" parallel="False" enabled="True" testMoniker="{B2D39C68-9774-4B47-8634-BE29138FA8F3}test_LogMessage3" count="1" timeout="0" stopOnError="3" stopOnException="2" description="" tmsData="" testCase="False">
+						<testParameters />
+						<environments activeCloud="CBT" />
+						<children />
+					</testItem>
+					<testItem name="ProjectTestItem4" key="{25C8D6DE-82D5-4BF9-8E3B-8380D8CDE31F}" group="False" parallel="False" enabled="True" testMoniker="{B2D39C68-9774-4B47-8634-BE29138FA8F3}test_LogMessage4" count="1" timeout="0" stopOnError="3" stopOnException="2" description="" tmsData="" testCase="False">
+						<testParameters />
+						<environments activeCloud="CBT" />
+						<children />
+					</testItem>
+					<testItem name="ProjectTestItem5" key="{2C2903C1-6162-43BA-83D0-FCE07C9363E4}" group="False" parallel="False" enabled="True" testMoniker="{B2D39C68-9774-4B47-8634-BE29138FA8F3}test_LogMessage5" count="1" timeout="0" stopOnError="3" stopOnException="2" description="" tmsData="" testCase="False">
+						<testParameters />
+						<environments activeCloud="CBT" />
+						<children />
+					</testItem>
+				</children>
+			</testItem>
+		</children>
+	</testItems>
+	<variables key="{8F946E19-997C-4E39-89C9-35113D460EE3}">
+		<data Version="4">
+			<Items>
+				<Variable Name="paymentID" Type="String" Local="True">
+					<DefValue />
+				</Variable>
+				<Variable Name="sgbCurrentURL" Type="String" Local="True">
+					<DefValue />
+				</Variable>
+				<Variable Name="sgbCurrentSite" Type="String" Local="True">
+					<DefValue />
+				</Variable>
+				<Variable Name="sgbNewSubAlias" Type="String" Local="True">
+					<DefValue StrValue="Tacobout APIs" />
+				</Variable>
+				<Variable Name="sgbNewSubEmail" Type="String" Local="True">
+					<DefValue StrValue="master@tacoking.com" />
+				</Variable>
+				<Variable Name="ErrorCounter" Type="Integer" Local="True">
+					<DefValue IntValue="0" />
+				</Variable>
+				<Variable Name="sgbCurrentProfile" Type="String" Local="True">
+					<DefValue StrValue="TestComplete Automation" />
+				</Variable>
+				<Variable Name="sgbCurrentUser" Type="String" Local="True">
+					<DefValue StrValue="Test Complete User 1" />
+				</Variable>
+				<Variable Name="sgbCurrentUserRole" Type="String" Local="True">
+					<DefValue StrValue="Super Admin" />
+				</Variable>
+				<Variable Name="sgbCurrentAccount" Type="String" Local="True">
+					<DefValue StrValue="TC Smartbear Standard" />
+				</Variable>
+				<Variable Name="sgbCurrentTransferType" Type="String" Local="True">
+					<DefValue StrValue="payment" />
+				</Variable>
+			</Items>
+		</data>
+	</variables>
+	<settings key="{0770DFAD-FE5C-4624-B09B-4317E884C8C9}">
+		<settingsVersion value="15.48" />
+		<setting name="AgOpenApp_ExtendedSilverlightObjectTree" type="1" value="False" />
+		<setting name="ApplicationHangingProcessFilterMode" type="6" rowIndex="4" colIndex="0">
+			<columns>
+				<column type="5" enabled="True" />
+			</columns>
+			<data>
+				<row val0="Use all processes" />
+				<row val0="Use only tested applications" />
+				<row val0="Use only selected processes" />
+				<row val0="Ignore selected processes" />
+				<row val0="Ignore all processes" />
+			</data>
+		</setting>
+		<setting name="ApplicationHangingProcessList" type="6" rowIndex="-1" colIndex="0">
+			<columns>
+				<column type="5" enabled="True" />
+			</columns>
+			<data />
+		</setting>
+		<setting name="ApplicationHangingTimeout" type="2" value="30000" />
+		<setting name="AzureDevOps_CollectionID" type="5" value="{B92EF9F6-4E6D-4DBB-B9EB-CBB67D2A6523}" />
+		<setting name="AzureDevOps_ProjectID" type="5" value="vstfs:///Classification/TeamProject/c6fbc3d6-047f-4949-834e-00eeafe18248" />
+		<setting name="AzureDevOps_ServerName" type="5" value="https://silvergate.visualstudio.com/" />
+		<setting name="AzureDevOps_TeamProject" type="5" value="DevProjects" />
+		<setting name="AzureDevOps_TeamProjectCollection" type="5" value="" />
+		<setting name="AzureDevOps_URL" type="5" value="https://silvergate.visualstudio.com/" />
+		<setting name="BitBar_APIKey" type="5" value="" />
+		<setting name="BitBar_APIURL" type="5" value="https://cloud.bitbar.com/api/" />
+		<setting name="BitBar_FindAndroidDevice" type="5" value="( Device Group As in Selected Device )" />
+		<setting name="BitBar_FindIOSDevice" type="5" value="( Device Group As in Selected Device )" />
+		<setting name="BitBar_HUBURL" type="5" value="https://appium.bitbar.com/wd/hub/" />
+		<setting name="BitBar_NewCommandTimeout" type="2" value="300" />
+		<setting name="CBT_AppsAvailability" type="6" rowIndex="0" colIndex="0">
+			<columns>
+				<column type="5" enabled="True" />
+			</columns>
+			<data>
+				<row val0="Everywhere" />
+				<row val0="In a local network" />
+				<row val0="On a local computer" />
+				<row val0="Via proxy" />
+			</data>
+		</setting>
+		<setting name="CBT_Authkey" type="5" value="" />
+		<setting name="CBT_LocalHtmlDir" type="5" value="" />
+		<setting name="CBT_ProxyAddress" type="5" value="" />
+		<setting name="CBT_ProxyLogin" type="5" value="" />
+		<setting name="CBT_ProxyPassword" type="5" value="" />
+		<setting name="CBT_ProxyPort" type="2" value="0" />
+		<setting name="CBT_UserName" type="5" value="" />
+		<setting name="CLRBridge_PreferredApartmentModel" type="6" rowIndex="0" colIndex="0">
+			<columns>
+				<column type="5" enabled="True" />
+			</columns>
+			<data>
+				<row val0="Does not matter" />
+				<row val0="Single-threaded apartment" />
+				<row val0="Multi-threaded apartment" />
+			</data>
+		</setting>
+		<setting name="CLRBridge_PreferredArchitecture" type="6" rowIndex="1" colIndex="0">
+			<columns>
+				<column type="5" enabled="True" />
+			</columns>
+			<data>
+				<row val0="The same as the operating system" />
+				<row val0="32-bit" />
+				<row val0="64-bit" />
+			</data>
+		</setting>
+		<setting name="CLRBridge_SelectedComponents" type="6" rowIndex="-1" colIndex="1">
+			<columns>
+				<column type="5" enabled="True" />
+				<column type="1" enabled="True" />
+			</columns>
+			<data />
+		</setting>
+		<setting name="CountProcessesOfAllUsers" type="1" value="False" />
+		<setting name="DbgServices_Active" type="1" value="True" />
+		<setting name="DbgServices_DepthShown" type="2" value="10" />
+		<setting name="DbgServices_EnableEvents" type="1" value="True" />
+		<setting name="DbgServices_Priority" type="6" rowIndex="3" colIndex="0">
+			<columns>
+				<column type="5" enabled="True" />
+			</columns>
+			<data>
+				<row val0="pmLowest" />
+				<row val0="pmLower" />
+				<row val0="pmNormal" />
+				<row val0="pmHigher" />
+				<row val0="pmHighest" />
+			</data>
+		</setting>
+		<setting name="DbgServices_UseExtendedDebugger" type="1" value="True" />
+		<setting name="DraggingDelay" type="2" value="5" />
+		<setting name="General_CurrentImageFormat" type="5" value="126_0_0_0_97_113_115_111_1_0_0_0_4_0_0_0_114_0_111_0_111_0_116_0_1_0_0_0_9_0_0_0_102_0_111_0_114_0_109_0_97_0_116_0_107_0_101_0_121_0_1_0_0_0_38_0_0_0_123_0_66_0_65_0_55_0_52_0_53_0_49_0_54_0_57_0_45_0_70_0_51_0_52_0_68_0_45_0_52_0_55_0_49_0_48_0_45_0_66_0_51_0_55_0_70_0_45_0_68_0_53_0_69_0_70_0_69_0_56_0_65_0_53_0_49_0_51_0_51_0_57_0_125_0_1_0_0_0_16_0_0_0_112_0_110_0_103_0_99_0_111_0_110_0_102_0_105_0_103_0_117_0_114_0_97_0_116_0_105_0_111_0_110_0_2_0_0_0_16_0_0_0_99_0_111_0_109_0_112_0_114_0_101_0_115_0_115_0_105_0_111_0_110_0_108_0_101_0_118_0_101_0_108_0_0_0_0_0_4_0_0_0_10_0_0_0_105_0_110_0_116_0_101_0_114_0_108_0_97_0_99_0_101_0_100_0_5_0_0_0_0_0_0_0_0_0_" />
+		<setting name="General_DisableDWMBeforeCapturingImage" type="1" value="True" />
+		<setting name="General_ImageFormat" type="5" value="Format: PNG; Compression level: 4" />
+		<setting name="General_ObjectTreeModel" type="6" rowIndex="0" colIndex="0">
+			<columns>
+				<column type="5" enabled="True" />
+			</columns>
+			<data>
+				<row val0="Tree" />
+				<row val0="Flat" />
+			</data>
+		</setting>
+		<setting name="General_ProjectLogLocation" type="5" value="Log" />
+		<setting name="General_RepaintWindowBeforeCapturingImage" type="1" value="True" />
+		<setting name="General_UnitsEncoding" type="6" rowIndex="1" colIndex="0">
+			<columns>
+				<column type="5" enabled="True" />
+			</columns>
+			<data>
+				<row val0="UTF-16" />
+				<row val0="UTF-8" />
+				<row val0="ANSI" />
+				<row val0="Auto" />
+			</data>
+		</setting>
+		<setting name="Gherkin_ExamplesAreTestCases" type="1" value="True" />
+		<setting name="Gherkin_ShowHiddenStepDefinitionWarn" type="1" value="True" />
+		<setting name="Gherkin_StopFeatureIfScenarioFailss" type="1" value="False" />
+		<setting name="Gherkin_StopScenarioIfStepFails" type="1" value="False" />
+		<setting name="Gherkin_StopScenarioOutlineIfExampleFails" type="1" value="False" />
+		<setting name="Gherkin_UseStepDuringDefinitionsGeneration" type="1" value="False" />
+		<setting name="HipTest_ProjectID" type="2" value="-1" />
+		<setting name="HipTest_ProjectName" type="5" value="The current project is not bound to CucumberStudio." />
+		<setting name="HipTest_SaveResults" type="1" value="True" />
+		<setting name="HipTest_SynchronizeBeforeRun" type="1" value="True" />
+		<setting name="HipTest_SynchronizeOnOpening" type="1" value="True" />
+		<setting name="HipTest_SynchronizeTestRun" type="1" value="False" />
+		<setting name="HipTest_TestRunID" type="5" value="" />
+		<setting name="HipTest_TestRunName" type="5" value="[Test run created last]" />
+		<setting name="JavaBridge_Classes" type="6" rowIndex="-1" colIndex="0">
+			<columns>
+				<column type="5" enabled="True" />
+			</columns>
+			<data />
+		</setting>
+		<setting name="JavaBridge_ClassPaths" type="6" rowIndex="-1" colIndex="0">
+			<columns>
+				<column type="5" enabled="True" />
+			</columns>
+			<data />
+		</setting>
+		<setting name="JavaFXOpenApp_DoNotRecognizeJavaFXStageAsAWTComponent" type="1" value="True" />
+		<setting name="JavaFXOpenApp_ExposedCustomNodes" type="6" rowIndex="-1" colIndex="2">
+			<columns>
+				<column type="1" enabled="True" />
+				<column type="5" enabled="True" />
+				<column type="5" enabled="True" />
+			</columns>
+			<data />
+		</setting>
+		<setting name="JavaFXOpenApp_NodeByClassNameFilters" type="6" rowIndex="8" colIndex="2">
+			<columns>
+				<column type="1" enabled="True" />
+				<column type="5" enabled="True" />
+				<column type="1" enabled="True" />
+			</columns>
+			<data>
+				<row val0="False" val1="*" val2="False" />
+				<row val0="True" val1="javafx.scene.SubScene" val2="True" />
+				<row val0="True" val1="javafx.scene.control.Control" val2="True" />
+				<row val0="True" val1="javafx.scene.web.WebView" val2="False" />
+				<row val0="False" val1="javafx.scene.canvas.Canvas" val2="True" />
+				<row val0="False" val1="javafx.scene.image.ImageView" val2="True" />
+				<row val0="False" val1="javafx.scene.media.MediaView" val2="True" />
+				<row val0="True" val1="com.sun.javafx.scene.control.skin.ContextMenuContent$MenuItemContainer" val2="True" />
+				<row val0="True" val1="com.sun.javafx.scene.control.ContextMenuContent$MenuItemContainer" val2="True" />
+			</data>
+		</setting>
+		<setting name="JavaOpenApp_DoNotRecognizeChildSWTAsParent" type="1" value="False" />
+		<setting name="KeyPressingDelay" type="2" value="2" />
+		<setting name="MobileSupportType" type="6" rowIndex="0" colIndex="0">
+			<columns>
+				<column type="5" enabled="True" />
+			</columns>
+			<data>
+				<row val0="Mobile device cloud (BitBar and local Appium)" />
+				<row val0="Legacy mobile support" />
+			</data>
+		</setting>
+		<setting name="MouseMovementDelay" type="2" value="3" />
+		<setting name="ObjectMapping_Objects" type="6" rowIndex="-1" colIndex="3">
+			<columns>
+				<column type="5" enabled="True" />
+				<column type="5" enabled="True" />
+				<column type="2" enabled="True" />
+				<column type="2" enabled="True" />
+			</columns>
+			<data />
+		</setting>
+		<setting name="OpenApps_ActivateSystemProcesses" type="1" value="False" />
+		<setting name="OpenApps_DbgAgent_AdvancedExceptionHandling" type="1" value="False" />
+		<setting name="OpenApps_DbgAgent_CombineClassDefinitions" type="1" value="False" />
+		<setting name="OpenApps_DbgAgent_EnableDebugAgent" type="1" value="False" />
+		<setting name="OpenApps_DbgAgent_StringLengthLimit" type="2" value="1024" />
+		<setting name="OpenApps_DbgAgent_UseStaticLibs" type="1" value="False" />
+		<setting name="OpenApps_EnableMultipleNamesForObjects" type="1" value="False" />
+		<setting name="OpenApps_FlashFlex_InstallFlashInjector" type="1" value="False" />
+		<setting name="OpenApps_FlashFlex_TrustedLocations" type="6" rowIndex="0" colIndex="1">
+			<columns>
+				<column type="1" enabled="True" />
+				<column type="5" enabled="True" />
+			</columns>
+			<data>
+				<row val0="True" val1="%PRODUCT_LOCATION%\Open Apps\Flex\FlashInjector.swf" />
+			</data>
+		</setting>
+		<setting name="OpenApps_HybridMobile_AccessPolicy" type="1" value="False" />
+		<setting name="OpenApps_HybridMobile_DynamicIdentifiers" type="6" rowIndex="37" colIndex="9">
+			<columns>
+				<column type="2" enabled="True" />
+				<column type="2" enabled="True" />
+				<column type="1" enabled="True" />
+				<column type="1" enabled="True" />
+				<column type="5" enabled="True" />
+				<column type="5" enabled="True" />
+				<column type="5" enabled="True" />
+				<column type="5" enabled="True" />
+				<column type="5" enabled="True" />
+				<column type="2" enabled="True" />
+			</columns>
+			<data>
+				<row val0="-1" val1="0" val2="True" val3="True" val4="ASP.NET" val5="" val6="" val7="" val8="Wildcard&#13;&#10;RegExp" val9="0" />
+				<row val0="0" val1="0" val2="False" val3="True" val4="Do not use IDs ending with a string like &quot;ctl00&quot;" val5="RegExp" val6="^(.*[-_$])?(ctl[0-9]+)$" val7="" val8="Wildcard&#13;&#10;RegExp" val9="0" />
+				<row val0="0" val1="0" val2="False" val3="True" val4="Remove GUIDs and ctl00-like prefixes from Sharepoint IDs" val5="RegExp" val6="(.+?_(\h+_\h+_\h+_\h+_\h+))+(.*ctr?l[0-9]+)?[_$]?{.*}$" val7="$1" val8="Wildcard&#13;&#10;RegExp" val9="0" />
+				<row val0="0" val1="0" val2="False" val3="True" val4="For IDs containing a string like &quot;ctl00_&quot;, leave only symbols after this string" val5="RegExp" val6=".*(ctl[0-9]+[-_$]+){.*}" val7="$1" val8="Wildcard&#13;&#10;RegExp" val9="0" />
+				<row val0="-1" val1="0" val2="True" val3="True" val4="Dojo toolkit" val5="" val6="" val7="" val8="Wildcard&#13;&#10;RegExp" val9="0" />
+				<row val0="4" val1="0" val2="False" val3="True" val4="Do not use IDs starting with &quot;dijit_&quot;" val5="Wildcard" val6="dijit_*" val7="" val8="Wildcard&#13;&#10;RegExp" val9="0" />
+				<row val0="-1" val1="0" val2="True" val3="True" val4="Google Web Toolkit" val5="" val6="" val7="" val8="Wildcard&#13;&#10;RegExp" val9="0" />
+				<row val0="6" val1="0" val2="False" val3="True" val4="Remove all but the last part of IDs like &quot;gwt-uid-370_runButton&quot;" val5="RegExp" val6="^(gwt-uid-[0-9]+)(_{.*})?$" val7="$1" val8="Wildcard&#13;&#10;RegExp" val9="0" />
+				<row val0="6" val1="0" val2="False" val3="True" val4="Remove dynamic parts of Sencha GXT IDs" val5="RegExp" val6="^(x-((widget)|(auto))-.*[0-9]+)([-_]{.*})?$" val7="$1" val8="Wildcard&#13;&#10;RegExp" val9="0" />
+				<row val0="-1" val1="0" val2="True" val3="True" val4="JavaServer Faces" val5="" val6="" val7="" val8="Wildcard&#13;&#10;RegExp" val9="0" />
+				<row val0="9" val1="0" val2="False" val3="True" val4="Do not use IDs like &quot;_t14&quot;" val5="RegExp" val6="^{_t}{[0-9]+}$" val7="" val8="Wildcard&#13;&#10;RegExp" val9="0" />
+				<row val0="9" val1="0" val2="False" val3="True" val4="Do not use IDs like &quot;j_id23&quot; or &quot;j_idt23&quot;" val5="RegExp" val6="^{j_idt?}{[0-9]+}$" val7="" val8="Wildcard&#13;&#10;RegExp" val9="0" />
+				<row val0="9" val1="0" val2="False" val3="True" val4="Remove all but the last part of IDs like &quot;frm:menuLinks:0:link&quot;" val5="RegExp" val6="(.+):{[^0-9]+}$" val7="$1" val8="Wildcard&#13;&#10;RegExp" val9="0" />
+				<row val0="9" val1="0" val2="False" val3="True" val4="Do not use IDs like &quot;frm:menuLinks:3:link&quot;" val5="RegExp" val6="(.+):(.*)" val7="" val8="Wildcard&#13;&#10;RegExp" val9="0" />
+				<row val0="-1" val1="0" val2="True" val3="True" val4="jQuery UI library" val5="" val6="" val7="" val8="Wildcard&#13;&#10;RegExp" val9="0" />
+				<row val0="14" val1="0" val2="False" val3="True" val4="Do not use IDs starting with &quot;ui-id-&quot;" val5="Wildcard" val6="ui-id-*" val7="" val8="Wildcard&#13;&#10;RegExp" val9="0" />
+				<row val0="-1" val1="0" val2="True" val3="True" val4="Microsoft Dynamics" val5="" val6="" val7="" val8="Wildcard&#13;&#10;RegExp" val9="0" />
+				<row val0="16" val1="0" val2="False" val3="True" val4="Do not use IDs like &quot;id-33&quot; or &quot;id__14&quot;" val5="RegExp" val6="^id[_0-9\-]+$" val7="" val8="Wildcard&#13;&#10;RegExp" val9="0" />
+				<row val0="-1" val1="0" val2="True" val3="True" val4="Salesforce" val5="" val6="" val7="" val8="Wildcard&#13;&#10;RegExp" val9="0" />
+				<row val0="18" val1="0" val2="False" val3="True" val4="Do not use IDs like &quot;checkbox-1&quot; or &quot;checkbox-123-3&quot;" val5="RegExp" val6="^checkbox-[0-9\-]+$" val7="" val8="Wildcard&#13;&#10;RegExp" val9="0" />
+				<row val0="18" val1="0" val2="False" val3="True" val4="Do not use IDs like &quot;input-1&quot; or &quot;input-123-3&quot;" val5="RegExp" val6="^input-[0-9\-]+$" val7="" val8="Wildcard&#13;&#10;RegExp" val9="0" />
+				<row val0="-1" val1="0" val2="True" val3="True" val4="Sencha ExtJS" val5="" val6="" val7="" val8="Wildcard&#13;&#10;RegExp" val9="0" />
+				<row val0="21" val1="0" val2="False" val3="True" val4="Do not use IDs containing &quot;ext-gen&quot;" val5="RegExp" val6="^(.*-)?ext-gen" val7="" val8="Wildcard&#13;&#10;RegExp" val9="0" />
+				<row val0="21" val1="0" val2="False" val3="True" val4="Do not use IDs containing &quot;ext-comp&quot;" val5="RegExp" val6="^(.*-)?ext-comp" val7="" val8="Wildcard&#13;&#10;RegExp" val9="0" />
+				<row val0="21" val1="0" val2="False" val3="True" val4="Do not use IDs starting with &quot;extdd-&quot;" val5="Wildcard" val6="extdd-*" val7="" val8="Wildcard&#13;&#10;RegExp" val9="0" />
+				<row val0="21" val1="0" val2="False" val3="True" val4="Remove digits from IDs like &quot;treepicker-1038&quot; or &quot;treepicker-1038-inputEl&quot;" val5="RegExp" val6="^{[A-Za-z-]+}-{\d\d\d\d+}{.*}$" val7="$1$3" val8="Wildcard&#13;&#10;RegExp" val9="0" />
+				<row val0="-1" val1="0" val2="True" val3="True" val4="Sencha Touch" val5="" val6="" val7="" val8="Wildcard&#13;&#10;RegExp" val9="0" />
+				<row val0="26" val1="0" val2="False" val3="True" val4="Remove dynamic parts of Sencha Touch IDs" val5="RegExp" val6="^ext-{.*}-\d+$" val7="$1" val8="Wildcard&#13;&#10;RegExp" val9="0" />
+				<row val0="-1" val1="0" val2="True" val3="True" val4="Yahoo! UI library" val5="" val6="" val7="" val8="Wildcard&#13;&#10;RegExp" val9="0" />
+				<row val0="28" val1="0" val2="False" val3="True" val4="Do not use IDs starting with &quot;yui-gen&quot;" val5="Wildcard" val6="yui-gen*" val7="" val8="Wildcard&#13;&#10;RegExp" val9="0" />
+				<row val0="28" val1="0" val2="False" val3="True" val4="Do not use IDs containing &quot;yui_3_&quot;" val5="Wildcard" val6="*yui_3_*" val7="" val8="Wildcard&#13;&#10;RegExp" val9="0" />
+				<row val0="-1" val1="0" val2="True" val3="True" val4="Other" val5="" val6="" val7="" val8="Wildcard&#13;&#10;RegExp" val9="0" />
+				<row val0="31" val1="0" val2="False" val3="True" val4="Do not use IDs containing GUID" val5="RegExp" val6="\h+-\h+-\h+-\h+-\h+" val7="" val8="Wildcard&#13;&#10;RegExp" val9="0" />
+				<row val0="31" val1="0" val2="False" val3="True" val4="Remove leading characters from IDs like &quot;c1114509959-searchform&quot;" val5="RegExp" val6="^[A-Za-z](\d\d\d\d\d+){[A-Za-z-]*}$" val7="$1" val8="Wildcard&#13;&#10;RegExp" val9="0" />
+				<row val0="31" val1="0" val2="False" val3="True" val4="Remove trailing digits from IDs like &quot;unique-123456&quot;" val5="RegExp" val6="^{[A-Za-z-]+}(\d\d\d\d\d+)$" val7="$1" val8="Wildcard&#13;&#10;RegExp" val9="0" />
+				<row val0="31" val1="0" val2="False" val3="True" val4="Remove digits from IDs like &quot;some_unique_123456_text&quot;" val5="RegExp" val6="^{[A-Za-z_]+}_(\d\d\d\d\d+){[A-Za-z_]*}$" val7="$1$2" val8="Wildcard&#13;&#10;RegExp" val9="0" />
+				<row val0="31" val1="0" val2="False" val3="True" val4="Remove digits from IDs like &quot;some_unique123456_text&quot;" val5="RegExp" val6="^{[A-Za-z_]+}(\d\d\d\d\d+){[A-Za-z_]*}$" val7="$1$2" val8="Wildcard&#13;&#10;RegExp" val9="0" />
+				<row val0="-1" val1="0" val2="True" val3="True" val4="Custom" val5="" val6="" val7="" val8="Wildcard&#13;&#10;RegExp" val9="0" />
+			</data>
+		</setting>
+		<setting name="OpenApps_HybridMobile_IdentificationAttribute" type="6" rowIndex="0" colIndex="0">
+			<columns>
+				<column type="5" enabled="True" />
+			</columns>
+			<data>
+				<row val0="ID" />
+				<row val0="Name" />
+			</data>
+		</setting>
+		<setting name="OpenApps_MethodInvokeTimeout" type="2" value="3000" />
+		<setting name="OpenApps_MSAA_ListOfAcceptedWindows" type="6" rowIndex="13" colIndex="0">
+			<columns>
+				<column type="1" enabled="True" />
+				<column type="5" enabled="True" />
+			</columns>
+			<data>
+				<row val0="False" val1="*" />
+				<row val0="False" val1="MsoCommandBar*" />
+				<row val0="False" val1="_Ww*" />
+				<row val0="False" val1="OpusApp" />
+				<row val0="False" val1="Vfp*" />
+				<row val0="False" val1="bosa_sdm_Microsoft Word *" />
+				<row val0="False" val1="Internet Explorer_Server" />
+				<row val0="False" val1="XTPToolBar" />
+				<row val0="False" val1="XTPDockingPaneTabbedContainer" />
+				<row val0="False" val1="XTPTaskPanel" />
+				<row val0="False" val1="XTPReport" />
+				<row val0="False" val1="XTPPopupBar" />
+				<row val0="False" val1="WindowsForms10.Window.8.app.0.2bf8098_r11_ad1" />
+				<row val0="False" val1="Window(&quot;WindowsForms10.Window.8.app.0.2bf8098_r11_ad1&quot;, &quot;&quot;, 6)" />
+			</data>
+		</setting>
+		<setting name="OpenApps_MSAA_TreeModel" type="1" value="False" />
+		<setting name="OpenApps_PriorityOfObjects" type="6" rowIndex="15" colIndex="0">
+			<columns>
+				<column type="5" enabled="True" />
+			</columns>
+			<data>
+				<row val0="NativeWebObject" />
+				<row val0="NativeChromeObject" />
+				<row val0="NativeSlObject" />
+				<row val0="NativeFirefoxObject" />
+				<row val0="NativeWebDriverObject" />
+				<row val0="NativeMSAA" />
+				<row val0="NativeVBObject" />
+				<row val0="NativeDelphiObject" />
+				<row val0="NativeTextObject" />
+				<row val0="NativeJavaObject" />
+				<row val0="NativeClrObject" />
+				<row val0="NativeCPPObject" />
+				<row val0="NativeJavaFXObject" />
+				<row val0="NativeSAPObject" />
+				<row val0="NativeQtObject" />
+				<row val0="NativeUIAObject" />
+			</data>
+		</setting>
+		<setting name="OpenApps_ProcessFilter_ProcessFilterMode" type="6" rowIndex="2" colIndex="0">
+			<columns>
+				<column type="5" enabled="True" />
+			</columns>
+			<data>
+				<row val0="Use all processes" />
+				<row val0="Use only tested applications" />
+				<row val0="Use only selected processes" />
+				<row val0="Ignore selected processes" />
+			</data>
+		</setting>
+		<setting name="OpenApps_ProcessFilter_ProcessList" type="6" rowIndex="1" colIndex="0">
+			<columns>
+				<column type="5" enabled="True" />
+			</columns>
+			<data>
+				<row val0="chrome" />
+				<row val0="TestComplete" />
+			</data>
+		</setting>
+		<setting name="OpenApps_UIA_ListOfAcceptedWindows" type="6" rowIndex="2" colIndex="1">
+			<columns>
+				<column type="1" enabled="True" />
+				<column type="5" enabled="True" />
+			</columns>
+			<data>
+				<row val0="False" val1="*" />
+				<row val0="True" val1="DirectUIHWND" />
+				<row val0="True" val1="Windows.UI.Core.CoreWindow" />
+			</data>
+		</setting>
+		<setting name="OpenApps_UseNativeObjectNames" type="1" value="True" />
+		<setting name="OpenApps_Web_AddCommentsForWaitMethod" type="1" value="False" />
+		<setting name="OpenApps_Web_CSSTransitionForPagePicture" type="1" value="True" />
+		<setting name="OpenApps_Web_CustomAttributes_AttributesForNameMapping" type="6" rowIndex="0" colIndex="1">
+			<columns>
+				<column type="1" enabled="True" />
+				<column type="5" enabled="True" />
+			</columns>
+			<data>
+				<row val0="True" val1="data-test-id" />
+				<row val0="True" val1="data-testid" />
+			</data>
+		</setting>
+		<setting name="OpenApps_Web_EnableSupportForWebComponents" type="1" value="True" />
+		<setting name="OpenApps_Web_ObjIdentification_DynamicIdentifiers" type="6" rowIndex="28" colIndex="4">
+			<columns>
+				<column type="2" enabled="True" />
+				<column type="2" enabled="True" />
+				<column type="1" enabled="True" />
+				<column type="1" enabled="True" />
+				<column type="5" enabled="True" />
+				<column type="5" enabled="True" />
+				<column type="5" enabled="True" />
+				<column type="5" enabled="True" />
+				<column type="5" enabled="True" />
+				<column type="2" enabled="True" />
+			</columns>
+			<data>
+				<row val0="-1" val1="-1" val2="True" val3="True" val4="Yahoo! UI library" val5="" val6="" val7="" val8="Wildcard&#10;RegExp" val9="2" />
+				<row val0="0" val1="-1" val2="False" val3="False" val4="Do not use IDs starting with &quot;yui-gen&quot;" val5="Wildcard" val6="yui-gen*" val7="" val8="Wildcard&#10;RegExp" val9="0" />
+				<row val0="0" val1="-1" val2="False" val3="False" val4="Do not use IDs containing &quot;yui_3_&quot;" val5="Wildcard" val6="*yui_3_*" val7="" val8="Wildcard&#10;RegExp" val9="0" />
+				<row val0="-1" val1="-1" val2="True" val3="True" val4="jQuery UI library" val5="" val6="" val7="" val8="Wildcard&#10;RegExp" val9="2" />
+				<row val0="3" val1="-1" val2="False" val3="False" val4="Do not use IDs starting with &quot;ui-id-&quot;" val5="Wildcard" val6="ui-id-*" val7="" val8="Wildcard&#10;RegExp" val9="0" />
+				<row val0="-1" val1="-1" val2="True" val3="True" val4="Dojo toolkit" val5="" val6="" val7="" val8="Wildcard&#10;RegExp" val9="2" />
+				<row val0="5" val1="-1" val2="False" val3="False" val4="Do not use IDs starting with &quot;dijit_&quot;" val5="Wildcard" val6="dijit_*" val7="" val8="Wildcard&#10;RegExp" val9="0" />
+				<row val0="-1" val1="-1" val2="True" val3="True" val4="Other" val5="" val6="" val7="" val8="Wildcard&#10;RegExp" val9="2" />
+				<row val0="7" val1="-1" val2="False" val3="False" val4="Do not use IDs containing GUID" val5="RegExp" val6="\h+-\h+-\h+-\h+-\h+" val7="" val8="Wildcard&#10;RegExp" val9="0" />
+				<row val0="-1" val1="-1" val2="True" val3="True" val4="ASP.NET" val5="" val6="" val7="" val8="Wildcard&#10;RegExp" val9="2" />
+				<row val0="9" val1="-1" val2="False" val3="False" val4="Do not use IDs ending with a string like &quot;ctl00&quot;" val5="RegExp" val6="^(.*[-_$])?(ctl[0-9]+)$" val7="" val8="Wildcard&#10;RegExp" val9="0" />
+				<row val0="9" val1="-1" val2="False" val3="False" val4="Remove GUIDs and ctl00-like prefixes from Sharepoint IDs" val5="RegExp" val6="(.+?_(\h+_\h+_\h+_\h+_\h+))+(.*ctr?l[0-9]+)?[_$]?{.*}$" val7="$1" val8="Wildcard&#10;RegExp" val9="0" />
+				<row val0="9" val1="-1" val2="False" val3="False" val4="For IDs containing a string like &quot;ctl00_&quot;, leave only symbols after this string" val5="RegExp" val6=".*(ctl[0-9]+[-_$]+){.*}" val7="$1" val8="Wildcard&#10;RegExp" val9="0" />
+				<row val0="-1" val1="-1" val2="True" val3="True" val4="Sencha ExtJS" val5="" val6="" val7="" val8="Wildcard&#10;RegExp" val9="2" />
+				<row val0="13" val1="-1" val2="False" val3="False" val4="Do not use IDs containing &quot;ext-gen&quot;" val5="RegExp" val6="^(.*-)?ext-gen" val7="" val8="Wildcard&#10;RegExp" val9="0" />
+				<row val0="13" val1="-1" val2="False" val3="False" val4="Do not use IDs containing &quot;ext-comp&quot;" val5="RegExp" val6="^(.*-)?ext-comp" val7="" val8="Wildcard&#10;RegExp" val9="0" />
+				<row val0="13" val1="-1" val2="False" val3="False" val4="Do not use IDs starting with &quot;extdd-&quot;" val5="Wildcard" val6="extdd-*" val7="" val8="Wildcard&#10;RegExp" val9="0" />
+				<row val0="13" val1="-1" val2="False" val3="False" val4="Remove digits from IDs like &quot;treepicker-1038&quot; or &quot;treepicker-1038-inputEl&quot;" val5="RegExp" val6="^{[A-Za-z-]+}-{\d\d\d\d}{.*}$" val7="$1$3" val8="Wildcard&#10;RegExp" val9="0" />
+				<row val0="-1" val1="-1" val2="True" val3="True" val4="Sencha Touch" val5="" val6="" val7="" val8="Wildcard&#10;RegExp" val9="2" />
+				<row val0="18" val1="-1" val2="False" val3="False" val4="Remove dynamic parts of Sencha Touch IDs" val5="RegExp" val6="^ext-{.*}-\d+$" val7="$1" val8="Wildcard&#10;RegExp" val9="0" />
+				<row val0="-1" val1="-1" val2="True" val3="True" val4="JavaServer Faces" val5="" val6="" val7="" val8="Wildcard&#10;RegExp" val9="2" />
+				<row val0="20" val1="-1" val2="False" val3="False" val4="Do not use IDs like &quot;_t14&quot;" val5="RegExp" val6="^{_t}{[0-9]+}$" val7="" val8="Wildcard&#10;RegExp" val9="0" />
+				<row val0="20" val1="-1" val2="False" val3="False" val4="Do not use IDs like &quot;j_id23&quot; or &quot;j_idt23&quot;" val5="RegExp" val6="^{j_idt?}{[0-9]+}$" val7="" val8="Wildcard&#10;RegExp" val9="0" />
+				<row val0="20" val1="-1" val2="False" val3="False" val4="Remove all but the last part of IDs like &quot;frm:menuLinks:0:link&quot;" val5="RegExp" val6="(.+):{[^0-9]+}$" val7="$1" val8="Wildcard&#10;RegExp" val9="0" />
+				<row val0="20" val1="-1" val2="False" val3="False" val4="Do not use IDs like &quot;frm:menuLinks:3:link&quot;" val5="RegExp" val6="(.+):(.*)" val7="" val8="Wildcard&#10;RegExp" val9="0" />
+				<row val0="-1" val1="-1" val2="True" val3="True" val4="Google Web Toolkit" val5="" val6="" val7="" val8="Wildcard&#10;RegExp" val9="1" />
+				<row val0="25" val1="-1" val2="False" val3="True" val4="Remove all but the last part of IDs like &quot;gwt-uid-370_runButton&quot;" val5="RegExp" val6="^(gwt-uid-[0-9]+)(_{.*})?$" val7="$1" val8="Wildcard&#10;RegExp" val9="0" />
+				<row val0="25" val1="-1" val2="False" val3="True" val4="Remove dynamic parts of Sencha GXT IDs" val5="RegExp" val6="^(x-((widget)|(auto))-.*[0-9]+)([-_]{.*})?$" val7="$1" val8="Wildcard&#10;RegExp" val9="0" />
+				<row val0="-1" val1="-1" val2="True" val3="True" val4="Custom" val5="" val6="" val7="" val8="Wildcard&#10;RegExp" val9="0" />
+			</data>
+		</setting>
+		<setting name="OpenApps_Web_ObjIdentification_IdentificationAttribute" type="6" rowIndex="0" colIndex="0">
+			<columns>
+				<column type="5" enabled="True" />
+			</columns>
+			<data>
+				<row val0="ID" />
+				<row val0="Name" />
+			</data>
+		</setting>
+		<setting name="OpenApps_Web_RecordScalableTests" type="1" value="True" />
+		<setting name="OpenApps_Web_RecordTestedHost" type="5" value="" />
+		<setting name="OpenApps_Web_TestedHost" type="5" value="" />
+		<setting name="OpenApps_Web_TreeModel" type="6" rowIndex="3" colIndex="0">
+			<columns>
+				<column type="5" enabled="True" />
+			</columns>
+			<data>
+				<row val0="DOM" />
+				<row val0="Tag" />
+				<row val0="Hybrid" />
+				<row val0="Tree" />
+			</data>
+		</setting>
+		<setting name="OpenApps_Web_URLProcessing_DynamicParameters" type="6" rowIndex="0" colIndex="0">
+			<columns>
+				<column type="5" enabled="True" />
+			</columns>
+			<data>
+				<row val0="*" />
+			</data>
+		</setting>
+		<setting name="OpenApps_Web_URLProcessing_IgnoreDynamicURLParameters" type="1" value="True" />
+		<setting name="OpenApps_Web_UseCSSPixels" type="1" value="True" />
+		<setting name="OpenApps_Web_UseLegacyWebTestingFeatures" type="1" value="False" />
+		<setting name="OpenApps_Web_VirtBrowsers_AdvancedMode" type="1" value="True" />
+		<setting name="OpenApps_Web_VirtBrowsers_AutoLaunchWhenRecording" type="6" rowIndex="0" colIndex="0">
+			<columns>
+				<column type="5" enabled="True" />
+			</columns>
+			<data>
+				<row val0="None" />
+				<row val0="Apple iPad" />
+				<row val0="Apple iPhone 3" />
+				<row val0="Apple iPhone 5" />
+				<row val0="Blackberry Z10" />
+				<row val0="Nokia Lumia 800" />
+				<row val0="Samsung Galaxy Mini" />
+				<row val0="Samsung Galaxy S3" />
+				<row val0="Samsung Nexus 10" />
+			</data>
+		</setting>
+		<setting name="OpenApps_Web_VirtBrowsers_List" type="6" rowIndex="7" colIndex="3">
+			<columns>
+				<column type="2" enabled="True" />
+				<column type="2" enabled="True" />
+				<column type="1" enabled="True" />
+				<column type="1" enabled="True" />
+				<column type="1" enabled="True" />
+				<column type="5" enabled="True" />
+				<column type="5" enabled="True" />
+				<column type="2" enabled="True" />
+				<column type="2" enabled="True" />
+				<column type="4" enabled="True" />
+			</columns>
+			<data>
+				<row val0="-1" val1="0" val2="False" val3="False" val4="False" val5="Apple iPad" val6="Mozilla/5.0 (iPad; CPU OS 6_1_3 like Mac OS X) AppleWebKit/536.26 (KHTML, like Gecko) Version/6.0 Mobile/10B329 Safari/8536.25" val7="768" val8="1024" val9="1" />
+				<row val0="-1" val1="0" val2="False" val3="False" val4="False" val5="Apple iPhone 3" val6="Mozilla/5.0 (iPhone; U; CPU iPhone OS 3_0 like Mac OS X; en-us) AppleWebKit/528.18 (KHTML, like Gecko) Version/4.0 Mobile/7A341 Safari/528.16" val7="320" val8="480" val9="1" />
+				<row val0="-1" val1="0" val2="False" val3="False" val4="False" val5="Apple iPhone 5" val6="Mozilla/5.0 (iPhone; CPU iPhone OS 6_1_4 like Mac OS X) AppleWebKit/536.26 (KHTML, like Gecko) Version/6.0 Mobile/10B350 Safari/8536.25" val7="320" val8="568" val9="1" />
+				<row val0="-1" val1="0" val2="False" val3="False" val4="False" val5="Blackberry Z10" val6="Mozilla/5.0 (BB10; Touch) AppleWebKit/537.10+ (KHTML, like Gecko) Version/10.0.9.2372 Mobile Safari/537.10+" val7="342" val8="570" val9="1" />
+				<row val0="-1" val1="0" val2="False" val3="False" val4="False" val5="Nokia Lumia 800" val6="Mozilla/5.0 (compatible; MSIE 9.0; Windows Phone OS 7.5; Trident/5.0; IEMobile/9.0; NOKIA; Lumia 800)" val7="480" val8="800" val9="1" />
+				<row val0="-1" val1="0" val2="False" val3="False" val4="False" val5="Samsung Galaxy Mini" val6="Mozilla/5.0 (Linux; U; Android 2.3.6; en-us; GT-S5570I Build/GINGERBREAD) AppleWebKit/533.1 (KHTML, like Gecko) Version/4.0 Mobile Safari/533.1" val7="240" val8="320" val9="1" />
+				<row val0="-1" val1="0" val2="False" val3="False" val4="False" val5="Samsung Galaxy S3" val6="Mozilla/5.0 (Linux; U; Android 4.0.4; en-us; GT-I9300 Build/IMM76D) AppleWebKit/534.30 (KHTML, like Gecko) Version/4.0 Mobile Safari/534.30" val7="360" val8="640" val9="1" />
+				<row val0="-1" val1="0" val2="False" val3="False" val4="False" val5="Samsung Nexus 10" val6="Mozilla/5.0 (Linux; Android 4.2.1; Nexus 10 Build/JOP40D) AppleWebKit/537.22 (KHTML, like Gecko) Chrome/25.0.1364.37 Safari/537.22" val7="800" val8="1280" val9="1" />
+			</data>
+		</setting>
+		<setting name="OpenApps_Web_WebPageLoadingTimeout" type="2" value="65000" />
+		<setting name="OpenApps_WPF_CompositeControls" type="6" rowIndex="-1" colIndex="2">
+			<columns>
+				<column type="1" enabled="True" />
+				<column type="5" enabled="True" />
+				<column type="5" enabled="True" />
+			</columns>
+			<data />
+		</setting>
+		<setting name="OpenApps_WPF_ItemsTemplates" type="6" rowIndex="-1" colIndex="2">
+			<columns>
+				<column type="1" enabled="True" />
+				<column type="5" enabled="True" />
+				<column type="5" enabled="True" />
+			</columns>
+			<data />
+		</setting>
+		<setting name="OpenApps_WPF_SimplifiedWPFObjectTree" type="1" value="False" />
+		<setting name="PerformanceCounters_List" type="6" rowIndex="-1" colIndex="5">
+			<columns>
+				<column type="5" enabled="True" />
+				<column type="5" enabled="True" />
+				<column type="2" enabled="True" />
+				<column type="2" enabled="True" />
+				<column type="5" enabled="True" />
+				<column type="1" enabled="True" />
+			</columns>
+			<data />
+		</setting>
+		<setting name="Playback_ErrHandling_OnError" type="6" rowIndex="3" colIndex="1">
+			<columns>
+				<column type="5" enabled="True" />
+				<column type="2" enabled="True" />
+			</columns>
+			<data>
+				<row val0="Continue running" val1="0" />
+				<row val0="Stop project" val1="1" />
+				<row val0="Stop current item" val1="2" />
+				<row val0="Stop and rerun current item" val1="4" />
+			</data>
+		</setting>
+		<setting name="Playback_ErrHandling_OnObjectRecognitionError" type="6" rowIndex="2" colIndex="1">
+			<columns>
+				<column type="5" enabled="True" />
+				<column type="2" enabled="True" />
+			</columns>
+			<data>
+				<row val0="Continue running" val1="0" />
+				<row val0="Stop project" val1="1" />
+				<row val0="Stop current item" val1="2" />
+			</data>
+		</setting>
+		<setting name="Playback_ErrHandling_OnWarning" type="6" rowIndex="0" colIndex="1">
+			<columns>
+				<column type="5" enabled="True" />
+				<column type="2" enabled="True" />
+			</columns>
+			<data>
+				<row val0="Continue running" val1="0" />
+				<row val0="Stop project" val1="1" />
+				<row val0="Stop current item" val1="2" />
+			</data>
+		</setting>
+		<setting name="Playback_ErrHandling_ShowErrorDialog" type="1" value="False" />
+		<setting name="Playback_Log_AutosaveInterval" type="2" value="0" />
+		<setting name="Playback_Log_EventCount" type="2" value="0" />
+		<setting name="Playback_Log_PostImageOnError" type="1" value="True" />
+		<setting name="Playback_ObjectSearchStrategy" type="6" rowIndex="1" colIndex="0">
+			<columns>
+				<column type="5" enabled="True" />
+			</columns>
+			<data>
+				<row val0="Depth-first" />
+				<row val0="Breadth-first" />
+			</data>
+		</setting>
+		<setting name="Playback_OverlappingWindow_IgnoreOverlappingWindow" type="1" value="True" />
+		<setting name="Playback_Runtime_AutoWaitTimeout" type="2" value="20000" />
+		<setting name="Playback_Runtime_DelayBetweenEvents" type="2" value="100" />
+		<setting name="Playback_Runtime_DisableMouse" type="1" value="False" />
+		<setting name="Playback_Runtime_MinimizeBeforePlayback" type="1" value="True" />
+		<setting name="Playback_Runtime_UseCaseSensitiveParameters" type="1" value="False" />
+		<setting name="Playback_StopOnError" type="1" value="False" />
+		<setting name="Playback_StopOnObjectRecognitionError" type="1" value="True" />
+		<setting name="Playback_StopOnWarning" type="1" value="False" />
+		<setting name="Playback_TestItemMaxReRunCount" type="2" value="1" />
+		<setting name="Playback_UnexpectedWndHandling_ClickOnFocusedControl" type="1" value="True" />
+		<setting name="Playback_UnexpectedWndHandling_IgnoreUnexpectedWindow" type="1" value="True" />
+		<setting name="Playback_UnexpectedWndHandling_PressEnter" type="1" value="True" />
+		<setting name="Playback_UnexpectedWndHandling_PressEsc" type="1" value="True" />
+		<setting name="Playback_UnexpectedWndHandling_SendCloseCommand" type="1" value="True" />
+		<setting name="Playback_UnexpectedWndHandling_StopExecution" type="1" value="True" />
+		<setting name="Recording_TestedAppsOnly" type="1" value="False" />
+		<setting name="RecreateActiveXObjects" type="1" value="False" />
+		<setting name="RunStandaloneServer" type="1" value="False" />
+		<setting name="StandaloneServerAdditionalOptions" type="5" value="" />
+		<setting name="StandaloneServerPort" type="2" value="4444" />
+		<setting name="TextRecognizer_AcceptedProcesses" type="6" rowIndex="-1" colIndex="1">
+			<columns>
+				<column type="1" enabled="True" />
+				<column type="5" enabled="True" />
+			</columns>
+			<data />
+		</setting>
+		<setting name="TextRecognizer_AcceptedWindows" type="6" rowIndex="-1" colIndex="1">
+			<columns>
+				<column type="1" enabled="True" />
+				<column type="5" enabled="True" />
+			</columns>
+			<data />
+		</setting>
+		<setting name="Visualizer_AutoUpdate" type="1" value="False" />
+		<setting name="Visualizer_AutoUpdateMode" type="6" rowIndex="0" colIndex="0">
+			<columns>
+				<column type="5" enabled="True" />
+			</columns>
+			<data>
+				<row val0="Update existing frames and capture new frames, if needed" />
+				<row val0="Update existing frames only" />
+			</data>
+		</setting>
+		<setting name="Visualizer_BindToSCC" type="1" value="False" />
+		<setting name="Visualizer_CaptureStyle" type="6" rowIndex="0" colIndex="0">
+			<columns>
+				<column type="5" enabled="True" />
+			</columns>
+			<data>
+				<row val0="Top-level parent" />
+				<row val0="Desktop" />
+			</data>
+		</setting>
+		<setting name="Visualizer_DeleteAll" type="1" value="True" />
+		<setting name="Visualizer_ParallelPlaybackCapture" type="1" value="False" />
+		<setting name="Visualizer_PlaybackCaptureProperties" type="1" value="False" />
+		<setting name="Visualizer_PlaybackCollectMode" type="6" rowIndex="0" colIndex="0">
+			<columns>
+				<column type="5" enabled="True" />
+			</columns>
+			<data>
+				<row val0="Off" />
+				<row val0="Capture images only" />
+				<row val0="Capture images and test object info" />
+			</data>
+		</setting>
+		<setting name="Visualizer_RecordingCaptureProperties" type="1" value="False" />
+		<setting name="Visualizer_RecordingCollectMode" type="6" rowIndex="0" colIndex="0">
+			<columns>
+				<column type="5" enabled="True" />
+			</columns>
+			<data>
+				<row val0="Off" />
+				<row val0="Capture images only" />
+				<row val0="Capture images and test object info" />
+			</data>
+		</setting>
+		<setting name="Visualizer_UseDuringPlayback" type="1" value="True" />
+		<setting name="Visualizer_UseDuringRecording" type="1" value="True" />
+		<setting name="WebCloudProvider" type="6" rowIndex="1" colIndex="0">
+			<columns>
+				<column type="5" enabled="True" />
+			</columns>
+			<data>
+				<row val0="BitBar Cloud" />
+				<row val0="CrossBrowserTesting" />
+			</data>
+		</setting>
+		<setting name="ZFJ_Cycle" type="5" value="" />
+		<setting name="ZFJ_ExecutionStatus_Failed" type="5" value="FAIL" />
+		<setting name="ZFJ_ExecutionStatus_Passed" type="5" value="PASS" />
+		<setting name="ZFJ_ExecutionStatus_Wip" type="5" value="WIP" />
+		<setting name="ZFJ_ExecutionStepStatus_Unexecuted" type="5" value="UNEXECUTED" />
+		<setting name="ZFJ_InstanceType" type="6" rowIndex="1" colIndex="0">
+			<columns>
+				<column type="5" enabled="True" />
+			</columns>
+			<data>
+				<row val0="Zephyr Squad Server" />
+				<row val0="Zephyr Squad Cloud" />
+			</data>
+		</setting>
+		<setting name="ZFJ_JiraLogin" type="5" value="" />
+		<setting name="ZFJ_JiraPassword" type="5" value="" />
+		<setting name="ZFJ_JiraProject" type="5" value="" />
+		<setting name="ZFJ_JiraUrl" type="5" value="" />
+		<setting name="ZFJ_TestIssueTypeName" type="5" value="Test" />
+		<setting name="ZFJ_Version" type="5" value="" />
+		<setting name="ZFJ_ZephyrAccessKey" type="5" value="" />
+		<setting name="ZFJ_ZephyrSecretKey" type="5" value="" />
+	</settings>
+	<analysis key="{4BFFF64C-C300-46FC-A846-F228993342AB}" />
+	<scc key="{00000000-0000-0000-0000-000000000000}" name="">
+		<data />
+	</scc>
+	<issueTracking key="{FAA62D5F-65F5-44AC-AB08-1161BC67FCBB}">
+		<Templates>
+			<Template Id="{1EB17ADF-E4EB-404D-97DC-AD758A1E8C1D}" ConnectionId="{00000000-0000-0000-0000-000000000000}" Description="This template is used by TestComplete&apos;s Log subsystem to post test results to an issue-tracking system. You can also use it at your desire." Name="CreateWorkItem" IsSystem="True" ItemTypeName="" ProjectName="" IsEditing="False" ItemId="">
+				<Fields>
+					<Field ItemId="{4A608A33-73BE-4F39-8812-43DADB30BE09}" AliasIsRequired="True" DBFieldNameIsRequired="False" Value="" DBFieldName="" Alias="Subject" />
+					<Field ItemId="{5E9903B7-6D9C-4D46-8214-8222B2F1734F}" AliasIsRequired="True" DBFieldNameIsRequired="False" Value="" DBFieldName="" Alias="Description" />
+				</Fields>
+			</Template>
+		</Templates>
+	</issueTracking>
+</Root>

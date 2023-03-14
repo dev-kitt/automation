@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Root signature="{9252F941-DB23-4FCA-AA50-858B33BB4A19}" version="11.40">
+	<children>
+		<folder name="PARTNER_PORTAL">
+			<folder name="PORTAL">
+				<child name="PortalMAIN" key="{67887867-378D-45F1-AEA9-93DF9660EC5F}" path="PortalMAIN.js" />
+				<child name="PortalSQL" key="{32A2EC66-3A35-460F-8133-D90EB1299429}" path="PortalSQL.js" />
+				<child name="PortalFX" key="{072DC3A6-FCA7-4B33-9550-D0AB632D32EF}" path="PortalFX.js" />
+				<child name="PortalINT" key="{49F88C36-E08E-4CF4-9179-A6A1F7850D82}" path="PortalINT.js" />
+				<child name="PortalPAY" key="{9F81C628-39A4-43CA-8CA0-F0C937EFB96B}" path="PortalPAY.js" />
+				<child name="PortalSEN" key="{CFD0E563-7748-4D57-9D28-7B0B07BBE6D1}" path="PortalSEN.js" />
+			</folder>
+			<folder name="BACK_OFFICE">
+				<child name="BackOfficeMAIN" key="{E9A712DF-7AA3-4E4C-AF2D-F5B06BF19502}" path="BackOfficeMAIN.js" />
+				<child name="BackOfficeADMIN" key="{CB13DF01-0248-460C-B7A8-3A308F503702}" path="BackOfficeADMIN.js" />
+				<child name="BackOfficeSQL" key="{9519EF9F-3B6B-41B9-88D5-F66F9D5B7861}" path="BackOfficeSQL.js" />
+				<child name="BackOfficeAPI" key="{B56138B5-A0E1-4E33-9E99-9EC1443CE20C}" path="BackOfficeAPI.js" />
+			</folder>
+			<folder name="COMMON">
+				<child name="CommonMAIN" key="{C206FF81-CFCC-4884-A88C-D9E657EAB6CA}" path="CommonMAIN.js" />
+				<child name="CommonDDT" key="{3F49B878-1832-47AC-9E0D-D4C3BA400352}" path="CommonDDT.js" />
+				<child name="CommonSQL" key="{7D07138A-2D6A-4AB4-87DD-422209CEB7C0}" path="CommonSQL.js" />
+			</folder>
+		</folder>
+		<folder name="TEST_SUITES">
+			<folder name="BACK_OFFICE">
+				<child name="Limits_SUITE" key="{08C12E71-97E5-45B0-87EC-7CD4D361A734}" path="Limits_SUITE.js" />
+				<child name="Profile_SUITE" key="{A618D154-CF97-498A-B7A0-97A5FF2957E2}" path="Profile_SUITE.js" />
+				<child name="Services_SUITE" key="{15C5EE63-14C5-40EE-90DB-DF5BECA697C9}" path="Services_SUITE.js" />
+				<child name="Subscriptions_SUITE" key="{CDDD9A0C-4E28-44FC-A8E4-AB1EC8F1B5B2}" path="Subscriptions_SUITE.js" />
+			</folder>
+			<folder name="PORTAL">
+				<child name="Int_SUITE" key="{6E084C5E-7531-4273-9A2F-334D71480D2D}" path="Int_SUITE.js" />
+				<child name="Pay_SUITE" key="{27506758-2DE2-44D8-9275-5183F808CB92}" path="Pay_SUITE.js" />
+				<child name="Sen_SUITE" key="{39089ADA-1A5F-44DA-BF19-2FDA2DC57BDD}" path="Sen_SUITE.js" />
+			</folder>
+			<folder name="REGRESSION">
+				<child name="Regression_SUITE" key="{0EBBC5D7-C908-4CF7-9FD9-14FAC414BD6B}" path="Regression_SUITE.js" />
+			</folder>
+			<folder name="DEMO">
+				<child name="Demo_SUITE" key="{B2D39C68-9774-4B47-8634-BE29138FA8F3}" path="Demo_SUITE.js" />
+				<child name="DemoMAIN" key="{3B09FBC9-4890-436C-A66E-577C66829AAA}" path="DemoMAIN.js" />
+			</folder>
+		</folder>
+	</children>
+</Root>

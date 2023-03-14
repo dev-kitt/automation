@@ -1,0 +1,25 @@
+trigger:
+  - main
+
+pool: AKS
+
+steps:
+  - task: DotNetCoreCLI@2
+    inputs:
+      command: 'restore'
+      feedsToUse: 'select'
+      vstsFeed: '00000000-0000-0000-0000-000000000000'
+  - task: DotNetCoreCLI@2
+    inputs:
+      command: 'publish'
+      publishWebProjects: false
+      arguments: '-c Release -o $(Build.ArtifactStagingDirectory)/publish -r linux-x64 -p:PublishReadyToRun=true -p:PublishSingleFile=true -p:PublishTrimmed=true --self-contained true -p:IncludeNativeLibrariesForSelfExtract=true'
+      zipAfterPublish: false
+  - task: UniversalPackages@0
+    inputs:
+      command: 'publish'
+      publishDirectory: '$(Build.ArtifactStagingDirectory)/publish'
+      feedsToUsePublish: 'internal'
+      vstsFeedPublish: '00000000-0000-0000-0000-000000000000'
+      vstsFeedPackagePublish: 'made-readme-uploader'
+      versionOption: 'patch'

@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Root signature="{AA2F3067-5C9B-4CCF-89D4-1F93CE1C510F}" version="15.0">
+	<children>
+		<child name="clearInternetData_ps1" key="{B8EEEC84-3967-4B8A-BC7A-3FDDEEBAC922}">
+			<data signature="{FC92F8D9-8A57-4D74-B8B4-479AA50BF647}" version="15.0" caption="clearInternetData_ps1" ID="{B8EEEC84-3967-4B8A-BC7A-3FDDEEBAC922}" FileName="Files\clearInternetData.ps1" Update="False" />
+		</child>
+		<child name="killBrowsers_ps1" key="{3CF614BB-49E2-4DA6-A6F3-BA374863D17D}">
+			<data signature="{FC92F8D9-8A57-4D74-B8B4-479AA50BF647}" version="15.0" caption="killBrowsers_ps1" ID="{3CF614BB-49E2-4DA6-A6F3-BA374863D17D}" FileName="Files\killBrowsers.ps1" Update="False" />
+		</child>
+		<child name="int_form_png" key="{13AEC80C-703E-495A-B34A-AA98E8D106F1}">
+			<data signature="{FC92F8D9-8A57-4D74-B8B4-479AA50BF647}" version="15.0" caption="int_form_png" ID="{13AEC80C-703E-495A-B34A-AA98E8D106F1}" FileName="Files\int_form.png" Update="False" />
+		</child>
+		<child name="sen_form_png" key="{207E7FF1-A37A-42B3-A4B4-0E683844F204}">
+			<data signature="{FC92F8D9-8A57-4D74-B8B4-479AA50BF647}" version="15.0" caption="sen_form_png" ID="{207E7FF1-A37A-42B3-A4B4-0E683844F204}" FileName="Files\sen_form.png" Update="False" />
+		</child>
+		<child name="SGB_Beneficiaries_xlsx" key="{C0D646EA-3C91-428F-8A09-892556631A0A}">
+			<data signature="{FC92F8D9-8A57-4D74-B8B4-479AA50BF647}" version="15.0" caption="SGB_Beneficiaries_xlsx" ID="{C0D646EA-3C91-428F-8A09-892556631A0A}" FileName="Files\SGB_Beneficiaries.xlsx" Update="False" />
+		</child>
+	</children>
+</Root>

@@ -1,0 +1,31 @@
+﻿// Verify MHT Files
+function verifyFiles_MHT()  {
+  var foundFiles, aFile;
+  foundFiles = aqFileSystem.FindFiles(Project.Path + "MHT_Files\\", "*.mht");
+  if (foundFiles != null) {
+    while (foundFiles.HasNext())
+    {
+      aFile = foundFiles.Next();
+      deleteFiles_MHT(aFile);
+    }
+  }
+  else {
+    Log.Message("No files were found.");
+  }
+}
+
+// Delete MHT Files Older Than 5 Minutes
+function deleteFiles_MHT(aFile) {
+  var DateTime = aqDateTime.Now();
+  var DateTimeMinusXMinutes = aqDateTime.AddMinutes(DateTime, -5);
+  Log.Message("NOW: " + DateTime + " | THEN: " + DateTimeMinusXMinutes);
+  
+  if (aFile.DateLastModified < DateTimeMinusXMinutes) {
+    FilePathString = aqConvert.VarToStr(aFile.Path)
+    aqFileSystem.DeleteFile(FilePathString);
+    Log.Message(FilePathString + " deleted" );
+  }
+  else {
+    Log.Message("No files were deleted");
+  }
+}

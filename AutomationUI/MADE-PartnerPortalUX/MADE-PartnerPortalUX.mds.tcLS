@@ -1,0 +1,188 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE Nodes [
+
+<!ENTITY % NameValue "CDATA">
+<!ENTITY % PropType "(I|S|D|L|H|B)">
+<!ENTITY % VersionValue "CDATA">
+
+<!ELEMENT Prp (#PCDATA)>
+<!ELEMENT Node (Node|Prp)*>
+<!ELEMENT Nodes (Node)+>
+
+<!ATTLIST Nodes version CDATA "1">
+
+<!ATTLIST Node name CDATA #REQUIRED>
+
+<!ATTLIST Prp name CDATA #REQUIRED>
+<!ATTLIST Prp type CDATA #REQUIRED>
+<!ATTLIST Prp value CDATA #REQUIRED>
+]>
+<Nodes version="1">
+	<Node name="root">
+		<Node name="data">
+			<Node name="logs">
+				<Prp name="key" type="S" value="{2407138C-3475-411C-8617-1E31DA17D885}"/>
+				<Prp name="relpath" type="S" value="Log"/>
+			</Node>
+			<Node name="variables">
+				<Node name="datav4">
+					<Node name="var0">
+						<Prp name="name" type="S" value="varErrorCount"/>
+					</Node>
+					<Node name="var1">
+						<Prp name="name" type="S" value="varDbPass"/>
+					</Node>
+					<Node name="var10">
+						<Prp name="name" type="S" value="varUserRole"/>
+					</Node>
+					<Node name="var11">
+						<Prp name="name" type="S" value="varSite"/>
+					</Node>
+					<Node name="var12">
+						<Prp name="name" type="S" value="varEntity"/>
+					</Node>
+					<Node name="var13">
+						<Prp name="name" type="S" value="varBeneName"/>
+					</Node>
+					<Node name="var14">
+						<Prp name="name" type="S" value="varBeneCountry"/>
+					</Node>
+					<Node name="var15">
+						<Prp name="name" type="S" value="varAcctSEN"/>
+					</Node>
+					<Node name="var16">
+						<Prp name="name" type="S" value="varAcctABA"/>
+					</Node>
+					<Node name="var17">
+						<Prp name="name" type="S" value="varLegalEntity"/>
+					</Node>
+					<Node name="var18">
+						<Prp name="name" type="S" value="varPurpose"/>
+					</Node>
+					<Node name="var19">
+						<Node name="value">
+							<Prp name="strvalue" type="H" value=" "/>
+						</Node>
+						<Prp name="name" type="S" value="dboPass"/>
+					</Node>
+					<Node name="var2">
+						<Prp name="name" type="S" value="varDbName"/>
+					</Node>
+					<Node name="var20">
+						<Node name="value">
+							<Prp name="strvalue" type="H" value="550053004400"/>
+						</Node>
+						<Prp name="name" type="S" value="madeCurrency"/>
+					</Node>
+					<Node name="var21">
+						<Node name="value">
+							<Prp name="strvalue" type="H" value="71006100"/>
+						</Node>
+						<Prp name="name" type="S" value="madeEnvironment"/>
+					</Node>
+					<Node name="var22">
+						<Node name="value">
+							<Prp name="strvalue" type="H" value="540065007300740043006F006D0070006C0065007400650020004100750074006F006D006100740069006F006E00"/>
+						</Node>
+						<Prp name="name" type="S" value="madeProfile"/>
+					</Node>
+					<Node name="var23">
+						<Node name="value">
+							<Prp name="strvalue" type="H" value="54004300410076003300"/>
+						</Node>
+						<Prp name="name" type="S" value="madeSubAlias"/>
+					</Node>
+					<Node name="var24">
+						<Node name="value">
+							<Prp name="strvalue" type="H" value="5400610063006F0042006F007500740054004300410076003300"/>
+						</Node>
+						<Prp name="name" type="S" value="madeSubAliasNew"/>
+					</Node>
+					<Node name="var25">
+						<Node name="value">
+							<Prp name="strvalue" type="H" value="6B0068007500640073006F006E004000730069006C0076006500720067006100740065002E0063006F006D00"/>
+						</Node>
+						<Prp name="name" type="S" value="madeSubEmail"/>
+					</Node>
+					<Node name="var26">
+						<Node name="value">
+							<Prp name="strvalue" type="H" value="6D00610073007400650072004000730069006C0076006500720067006100740065002E0063006F006D00"/>
+						</Node>
+						<Prp name="name" type="S" value="madeSubEmailNew"/>
+					</Node>
+					<Node name="var27">
+						<Node name="value">
+							<Prp name="strvalue" type="H" value="5400650073007400200043006F006D0070006C006500740065002000550073006500720020003100"/>
+						</Node>
+						<Prp name="name" type="S" value="madeUser"/>
+					</Node>
+					<Node name="var28">
+						<Node name="value">
+							<Prp name="strvalue" type="H" value="380039003600310039003300440030004600340044003800380042004600350045004300390039004300370046003100350030003900460034004400360042003300380030003500350034003300410030003200370036003100410032004600360038004200420046003900360030003300370037003400"/>
+						</Node>
+						<Prp name="name" type="S" value="dboPassQA"/>
+					</Node>
+					<Node name="var29">
+						<Node name="value">
+							<Prp name="strvalue" type="H" value="38003900360031004400330044003100460034004400380037003300460033003100340039004400430037003900330044004100460044003300420037004100420036003100460045003200370042004200340030003500420034003000380039004500420045003400370036003900330038003200330045003400370038003100380036003500390044003500350035004500370030003800440039003700"/>
+						</Node>
+						<Prp name="name" type="S" value="dboPassSTG"/>
+					</Node>
+					<Node name="var3">
+						<Prp name="name" type="S" value="varDbUser"/>
+					</Node>
+					<Node name="var30">
+						<Node name="value">
+							<Prp name="strvalue" type="H" value="660067002D00730071006C002D00730069006C0076006500720067006100740065002D0061007000690073002D007300680061007200650064002D00"/>
+						</Node>
+						<Prp name="name" type="S" value="dboServer"/>
+					</Node>
+					<Node name="var31">
+						<Node name="value">
+							<Prp name="strvalue" type="H" value="730071006C002D00730069006C0076006500720067006100740065002D0061007000690073002D007300680061007200650064002D00"/>
+						</Node>
+						<Prp name="name" type="S" value="dboServerURL"/>
+					</Node>
+					<Node name="var32">
+						<Node name="value">
+							<Prp name="strvalue" type="H" value="730069006C0076006500720067006100740065005F0073006100"/>
+						</Node>
+						<Prp name="name" type="S" value="dboUser"/>
+					</Node>
+					<Node name="var33">
+						<Node name="value">
+							<Prp name="strvalue" type="H" value=" "/>
+						</Node>
+						<Prp name="name" type="S" value="madeAccount"/>
+					</Node>
+					<Node name="var34">
+						<Node name="value">
+							<Prp name="strvalue" type="H" value="530075007000650072002000410064006D0069006E00"/>
+						</Node>
+						<Prp name="name" type="S" value="madeUserRole"/>
+					</Node>
+					<Node name="var4">
+						<Prp name="name" type="S" value="varCurrencyFrom"/>
+					</Node>
+					<Node name="var5">
+						<Prp name="name" type="S" value="varCurrencyTo"/>
+					</Node>
+					<Node name="var6">
+						<Prp name="name" type="S" value="varAcctTo"/>
+					</Node>
+					<Node name="var7">
+						<Prp name="name" type="S" value="varAcctFrom"/>
+					</Node>
+					<Node name="var8">
+						<Prp name="name" type="S" value="varTransferType"/>
+					</Node>
+					<Node name="var9">
+						<Prp name="name" type="S" value="varUser"/>
+					</Node>
+				</Node>
+				<Prp name="version" type="I" value="4"/>
+			</Node>
+		</Node>
+		<Prp name="signature" type="S" value="{49FC0C30-9EF7-4DBD-97A8-B7A00E79A2AF}"/>
+	</Node>
+</Nodes>

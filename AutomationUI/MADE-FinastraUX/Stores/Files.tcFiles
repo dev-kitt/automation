@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Root signature="{AA2F3067-5C9B-4CCF-89D4-1F93CE1C510F}" version="15.0">
+	<children>
+		<child name="clearInternetData_ps1" key="{42AA402F-A769-4BAC-8449-2D5F4A0450E0}">
+			<data signature="{FC92F8D9-8A57-4D74-B8B4-479AA50BF647}" version="15.0" caption="clearInternetData_ps1" ID="{42AA402F-A769-4BAC-8449-2D5F4A0450E0}" FileName="Files\clearInternetData.ps1" Update="False" />
+		</child>
+		<child name="killBrowsers_ps1" key="{349870A9-1CCF-4F7C-B11C-6AC24CC77951}">
+			<data signature="{FC92F8D9-8A57-4D74-B8B4-479AA50BF647}" version="15.0" caption="killBrowsers_ps1" ID="{349870A9-1CCF-4F7C-B11C-6AC24CC77951}" FileName="Files\killBrowsers.ps1" Update="False" />
+		</child>
+		<child name="Run_ChromeIncognito_bat" key="{5F56CA77-F1AB-440A-98A3-2B67DCE737BF}">
+			<data signature="{FC92F8D9-8A57-4D74-B8B4-479AA50BF647}" version="15.0" caption="Run_ChromeIncognito_bat" ID="{5F56CA77-F1AB-440A-98A3-2B67DCE737BF}" FileName="Files\Run_ChromeIncognito.bat" Update="False" />
+		</child>
+	</children>
+</Root>

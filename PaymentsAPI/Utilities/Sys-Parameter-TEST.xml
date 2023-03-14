@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<con:testCase failOnError="true" failTestCaseOnErrors="true" id="00000000-0000-0000-0000-000000000000v" keepSession="false" maxResults="0" name="Sys Parameter TEST" searchProperties="true" xmlns:con="http://eviware.com/soapui/config"><con:settings><con:setting id="00000000-0000-0000-0000-000000000000fileName">Sys-Parameter-TEST</con:setting></con:settings><con:testStep id="00000000-0000-0000-0000-000000000000" name="Properties" type="properties"><con:settings/><con:config xsi:type="con:PropertiesStep" saveFirst="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:properties><con:property><con:name>UniqueID</con:name><con:value>***^SYS_PROCESSING_STATE</con:value></con:property><con:property><con:name>Value</con:name><con:value>TEST</con:value></con:property></con:properties></con:config></con:testStep><con:testStep id="00000000-0000-0000-0000-000000000000" name="profileSave - Request 1" type="request"><con:settings/><con:config xsi:type="con:RequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:interface>ProfileActionsServiceSoap12Binding</con:interface><con:operation>profileSave</con:operation><con:request id="00000000-0000-0000-0000-000000000000" incomingWss="" name="profileSave - Request 1" outgoingWss="Submit" sslKeystore="" timeout="" useWsAddressing="false" useWsReliableMessaging="false" wssPasswordType=""><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting></con:settings><con:encoding>UTF-8</con:encoding><con:endpoint>${#Project#Active_URL}/gppold/services/ProfileActionsService</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://www.w3.org/2003/05/soap-envelope" xmlns:q0="http://fundtech.com/SCL/ProfileActionsService" xmlns:q1="http://fundtech.com/SCL/StaticDataCommonTypes" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+<soapenv:Header>
+<q2:FndtHeader xmlns:q2="http://fundtech.com/SCL/CommonTypes">
+<q2:credentials>
+<q2:UserID>${#Project#SecurityUser}</q2:UserID>
+<q2:Role>ALL1</q2:Role>
+</q2:credentials>
+</q2:FndtHeader>
+</soapenv:Header>
+<soapenv:Body>
+<q0:ProfileSaveRequest>
+<q1:header>
+<q1:UserID>${#Project#SecurityUser}</q1:UserID>
+<q1:Role>ALL1</q1:Role>
+</q1:header>
+<q0:profileID>54</q0:profileID>
+<q0:effectiveDate>${#Project#Date}</q0:effectiveDate>
+<q0:profileRecordUniqueID>${Properties#UniqueID}</q0:profileRecordUniqueID>
+<q0:record>
+<q1:field dataType="" name="SYST_PAR.PARAM_NAME">SYS_PROCESSING_STATE</q1:field>
+<q1:field dataType="" name="SYST_PAR.OFFICE">***</q1:field>
+<q1:field dataType="" name="SYST_PAR.LAYER_CLASSIFICATION">Core</q1:field>
+<q1:field dataType="" name="SYST_PAR.PARM_VALUE">${#TestCase#Value}</q1:field>
+<!--
+0 = Remove Check
+1 = Add Check
+-->
+</q0:record>
+</q0:ProfileSaveRequest>
+</soapenv:Body>
+</soapenv:Envelope>]]></con:request><con:assertion id="00000000-0000-0000-0000-000000000000" name="SOAP Response" type="SOAP Response"/><con:credentials><con:username/><con:selectedAuthProfile>Basic</con:selectedAuthProfile><con:addedBasicAuthenticationTypes>Basic</con:addedBasicAuthenticationTypes><con:authType>Global HTTP Settings</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:wsaConfig action="http://fundtech.com/SCL/ProfileActionsService/ProfileActionsServicePortType/profileSaveRequest" mustUnderstand="NONE" version="200508"/><con:wsrmConfig version="1.2"/><con:environmentSpec><con:entry environmentId="00000000-0000-0000-0000-000000000000"><con:authProfile>Basic</con:authProfile></con:entry><con:entry environmentId="00000000-0000-0000-0000-000000000000"><con:authProfile>Inherit From Parent</con:authProfile></con:entry></con:environmentSpec></con:request></con:config></con:testStep><con:testStep id="00000000-0000-0000-0000-000000000000" name="profileApprove" type="request"><con:settings/><con:config xsi:type="con:RequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:interface>ProfileActionsServiceSoap12Binding</con:interface><con:operation>profileSave</con:operation><con:request id="00000000-0000-0000-0000-000000000000" name="profileApprove" outgoingWss="Submit"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting></con:settings><con:encoding>UTF-8</con:encoding><con:endpoint>${#Project#Active_URL}/gppold/services/ProfileActionsService</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://www.w3.org/2003/05/soap-envelope" xmlns:q0="http://fundtech.com/SCL/ProfileActionsService" xmlns:q1="http://fundtech.com/SCL/StaticDataCommonTypes" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+<soapenv:Header>
+<q2:FndtHeader xmlns:q2="http://fundtech.com/SCL/CommonTypes">
+<q2:credentials>
+<q2:UserID>${#Project#SecurityUser}</q2:UserID>
+<q2:Role>ALL1</q2:Role>
+</q2:credentials>
+</q2:FndtHeader>
+</soapenv:Header>
+<soapenv:Body>
+<q0:ProfileApproveRequest>
+<q1:header>
+<q1:UserID>${#Project#SecurityUser}</q1:UserID>
+<q1:Role>ALL1</q1:Role>
+</q1:header>
+<q0:profileID>54</q0:profileID>
+<q0:effectiveDate>${#Project#Date}</q0:effectiveDate>
+<q0:profileRecordUniqueID>***^SYS_PROCESSING_STATE</q0:profileRecordUniqueID>
+</q0:ProfileApproveRequest>
+</soapenv:Body>
+</soapenv:Envelope>]]></con:request><con:assertion id="00000000-0000-0000-0000-000000000000v" type="SOAP Response"/><con:credentials><con:selectedAuthProfile>Basic</con:selectedAuthProfile><con:addedBasicAuthenticationTypes>Basic</con:addedBasicAuthenticationTypes><con:authType>Global HTTP Settings</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:wsaConfig mustUnderstand="NONE" version="200508"/><con:wsrmConfig version="1.2"/><con:environmentSpec><con:entry environmentId="00000000-0000-0000-0000-000000000000"><con:authProfile>Basic</con:authProfile></con:entry><con:entry environmentId="00000000-0000-0000-0000-000000000000"><con:authProfile>Inherit From Parent</con:authProfile></con:entry></con:environmentSpec></con:request></con:config></con:testStep><con:testStep id="00000000-0000-0000-0000-000000000000" name="Delay 1" type="delay"><con:settings/><con:config><delay>1000</delay></con:config></con:testStep><con:testStep id="00000000-0000-0000-0000-000000000000" name="profileApply - Request 1" type="request"><con:settings/><con:config xsi:type="con:RequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:interface>ProfileActionsServiceSoap12Binding</con:interface><con:operation>profileActivate</con:operation><con:request id="00000000-0000-0000-0000-000000000000" incomingWss="" name="profileApply - Request 1" outgoingWss="Submit" sslKeystore="" timeout="" useWsAddressing="false" useWsReliableMessaging="false" wssPasswordType=""><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting></con:settings><con:encoding>UTF-8</con:encoding><con:endpoint>${#Project#Active_URL}/gppold/services/ApplyChangesService?wsdl</con:endpoint><con:request><![CDATA[<soap:Envelope xmlns:soap="http://www.w3.org/2003/05/soap-envelope" xmlns:app="http://fundtech.com/SCL/ApplyChangesService" xmlns:stat="http://fundtech.com/SCL/StaticDataCommonTypes">
+<soap:Header>
+<q2:FndtHeader xmlns:q2="http://fundtech.com/SCL/CommonTypes">
+<q2:credentials>
+<q2:UserID>${#Project#SecurityUser}</q2:UserID>
+<q2:Role>ALL1</q2:Role>
+</q2:credentials>
+</q2:FndtHeader>
+</soap:Header>
+<soap:Body>
+<app:ApplyChangesRequest>
+<stat:header>
+<stat:UserID>${#Project#SecurityUser}</stat:UserID>
+</stat:header>
+<app:effectiveDate>${#Project#Date}</app:effectiveDate>
+<app:profileIDs>P54</app:profileIDs>
+</app:ApplyChangesRequest>
+</soap:Body>
+</soap:Envelope>]]></con:request><con:assertion id="00000000-0000-0000-0000-000000000000" name="SOAP Response" type="SOAP Response"/><con:credentials><con:selectedAuthProfile>Basic</con:selectedAuthProfile><con:addedBasicAuthenticationTypes>Basic</con:addedBasicAuthenticationTypes><con:authType>Global HTTP Settings</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:wsaConfig action="http://fundtech.com/SCL/ProfileActionsService/ProfileActionsServicePortType/profileActivateRequest" mustUnderstand="NONE" version="200508"/><con:wsrmConfig version="1.2"/><con:environmentSpec><con:entry environmentId="00000000-0000-0000-0000-000000000000"><con:authProfile>Basic</con:authProfile></con:entry><con:entry environmentId="00000000-0000-0000-0000-000000000000"><con:authProfile>Inherit From Parent</con:authProfile></con:entry></con:environmentSpec></con:request></con:config></con:testStep><con:properties><con:property><con:name>Value</con:name><con:value>TEST</con:value></con:property></con:properties><con:reportParameters/><con:environmentSpec><con:entry environmentId="00000000-0000-0000-0000-000000000000"><con:authProfile>Inherit From Parent</con:authProfile></con:entry><con:entry environmentId="00000000-0000-0000-0000-000000000000"><con:authProfile>Inherit From Parent</con:authProfile></con:entry></con:environmentSpec></con:testCase>

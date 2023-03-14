@@ -1,0 +1,115 @@
+﻿/***************************************************************
+Name: Driver
+Description: General DDT Driver functions
+Author: Keith Hudson
+Creation Date: 11/14/2021
+***************************************************************/
+
+function ddtCloseDriver() {
+  if (!equal(DDT.CurrentDriver, null)) {
+    DDT.CloseDriver(DDT.CurrentDriver.Name); 
+  }  
+}
+
+function ddtRowCount() {
+  var count = DDT.CurrentDriver.ColumnCount;
+  for (var i = 0; i < count; i++) {
+    var column = DDT.CurrentDriver.ColumnName(i);
+  }
+  return i;
+}
+
+function ddtSetSpreadsheet(fileName, sheetName) {
+  CommonDDT.ddtCloseDriver();
+  DDT.ExcelDriver(Project.Path + "Stores\\Files\\" + fileName, sheetName);
+  Log.Checkpoint("| File Set | - PATH: " + Project.Path + fileName + " TAB: " + sheetName);
+}
+
+var RecNo;
+  
+// Posts data to the log (helper routine)
+function ProcessData()
+{
+  var Fldr, i;
+  
+  Fldr = Log.CreateFolder("Record: " + aqConvert.VarToStr(RecNo));
+  Log.PushLogFolder(Fldr);
+  
+  for(i = 0; i < DDT.CurrentDriver.ColumnCount; i++)
+    Log.Message(DDT.CurrentDriver.ColumnName(i) + ": " + aqConvert.VarToStr(DDT.CurrentDriver.Value(i)));
+  
+  Log.PopLogFolder();
+  RecNo = RecNo + 1;
+}
+  
+// Creates the driver (main routine)
+function TestDriver()
+{
+  var Driver;
+  
+  // Creates the driver
+  Driver = DDT.ExcelDriver(Project.Path + "Stores\\Files\\testRecordSet.xlsx", "Profile");
+  
+  // Iterates through records
+  RecNo = 0;
+  while (! Driver.EOF() )
+  {
+    ProcessData(); // Processes data
+    Driver.Next(); // Goes to the next record
+  }
+  
+  // post column count and close the driver
+  Log.Checkpoint(ddtRowCount());
+  DDT.CloseDriver(Driver.Name);
+}
+
+
+function ddtBeneficiaryInfo(selectRec) {
+  // define spreadsheet file path/tab/row
+  CommonDDT.ddtSetSpreadsheet("testRecordSet.xlsx", "Profile");
+  
+  // iterates through records
+  while (! DDT.CurrentDriver.EOF()) {      
+    // gets a value from xlsx file and posts it to the log
+    if (equal(DDT.CurrentDriver.Value(0), selectRec)) {
+      // get and set trade variables
+      ProjectSuite.Variables.BeneficiaryAlias = DDT.CurrentDriver.Value(1); 
+      ProjectSuite.Variables.BeneficiaryBank = DDT.CurrentDriver.Value(2);
+      ProjectSuite.Variables.BeneficiaryRN = DDT.CurrentDriver.Value(3);
+      ProjectSuite.Variables.BeneficiaryBAN = DDT.CurrentDriver.Value(4);
+      ProjectSuite.Variables.BeneficiaryBIC = DDT.CurrentDriver.Value(5);
+      ProjectSuite.Variables.BeneficiaryAddress = DDT.CurrentDriver.Value(6);
+      ProjectSuite.Variables.BeneficiaryCity = DDT.CurrentDriver.Value(7);
+      ProjectSuite.Variables.BeneficiaryState = DDT.CurrentDriver.Value(8);
+      ProjectSuite.Variables.BeneficiaryZip = DDT.CurrentDriver.Value(9);
+      ProjectSuite.Variables.BeneficiaryCountry = DDT.CurrentDriver.Value(10);
+      
+      Log.Checkpoint("| Beneficiary Info Retrieved | - " + ProjectSuite.Variables.ServiceType + " " + ProjectSuite.Variables.TransactionType);
+      
+      return ProjectSuite.Variables.BeneficiaryAlias, ProjectSuite.Variables.BeneficiaryBank, 
+        ProjectSuite.Variables.BeneficiaryRN, ProjectSuite.Variables.BeneficiaryBAN, 
+        ProjectSuite.Variables.BeneficiaryBIC, ProjectSuite.Variables.BeneficiaryAddress, 
+        ProjectSuite.Variables.BeneficiaryCity, ProjectSuite.Variables.BeneficiaryState, 
+        ProjectSuite.Variables.BeneficiaryZip, ProjectSuite.Variables.BeneficiaryCountry;
+    }    
+    DDT.CurrentDriver.Next();       
+  }
+}
+         
+function ddtRefreshFileData(fileName, sheetName) {
+  if (!equal(DDT.CurrentDriver, null))
+  {
+    DDT.CloseDriver(DDT.CurrentDriver.Name);
+    Log.Message("LOG: closed excel DDT driver from dataExcel event");
+  } 
+  
+  if (equal(aqFileSystem.Exists(Project.Path + "\\Stores\\Files\\" + fileName), true))
+  {
+    aqFileSystem.DeleteFile(Project.Path + "\\Stores\\Files\\" + fileName);
+    Log.Message("LOG: file deleted before execution");
+  }
+  
+  var path = Project.Path + "\\Stores\\Files\\" + fileName;
+  aqFile.Copy(path, Project.Path + "\\Stores\\Files\\" + fileName, false);
+  var filePath = DDT.ExcelDriver(Project.Path + "\\Stores\\Files\\" + fileName, sheetName);
+}

@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Root signature="{9252F941-DB23-4FCA-AA50-858B33BB4A19}" version="11.40">
+	<children>
+		<folder name="Demo">
+			<child name="Demo" key="{8C059632-F494-45E9-BC27-36DDA355FA8A}" path="Demo.js" />
+		</folder>
+		<child name="FinastraMAIN" key="{BA350F33-6983-4B08-AC9D-7B815DD92363}" path="FinastraMAIN.js" />
+		<child name="CommonMAIN" key="{36F60812-01BF-4CF7-ABFA-1289F5968942}" path="CommonMAIN.js" />
+		<child name="FinastraBDD" key="{DA232283-24BA-492C-B24D-5B4EA02DE25C}" path="FinastraBDD.js" />
+		<child name="FinastraDDT" key="{FD61A2E3-65A8-4E07-A057-A8FCEA5A16E7}" path="FinastraDDT.js" />
+	</children>
+</Root>

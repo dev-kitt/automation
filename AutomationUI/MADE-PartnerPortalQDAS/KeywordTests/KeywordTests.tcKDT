@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Root signature="{9576DAFD-0ADD-41A8-9897-C72F150AF6BB}" version="15.0">
+	<children>
+		<child name="kw_negBackOfficeSecurityTest" key="{1043412C-E11A-44AD-93C6-DE82B733B049}" path="kw_negBackOfficeSecurityTest.tcKDTest" />
+		<child name="kw_negPortalSecurityTest" key="{F4F4E41C-E75F-43AA-915D-99736866AB62}" path="kw_negPortalSecurityTest.tcKDTest" />
+		<child name="kw_posBackOfficeSecurityTest" key="{45B01104-9F28-42A7-BE2A-0120DCF4F376}" path="kw_posBackOfficeSecurityTest.tcKDTest" />
+		<child name="kw_posPortalSecurityTest" key="{68E11937-5421-4580-ADD7-58FFD4A5D413}" path="kw_posPortalSecurityTest.tcKDTest" />
+	</children>
+</Root>

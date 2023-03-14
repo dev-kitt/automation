@@ -1,0 +1,6257 @@
+{
+	"info": {
+		"_postman_id": "00000000-0000-0000-0000-000000000000",
+		"name": "Regression_(Blocked)",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "17221433"
+	},
+	"item": [
+		{
+			"name": "Buildout In Progress",
+			"item": [
+				{
+					"name": "Transfer",
+					"item": [
+						{
+							"name": "Post",
+							"item": [
+								{
+									"name": "account/transfer/sen",
+									"event": [
+										{
+											"listen": "test",
+											"script": {
+												"exec": [
+													"pm.test(\"response is created\", function () {",
+													"    pm.response.to.have.status(201);",
+													"});",
+													"",
+													"pm.test(\"Sen Created\", function () {",
+													"    pm.expect(pm.response.text()).to.include(\"Completed Successfully\");",
+													"});",
+													""
+												],
+												"type": "text/javascript"
+											}
+										}
+									],
+									"request": {
+										"method": "POST",
+										"header": [
+											{
+												"key": "Ocp-Apim-Subscription-Key",
+												"value": "{{subscriptionKey}}",
+												"type": "text"
+											},
+											{
+												"key": "Ocp-Apim-Trace",
+												"value": "true",
+												"type": "text"
+											},
+											{
+												"key": "X-Auth-Signature",
+												"value": "{{signature}}",
+												"type": "text"
+											},
+											{
+												"key": "X-Auth-Nonce",
+												"value": "{{nonce}}",
+												"type": "text"
+											},
+											{
+												"key": "X-Auth-Timestamp",
+												"value": "{{date}}",
+												"type": "text"
+											},
+											{
+												"key": "X-Auth-Version",
+												"value": "{{version}}",
+												"type": "text"
+											},
+											{
+												"key": "Content-Type",
+												"value": "application/json",
+												"type": "text"
+											},
+											{
+												"key": "Idempotency-Key",
+												"value": "f4d88916-72df-45a6-881e-c318d41004b7",
+												"type": "text",
+												"disabled": true
+											}
+										],
+										"body": {
+											"mode": "raw",
+											"raw": "{\r\n  \"account_number_from\": \"1234567890\",\r\n  \"account_number_to\": \"4400009902\",\r\n  \"amount\": 0.01,\r\n  \"currency\": \"USD\",\r\n  \"account_from_description2\": \"hi fam\",\r\n  \"account_to_description2\": \"to desc 2\"\r\n}"
+										},
+										"url": {
+											"raw": "{{url}}/api/transfer/sen",
+											"host": [
+												"{{url}}"
+											],
+											"path": [
+												"api",
+												"transfer",
+												"sen"
+											]
+										}
+									},
+									"response": []
+								}
+							]
+						}
+					]
+				},
+				{
+					"name": "3. Post FX Payment",
+					"item": [
+						{
+							"name": "fx payment, ad hoc, trade-id w trailing spaces",
+							"event": [
+								{
+									"listen": "test",
+									"script": {
+										"exec": [
+											"pm.test(\"FX payment, Ad-Hoc, Trade-id with Trailing Spaces\", function () {\r",
+											"    pm.response.to.have.status(200);\r",
+											"});\r",
+											"\r",
+											"pm.test(\"201 Returned, Payment created\", function () {\r",
+											"    pm.expect(pm.response.text()).to.include(\"payment_id\")\r",
+											"});\r",
+											"\r",
+											"pm.test(\"error not message present\", function () {\r",
+											"    pm.expect(pm.response.text()).to.not.include(\"ERRORMSG\");\r",
+											"});"
+										],
+										"type": "text/javascript"
+									}
+								}
+							],
+							"protocolProfileBehavior": {
+								"disabledSystemHeaders": {
+									"accept": true,
+									"content-type": true
+								}
+							},
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Ocp-Apim-Subscription-Key",
+										"value": "{{subscriptionKey}}",
+										"type": "text"
+									},
+									{
+										"key": "Ocp-Apim-Trace",
+										"value": "true",
+										"type": "text"
+									},
+									{
+										"key": "X-Auth-Signature",
+										"value": "{{signature}}",
+										"type": "text"
+									},
+									{
+										"key": "X-Auth-Nonce",
+										"value": "{{nonce}}",
+										"type": "text"
+									},
+									{
+										"key": "X-Auth-Timestamp",
+										"value": "{{date}}",
+										"type": "text"
+									},
+									{
+										"key": "X-Auth-Version",
+										"value": "{{version}}",
+										"type": "text"
+									},
+									{
+										"key": "Content-Type",
+										"value": "application/json",
+										"type": "text",
+										"disabled": true
+									},
+									{
+										"key": "Content-Type",
+										"value": "application/vnd.made.adhocfxpaymentrequest+json",
+										"type": "text",
+										"description": "adhoc"
+									},
+									{
+										"key": "Content-Type",
+										"value": "application/vnd.made.fxpaymentrequest+json",
+										"type": "text",
+										"description": "non adhoc",
+										"disabled": true
+									},
+									{
+										"key": "Accept",
+										"value": "application/vnd.made.fxpayment.hateoas+json",
+										"type": "text"
+									},
+									{
+										"key": "Accept",
+										"value": "application/json",
+										"type": "text",
+										"disabled": true
+									},
+									{
+										"key": "Accept",
+										"value": "application/vnd.made.fxpayment+json",
+										"type": "text",
+										"disabled": true
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"trade_id\": \"{{sequential_test_trade_id2}} \",\r\n    \"purpose_of_payment\": 1,\r\n    \"memo\": \"test from api\",\r\n    \"sending_currency\": \"EUR\",\r\n    \r\n    \"beneficiary_bank_type\": \"ABA\",\r\n    \"beneficiary_bank_routing_id\": \"256074974\",\r\n    \"beneficiary_bank_name\": \"Navy Fed\",\r\n    \"beneficiary_bank_street_address\": \"1111 Sample Dr\",\r\n    \"beneficiary_bank_city\": \"JacksonVille\",\r\n    \"beneficiary_bank_region\": \"FL\",\r\n    \"beneficiary_bank_country_code\": \"US\",\r\n    \"beneficiary_bank_account_number\": \"354354566\",\r\n    \"beneficiary_bank_account_is_iban\": false,\r\n\r\n    \"beneficiary_name\": \"J JEN\",\r\n    \"beneficiary_street_address\": \"2222 Sample Dr\",\r\n    \"beneficiary_city\": \"Los Angeles\",\r\n    \"beneficiary_region\": \"CA\",\r\n    \"beneficiary_country_code\": \"US\",\r\n\r\n    \"intermediary_bank_type\":\"ABA\",\r\n\t\"intermediary_bank_routing_id\": \"321171184\",\r\n\t\"intermediary_bank_name\": \"Citibank\",\r\n\t\"intermediary_bank_street_address\": \"250 University Avenue\",\r\n\t\"intermediary_bank_city\": \"Palo Alto\",\r\n\t\"intermediary_bank_region\": \"CA\",\r\n\t\"intermediary_bank_postal\": \"94301\",\r\n\t\"intermediary_bank_country_code\": \"US\",\r\n\r\n    \"external_account_id\": \"5a6aad0b-eaae-4c6b-b971-66f98fcf1a86\"\r\n}"
+								},
+								"url": {
+									"raw": "{{url}}/api/fx/payment",
+									"host": [
+										"{{url}}"
+									],
+									"path": [
+										"api",
+										"fx",
+										"payment"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Post Quote, Market Order - for purpose of pmt",
+							"event": [
+								{
+									"listen": "test",
+									"script": {
+										"exec": [
+											"pm.test(\"Market Order Buy, send to third party\", function () {\r",
+											"    pm.response.to.have.status(200);\r",
+											"    let json = pm.response.json()\r",
+											"    pm.collectionVariables.set(\"sequential_test_trade_id4\", json.trade_id);\r",
+											"});\r",
+											"\r",
+											"pm.test(\"Response is 200, showing account type as third party\", function () {\r",
+											"    pm.expect(pm.response.text()).to.include(\"ThirdParty\")\r",
+											"});\r",
+											"\r",
+											"pm.test(\"error not message present\", function () {\r",
+											"    pm.expect(pm.response.text()).to.not.include(\"ERRORMSG\");\r",
+											"});"
+										],
+										"type": "text/javascript"
+									}
+								}
+							],
+							"protocolProfileBehavior": {
+								"disabledSystemHeaders": {
+									"accept": true
+								}
+							},
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Accept",
+										"value": "application/vnd.made.quote.hateoas+json",
+										"type": "text",
+										"description": "quote + hateoas",
+										"disabled": true
+									},
+									{
+										"key": "Accept",
+										"value": "application/vnd.made.marketorder.hateoas+json",
+										"type": "text",
+										"description": "trade + hateoas",
+										"disabled": true
+									},
+									{
+										"key": "Accept",
+										"value": "application/json",
+										"type": "text",
+										"description": "standard json",
+										"disabled": true
+									},
+									{
+										"key": "Accept",
+										"value": "application/vnd.made.quote+json",
+										"description": "quote",
+										"type": "text",
+										"disabled": true
+									},
+									{
+										"key": "Accept",
+										"value": "application/vnd.made.marketorder+json",
+										"description": "trade",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"account_number\": \"1234567890\",\r\n    \"currency_pair\": \"eur/usd\",\r\n    \"external_account_type\": 2,\r\n    \"is_buy\": true,\r\n    \"dealt_amount\": 1,\r\n    \"counter_amount\": 0\r\n}\r\n",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{url}}/api/fx/quote",
+									"host": [
+										"{{url}}"
+									],
+									"path": [
+										"api",
+										"fx",
+										"quote"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "fx payment, ad hoc, purpose of payment",
+							"event": [
+								{
+									"listen": "test",
+									"script": {
+										"exec": [
+											"pm.test(\"good response\", function () {\r",
+											"    pm.response.to.have.status(200);\r",
+											"});\r",
+											"\r",
+											"pm.test(\"error not message present\", function () {\r",
+											"    pm.expect(pm.response.text()).to.not.include(\"ERRORMSG\");\r",
+											"});"
+										],
+										"type": "text/javascript"
+									}
+								}
+							],
+							"protocolProfileBehavior": {
+								"disabledSystemHeaders": {
+									"accept": true,
+									"content-type": true
+								}
+							},
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Ocp-Apim-Subscription-Key",
+										"value": "{{subscriptionKey}}",
+										"type": "text"
+									},
+									{
+										"key": "Ocp-Apim-Trace",
+										"value": "true",
+										"type": "text"
+									},
+									{
+										"key": "X-Auth-Signature",
+										"value": "{{signature}}",
+										"type": "text"
+									},
+									{
+										"key": "X-Auth-Nonce",
+										"value": "{{nonce}}",
+										"type": "text"
+									},
+									{
+										"key": "X-Auth-Timestamp",
+										"value": "{{date}}",
+										"type": "text"
+									},
+									{
+										"key": "X-Auth-Version",
+										"value": "{{version}}",
+										"type": "text"
+									},
+									{
+										"key": "Content-Type",
+										"value": "application/json",
+										"type": "text",
+										"disabled": true
+									},
+									{
+										"key": "Content-Type",
+										"value": "application/vnd.made.adhocfxpaymentrequest+json",
+										"type": "text",
+										"description": "adhoc"
+									},
+									{
+										"key": "Content-Type",
+										"value": "application/vnd.made.fxpaymentrequest+json",
+										"type": "text",
+										"description": "non adhoc",
+										"disabled": true
+									},
+									{
+										"key": "Accept",
+										"value": "application/vnd.made.fxpayment.hateoas+json",
+										"type": "text"
+									},
+									{
+										"key": "Accept",
+										"value": "application/json",
+										"type": "text",
+										"disabled": true
+									},
+									{
+										"key": "Accept",
+										"value": "application/vnd.made.fxpayment+json",
+										"type": "text",
+										"disabled": true
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"trade_id\": \"{{sequential_test_trade_id4}}\",\r\n    \"purpose_of_payment\": 1,\r\n    \"memo\": \"test from api\",\r\n    \"sending_currency\": \"EUR\",\r\n    \r\n    \"beneficiary_bank_type\": \"ABA\",\r\n    \"beneficiary_bank_routing_id\": \"256074974\",\r\n    \"beneficiary_bank_name\": \"Navy Fed\",\r\n    \"beneficiary_bank_street_address\": \"1111 Sample Dr\",\r\n    \"beneficiary_bank_city\": \"JacksonVille\",\r\n    \"beneficiary_bank_region\": \"FL\",\r\n    \"beneficiary_bank_country_code\": \"US\",\r\n    \"beneficiary_bank_account_number\": \"354354566\",\r\n    \"beneficiary_bank_account_is_iban\": false,\r\n\r\n    \"beneficiary_name\": \"J JEN\",\r\n    \"beneficiary_street_address\": \"2222 Sample Dr\",\r\n    \"beneficiary_city\": \"Los Angeles\",\r\n    \"beneficiary_region\": \"CA\",\r\n    \"beneficiary_country_code\": \"US\",\r\n\r\n    \"intermediary_bank_type\":\"ABA\",\r\n\t\"intermediary_bank_routing_id\": \"321171184\",\r\n\t\"intermediary_bank_name\": \"Citibank\",\r\n\t\"intermediary_bank_street_address\": \"250 University Avenue\",\r\n\t\"intermediary_bank_city\": \"Palo Alto\",\r\n\t\"intermediary_bank_region\": \"CA\",\r\n\t\"intermediary_bank_postal\": \"94301\",\r\n\t\"intermediary_bank_country_code\": \"US\",\r\n\r\n    \"external_account_id\": \"5a6aad0b-eaae-4c6b-b971-66f98fcf1a86\"\r\n}"
+								},
+								"url": {
+									"raw": "{{url}}/api/fx/payment",
+									"host": [
+										"{{url}}"
+									],
+									"path": [
+										"api",
+										"fx",
+										"payment"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Post Quote, Market Order - for currency trailing",
+							"event": [
+								{
+									"listen": "test",
+									"script": {
+										"exec": [
+											"pm.test(\"Market Order Buy, send to third party\", function () {\r",
+											"    pm.response.to.have.status(200);\r",
+											"    let json = pm.response.json()\r",
+											"    pm.collectionVariables.set(\"sequential_test_trade_id5\", json.trade_id);\r",
+											"});\r",
+											"\r",
+											"pm.test(\"Response is 200, showing account type as third party\", function () {\r",
+											"    pm.expect(pm.response.text()).to.include(\"ThirdParty\")\r",
+											"});\r",
+											"\r",
+											"pm.test(\"error not message present\", function () {\r",
+											"    pm.expect(pm.response.text()).to.not.include(\"ERRORMSG\");\r",
+											"});"
+										],
+										"type": "text/javascript"
+									}
+								}
+							],
+							"protocolProfileBehavior": {
+								"disabledSystemHeaders": {
+									"accept": true
+								}
+							},
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Accept",
+										"value": "application/vnd.made.quote.hateoas+json",
+										"type": "text",
+										"description": "quote + hateoas",
+										"disabled": true
+									},
+									{
+										"key": "Accept",
+										"value": "application/vnd.made.marketorder.hateoas+json",
+										"type": "text",
+										"description": "trade + hateoas",
+										"disabled": true
+									},
+									{
+										"key": "Accept",
+										"value": "application/json",
+										"type": "text",
+										"description": "standard json",
+										"disabled": true
+									},
+									{
+										"key": "Accept",
+										"value": "application/vnd.made.quote+json",
+										"description": "quote",
+										"type": "text",
+										"disabled": true
+									},
+									{
+										"key": "Accept",
+										"value": "application/vnd.made.marketorder+json",
+										"description": "trade",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"account_number\": \"1234567890\",\r\n    \"currency_pair\": \"eur/usd\",\r\n    \"external_account_type\": 2,\r\n    \"is_buy\": true,\r\n    \"dealt_amount\": 1,\r\n    \"counter_amount\": 0\r\n}\r\n",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{url}}/api/fx/quote",
+									"host": [
+										"{{url}}"
+									],
+									"path": [
+										"api",
+										"fx",
+										"quote"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "fx payment, ad hoc, sending currency w trailing spaces",
+							"event": [
+								{
+									"listen": "test",
+									"script": {
+										"exec": [
+											"pm.test(\"FX payment, Ad-Hoc, Sending Currency with Trailing Spaces\", function () {\r",
+											"    pm.response.to.have.status(200);\r",
+											"});\r",
+											"\r",
+											"pm.test(\"201 Returned, Payment created\", function () {\r",
+											"    pm.expect(pm.response.text()).to.include(\"payment_id\")\r",
+											"});\r",
+											"\r",
+											"pm.test(\"error not message present\", function () {\r",
+											"    pm.expect(pm.response.text()).to.not.include(\"ERRORMSG\");\r",
+											"});"
+										],
+										"type": "text/javascript"
+									}
+								}
+							],
+							"protocolProfileBehavior": {
+								"disabledSystemHeaders": {
+									"accept": true,
+									"content-type": true
+								}
+							},
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Ocp-Apim-Subscription-Key",
+										"value": "{{subscriptionKey}}",
+										"type": "text"
+									},
+									{
+										"key": "Ocp-Apim-Trace",
+										"value": "true",
+										"type": "text"
+									},
+									{
+										"key": "X-Auth-Signature",
+										"value": "{{signature}}",
+										"type": "text"
+									},
+									{
+										"key": "X-Auth-Nonce",
+										"value": "{{nonce}}",
+										"type": "text"
+									},
+									{
+										"key": "X-Auth-Timestamp",
+										"value": "{{date}}",
+										"type": "text"
+									},
+									{
+										"key": "X-Auth-Version",
+										"value": "{{version}}",
+										"type": "text"
+									},
+									{
+										"key": "Content-Type",
+										"value": "application/json",
+										"type": "text",
+										"disabled": true
+									},
+									{
+										"key": "Content-Type",
+										"value": "application/vnd.made.adhocfxpaymentrequest+json",
+										"type": "text",
+										"description": "adhoc"
+									},
+									{
+										"key": "Content-Type",
+										"value": "application/vnd.made.fxpaymentrequest+json",
+										"type": "text",
+										"description": "non adhoc",
+										"disabled": true
+									},
+									{
+										"key": "Accept",
+										"value": "application/vnd.made.fxpayment.hateoas+json",
+										"type": "text"
+									},
+									{
+										"key": "Accept",
+										"value": "application/json",
+										"type": "text",
+										"disabled": true
+									},
+									{
+										"key": "Accept",
+										"value": "application/vnd.made.fxpayment+json",
+										"type": "text",
+										"disabled": true
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"trade_id\": \"{{sequential_test_trade_id5}}\",\r\n    \"purpose_of_payment\": 1,\r\n    \"memo\": \"test from api\",\r\n    \"sending_currency\": \"EUR \",\r\n    \r\n    \"beneficiary_bank_type\": \"ABA\",\r\n    \"beneficiary_bank_routing_id\": \"256074974\",\r\n    \"beneficiary_bank_name\": \"Navy Fed\",\r\n    \"beneficiary_bank_street_address\": \"1111 Sample Dr\",\r\n    \"beneficiary_bank_city\": \"JacksonVille\",\r\n    \"beneficiary_bank_region\": \"FL\",\r\n    \"beneficiary_bank_country_code\": \"US\",\r\n    \"beneficiary_bank_account_number\": \"354354566\",\r\n    \"beneficiary_bank_account_is_iban\": false,\r\n\r\n    \"beneficiary_name\": \"J JEN\",\r\n    \"beneficiary_street_address\": \"2222 Sample Dr\",\r\n    \"beneficiary_city\": \"Los Angeles\",\r\n    \"beneficiary_region\": \"CA\",\r\n    \"beneficiary_country_code\": \"US\",\r\n\r\n    \"intermediary_bank_type\":\"ABA\",\r\n\t\"intermediary_bank_routing_id\": \"321171184\",\r\n\t\"intermediary_bank_name\": \"Citibank\",\r\n\t\"intermediary_bank_street_address\": \"250 University Avenue\",\r\n\t\"intermediary_bank_city\": \"Palo Alto\",\r\n\t\"intermediary_bank_region\": \"CA\",\r\n\t\"intermediary_bank_postal\": \"94301\",\r\n\t\"intermediary_bank_country_code\": \"US\",\r\n\r\n    \"external_account_id\": \"5a6aad0b-eaae-4c6b-b971-66f98fcf1a86\"\r\n}"
+								},
+								"url": {
+									"raw": "{{url}}/api/fx/payment",
+									"host": [
+										"{{url}}"
+									],
+									"path": [
+										"api",
+										"fx",
+										"payment"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Post Quote, Market Order - for currency leading",
+							"event": [
+								{
+									"listen": "test",
+									"script": {
+										"exec": [
+											"pm.test(\"Market Order Buy, send to third party\", function () {\r",
+											"    pm.response.to.have.status(200);\r",
+											"    let json = pm.response.json()\r",
+											"    pm.collectionVariables.set(\"sequential_test_trade_id6\", json.trade_id);\r",
+											"});\r",
+											"\r",
+											"pm.test(\"Response is 200, showing account type as third party\", function () {\r",
+											"    pm.expect(pm.response.text()).to.include(\"ThirdParty\")\r",
+											"});\r",
+											"\r",
+											"pm.test(\"error not message present\", function () {\r",
+											"    pm.expect(pm.response.text()).to.not.include(\"ERRORMSG\");\r",
+											"});"
+										],
+										"type": "text/javascript"
+									}
+								}
+							],
+							"protocolProfileBehavior": {
+								"disabledSystemHeaders": {
+									"accept": true
+								}
+							},
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Accept",
+										"value": "application/vnd.made.quote.hateoas+json",
+										"type": "text",
+										"description": "quote + hateoas",
+										"disabled": true
+									},
+									{
+										"key": "Accept",
+										"value": "application/vnd.made.marketorder.hateoas+json",
+										"type": "text",
+										"description": "trade + hateoas",
+										"disabled": true
+									},
+									{
+										"key": "Accept",
+										"value": "application/json",
+										"type": "text",
+										"description": "standard json",
+										"disabled": true
+									},
+									{
+										"key": "Accept",
+										"value": "application/vnd.made.quote+json",
+										"description": "quote",
+										"type": "text",
+										"disabled": true
+									},
+									{
+										"key": "Accept",
+										"value": "application/vnd.made.marketorder+json",
+										"description": "trade",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"account_number\": \"1234567890\",\r\n    \"currency_pair\": \"eur/usd\",\r\n    \"external_account_type\": 2,\r\n    \"is_buy\": true,\r\n    \"dealt_amount\": 1,\r\n    \"counter_amount\": 0\r\n}\r\n",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{url}}/api/fx/quote",
+									"host": [
+										"{{url}}"
+									],
+									"path": [
+										"api",
+										"fx",
+										"quote"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "fx payment, ad hoc, sending currency w leading spaces",
+							"event": [
+								{
+									"listen": "test",
+									"script": {
+										"exec": [
+											"pm.test(\"FX payment, Ad-Hoc, Sending Currency with Leading Spaces\", function () {\r",
+											"    pm.response.to.have.status(200);\r",
+											"});\r",
+											"\r",
+											"pm.test(\"201 Returned, Payment created\", function () {\r",
+											"    pm.expect(pm.response.text()).to.include(\"payment_id\")\r",
+											"});\r",
+											"\r",
+											"pm.test(\"error not message present\", function () {\r",
+											"    pm.expect(pm.response.text()).to.not.include(\"ERRORMSG\");\r",
+											"});"
+										],
+										"type": "text/javascript"
+									}
+								}
+							],
+							"protocolProfileBehavior": {
+								"disabledSystemHeaders": {
+									"accept": true,
+									"content-type": true
+								}
+							},
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Ocp-Apim-Subscription-Key",
+										"value": "{{subscriptionKey}}",
+										"type": "text"
+									},
+									{
+										"key": "Ocp-Apim-Trace",
+										"value": "true",
+										"type": "text"
+									},
+									{
+										"key": "X-Auth-Signature",
+										"value": "{{signature}}",
+										"type": "text"
+									},
+									{
+										"key": "X-Auth-Nonce",
+										"value": "{{nonce}}",
+										"type": "text"
+									},
+									{
+										"key": "X-Auth-Timestamp",
+										"value": "{{date}}",
+										"type": "text"
+									},
+									{
+										"key": "X-Auth-Version",
+										"value": "{{version}}",
+										"type": "text"
+									},
+									{
+										"key": "Content-Type",
+										"value": "application/json",
+										"type": "text",
+										"disabled": true
+									},
+									{
+										"key": "Content-Type",
+										"value": "application/vnd.made.adhocfxpaymentrequest+json",
+										"type": "text",
+										"description": "adhoc"
+									},
+									{
+										"key": "Content-Type",
+										"value": "application/vnd.made.fxpaymentrequest+json",
+										"type": "text",
+										"description": "non adhoc",
+										"disabled": true
+									},
+									{
+										"key": "Accept",
+										"value": "application/vnd.made.fxpayment.hateoas+json",
+										"type": "text"
+									},
+									{
+										"key": "Accept",
+										"value": "application/json",
+										"type": "text",
+										"disabled": true
+									},
+									{
+										"key": "Accept",
+										"value": "application/vnd.made.fxpayment+json",
+										"type": "text",
+										"disabled": true
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"trade_id\": \"{{sequential_test_trade_id6}}\",\r\n    \"purpose_of_payment\": 1,\r\n    \"memo\": \"test from api\",\r\n    \"sending_currency\": \" EUR\",\r\n    \r\n    \"beneficiary_bank_type\": \"ABA\",\r\n    \"beneficiary_bank_routing_id\": \"256074974\",\r\n    \"beneficiary_bank_name\": \"Navy Fed\",\r\n    \"beneficiary_bank_street_address\": \"1111 Sample Dr\",\r\n    \"beneficiary_bank_city\": \"JacksonVille\",\r\n    \"beneficiary_bank_region\": \"FL\",\r\n    \"beneficiary_bank_country_code\": \"US\",\r\n    \"beneficiary_bank_account_number\": \"354354566\",\r\n    \"beneficiary_bank_account_is_iban\": false,\r\n\r\n    \"beneficiary_name\": \"J JEN\",\r\n    \"beneficiary_street_address\": \"2222 Sample Dr\",\r\n    \"beneficiary_city\": \"Los Angeles\",\r\n    \"beneficiary_region\": \"CA\",\r\n    \"beneficiary_country_code\": \"US\",\r\n\r\n    \"intermediary_bank_type\":\"ABA\",\r\n\t\"intermediary_bank_routing_id\": \"321171184\",\r\n\t\"intermediary_bank_name\": \"Citibank\",\r\n\t\"intermediary_bank_street_address\": \"250 University Avenue\",\r\n\t\"intermediary_bank_city\": \"Palo Alto\",\r\n\t\"intermediary_bank_region\": \"CA\",\r\n\t\"intermediary_bank_postal\": \"94301\",\r\n\t\"intermediary_bank_country_code\": \"US\",\r\n\r\n    \"external_account_id\": \"5a6aad0b-eaae-4c6b-b971-66f98fcf1a86\"\r\n}"
+								},
+								"url": {
+									"raw": "{{url}}/api/fx/payment",
+									"host": [
+										"{{url}}"
+									],
+									"path": [
+										"api",
+										"fx",
+										"payment"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Post Quote, Market Order - for Connections",
+							"event": [
+								{
+									"listen": "test",
+									"script": {
+										"exec": [
+											"pm.test(\"Market Order Buy, send to third party\", function () {\r",
+											"    pm.response.to.have.status(200);\r",
+											"    let json = pm.response.json()\r",
+											"    pm.collectionVariables.set(\"sequential_test_trade_id7\", json.trade_id);\r",
+											"});\r",
+											"\r",
+											"pm.test(\"Response is 200, showing account type as third party\", function () {\r",
+											"    pm.expect(pm.response.text()).to.include(\"ThirdParty\")\r",
+											"});\r",
+											"\r",
+											"pm.test(\"error not message present\", function () {\r",
+											"    pm.expect(pm.response.text()).to.not.include(\"ERRORMSG\");\r",
+											"});"
+										],
+										"type": "text/javascript"
+									}
+								}
+							],
+							"protocolProfileBehavior": {
+								"disabledSystemHeaders": {
+									"accept": true
+								}
+							},
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Accept",
+										"value": "application/vnd.made.quote.hateoas+json",
+										"type": "text",
+										"description": "quote + hateoas",
+										"disabled": true
+									},
+									{
+										"key": "Accept",
+										"value": "application/vnd.made.marketorder.hateoas+json",
+										"type": "text",
+										"description": "trade + hateoas",
+										"disabled": true
+									},
+									{
+										"key": "Accept",
+										"value": "application/json",
+										"type": "text",
+										"description": "standard json",
+										"disabled": true
+									},
+									{
+										"key": "Accept",
+										"value": "application/vnd.made.quote+json",
+										"description": "quote",
+										"type": "text",
+										"disabled": true
+									},
+									{
+										"key": "Accept",
+										"value": "application/vnd.made.marketorder+json",
+										"description": "trade",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"account_number\": \"1234567890\",\r\n    \"currency_pair\": \"eur/usd\",\r\n    \"external_account_type\": 2,\r\n    \"is_buy\": true,\r\n    \"dealt_amount\": 1,\r\n    \"counter_amount\": 0\r\n}\r\n",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{url}}/api/fx/quote",
+									"host": [
+										"{{url}}"
+									],
+									"path": [
+										"api",
+										"fx",
+										"quote"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "fx payment, Connections",
+							"event": [
+								{
+									"listen": "test",
+									"script": {
+										"exec": [
+											"pm.test(\"good response\", function () {\r",
+											"    pm.response.to.have.status(200);\r",
+											"});\r",
+											"\r",
+											"pm.test(\"error not message present\", function () {\r",
+											"    pm.expect(pm.response.text()).to.not.include(\"ERRORMSG\");\r",
+											"});"
+										],
+										"type": "text/javascript"
+									}
+								}
+							],
+							"protocolProfileBehavior": {
+								"disabledSystemHeaders": {
+									"accept": true,
+									"content-type": true
+								}
+							},
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Ocp-Apim-Subscription-Key",
+										"value": "{{subscriptionKey}}",
+										"type": "text"
+									},
+									{
+										"key": "Ocp-Apim-Trace",
+										"value": "true",
+										"type": "text"
+									},
+									{
+										"key": "X-Auth-Signature",
+										"value": "{{signature}}",
+										"type": "text"
+									},
+									{
+										"key": "X-Auth-Nonce",
+										"value": "{{nonce}}",
+										"type": "text"
+									},
+									{
+										"key": "X-Auth-Timestamp",
+										"value": "{{date}}",
+										"type": "text"
+									},
+									{
+										"key": "X-Auth-Version",
+										"value": "{{version}}",
+										"type": "text"
+									},
+									{
+										"key": "Content-Type",
+										"value": "application/json",
+										"type": "text",
+										"disabled": true
+									},
+									{
+										"key": "Content-Type",
+										"value": "application/vnd.made.adhocfxpaymentrequest+json",
+										"type": "text",
+										"description": "adhoc"
+									},
+									{
+										"key": "Content-Type",
+										"value": "application/vnd.made.fxpaymentrequest+json",
+										"type": "text",
+										"description": "non adhoc",
+										"disabled": true
+									},
+									{
+										"key": "Accept",
+										"value": "application/vnd.made.fxpayment.hateoas+json",
+										"type": "text"
+									},
+									{
+										"key": "Accept",
+										"value": "application/json",
+										"type": "text",
+										"disabled": true
+									},
+									{
+										"key": "Accept",
+										"value": "application/vnd.made.fxpayment+json",
+										"type": "text",
+										"disabled": true
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"trade_id\": \"{{sequential_test_trade_id7}}\",\r\n    \"purpose_of_payment\": 1,\r\n    \"memo\": \"test from api\",\r\n    \"sending_currency\": \"EUR\",\r\n    \r\n    \"beneficiary_bank_type\": \"ABA\",\r\n    \"beneficiary_bank_routing_id\": \"256074974\",\r\n    \"beneficiary_bank_name\": \"Navy Fed\",\r\n    \"beneficiary_bank_street_address\": \"1111 Sample Dr\",\r\n    \"beneficiary_bank_city\": \"JacksonVille\",\r\n    \"beneficiary_bank_region\": \"FL\",\r\n    \"beneficiary_bank_country_code\": \"US\",\r\n    \"beneficiary_bank_account_number\": \"354354566\",\r\n    \"beneficiary_bank_account_is_iban\": false,\r\n\r\n    \"beneficiary_name\": \"J JEN\",\r\n    \"beneficiary_street_address\": \"2222 Sample Dr\",\r\n    \"beneficiary_city\": \"Los Angeles\",\r\n    \"beneficiary_region\": \"CA\",\r\n    \"beneficiary_country_code\": \"US\",\r\n\r\n    \"intermediary_bank_type\":\"ABA\",\r\n\t\"intermediary_bank_routing_id\": \"321171184\",\r\n\t\"intermediary_bank_name\": \"Citibank\",\r\n\t\"intermediary_bank_street_address\": \"250 University Avenue\",\r\n\t\"intermediary_bank_city\": \"Palo Alto\",\r\n\t\"intermediary_bank_region\": \"CA\",\r\n\t\"intermediary_bank_postal\": \"94301\",\r\n\t\"intermediary_bank_country_code\": \"US\",\r\n\r\n    \"external_account_id\": \"5a6aad0b-eaae-4c6b-b971-66f98fcf1a86\"\r\n}"
+								},
+								"url": {
+									"raw": "{{url}}/api/fx/payment",
+									"host": [
+										"{{url}}"
+									],
+									"path": [
+										"api",
+										"fx",
+										"payment"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "account/balance",
+					"event": [
+						{
+							"listen": "prerequest",
+							"script": {
+								"exec": [
+									""
+								],
+								"type": "text/javascript"
+							}
+						},
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"response is ok\", function () {",
+									"    pm.response.to.have.status(200);",
+									"});",
+									""
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Ocp-Apim-Subscription-Key",
+								"value": "{{subscriptionKey}}"
+							},
+							{
+								"key": "Ocp-Apim-Trace",
+								"value": "true"
+							},
+							{
+								"key": "X-Auth-Signature",
+								"value": "{{signature}}",
+								"type": "text"
+							},
+							{
+								"key": "X-Auth-Nonce",
+								"value": "{{nonce}}",
+								"type": "text"
+							},
+							{
+								"key": "X-Auth-Timestamp",
+								"value": "{{date}}",
+								"type": "text"
+							},
+							{
+								"key": "X-Auth-Version",
+								"value": "{{version}}",
+								"type": "text"
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"url": {
+							"raw": "{{url}}/api/account/:accountNumber/balance",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"api",
+								"account",
+								":accountNumber",
+								"balance"
+							],
+							"variable": [
+								{
+									"key": "accountNumber",
+									"value": "1234567890",
+									"type": "string",
+									"description": "1045400114, 1234567890, 1003900113, 1018409019"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "account/hold (disabled)",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									""
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Ocp-Apim-Subscription-Key",
+								"value": "{{subscriptionKey}}",
+								"type": "text",
+								"description": "924241808aec4f3583975f166f839d4b"
+							},
+							{
+								"key": "Ocp-Apim-Trace",
+								"value": "true",
+								"type": "text"
+							},
+							{
+								"key": "X-Auth-Signature",
+								"value": "{{signature}}",
+								"type": "text"
+							},
+							{
+								"key": "X-Auth-Nonce",
+								"value": "{{nonce}}",
+								"type": "text"
+							},
+							{
+								"key": "X-Auth-Timestamp",
+								"value": "{{date}}",
+								"type": "text"
+							},
+							{
+								"key": "X-Auth-Version",
+								"value": "{{version}}",
+								"type": "text"
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{url}}/api/account/:account-number/hold?application=DD",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"api",
+								"account",
+								":account-number",
+								"hold"
+							],
+							"query": [
+								{
+									"key": "application",
+									"value": "DD"
+								},
+								{
+									"key": "transaction-code",
+									"value": "HD",
+									"disabled": true
+								}
+							],
+							"variable": [
+								{
+									"key": "account-number",
+									"value": "1067309011"
+								}
+							]
+						},
+						"description": "Get hold information for an account."
+					},
+					"response": []
+				},
+				{
+					"name": "account/loan/balance",
+					"event": [
+						{
+							"listen": "prerequest",
+							"script": {
+								"exec": [
+									""
+								],
+								"type": "text/javascript"
+							}
+						},
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"response is ok\", function () {",
+									"    pm.response.to.have.status(200);",
+									"});",
+									""
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Ocp-Apim-Subscription-Key",
+								"value": "{{subscriptionKey}}"
+							},
+							{
+								"key": "Ocp-Apim-Trace",
+								"value": "true"
+							},
+							{
+								"key": "Authorization",
+								"value": "{{token}}",
+								"disabled": true
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"disabled": true
+							},
+							{
+								"key": "X-Auth-Signature",
+								"value": "{{signature}}",
+								"type": "text"
+							},
+							{
+								"key": "X-Auth-Nonce",
+								"value": "{{nonce}}",
+								"type": "text"
+							},
+							{
+								"key": "X-Auth-Timestamp",
+								"value": "{{date}}",
+								"type": "text"
+							},
+							{
+								"key": "X-Auth-Version",
+								"value": "{{version}}",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{url}}/api/account/:accountNumber/loan/balance",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"api",
+								"account",
+								":accountNumber",
+								"loan",
+								"balance"
+							],
+							"variable": [
+								{
+									"key": "accountNumber",
+									"value": "2016"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "account/cash-manager/balance",
+					"event": [
+						{
+							"listen": "prerequest",
+							"script": {
+								"exec": [
+									""
+								],
+								"type": "text/javascript"
+							}
+						},
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"response is ok\", function () {",
+									"    pm.response.to.have.status(200);",
+									"});",
+									""
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Ocp-Apim-Subscription-Key",
+								"value": "{{subscriptionKey}}"
+							},
+							{
+								"key": "Ocp-Apim-Trace",
+								"value": "true"
+							},
+							{
+								"key": "X-Auth-Signature",
+								"value": "{{signature}}",
+								"type": "text"
+							},
+							{
+								"key": "X-Auth-Nonce",
+								"value": "{{nonce}}",
+								"type": "text"
+							},
+							{
+								"key": "X-Auth-Timestamp",
+								"value": "{{date}}",
+								"type": "text"
+							},
+							{
+								"key": "X-Auth-Version",
+								"value": "{{version}}",
+								"type": "text"
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"url": {
+							"raw": "{{url}}/api/account/:accountNumber/cash-manager/balance",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"api",
+								"account",
+								":accountNumber",
+								"cash-manager",
+								"balance"
+							],
+							"variable": [
+								{
+									"key": "accountNumber",
+									"value": "777777777",
+									"type": "string"
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Payment",
+			"item": [
+				{
+					"name": "Get",
+					"item": [
+						{
+							"name": "Get Payment",
+							"event": [
+								{
+									"listen": "test",
+									"script": {
+										"exec": [
+											"pm.test(\"good response\", function () {\r",
+											"    pm.response.to.have.status(200);\r",
+											"});\r",
+											"\r",
+											"pm.test(\"payment created\", function () {\r",
+											"    pm.expect(pm.response.text()).to.include(\"payment_id\")\r",
+											"});\r",
+											"\r",
+											"pm.test(\"error not message present\", function () {\r",
+											"    pm.expect(pm.response.text()).to.not.include(\"ERRORMSG\");\r",
+											"});\r",
+											"\r",
+											"pm.test(\"PIM is present\", function () {\r",
+											"    var jsonData = JSON.parse(responseBody);\r",
+											"   //pm.globals.set(\"pim\",  jsonData[0].payment_id);\r",
+											"   //pm.globals.set(\"pim_timestamp\",  jsonData[0].time_stamp);\r",
+											"   postman.setEnvironmentVariable('pim', jsonData[0].payment_id);\r",
+											"   postman.setEnvironmentVariable('pim_timestamp', jsonData[0].time_stamp);\r",
+											"});\r",
+											"\r",
+											"\r",
+											"setTimeout(function(){}, [1500]);"
+										],
+										"type": "text/javascript"
+									}
+								}
+							],
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Ocp-Apim-Subscription-Key",
+										"type": "text",
+										"value": "{{subscriptionKey}}"
+									},
+									{
+										"key": "Ocp-Apim-Trace",
+										"type": "text",
+										"value": "true"
+									},
+									{
+										"key": "X-Auth-Signature",
+										"type": "text",
+										"value": "{{signature}}"
+									},
+									{
+										"key": "X-Auth-Nonce",
+										"type": "text",
+										"value": "{{nonce}}"
+									},
+									{
+										"key": "X-Auth-Timestamp",
+										"type": "text",
+										"value": "{{date}}"
+									},
+									{
+										"key": "X-Auth-Version",
+										"type": "text",
+										"value": "{{version}}"
+									},
+									{
+										"key": "Content-Type",
+										"type": "text",
+										"value": "application/json"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": ""
+								},
+								"url": {
+									"raw": "{{url}}/api/payment/:payment-id",
+									"host": [
+										"{{url}}"
+									],
+									"path": [
+										"api",
+										"payment",
+										":payment-id"
+									],
+									"variable": [
+										{
+											"key": "payment-id",
+											"value": "L09790527G9T1ID9",
+											"description": "L08OK38350ZS0WKM, L09790527G9T1ID9"
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Get Payments",
+							"event": [
+								{
+									"listen": "test",
+									"script": {
+										"exec": [
+											"pm.test(\"good response\", function () {\r",
+											"    pm.response.to.have.status(200);\r",
+											"});\r",
+											"\r",
+											"pm.test(\"payment created\", function () {\r",
+											"    pm.expect(pm.response.text()).to.include(\"payment_id\")\r",
+											"});\r",
+											"\r",
+											"pm.test(\"error not message present\", function () {\r",
+											"    pm.expect(pm.response.text()).to.not.include(\"ERRORMSG\");\r",
+											"});\r",
+											"\r",
+											"pm.test(\"PIM is present\", function () {\r",
+											"    var jsonData = JSON.parse(responseBody);\r",
+											"   //pm.globals.set(\"pim\",  jsonData[0].payment_id);\r",
+											"   //pm.globals.set(\"pim_timestamp\",  jsonData[0].time_stamp);\r",
+											"   postman.setEnvironmentVariable('pim', jsonData.records[0].payment_id);\r",
+											"   postman.setEnvironmentVariable('pim_timestamp', jsonData.records[0].time_stamp);\r",
+											"});\r",
+											"\r",
+											"\r",
+											"setTimeout(function(){}, [1500]);"
+										],
+										"type": "text/javascript"
+									}
+								}
+							],
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Ocp-Apim-Subscription-Key",
+										"type": "text",
+										"value": "{{subscriptionKey}}"
+									},
+									{
+										"key": "Ocp-Apim-Trace",
+										"type": "text",
+										"value": "true"
+									},
+									{
+										"key": "X-Auth-Signature",
+										"type": "text",
+										"value": "{{signature}}"
+									},
+									{
+										"key": "X-Auth-Nonce",
+										"type": "text",
+										"value": "{{nonce}}"
+									},
+									{
+										"key": "X-Auth-Timestamp",
+										"type": "text",
+										"value": "{{date}}"
+									},
+									{
+										"key": "X-Auth-Version",
+										"type": "text",
+										"value": "{{version}}"
+									},
+									{
+										"key": "Content-Type",
+										"type": "text",
+										"value": "application/json"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": ""
+								},
+								"url": {
+									"raw": "{{url}}/api/payment?account-number=1234567890&begin-date=07/01/2022&end-date=07/30/2022&page-size=100&page-number=1&sort-order=asc",
+									"host": [
+										"{{url}}"
+									],
+									"path": [
+										"api",
+										"payment"
+									],
+									"query": [
+										{
+											"key": "account-number",
+											"value": "1234567890"
+										},
+										{
+											"key": "begin-date",
+											"value": "07/01/2022"
+										},
+										{
+											"key": "end-date",
+											"value": "07/30/2022"
+										},
+										{
+											"key": "page-size",
+											"value": "100"
+										},
+										{
+											"key": "page-number",
+											"value": "1"
+										},
+										{
+											"key": "sort-order",
+											"value": "asc"
+										}
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "Post",
+					"item": [
+						{
+							"name": "BCPPayment",
+							"item": [
+								{
+									"name": "BCP Post Payment - 2 Bank",
+									"event": [
+										{
+											"listen": "test",
+											"script": {
+												"exec": [
+													"pm.test(\"good response\", function () {\r",
+													"    pm.response.to.have.status(200);\r",
+													"});\r",
+													"\r",
+													"pm.test(\"payment created\", function () {\r",
+													"    pm.expect(pm.response.text()).to.include(\"payment_id\")\r",
+													"});\r",
+													"\r",
+													"pm.test(\"error not message present\", function () {\r",
+													"    pm.expect(pm.response.text()).to.not.include(\"ERRORMSG\");\r",
+													"});\r",
+													"\r",
+													"pm.test(\"PIM is present\", function () {\r",
+													"    var jsonData = JSON.parse(responseBody);\r",
+													"   pm.globals.set(\"pim\",  jsonData.payment_id);\r",
+													"   pm.globals.set(\"pim_timestamp\",  jsonData.payment_timestamp);\r",
+													"});\r",
+													"\r",
+													"\r",
+													"setTimeout(function(){}, [1500]);"
+												],
+												"type": "text/javascript"
+											}
+										}
+									],
+									"request": {
+										"method": "POST",
+										"header": [
+											{
+												"key": "Ocp-Apim-Subscription-Key",
+												"value": "{{subscriptionKey}}",
+												"type": "text"
+											},
+											{
+												"key": "Ocp-Apim-Trace",
+												"value": "true",
+												"type": "text"
+											},
+											{
+												"key": "X-Auth-Signature",
+												"value": "{{signature}}",
+												"type": "text"
+											},
+											{
+												"key": "X-Auth-Nonce",
+												"value": "{{nonce}}",
+												"type": "text"
+											},
+											{
+												"key": "X-Auth-Timestamp",
+												"value": "{{date}}",
+												"type": "text"
+											},
+											{
+												"key": "X-Auth-Version",
+												"value": "{{version}}",
+												"type": "text"
+											},
+											{
+												"key": "Content-Type",
+												"value": "application/json",
+												"type": "text"
+											},
+											{
+												"key": "Idempotency-Key",
+												"value": "22552b15-3402-4401-9b4f-5f3d91a076b0",
+												"type": "text",
+												"disabled": true
+											}
+										],
+										"body": {
+											"mode": "raw",
+											"raw": "{\r\n\t\"amount\": 2.22,\r\n\t\"originator_account_number\": \"1234567890\",\r\n\t\"sending_currency\": \"USD\",\r\n\t\"beneficiary_bank_account_number\": \"1234567890\",\r\n    \"beneficiary_bank_account_is_iban\": false,\r\n\t\"beneficiary_name\": \"John Smith\",\r\n\t\"beneficiary_street_address\": \"222 Weinerschnitzle Lane\",\r\n\t\"beneficiary_city\": \"San Francisco\",\r\n    \"beneficiary_region\": \"CA\",\r\n    \"beneficiary_postal\": \"90210\",\r\n    \"beneficiary_country_code\": \"CA\",\r\n    \"beneficiary_bank_type\": \"ABA\",\r\n\t\"beneficiary_bank_routing_id\": \"021000021\",\r\n\t\"beneficiary_bank_name\": \"JPMorgan Chase Bank\",\r\n\t\"beneficiary_bank_street_address\": \"1111 Polaris Parkway\",\r\n\t\"beneficiary_bank_city\": \"Columbus\",\r\n\t\"beneficiary_bank_region\": \"OH\",\r\n    \"beneficiary_bank_postal\": \"43240\",\r\n    \"beneficiary_bank_country_code\": \"US\",\r\n    \"originator_to_beneficiary_info\": \"Memo line\"\r\n}"
+										},
+										"url": {
+											"raw": "{{url}}/api/payment/backup",
+											"host": [
+												"{{url}}"
+											],
+											"path": [
+												"api",
+												"payment",
+												"backup"
+											]
+										}
+									},
+									"response": []
+								},
+								{
+									"name": "BCP Post Payment - 3 Bank",
+									"event": [
+										{
+											"listen": "test",
+											"script": {
+												"exec": [
+													"pm.test(\"good response\", function () {\r",
+													"    pm.response.to.have.status(200);\r",
+													"});\r",
+													"\r",
+													"pm.test(\"payment created\", function () {\r",
+													"    pm.expect(pm.response.text()).to.include(\"payment_id\")\r",
+													"});\r",
+													"\r",
+													"pm.test(\"error not message present\", function () {\r",
+													"    pm.expect(pm.response.text()).to.not.include(\"ERRORMSG\");\r",
+													"});\r",
+													"\r",
+													"pm.test(\"PIM is present\", function () {\r",
+													"    var jsonData = JSON.parse(responseBody);\r",
+													"   pm.globals.set(\"pim\",  jsonData.payment_id);\r",
+													"   pm.globals.set(\"pim_timestamp\",  jsonData.payment_timestamp);\r",
+													"});\r",
+													"\r",
+													"\r",
+													"setTimeout(function(){}, [1500]);"
+												],
+												"type": "text/javascript"
+											}
+										}
+									],
+									"request": {
+										"method": "POST",
+										"header": [
+											{
+												"key": "Ocp-Apim-Subscription-Key",
+												"value": "{{subscriptionKey}}",
+												"type": "text"
+											},
+											{
+												"key": "Ocp-Apim-Trace",
+												"value": "true",
+												"type": "text"
+											},
+											{
+												"key": "X-Auth-Signature",
+												"value": "{{signature}}",
+												"type": "text"
+											},
+											{
+												"key": "X-Auth-Nonce",
+												"value": "{{nonce}}",
+												"type": "text"
+											},
+											{
+												"key": "X-Auth-Timestamp",
+												"value": "{{date}}",
+												"type": "text"
+											},
+											{
+												"key": "X-Auth-Version",
+												"value": "{{version}}",
+												"type": "text"
+											},
+											{
+												"key": "Content-Type",
+												"value": "application/json",
+												"type": "text"
+											},
+											{
+												"key": "Idempotency-Key",
+												"value": "22552b15-3402-4401-9b4f-5f3d91a076b0",
+												"type": "text",
+												"disabled": true
+											}
+										],
+										"body": {
+											"mode": "raw",
+											"raw": "{\r\n\t\"amount\": 1,\r\n\t\"originator_account_number\": \"1234567890\",\r\n\t\"sending_currency\": \"USD\",\r\n\t\"beneficiary_bank_account_number\": \"354354566\",\r\n    \"beneficiary_bank_account_is_iban\": false,\r\n\t\"beneficiary_name\": \"Hello World\",\r\n\t\"beneficiary_street_address\": \"123 bene address\",\r\n\t\"beneficiary_city\": \"San Francisco\",\r\n    \"beneficiary_region\": \"CA\",\r\n\t\"beneficiary_postal\":\"12345\",\r\n    \"beneficiary_country_code\": \"USA\",\r\n    \"beneficiary_bank_type\": \"ABA\",\r\n\t\"beneficiary_bank_routing_id\": \"071006486\",\r\n\t\"beneficiary_bank_name\": \"THE PRIVATEBANK AND TRUST COMPANY\",\r\n\t\"beneficiary_bank_street_address\": \"70 W MADISON SUITE 200\",\r\n\t\"beneficiary_bank_city\": \"Chicago\",\r\n\t\"beneficiary_bank_region\": \"IL\",\r\n    \"beneficiary_bank_postal\": \"60602\",\r\n    \"beneficiary_bank_country_code\": \"US\",\r\n    \"intermediary_bank_type\":\"ABA\",\r\n\t\"intermediary_bank_routing_id\": \"321171184\",\r\n\t\"intermediary_bank_name\": \"Citibank\",\r\n\t\"intermediary_bank_street_address\": \"250 University Avenue\",\r\n\t\"intermediary_bank_city\": \"Palo Alto\",\r\n\t\"intermediary_bank_region\": \"CA\",\r\n\t\"intermediary_bank_postal\": \"94301\",\r\n\t\"intermediary_bank_country_code\": \"US\",\r\n    \"originator_to_beneficiary_info\": \"Mic Check\"\r\n}"
+										},
+										"url": {
+											"raw": "{{url}}/api/payment/backup",
+											"host": [
+												"{{url}}"
+											],
+											"path": [
+												"api",
+												"payment",
+												"backup"
+											]
+										}
+									},
+									"response": []
+								}
+							]
+						},
+						{
+							"name": "Post Payment - Book to Book",
+							"event": [
+								{
+									"listen": "test",
+									"script": {
+										"exec": [
+											"pm.test(\"good response\", function () {\r",
+											"    pm.response.to.have.status(200);\r",
+											"});\r",
+											"\r",
+											"pm.test(\"payment created\", function () {\r",
+											"    pm.expect(pm.response.text()).to.include(\"payment_id\")\r",
+											"});\r",
+											"\r",
+											"pm.test(\"error not message present\", function () {\r",
+											"    pm.expect(pm.response.text()).to.not.include(\"ERRORMSG\");\r",
+											"});\r",
+											"\r",
+											"pm.test(\"PIM is present\", function () {\r",
+											"    var jsonData = JSON.parse(responseBody);\r",
+											"   pm.environment.set(\"pim\",  jsonData.payment_id);\r",
+											"   pm.environment.set(\"pim_timestamp\",  jsonData.payment_timestamp); \r",
+											"});\r",
+											"\r",
+											"\r",
+											"setTimeout(function(){}, [1500]);"
+										],
+										"type": "text/javascript"
+									}
+								}
+							],
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Ocp-Apim-Subscription-Key",
+										"value": "{{subscriptionKey}}",
+										"type": "text"
+									},
+									{
+										"key": "Ocp-Apim-Trace",
+										"value": "true",
+										"type": "text"
+									},
+									{
+										"key": "X-Auth-Signature",
+										"value": "{{signature}}",
+										"type": "text"
+									},
+									{
+										"key": "X-Auth-Nonce",
+										"value": "{{nonce}}",
+										"type": "text"
+									},
+									{
+										"key": "X-Auth-Timestamp",
+										"value": "{{date}}",
+										"type": "text"
+									},
+									{
+										"key": "X-Auth-Version",
+										"value": "{{version}}",
+										"type": "text"
+									},
+									{
+										"key": "Content-Type",
+										"value": "application/json",
+										"type": "text"
+									},
+									{
+										"key": "Idempotency-Key",
+										"value": "22552b15-3402-4401-9b4f-5f3d91a077a6",
+										"type": "text",
+										"disabled": true
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n\t\"amount\": 10.01,\r\n\t\"originator_account_number\": \"{{originator account number}}\",\r\n\t\"sending_currency\": \"USD\",\r\n    \"beneficiary_bank_type\": \"aba\",\r\n    \"beneficiary_bank_routing_id\": \"322286803\",\r\n    \"beneficiary_bank_name\": \"made\", \r\n\t\"beneficiary_bank_account_number\": \"{{made account number}}\",\r\n    \"beneficiary_bank_account_is_iban\": false,\r\n    \"beneficiary_bank_street_address\": \"4250 Executive Square Suite 300\",\r\n\t\"beneficiary_name\": \"made Counterparty\",\r\n\t\"beneficiary_street_address\": \"123 Rubik's Way\",\r\n\t\"beneficiary_city\": \"Austin\",\r\n    \"beneficiary_region\": \"TX\",\r\n\t\"beneficiary_postal\":\"73301\",\r\n    \"beneficiary_country_code\": \"USA\",\r\n    \"originator_to_beneficiary_info\": \"\"\r\n}"
+								},
+								"url": {
+									"raw": "{{url}}/api/payment",
+									"host": [
+										"{{url}}"
+									],
+									"path": [
+										"api",
+										"payment"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Post Payment - 2 Bank Scenario_domestic",
+							"event": [
+								{
+									"listen": "test",
+									"script": {
+										"exec": [
+											"pm.test(\"good response\", function () {\r",
+											"    pm.response.to.have.status(200);\r",
+											"});\r",
+											"\r",
+											"pm.test(\"payment created\", function () {\r",
+											"    pm.expect(pm.response.text()).to.include(\"payment_id\")\r",
+											"});\r",
+											"\r",
+											"pm.test(\"error not message present\", function () {\r",
+											"    pm.expect(pm.response.text()).to.not.include(\"ERRORMSG\");\r",
+											"});\r",
+											"\r",
+											"pm.test(\"PIM is present\", function () {\r",
+											"    var jsonData = JSON.parse(responseBody);\r",
+											"   pm.globals.set(\"pim\",  jsonData.payment_id);\r",
+											"   pm.globals.set(\"pim_timestamp\",  jsonData.payment_timestamp);\r",
+											"});\r",
+											"\r",
+											"\r",
+											"setTimeout(function(){}, [1500]);"
+										],
+										"type": "text/javascript"
+									}
+								}
+							],
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Ocp-Apim-Subscription-Key",
+										"value": "{{subscriptionKey}}",
+										"type": "text"
+									},
+									{
+										"key": "Ocp-Apim-Trace",
+										"value": "true",
+										"type": "text"
+									},
+									{
+										"key": "X-Auth-Signature",
+										"value": "{{signature}}",
+										"type": "text"
+									},
+									{
+										"key": "X-Auth-Nonce",
+										"value": "{{nonce}}",
+										"type": "text"
+									},
+									{
+										"key": "X-Auth-Timestamp",
+										"value": "{{date}}",
+										"type": "text"
+									},
+									{
+										"key": "X-Auth-Version",
+										"value": "{{version}}",
+										"type": "text"
+									},
+									{
+										"key": "Content-Type",
+										"value": "application/json",
+										"type": "text"
+									},
+									{
+										"key": "Idempotency-Key",
+										"value": "22552b15-3402-4401-9b4f-5f3d91a076b0",
+										"type": "text",
+										"disabled": true
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n\t\"amount\": {{enter a value}},\r\n\t\"originator_account_number\": \"1234567890\",\r\n\t\"sending_currency\": \"USD\",\r\n\t\"beneficiary_bank_account_number\": \"{{enter random #}}\",\r\n    \"beneficiary_bank_account_is_iban\": false,\r\n\t\"beneficiary_name\": \"hello {{your first name}}\",\r\n\t\"beneficiary_street_address\": \"222 Weinerschnitzle Lane\",\r\n\t\"beneficiary_city\": \"San Francisco\",\r\n    \"beneficiary_region\": \"CA\",\r\n    \"beneficiary_country_code\": \"CA\",\r\n    \"beneficiary_bank_type\": \"ABA\",\r\n\t\"beneficiary_bank_routing_id\": \"322271627\",\r\n\t\"beneficiary_bank_name\": \"JPMorgan Chase Bank\",\r\n\t\"beneficiary_bank_street_address\": \"1111 Polaris Parkway\",\r\n\t\"beneficiary_bank_city\": \"Columbus\",\r\n\t\"beneficiary_bank_region\": \"OH\",\r\n    \"beneficiary_bank_postal\": \"43240\",\r\n    \"beneficiary_bank_country_code\": \"US\",\r\n    \"originator_to_beneficiary_info\": \"\"\r\n}"
+								},
+								"url": {
+									"raw": "{{url}}/api/payment",
+									"host": [
+										"{{url}}"
+									],
+									"path": [
+										"api",
+										"payment"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Post Payment - 2 Bank Scenario_international",
+							"event": [
+								{
+									"listen": "test",
+									"script": {
+										"exec": [
+											"pm.test(\"good response\", function () {\r",
+											"    pm.response.to.have.status(200);\r",
+											"});\r",
+											"\r",
+											"pm.test(\"payment created\", function () {\r",
+											"    pm.expect(pm.response.text()).to.include(\"payment_id\")\r",
+											"});\r",
+											"\r",
+											"pm.test(\"error not message present\", function () {\r",
+											"    pm.expect(pm.response.text()).to.not.include(\"ERRORMSG\");\r",
+											"});\r",
+											"\r",
+											"pm.test(\"PIM is present\", function () {\r",
+											"    var jsonData = JSON.parse(responseBody);\r",
+											"   pm.globals.set(\"pim\",  jsonData.payment_id);\r",
+											"   pm.globals.set(\"pim_timestamp\",  jsonData.payment_timestamp);\r",
+											"});\r",
+											"\r",
+											"\r",
+											"setTimeout(function(){}, [1500]);"
+										],
+										"type": "text/javascript"
+									}
+								}
+							],
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Ocp-Apim-Subscription-Key",
+										"value": "{{subscriptionKey}}",
+										"type": "text"
+									},
+									{
+										"key": "Ocp-Apim-Trace",
+										"value": "true",
+										"type": "text"
+									},
+									{
+										"key": "X-Auth-Signature",
+										"value": "{{signature}}",
+										"type": "text"
+									},
+									{
+										"key": "X-Auth-Nonce",
+										"value": "{{nonce}}",
+										"type": "text"
+									},
+									{
+										"key": "X-Auth-Timestamp",
+										"value": "{{date}}",
+										"type": "text"
+									},
+									{
+										"key": "X-Auth-Version",
+										"value": "{{version}}",
+										"type": "text"
+									},
+									{
+										"key": "Content-Type",
+										"value": "application/json",
+										"type": "text"
+									},
+									{
+										"key": "Idempotency-Key",
+										"value": "22552b15-3402-4401-9b4f-5f3d91a076b0",
+										"type": "text",
+										"disabled": true
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n\t\"amount\":1.5,\r\n\t\"originator_account_number\": \"5091010115\",\r\n\t\"sending_currency\": \"EUR\",\r\n\t\"beneficiary_bank_account_number\": \"1045464899665\",\r\n    \"beneficiary_bank_account_is_iban\": false,\r\n\t\"beneficiary_name\": \"Hocus Pocus\",\r\n\t\"beneficiary_street_address\": \"1670 Great Road\",\r\n\t\"beneficiary_city\": \"Providence\",\r\n    \"beneficiary_region\": \"RI\",\r\n    \"beneficiary_country_code\": \"USA\",\r\n    \"beneficiary_bank_type\": \"SWIFT\",\r\n\t\"beneficiary_bank_routing_id\": \"SRLGGB2L\",\r\n\t\"beneficiary_bank_name\": \"Starling Bank Ltd\",\r\n\t\"beneficiary_bank_street_address\": \"3rd Floor, 2 Finsbury Avenue\",\r\n\t\"beneficiary_bank_city\": \"London\",\r\n\t\"beneficiary_bank_region\": \"England\",\r\n    \"beneficiary_bank_postal\": \"EC2M 2PP\",\r\n    \"beneficiary_bank_country_code\": \"GB\",\r\n    \"originator_to_beneficiary_info\": \"Witchery Goods\"\r\n}"
+								},
+								"url": {
+									"raw": "{{url}}/api/payment",
+									"host": [
+										"{{url}}"
+									],
+									"path": [
+										"api",
+										"payment"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Post Payment - 3 Bank Scenario_domestic",
+							"event": [
+								{
+									"listen": "test",
+									"script": {
+										"exec": [
+											"pm.test(\"good response\", function () {\r",
+											"    pm.response.to.have.status(201);\r",
+											"});\r",
+											"\r",
+											"pm.test(\"payment created\", function () {\r",
+											"    pm.expect(pm.response.text()).to.include(\"payment_id\")\r",
+											"});\r",
+											"\r",
+											"pm.test(\"error not message present\", function () {\r",
+											"    pm.expect(pm.response.text()).to.not.include(\"ERRORMSG\");\r",
+											"});\r",
+											"\r",
+											"pm.test(\"PIM is present\", function () {\r",
+											"    var jsonData = JSON.parse(responseBody);\r",
+											"   pm.globals.set(\"pim\",  jsonData.payment_id);\r",
+											"   pm.globals.set(\"pim_timestamp\",  jsonData.payment_timestamp);\r",
+											"});\r",
+											"\r",
+											"\r",
+											"setTimeout(function(){}, [1500]);"
+										],
+										"type": "text/javascript"
+									}
+								}
+							],
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Ocp-Apim-Subscription-Key",
+										"value": "{{subscriptionKey}}",
+										"type": "text"
+									},
+									{
+										"key": "Ocp-Apim-Trace",
+										"value": "true",
+										"type": "text"
+									},
+									{
+										"key": "X-Auth-Signature",
+										"value": "{{signature}}",
+										"type": "text"
+									},
+									{
+										"key": "X-Auth-Nonce",
+										"value": "{{nonce}}",
+										"type": "text"
+									},
+									{
+										"key": "X-Auth-Timestamp",
+										"value": "{{date}}",
+										"type": "text"
+									},
+									{
+										"key": "X-Auth-Version",
+										"value": "{{version}}",
+										"type": "text"
+									},
+									{
+										"key": "Content-Type",
+										"value": "application/json",
+										"type": "text"
+									},
+									{
+										"key": "Idempotency-Key",
+										"value": "22552b15-3402-4401-9b4f-5f3d91a076b0",
+										"type": "text",
+										"disabled": true
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n\t\"amount\": 5,\r\n\t\"originator_account_number\": \"1234567890\",\r\n\t\"sending_currency\": \"USD\",\r\n\t\"beneficiary_bank_account_number\": \"354354566\",\r\n    \"beneficiary_bank_account_is_iban\": false,\r\n\t\"beneficiary_name\": \"Hello World\",\r\n\t\"beneficiary_street_address\": \"123 bene address\",\r\n\t\"beneficiary_city\": \"San Francisco\",\r\n    \"beneficiary_region\": \"CA\",\r\n\t\"beneficiary_postal\":\"12345\",\r\n    \"beneficiary_country_code\": \"USA\",\r\n    \"beneficiary_bank_type\": \"ABA\",\r\n\t\"beneficiary_bank_routing_id\": \"121042882\",\r\n\t\"beneficiary_bank_name\": \"Wells Fargo\",\r\n\t\"beneficiary_bank_street_address\": \"7011 W MATTISON SUITE 1200\",\r\n\t\"beneficiary_bank_city\": \"LOS ANGELES\",\r\n\t\"beneficiary_bank_region\": \"CA\",\r\n    \"beneficiary_bank_postal\": \"90210\",\r\n    \"beneficiary_bank_country_code\": \"US\",\r\n    \"intermediary_bank_type\":\"ABA\",\r\n\t\"intermediary_bank_routing_id\": \"321171184\",\r\n\t\"intermediary_bank_name\": \"Citibank\",\r\n\t\"intermediary_bank_street_address\": \"250 University Avenue\",\r\n\t\"intermediary_bank_city\": \"Palo Alto\",\r\n\t\"intermediary_bank_region\": \"CA\",\r\n\t\"intermediary_bank_postal\": \"94301\",\r\n\t\"intermediary_bank_country_code\": \"US\",\r\n    \"originator_to_beneficiary_info\": \"\"\r\n}"
+								},
+								"url": {
+									"raw": "{{url}}/api/payment",
+									"host": [
+										"{{url}}"
+									],
+									"path": [
+										"api",
+										"payment"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Post Payment - 3 Bank Scenario_international",
+							"event": [
+								{
+									"listen": "test",
+									"script": {
+										"exec": [
+											"pm.test(\"good response\", function () {\r",
+											"    pm.response.to.have.status(200);\r",
+											"});\r",
+											"\r",
+											"pm.test(\"payment created\", function () {\r",
+											"    pm.expect(pm.response.text()).to.include(\"payment_id\")\r",
+											"});\r",
+											"\r",
+											"pm.test(\"error not message present\", function () {\r",
+											"    pm.expect(pm.response.text()).to.not.include(\"ERRORMSG\");\r",
+											"});\r",
+											"\r",
+											"pm.test(\"PIM is present\", function () {\r",
+											"    var jsonData = JSON.parse(responseBody);\r",
+											"   pm.globals.set(\"pim\",  jsonData.payment_id);\r",
+											"   pm.globals.set(\"pim_timestamp\",  jsonData.payment_timestamp);\r",
+											"});\r",
+											"\r",
+											"\r",
+											"setTimeout(function(){}, [1500]);"
+										],
+										"type": "text/javascript"
+									}
+								}
+							],
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Ocp-Apim-Subscription-Key",
+										"value": "{{subscriptionKey}}",
+										"type": "text"
+									},
+									{
+										"key": "Ocp-Apim-Trace",
+										"value": "true",
+										"type": "text"
+									},
+									{
+										"key": "X-Auth-Signature",
+										"value": "{{signature}}",
+										"type": "text"
+									},
+									{
+										"key": "X-Auth-Nonce",
+										"value": "{{nonce}}",
+										"type": "text"
+									},
+									{
+										"key": "X-Auth-Timestamp",
+										"value": "{{date}}",
+										"type": "text"
+									},
+									{
+										"key": "X-Auth-Version",
+										"value": "{{version}}",
+										"type": "text"
+									},
+									{
+										"key": "Content-Type",
+										"value": "application/json",
+										"type": "text"
+									},
+									{
+										"key": "Idempotency-Key",
+										"value": "22552b15-3402-4401-9b4f-5f3d91a076b0",
+										"type": "text",
+										"disabled": true
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n\t\"amount\": 2,\r\n\t\"originator_account_number\": \"5091010001\",\r\n\t\"sending_currency\": \"EUR\",\r\n\t\"beneficiary_bank_account_number\": \"NL85INGB4031638493\",\r\n    \"beneficiary_bank_account_is_iban\": true,\r\n\t\"beneficiary_name\": \"Goodday Sunshine\",\r\n\t\"beneficiary_street_address\": \"31 Rue Cambon\",\r\n\t\"beneficiary_city\": \"Paris\",\r\n    \"beneficiary_region\": \"France\",\r\n\t\"beneficiary_postal\":\"75001\",\r\n    \"beneficiary_country_code\": \"FR\",\r\n    \"beneficiary_bank_type\": \"SWIFT\",\r\n\t\"beneficiary_bank_routing_id\": \"INGBNL2A\",\r\n\t\"beneficiary_bank_name\": \"ING Bank N.V.\",\r\n\t\"beneficiary_bank_street_address\": \"41 AVENUE DE L'OPERA\",\r\n\t\"beneficiary_bank_city\": \"Paris\",\r\n\t\"beneficiary_bank_region\": \"France\",\r\n    \"beneficiary_bank_postal\": \"75002\",\r\n    \"beneficiary_bank_country_code\": \"Fr\",\r\n    \"intermediary_bank_type\":\"SWIFT\",\r\n\t\"intermediary_bank_routing_id\": \"AIGIUS33\",\r\n\t\"intermediary_bank_name\": \"AIG INTERNATIONAL INC.\",\r\n\t\"intermediary_bank_street_address\": \"50 DANBURY ROAD\",\r\n\t\"intermediary_bank_city\": \"Wilton\",\r\n\t\"intermediary_bank_region\": \"CT\",\r\n\t\"intermediary_bank_postal\": \"06897\",\r\n\t\"intermediary_bank_country_code\": \"US\",\r\n    \"originator_to_beneficiary_info\": \"\"\r\n}"
+								},
+								"url": {
+									"raw": "{{url}}/api/payment",
+									"host": [
+										"{{url}}"
+									],
+									"path": [
+										"api",
+										"payment"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "Patch",
+					"item": [
+						{
+							"name": "BCPPayment Patch",
+							"item": [
+								{
+									"name": "BCP Patch Payment",
+									"event": [
+										{
+											"listen": "test",
+											"script": {
+												"exec": [
+													"pm.test(\"good response\", function () {\r",
+													"    pm.response.to.have.status(200);\r",
+													"});\r",
+													"\r",
+													"pm.test(\"payment created\", function () {\r",
+													"    pm.expect(pm.response.text()).to.include(\"payment_id\")\r",
+													"});\r",
+													"\r",
+													"pm.test(\"error not message present\", function () {\r",
+													"    pm.expect(pm.response.text()).to.not.include(\"ERRORMSG\");\r",
+													"});\r",
+													"\r",
+													"pm.test(\"PIM is present\", function () {\r",
+													"    var jsonData = JSON.parse(responseBody);\r",
+													"   //pm.globals.set(\"pim\",  jsonData.payment_id);\r",
+													"   //pm.globals.set(\"pim_timestamp\",  jsonData.payment_timestamp);\r",
+													"});\r",
+													"\r",
+													"\r",
+													"setTimeout(function(){}, [1500]);"
+												],
+												"type": "text/javascript"
+											}
+										}
+									],
+									"request": {
+										"method": "PATCH",
+										"header": [
+											{
+												"key": "Ocp-Apim-Subscription-Key",
+												"value": "{{subscriptionKey}}",
+												"type": "text"
+											},
+											{
+												"key": "Ocp-Apim-Trace",
+												"value": "true",
+												"type": "text"
+											},
+											{
+												"key": "X-Auth-Signature",
+												"value": "{{signature}}",
+												"type": "text"
+											},
+											{
+												"key": "X-Auth-Nonce",
+												"value": "{{nonce}}",
+												"type": "text"
+											},
+											{
+												"key": "X-Auth-Timestamp",
+												"value": "{{date}}",
+												"type": "text"
+											},
+											{
+												"key": "X-Auth-Version",
+												"value": "{{version}}",
+												"type": "text"
+											},
+											{
+												"key": "Content-Type",
+												"value": "application/json",
+												"type": "text"
+											},
+											{
+												"key": "Idempotency-Key",
+												"value": "07c90cd0-ed56-4727-8e69-db6a37260f51",
+												"type": "text",
+												"disabled": true
+											}
+										],
+										"body": {
+											"mode": "raw",
+											"raw": "{\r\n    \"action\": \"approve\",\r\n    \"timestamp\": \"2022-01-19 12:36:37.720\"\r\n}"
+										},
+										"url": {
+											"raw": "{{url}}/api/payment/backup/:mid",
+											"host": [
+												"{{url}}"
+											],
+											"path": [
+												"api",
+												"payment",
+												"backup",
+												":mid"
+											],
+											"variable": [
+												{
+													"key": "mid",
+													"value": null
+												}
+											]
+										}
+									},
+									"response": []
+								}
+							]
+						},
+						{
+							"name": "Patch Payment",
+							"event": [
+								{
+									"listen": "test",
+									"script": {
+										"exec": [
+											"pm.test(\"good response\", function () {\r",
+											"    pm.response.to.have.status(200);\r",
+											"});\r",
+											"\r",
+											"pm.test(\"payment created\", function () {\r",
+											"    pm.expect(pm.response.text()).to.include(\"payment_id\")\r",
+											"});\r",
+											"\r",
+											"pm.test(\"error not message present\", function () {\r",
+											"    pm.expect(pm.response.text()).to.not.include(\"ERRORMSG\");\r",
+											"});\r",
+											"\r",
+											"pm.test(\"PIM is present\", function () {\r",
+											"    var jsonData = JSON.parse(responseBody);\r",
+											"   //pm.globals.set(\"pim\",  jsonData.payment_id);\r",
+											"   //pm.globals.set(\"pim_timestamp\",  jsonData.payment_timestamp);\r",
+											"});\r",
+											"\r",
+											"\r",
+											"setTimeout(function(){}, [1500]);"
+										],
+										"type": "text/javascript"
+									}
+								}
+							],
+							"request": {
+								"method": "PATCH",
+								"header": [
+									{
+										"key": "Ocp-Apim-Subscription-Key",
+										"value": "{{subscriptionKey}}",
+										"type": "text"
+									},
+									{
+										"key": "Ocp-Apim-Trace",
+										"value": "true",
+										"type": "text"
+									},
+									{
+										"key": "X-Auth-Signature",
+										"value": "{{signature}}",
+										"type": "text"
+									},
+									{
+										"key": "X-Auth-Nonce",
+										"value": "{{nonce}}",
+										"type": "text"
+									},
+									{
+										"key": "X-Auth-Timestamp",
+										"value": "{{date}}",
+										"type": "text"
+									},
+									{
+										"key": "X-Auth-Version",
+										"value": "{{version}}",
+										"type": "text"
+									},
+									{
+										"key": "Content-Type",
+										"value": "application/json",
+										"type": "text"
+									},
+									{
+										"key": "Idempotency-Key",
+										"value": "07c90cd0-ed56-4727-8e69-db6a37260f51",
+										"type": "text",
+										"disabled": true
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"action\": \"approve\",\r\n    \"timestamp\": \"2022-02-01 21:24:39.160\"\r\n}"
+								},
+								"url": {
+									"raw": "{{url}}/api/payment/:mid",
+									"host": [
+										"{{url}}"
+									],
+									"path": [
+										"api",
+										"payment",
+										":mid"
+									],
+									"variable": [
+										{
+											"key": "mid",
+											"value": "M021L2437NKP71TT"
+										}
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "Auth",
+			"item": [
+				{
+					"name": "Local auth test",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "X-made-Subscription-Id",
+								"value": "{{subscriptionGuid}}",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "http://localhost:5072/auth",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5072",
+							"path": [
+								"auth"
+							]
+						}
+					},
+					"response": []
+				}
+			],
+			"description": "This is for testing authentication using the newly built authentication service."
+		},
+		{
+			"name": "Webhook",
+			"item": [
+				{
+					"name": "Get",
+					"item": [
+						{
+							"name": "Get Webhook",
+							"event": [
+								{
+									"listen": "test",
+									"script": {
+										"exec": [
+											"pm.test(\"response is ok\", function () {",
+											"    pm.response.to.have.status(200);",
+											"});",
+											""
+										],
+										"type": "text/javascript"
+									}
+								}
+							],
+							"request": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Ocp-Apim-Subscription-Key",
+										"value": "{{subscriptionKey}}",
+										"type": "text"
+									},
+									{
+										"key": "Ocp-Apim-Trace",
+										"value": "true",
+										"type": "text"
+									},
+									{
+										"key": "X-Auth-Signature",
+										"value": "{{signature}}",
+										"type": "text"
+									},
+									{
+										"key": "X-Auth-Nonce",
+										"value": "{{nonce}}",
+										"type": "text"
+									},
+									{
+										"key": "X-Auth-Timestamp",
+										"value": "{{date}}",
+										"type": "text"
+									},
+									{
+										"key": "X-Auth-Version",
+										"value": "{{version}}",
+										"type": "text"
+									},
+									{
+										"key": "Content-Type",
+										"value": "application/json",
+										"type": "text"
+									}
+								],
+								"url": {
+									"raw": "{{url}}/api/WebHook/:web-hook-id",
+									"host": [
+										"{{url}}"
+									],
+									"path": [
+										"api",
+										"WebHook",
+										":web-hook-id"
+									],
+									"variable": [
+										{
+											"key": "web-hook-id",
+											"value": null
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Get Webhooks",
+							"event": [
+								{
+									"listen": "test",
+									"script": {
+										"exec": [
+											"pm.test(\"response is ok\", function () {",
+											"    pm.response.to.have.status(200);",
+											"});",
+											""
+										],
+										"type": "text/javascript"
+									}
+								}
+							],
+							"request": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Ocp-Apim-Subscription-Key",
+										"value": "{{subscriptionKey}}",
+										"type": "text"
+									},
+									{
+										"key": "Ocp-Apim-Trace",
+										"value": "true",
+										"type": "text"
+									},
+									{
+										"key": "X-Auth-Signature",
+										"value": "{{signature}}",
+										"type": "text"
+									},
+									{
+										"key": "X-Auth-Nonce",
+										"value": "{{nonce}}",
+										"type": "text"
+									},
+									{
+										"key": "X-Auth-Timestamp",
+										"value": "{{date}}",
+										"type": "text"
+									},
+									{
+										"key": "X-Auth-Version",
+										"value": "{{version}}",
+										"type": "text"
+									},
+									{
+										"key": "Content-Type",
+										"value": "application/json",
+										"type": "text"
+									}
+								],
+								"url": {
+									"raw": "{{url}}/api/webhook/?account-number=1234567890",
+									"host": [
+										"{{url}}"
+									],
+									"path": [
+										"api",
+										"webhook",
+										""
+									],
+									"query": [
+										{
+											"key": "account-number",
+											"value": "1234567890"
+										}
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "Post",
+					"item": [
+						{
+							"name": "webhooks/register",
+							"event": [
+								{
+									"listen": "test",
+									"script": {
+										"exec": [
+											"pm.test(\"response is ok\", function () {",
+											"    pm.response.to.have.status(201);",
+											"});",
+											"",
+											"pm.test(\"SetWebHookId\", function () {",
+											"var result = JSON.parse(responseBody);",
+											"pm.environment.set(\"webhookId\", result.WebHookId);    ",
+											"});",
+											""
+										],
+										"type": "text/javascript"
+									}
+								}
+							],
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Ocp-Apim-Subscription-Key",
+										"value": "{{subscriptionKey}}",
+										"type": "text"
+									},
+									{
+										"key": "Ocp-Apim-Trace",
+										"value": "true",
+										"type": "text"
+									},
+									{
+										"key": "X-Auth-Signature",
+										"value": "{{signature}}",
+										"type": "text"
+									},
+									{
+										"key": "X-Auth-Nonce",
+										"value": "{{nonce}}",
+										"type": "text"
+									},
+									{
+										"key": "X-Auth-Timestamp",
+										"value": "{{date}}",
+										"type": "text"
+									},
+									{
+										"key": "X-Auth-Version",
+										"value": "{{version}}",
+										"type": "text"
+									},
+									{
+										"key": "Content-Type",
+										"value": "application/json",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n  \"Account_Number\": \"1234567890\",\r\n  \"Description\": \"Testing Locally running webhook\",\r\n  \"Web_Hook_Url\": \"https://smallgoldpage85.conveyor.cloud\",\r\n  \"Emails\": \"bsearle@made.com\"\r\n}"
+								},
+								"url": {
+									"raw": "{{url}}/api/WebHook",
+									"host": [
+										"{{url}}"
+									],
+									"path": [
+										"api",
+										"WebHook"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "Delete",
+					"item": [
+						{
+							"name": "webhooks/delete",
+							"event": [
+								{
+									"listen": "test",
+									"script": {
+										"exec": [
+											"pm.test(\"response is ok\", function () {",
+											"    pm.response.to.have.status(204);",
+											"});",
+											""
+										],
+										"type": "text/javascript"
+									}
+								}
+							],
+							"request": {
+								"method": "DELETE",
+								"header": [
+									{
+										"key": "Ocp-Apim-Subscription-Key",
+										"value": "{{subscriptionKey}}",
+										"type": "text"
+									},
+									{
+										"key": "Ocp-Apim-Trace",
+										"value": "true",
+										"type": "text"
+									},
+									{
+										"key": "X-Auth-Signature",
+										"value": "{{signature}}",
+										"type": "text"
+									},
+									{
+										"key": "X-Auth-Nonce",
+										"value": "{{nonce}}",
+										"type": "text"
+									},
+									{
+										"key": "X-Auth-Timestamp",
+										"value": "{{date}}",
+										"type": "text"
+									},
+									{
+										"key": "X-Auth-Version",
+										"value": "{{version}}",
+										"type": "text"
+									},
+									{
+										"key": "Content-Type",
+										"value": "application/json",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": ""
+								},
+								"url": {
+									"raw": "{{url}}/api/WebHook/:web_hook_id",
+									"host": [
+										"{{url}}"
+									],
+									"path": [
+										"api",
+										"WebHook",
+										":web_hook_id"
+									],
+									"variable": [
+										{
+											"key": "web_hook_id",
+											"value": "1"
+										}
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "Connections",
+			"item": [
+				{
+					"name": "Get",
+					"item": [
+						{
+							"name": "Get Connections",
+							"event": [
+								{
+									"listen": "test",
+									"script": {
+										"exec": [
+											"pm.test(\"good response\", function () {\r",
+											"    pm.response.to.have.status(200);\r",
+											"});\r",
+											"\r",
+											"pm.test(\"error not message present\", function () {\r",
+											"    pm.expect(pm.response.text()).to.not.include(\"ERRORMSG\");\r",
+											"});"
+										],
+										"type": "text/javascript"
+									}
+								}
+							],
+							"protocolProfileBehavior": {
+								"disabledSystemHeaders": {
+									"accept": true
+								}
+							},
+							"request": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json",
+										"type": "text"
+									},
+									{
+										"key": "Accept",
+										"value": "application/json",
+										"type": "text",
+										"description": "standard json",
+										"disabled": true
+									},
+									{
+										"key": "Accept",
+										"value": "application/vnd.made.connections+json",
+										"description": "connections",
+										"type": "text",
+										"disabled": true
+									},
+									{
+										"key": "Accept",
+										"value": "application/vnd.made.connections.hateoas+json",
+										"description": "connections hateoas",
+										"type": "text"
+									},
+									{
+										"key": "Accept",
+										"value": "application/vnd.made.contacts+json",
+										"description": "third party contacts",
+										"type": "text",
+										"disabled": true
+									},
+									{
+										"key": "Accept",
+										"value": "application/vnd.made.contacts.hateoas+json",
+										"description": "third party contacts hateoas",
+										"type": "text",
+										"disabled": true
+									},
+									{
+										"key": "Accept",
+										"value": "application/vnd.made.externalaccounts+json",
+										"description": "owned accounts",
+										"type": "text",
+										"disabled": true
+									},
+									{
+										"key": "Accept",
+										"value": "application/vnd.made.externalaccounts.hateoas+json",
+										"description": "owned accounts hateoas",
+										"type": "text",
+										"disabled": true
+									}
+								],
+								"url": {
+									"raw": "{{url}}/api/connections",
+									"host": [
+										"{{url}}"
+									],
+									"path": [
+										"api",
+										"connections"
+									],
+									"query": [
+										{
+											"key": "trade-id",
+											"value": "263815",
+											"disabled": true
+										},
+										{
+											"key": "currency",
+											"value": "EUR",
+											"disabled": true
+										}
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "FX",
+			"item": [
+				{
+					"name": "Get",
+					"item": [
+						{
+							"name": "Get Trade",
+							"event": [
+								{
+									"listen": "test",
+									"script": {
+										"exec": [
+											"pm.test(\"good response\", function () {\r",
+											"    pm.response.to.have.status(200);\r",
+											"});\r",
+											"\r",
+											"pm.test(\"error not message present\", function () {\r",
+											"    pm.expect(pm.response.text()).to.not.include(\"ERRORMSG\");\r",
+											"});"
+										],
+										"type": "text/javascript"
+									}
+								}
+							],
+							"protocolProfileBehavior": {
+								"disabledSystemHeaders": {
+									"accept": true
+								}
+							},
+							"request": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Ocp-Apim-Subscription-Key",
+										"value": "{{subscriptionKey}}",
+										"type": "text"
+									},
+									{
+										"key": "Ocp-Apim-Trace",
+										"value": "true",
+										"type": "text"
+									},
+									{
+										"key": "X-Auth-Signature",
+										"value": "{{signature}}",
+										"type": "text"
+									},
+									{
+										"key": "X-Auth-Nonce",
+										"value": "{{nonce}}",
+										"type": "text"
+									},
+									{
+										"key": "X-Auth-Timestamp",
+										"value": "{{date}}",
+										"type": "text"
+									},
+									{
+										"key": "X-Auth-Version",
+										"value": "{{version}}",
+										"type": "text"
+									},
+									{
+										"key": "Content-Type",
+										"value": "application/json",
+										"type": "text"
+									},
+									{
+										"key": "Accept",
+										"value": "application/json",
+										"type": "text",
+										"description": "standard json",
+										"disabled": true
+									},
+									{
+										"key": "Accept",
+										"value": "application/vnd.made.trade+json",
+										"description": "trade",
+										"type": "text",
+										"disabled": true
+									},
+									{
+										"key": "Accept",
+										"value": "application/vnd.made.trade.hateoas+json",
+										"description": "trade hateoas",
+										"type": "text"
+									}
+								],
+								"url": {
+									"raw": "{{url}}/api/fx/trade/:trade-Id",
+									"host": [
+										"{{url}}"
+									],
+									"path": [
+										"api",
+										"fx",
+										"trade",
+										":trade-Id"
+									],
+									"variable": [
+										{
+											"key": "trade-Id",
+											"value": "265381"
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Get Trades",
+							"event": [
+								{
+									"listen": "test",
+									"script": {
+										"exec": [
+											"pm.test(\"good response\", function () {\r",
+											"    pm.response.to.have.status(200);\r",
+											"});\r",
+											"\r",
+											"pm.test(\"error not message present\", function () {\r",
+											"    pm.expect(pm.response.text()).to.not.include(\"ERRORMSG\");\r",
+											"});"
+										],
+										"type": "text/javascript"
+									}
+								},
+								{
+									"listen": "prerequest",
+									"script": {
+										"exec": [
+											""
+										],
+										"type": "text/javascript"
+									}
+								}
+							],
+							"protocolProfileBehavior": {
+								"disabledSystemHeaders": {
+									"accept": true
+								}
+							},
+							"request": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json",
+										"type": "text"
+									},
+									{
+										"key": "Accept",
+										"value": "application/json",
+										"type": "text",
+										"description": "standard json",
+										"disabled": true
+									},
+									{
+										"key": "Accept",
+										"value": "application/vnd.made.trade+json",
+										"description": "trade",
+										"type": "text",
+										"disabled": true
+									},
+									{
+										"key": "Accept",
+										"value": "application/vnd.made.trade.hateoas+json",
+										"description": "trade+hateoas",
+										"type": "text"
+									}
+								],
+								"url": {
+									"raw": "{{url}}/api/fx/trade?account-number=1234567890&begin-date=5/01/2021&sort-order=d&end-Date=05/30/2021",
+									"host": [
+										"{{url}}"
+									],
+									"path": [
+										"api",
+										"fx",
+										"trade"
+									],
+									"query": [
+										{
+											"key": "account-number",
+											"value": "1234567890",
+											"description": "1234567890, 1067309011"
+										},
+										{
+											"key": "begin-date",
+											"value": "5/01/2021"
+										},
+										{
+											"key": "sort-order",
+											"value": "d"
+										},
+										{
+											"key": "source",
+											"value": "2",
+											"description": "1 for partner, 2 for portal",
+											"disabled": true
+										},
+										{
+											"key": "end-Date",
+											"value": "05/30/2021"
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Payment Instructions",
+							"event": [
+								{
+									"listen": "test",
+									"script": {
+										"exec": [
+											"pm.test(\"Success Test\", function () {\r",
+											"    pm.response.to.have.status(200);\r",
+											"});"
+										],
+										"type": "text/javascript"
+									}
+								}
+							],
+							"request": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json",
+										"type": "text"
+									},
+									{
+										"key": "Accept",
+										"value": "application/json",
+										"type": "text",
+										"description": "standard json",
+										"disabled": true
+									},
+									{
+										"key": "Accept",
+										"value": "application/vnd.made.paymentinstructions+json",
+										"description": "paymentinstructions",
+										"type": "text",
+										"disabled": true
+									},
+									{
+										"key": "Accept",
+										"value": "application/vnd.made.paymentinstructions.hateoas+json",
+										"description": "paymentinstructions+hateoas",
+										"type": "text"
+									}
+								],
+								"url": {
+									"raw": "{{url}}/api/payment/instructions/:trade-id",
+									"host": [
+										"{{url}}"
+									],
+									"path": [
+										"api",
+										"payment",
+										"instructions",
+										":trade-id"
+									],
+									"variable": [
+										{
+											"key": "trade-id",
+											"value": "",
+											"description": "366004 for inbound instructions"
+										}
+									]
+								}
+							},
+							"response": []
+						}
+					],
+					"description": "Get folder contains:\n 1) Get Trade\n 2) Get Trades\n 3) Get Payment Instructions"
+				},
+				{
+					"name": "Post",
+					"item": [
+						{
+							"name": "Post Quote",
+							"event": [
+								{
+									"listen": "test",
+									"script": {
+										"exec": [
+											"pm.test(\"good response\", function () {\r",
+											"    pm.response.to.have.status(200);\r",
+											"});\r",
+											"\r",
+											"pm.test(\"error not message present\", function () {\r",
+											"    pm.expect(pm.response.text()).to.not.include(\"ERRORMSG\");\r",
+											"});"
+										],
+										"type": "text/javascript"
+									}
+								}
+							],
+							"protocolProfileBehavior": {
+								"disabledSystemHeaders": {
+									"accept": true
+								}
+							},
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Accept",
+										"value": "application/vnd.made.quote.hateoas+json",
+										"type": "text",
+										"description": "quote + hateoas",
+										"disabled": true
+									},
+									{
+										"key": "Accept",
+										"value": "application/vnd.made.marketorder.hateoas+json",
+										"type": "text",
+										"description": "trade + hateoas",
+										"disabled": true
+									},
+									{
+										"key": "Accept",
+										"value": "application/json",
+										"type": "text",
+										"description": "standard json",
+										"disabled": true
+									},
+									{
+										"key": "Accept",
+										"value": "application/vnd.made.quote+json",
+										"description": "quote",
+										"type": "text",
+										"disabled": true
+									},
+									{
+										"key": "Accept",
+										"value": "application/vnd.made.marketorder+json",
+										"description": "trade",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"account_number\": \"1067309011\",\r\n    \"currency_pair\": \"GBP/USD\",\r\n    \"external_account_type\": 2,\r\n    \"is_buy\": true,\r\n    \"dealt_amount\": 1,\r\n    \"counter_amount\": 0\r\n}\r\n",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{url}}/api/fx/quote",
+									"host": [
+										"{{url}}"
+									],
+									"path": [
+										"api",
+										"fx",
+										"quote"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Post Trade",
+							"event": [
+								{
+									"listen": "test",
+									"script": {
+										"exec": [
+											"pm.test(\"good response\", function () {\r",
+											"    pm.response.to.have.status(200);\r",
+											"});\r",
+											"\r",
+											"pm.test(\"error not message present\", function () {\r",
+											"    pm.expect(pm.response.text()).to.not.include(\"ERRORMSG\");\r",
+											"});"
+										],
+										"type": "text/javascript"
+									}
+								}
+							],
+							"protocolProfileBehavior": {
+								"disabledSystemHeaders": {
+									"accept": true
+								}
+							},
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Ocp-Apim-Subscription-Key",
+										"value": "{{subscriptionKey}}",
+										"type": "text"
+									},
+									{
+										"key": "Ocp-Apim-Trace",
+										"value": "true",
+										"type": "text"
+									},
+									{
+										"key": "X-Auth-Signature",
+										"value": "{{signature}}",
+										"type": "text"
+									},
+									{
+										"key": "X-Auth-Nonce",
+										"value": "{{nonce}}",
+										"type": "text"
+									},
+									{
+										"key": "X-Auth-Timestamp",
+										"value": "{{date}}",
+										"type": "text"
+									},
+									{
+										"key": "X-Auth-Version",
+										"value": "{{version}}",
+										"type": "text"
+									},
+									{
+										"key": "Content-Type",
+										"value": "application/json",
+										"type": "text"
+									},
+									{
+										"key": "Accept",
+										"value": "application/vnd.made.tradeexecution.hateoas+json",
+										"type": "text",
+										"description": "tradeexecution + hateoas"
+									},
+									{
+										"key": "Accept",
+										"value": "application/json",
+										"type": "text",
+										"description": "standard json",
+										"disabled": true
+									},
+									{
+										"key": "Accept",
+										"value": "application/vnd.made.tradeexecution+json",
+										"description": "tradeexecution",
+										"type": "text",
+										"disabled": true
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"quote_id\": \"1619622187303\"\r\n}"
+								},
+								"url": {
+									"raw": "{{url}}/api/fx/trade",
+									"host": [
+										"{{url}}"
+									],
+									"path": [
+										"api",
+										"fx",
+										"trade"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Post Quote, RFQ - Dealt & Counter Amount Not Provided",
+							"event": [
+								{
+									"listen": "test",
+									"script": {
+										"exec": [
+											"pm.test(\"RFQ - Dealt & Counter Amount Not Provided\", function () {\r",
+											"    pm.response.to.have.status(400);\r",
+											"});\r",
+											"\r",
+											"pm.test(\"400 Bad Request, Showing error message\", function () {\r",
+											"    pm.expect(pm.response.text()).to.include(\"dealt\")\r",
+											"});\r",
+											""
+										],
+										"type": "text/javascript"
+									}
+								},
+								{
+									"listen": "prerequest",
+									"script": {
+										"exec": [
+											"const { v4: uuidv4 } = require('uuid');\r",
+											"\r",
+											"let subscriptionKey = \"4ebb9101a8a0437fa0b68dc733b23b26\";\r",
+											"let subscriptionGuid = pm.variables.get('subscriptionGuid');\r",
+											"let apiSecret = \"Q3Pk7IM1M1Ur9jDTTvdxedjnwUvpH9cl7Q7tyIFszFA=\";\r",
+											"let ver = pm.variables.get('version');\r",
+											"let tracing = pm.variables.get('tracing');\r",
+											"let utcDate = (new Date()).toISOString();\r",
+											"let nonce = uuidv4();\r",
+											"\r",
+											"let uri = pm.environment.values.substitute(pm.request.url, null, false);\r",
+											"uri = pm.collectionVariables.values.substitute(pm.request.url, null, false) + \"\";\r",
+											"\r",
+											"let uriParts = uri.replace(/#+$/, \"\").split(/\\?(.+)/)\r",
+											"let url = encodeURI(uriParts[0]);\r",
+											"if (uriParts.length > 1) {\r",
+											"    url = url + \"?\" + uriParts[1]\r",
+											"}\r",
+											"\r",
+											"let body = pm.request.body !== undefined ? pm.collectionVariables.values.substitute(pm.environment.values.substitute(pm.request.body, null, false), null, false) : \"\";\r",
+											"let rawMessage = \"made\" + \" \" + subscriptionKey + url + nonce +utcDate + ver + body;\r",
+											"\r",
+											"console.log(\"Raw message: \" + rawMessage)\r",
+											"// Generate HMAC SHA256 or 512 signature\r",
+											"let signature = CryptoJS.enc.Base64.stringify(CryptoJS.HmacSHA512(rawMessage, apiSecret));\r",
+											"\r",
+											"if (subscriptionGuid !== undefined) {\r",
+											"    pm.request.headers.upsert({\r",
+											"        key: 'X-made-Subscription-Id',\r",
+											"        value: subscriptionGuid\r",
+											"    });\r",
+											"\r",
+											"\r",
+											"    pm.request.headers.upsert({\r",
+											"        key: 'X-made-Subscription-Name',\r",
+											"        value: \"Postman local test\"\r",
+											"    });\r",
+											"}\r",
+											"\r",
+											"pm.request.headers.upsert({\r",
+											"    key: 'Ocp-Apim-Subscription-Key',\r",
+											"    value: subscriptionKey\r",
+											"}\r",
+											");\r",
+											"pm.request.headers.upsert({\r",
+											"    key: 'Ocp-Apim-Trace',\r",
+											"    value: tracing\r",
+											"}\r",
+											");\r",
+											"pm.request.headers.upsert({\r",
+											"    key: 'X-Auth-Signature',\r",
+											"    value: signature\r",
+											"}\r",
+											");\r",
+											"pm.request.headers.upsert({\r",
+											"    key: 'X-Auth-Nonce',\r",
+											"    value: nonce\r",
+											"}\r",
+											");\r",
+											"pm.request.headers.upsert({\r",
+											"    key: 'X-Auth-Timestamp',\r",
+											"    value: utcDate\r",
+											"}\r",
+											");\r",
+											"pm.request.headers.upsert({\r",
+											"    key: 'X-Auth-Version',\r",
+											"    value: ver\r",
+											"}\r",
+											");"
+										],
+										"type": "text/javascript"
+									}
+								}
+							],
+							"protocolProfileBehavior": {
+								"disabledSystemHeaders": {
+									"accept": true
+								}
+							},
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Accept",
+										"value": "application/vnd.made.quote.hateoas+json",
+										"type": "text",
+										"description": "quote + hateoas",
+										"disabled": true
+									},
+									{
+										"key": "Accept",
+										"value": "application/vnd.made.marketorder.hateoas+json",
+										"type": "text",
+										"description": "trade + hateoas",
+										"disabled": true
+									},
+									{
+										"key": "Accept",
+										"value": "application/json",
+										"type": "text",
+										"description": "standard json",
+										"disabled": true
+									},
+									{
+										"key": "Accept",
+										"value": "application/vnd.made.quote+json",
+										"description": "quote",
+										"type": "text"
+									},
+									{
+										"key": "Accept",
+										"value": "application/vnd.made.marketorder+json",
+										"description": "trade",
+										"type": "text",
+										"disabled": true
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"account_number\": \"4400009902\",\r\n    \"currency_pair\": \"eur/usd\",\r\n    \"external_account_type\": 2,\r\n    \"is_buy\": true,\r\n    \"dealt_amount\": ,\r\n    \"counter_amount\": \r\n}\r\n",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{url}}/api/fx/quote",
+									"host": [
+										"{{url}}"
+									],
+									"path": [
+										"api",
+										"fx",
+										"quote"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Post Internal Quote - Both debit & credit amount provided",
+							"event": [
+								{
+									"listen": "test",
+									"script": {
+										"exec": [
+											"pm.test(\"Internal FX Quote, Both debit & credit amount provided - 400 Bad Request\", function () {\r",
+											"    pm.response.to.have.status(400);\r",
+											"});\r",
+											"\r",
+											"pm.test(\"Error Message : Be sure to supply only debit_amount or credit_amount with a value greater than 0\", function () {\r",
+											"    pm.expect(pm.response.text()).to.include(\"only debit_amount\");\r",
+											"});"
+										],
+										"type": "text/javascript"
+									}
+								},
+								{
+									"listen": "prerequest",
+									"script": {
+										"exec": [
+											"const { v4: uuidv4 } = require('uuid');\r",
+											"\r",
+											"let subscriptionKey = \"4ebb9101a8a0437fa0b68dc733b23b26\";\r",
+											"let subscriptionGuid = pm.variables.get('subscriptionGuid');\r",
+											"let apiSecret = \"Q3Pk7IM1M1Ur9jDTTvdxedjnwUvpH9cl7Q7tyIFszFA=\";\r",
+											"let ver = pm.variables.get('version');\r",
+											"let tracing = pm.variables.get('tracing');\r",
+											"let utcDate = (new Date()).toISOString();\r",
+											"let nonce = uuidv4();\r",
+											"\r",
+											"let uri = pm.environment.values.substitute(pm.request.url, null, false);\r",
+											"uri = pm.collectionVariables.values.substitute(pm.request.url, null, false) + \"\";\r",
+											"\r",
+											"let uriParts = uri.replace(/#+$/, \"\").split(/\\?(.+)/)\r",
+											"let url = encodeURI(uriParts[0]);\r",
+											"if (uriParts.length > 1) {\r",
+											"    url = url + \"?\" + uriParts[1]\r",
+											"}\r",
+											"\r",
+											"let body = pm.request.body !== undefined ? pm.collectionVariables.values.substitute(pm.environment.values.substitute(pm.request.body, null, false), null, false) : \"\";\r",
+											"let rawMessage = \"made\" + \" \" + subscriptionKey + url + nonce +utcDate + ver + body;\r",
+											"\r",
+											"console.log(\"Raw message: \" + rawMessage)\r",
+											"// Generate HMAC SHA256 or 512 signature\r",
+											"let signature = CryptoJS.enc.Base64.stringify(CryptoJS.HmacSHA512(rawMessage, apiSecret));\r",
+											"\r",
+											"if (subscriptionGuid !== undefined) {\r",
+											"    pm.request.headers.upsert({\r",
+											"        key: 'X-made-Subscription-Id',\r",
+											"        value: subscriptionGuid\r",
+											"    });\r",
+											"\r",
+											"\r",
+											"    pm.request.headers.upsert({\r",
+											"        key: 'X-made-Subscription-Name',\r",
+											"        value: \"Postman local test\"\r",
+											"    });\r",
+											"}\r",
+											"\r",
+											"pm.request.headers.upsert({\r",
+											"    key: 'Ocp-Apim-Subscription-Key',\r",
+											"    value: subscriptionKey\r",
+											"}\r",
+											");\r",
+											"pm.request.headers.upsert({\r",
+											"    key: 'Ocp-Apim-Trace',\r",
+											"    value: tracing\r",
+											"}\r",
+											");\r",
+											"pm.request.headers.upsert({\r",
+											"    key: 'X-Auth-Signature',\r",
+											"    value: signature\r",
+											"}\r",
+											");\r",
+											"pm.request.headers.upsert({\r",
+											"    key: 'X-Auth-Nonce',\r",
+											"    value: nonce\r",
+											"}\r",
+											");\r",
+											"pm.request.headers.upsert({\r",
+											"    key: 'X-Auth-Timestamp',\r",
+											"    value: utcDate\r",
+											"}\r",
+											");\r",
+											"pm.request.headers.upsert({\r",
+											"    key: 'X-Auth-Version',\r",
+											"    value: ver\r",
+											"}\r",
+											");"
+										],
+										"type": "text/javascript"
+									}
+								}
+							],
+							"protocolProfileBehavior": {
+								"disabledSystemHeaders": {
+									"accept": true
+								}
+							},
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Accept",
+										"value": "application/vnd.made.internalquote.hateoas+json",
+										"type": "text",
+										"description": "quote + hateoas"
+									},
+									{
+										"key": "Accept",
+										"value": "application/vnd.made.internalmarketorder.hateoas+json",
+										"type": "text",
+										"description": "trade + hateoas",
+										"disabled": true
+									},
+									{
+										"key": "Accept",
+										"value": "application/json",
+										"type": "text",
+										"description": "standard json",
+										"disabled": true
+									},
+									{
+										"key": "Accept",
+										"value": "application/vnd.made.internalquote+json",
+										"description": "quote",
+										"type": "text",
+										"disabled": true
+									},
+									{
+										"key": "Accept",
+										"value": "application/vnd.made.internalmarketorder+json",
+										"description": "trade",
+										"type": "text",
+										"disabled": true
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"debit_account_number\": \"1142409018\",\r\n    \"credit_account_number\": \"5091010001\",\r\n    \"currency_pair\": \"eur/usd\",\r\n    \"debit_amount\": 40,\r\n    \"credit_amount\": 40\r\n}\r\n",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{url}}/api/fx/internal/quote",
+									"host": [
+										"{{url}}"
+									],
+									"path": [
+										"api",
+										"fx",
+										"internal",
+										"quote"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Post Internal Quote - Debit and credit amount not provided",
+							"event": [
+								{
+									"listen": "test",
+									"script": {
+										"exec": [
+											"pm.test(\"Internal FX Quote, Debit & credit amount not provided\", function () {\r",
+											"    pm.response.to.have.status(400);\r",
+											"});\r",
+											"\r",
+											"pm.test(\"Error Message : request field is required\", function () {\r",
+											"    pm.expect(pm.response.text()).to.include(\"field is required\");\r",
+											"});"
+										],
+										"type": "text/javascript"
+									}
+								},
+								{
+									"listen": "prerequest",
+									"script": {
+										"exec": [
+											"const { v4: uuidv4 } = require('uuid');\r",
+											"\r",
+											"let subscriptionKey = \"4ebb9101a8a0437fa0b68dc733b23b26\";\r",
+											"let subscriptionGuid = pm.variables.get('subscriptionGuid');\r",
+											"let apiSecret = \"Q3Pk7IM1M1Ur9jDTTvdxedjnwUvpH9cl7Q7tyIFszFA=\";\r",
+											"let ver = pm.variables.get('version');\r",
+											"let tracing = pm.variables.get('tracing');\r",
+											"let utcDate = (new Date()).toISOString();\r",
+											"let nonce = uuidv4();\r",
+											"\r",
+											"let uri = pm.environment.values.substitute(pm.request.url, null, false);\r",
+											"uri = pm.collectionVariables.values.substitute(pm.request.url, null, false) + \"\";\r",
+											"\r",
+											"let uriParts = uri.replace(/#+$/, \"\").split(/\\?(.+)/)\r",
+											"let url = encodeURI(uriParts[0]);\r",
+											"if (uriParts.length > 1) {\r",
+											"    url = url + \"?\" + uriParts[1]\r",
+											"}\r",
+											"\r",
+											"let body = pm.request.body !== undefined ? pm.collectionVariables.values.substitute(pm.environment.values.substitute(pm.request.body, null, false), null, false) : \"\";\r",
+											"let rawMessage = \"made\" + \" \" + subscriptionKey + url + nonce +utcDate + ver + body;\r",
+											"\r",
+											"console.log(\"Raw message: \" + rawMessage)\r",
+											"// Generate HMAC SHA256 or 512 signature\r",
+											"let signature = CryptoJS.enc.Base64.stringify(CryptoJS.HmacSHA512(rawMessage, apiSecret));\r",
+											"\r",
+											"if (subscriptionGuid !== undefined) {\r",
+											"    pm.request.headers.upsert({\r",
+											"        key: 'X-made-Subscription-Id',\r",
+											"        value: subscriptionGuid\r",
+											"    });\r",
+											"\r",
+											"\r",
+											"    pm.request.headers.upsert({\r",
+											"        key: 'X-made-Subscription-Name',\r",
+											"        value: \"Postman local test\"\r",
+											"    });\r",
+											"}\r",
+											"\r",
+											"pm.request.headers.upsert({\r",
+											"    key: 'Ocp-Apim-Subscription-Key',\r",
+											"    value: subscriptionKey\r",
+											"}\r",
+											");\r",
+											"pm.request.headers.upsert({\r",
+											"    key: 'Ocp-Apim-Trace',\r",
+											"    value: tracing\r",
+											"}\r",
+											");\r",
+											"pm.request.headers.upsert({\r",
+											"    key: 'X-Auth-Signature',\r",
+											"    value: signature\r",
+											"}\r",
+											");\r",
+											"pm.request.headers.upsert({\r",
+											"    key: 'X-Auth-Nonce',\r",
+											"    value: nonce\r",
+											"}\r",
+											");\r",
+											"pm.request.headers.upsert({\r",
+											"    key: 'X-Auth-Timestamp',\r",
+											"    value: utcDate\r",
+											"}\r",
+											");\r",
+											"pm.request.headers.upsert({\r",
+											"    key: 'X-Auth-Version',\r",
+											"    value: ver\r",
+											"}\r",
+											");"
+										],
+										"type": "text/javascript"
+									}
+								}
+							],
+							"protocolProfileBehavior": {
+								"disabledSystemHeaders": {
+									"accept": true
+								}
+							},
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Accept",
+										"value": "application/vnd.made.internalquote.hateoas+json",
+										"type": "text",
+										"description": "quote + hateoas"
+									},
+									{
+										"key": "Accept",
+										"value": "application/vnd.made.internalmarketorder.hateoas+json",
+										"type": "text",
+										"description": "trade + hateoas",
+										"disabled": true
+									},
+									{
+										"key": "Accept",
+										"value": "application/json",
+										"type": "text",
+										"description": "standard json",
+										"disabled": true
+									},
+									{
+										"key": "Accept",
+										"value": "application/vnd.made.internalquote+json",
+										"description": "quote",
+										"type": "text",
+										"disabled": true
+									},
+									{
+										"key": "Accept",
+										"value": "application/vnd.made.internalmarketorder+json",
+										"description": "trade",
+										"type": "text",
+										"disabled": true
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"debit_account_number\": \"1142409018\",\r\n    \"credit_account_number\": \"5091010001\",\r\n    \"currency_pair\": \"\",\r\n    \"debit_amount\": ,\r\n    \"credit_amount\": \r\n}\r\n",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{url}}/api/fx/internal/quote",
+									"host": [
+										"{{url}}"
+									],
+									"path": [
+										"api",
+										"fx",
+										"internal",
+										"quote"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Post Internal Quote - Both debit & credit amount provided",
+							"event": [
+								{
+									"listen": "test",
+									"script": {
+										"exec": [
+											"pm.test(\"Internal FX Quote, Both debit & credit amount provided - 400 Bad Request\", function () {\r",
+											"    pm.response.to.have.status(400);\r",
+											"});\r",
+											"\r",
+											"pm.test(\"Error Message : Be sure to supply only debit_amount or credit_amount with a value greater than 0\", function () {\r",
+											"    pm.expect(pm.response.text()).to.include(\"only debit_amount\");\r",
+											"});"
+										],
+										"type": "text/javascript"
+									}
+								},
+								{
+									"listen": "prerequest",
+									"script": {
+										"exec": [
+											"const { v4: uuidv4 } = require('uuid');\r",
+											"\r",
+											"let subscriptionKey = \"4ebb9101a8a0437fa0b68dc733b23b26\";\r",
+											"let subscriptionGuid = pm.variables.get('subscriptionGuid');\r",
+											"let apiSecret = \"Q3Pk7IM1M1Ur9jDTTvdxedjnwUvpH9cl7Q7tyIFszFA=\";\r",
+											"let ver = pm.variables.get('version');\r",
+											"let tracing = pm.variables.get('tracing');\r",
+											"let utcDate = (new Date()).toISOString();\r",
+											"let nonce = uuidv4();\r",
+											"\r",
+											"let uri = pm.environment.values.substitute(pm.request.url, null, false);\r",
+											"uri = pm.collectionVariables.values.substitute(pm.request.url, null, false) + \"\";\r",
+											"\r",
+											"let uriParts = uri.replace(/#+$/, \"\").split(/\\?(.+)/)\r",
+											"let url = encodeURI(uriParts[0]);\r",
+											"if (uriParts.length > 1) {\r",
+											"    url = url + \"?\" + uriParts[1]\r",
+											"}\r",
+											"\r",
+											"let body = pm.request.body !== undefined ? pm.collectionVariables.values.substitute(pm.environment.values.substitute(pm.request.body, null, false), null, false) : \"\";\r",
+											"let rawMessage = \"made\" + \" \" + subscriptionKey + url + nonce +utcDate + ver + body;\r",
+											"\r",
+											"console.log(\"Raw message: \" + rawMessage)\r",
+											"// Generate HMAC SHA256 or 512 signature\r",
+											"let signature = CryptoJS.enc.Base64.stringify(CryptoJS.HmacSHA512(rawMessage, apiSecret));\r",
+											"\r",
+											"if (subscriptionGuid !== undefined) {\r",
+											"    pm.request.headers.upsert({\r",
+											"        key: 'X-made-Subscription-Id',\r",
+											"        value: subscriptionGuid\r",
+											"    });\r",
+											"\r",
+											"\r",
+											"    pm.request.headers.upsert({\r",
+											"        key: 'X-made-Subscription-Name',\r",
+											"        value: \"Postman local test\"\r",
+											"    });\r",
+											"}\r",
+											"\r",
+											"pm.request.headers.upsert({\r",
+											"    key: 'Ocp-Apim-Subscription-Key',\r",
+											"    value: subscriptionKey\r",
+											"}\r",
+											");\r",
+											"pm.request.headers.upsert({\r",
+											"    key: 'Ocp-Apim-Trace',\r",
+											"    value: tracing\r",
+											"}\r",
+											");\r",
+											"pm.request.headers.upsert({\r",
+											"    key: 'X-Auth-Signature',\r",
+											"    value: signature\r",
+											"}\r",
+											");\r",
+											"pm.request.headers.upsert({\r",
+											"    key: 'X-Auth-Nonce',\r",
+											"    value: nonce\r",
+											"}\r",
+											");\r",
+											"pm.request.headers.upsert({\r",
+											"    key: 'X-Auth-Timestamp',\r",
+											"    value: utcDate\r",
+											"}\r",
+											");\r",
+											"pm.request.headers.upsert({\r",
+											"    key: 'X-Auth-Version',\r",
+											"    value: ver\r",
+											"}\r",
+											");"
+										],
+										"type": "text/javascript"
+									}
+								}
+							],
+							"protocolProfileBehavior": {
+								"disabledSystemHeaders": {
+									"accept": true
+								}
+							},
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Accept",
+										"value": "application/vnd.made.internalquote.hateoas+json",
+										"type": "text",
+										"description": "quote + hateoas",
+										"disabled": true
+									},
+									{
+										"key": "Accept",
+										"value": "application/vnd.made.internalmarketorder.hateoas+json",
+										"type": "text",
+										"description": "trade + hateoas"
+									},
+									{
+										"key": "Accept",
+										"value": "application/json",
+										"type": "text",
+										"description": "standard json",
+										"disabled": true
+									},
+									{
+										"key": "Accept",
+										"value": "application/vnd.made.internalquote+json",
+										"description": "quote",
+										"type": "text",
+										"disabled": true
+									},
+									{
+										"key": "Accept",
+										"value": "application/vnd.made.internalmarketorder+json",
+										"description": "trade",
+										"type": "text",
+										"disabled": true
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"debit_account_number\": \"1142409018\",\r\n    \"credit_account_number\": \"5091010001\",\r\n    \"currency_pair\": \"eur/usd\",\r\n    \"debit_amount\": 40,\r\n    \"credit_amount\": 40\r\n}\r\n",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{url}}/api/fx/internal/quote",
+									"host": [
+										"{{url}}"
+									],
+									"path": [
+										"api",
+										"fx",
+										"internal",
+										"quote"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Post Payment",
+							"event": [
+								{
+									"listen": "test",
+									"script": {
+										"exec": [
+											"pm.test(\"good response\", function () {\r",
+											"    pm.response.to.have.status(200);\r",
+											"});\r",
+											"\r",
+											"pm.test(\"error not message present\", function () {\r",
+											"    pm.expect(pm.response.text()).to.not.include(\"ERRORMSG\");\r",
+											"});"
+										],
+										"type": "text/javascript"
+									}
+								}
+							],
+							"protocolProfileBehavior": {
+								"disabledSystemHeaders": {
+									"accept": true,
+									"content-type": true
+								}
+							},
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Ocp-Apim-Subscription-Key",
+										"value": "{{subscriptionKey}}",
+										"type": "text"
+									},
+									{
+										"key": "Ocp-Apim-Trace",
+										"value": "true",
+										"type": "text"
+									},
+									{
+										"key": "X-Auth-Signature",
+										"value": "{{signature}}",
+										"type": "text"
+									},
+									{
+										"key": "X-Auth-Nonce",
+										"value": "{{nonce}}",
+										"type": "text"
+									},
+									{
+										"key": "X-Auth-Timestamp",
+										"value": "{{date}}",
+										"type": "text"
+									},
+									{
+										"key": "X-Auth-Version",
+										"value": "{{version}}",
+										"type": "text"
+									},
+									{
+										"key": "Content-Type",
+										"value": "application/json",
+										"type": "text",
+										"disabled": true
+									},
+									{
+										"key": "Content-Type",
+										"value": "application/vnd.made.adhocfxpaymentrequest+json",
+										"type": "text",
+										"description": "adhoc"
+									},
+									{
+										"key": "Content-Type",
+										"value": "application/vnd.made.fxpaymentrequest+json",
+										"type": "text",
+										"description": "non adhoc",
+										"disabled": true
+									},
+									{
+										"key": "Accept",
+										"value": "application/vnd.made.fxpayment.hateoas+json",
+										"type": "text"
+									},
+									{
+										"key": "Accept",
+										"value": "application/json",
+										"type": "text",
+										"disabled": true
+									},
+									{
+										"key": "Accept",
+										"value": "application/vnd.made.fxpayment+json",
+										"type": "text",
+										"disabled": true
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"trade_id\": \"643803\",\r\n    \"purpose_of_payment\": 1,\r\n    \"memo\": \"TC xxxxx\",\r\n    \"sending_currency\": \"GBP\",\r\n    \r\n    \"beneficiary_bank_type\": \"SWIFT\",\r\n    \"beneficiary_bank_routing_id\": \"COBADEFF\",\r\n    \"beneficiary_bank_name\": \"COMMERZBANK\",\r\n    \"beneficiary_bank_street_address\": \"1111 Sample Dr\",\r\n    \"beneficiary_bank_city\": \"FRANKFURT\",\r\n    \"beneficiary_bank_region\": \"GERMANY\",\r\n    \"beneficiary_bank_country_code\": \"GE\",\r\n    \"beneficiary_bank_account_number\": \"DE89370400440532011000\",\r\n    \"beneficiary_bank_account_is_iban\": true,\r\n\r\n    \"beneficiary_name\": \"J JEN\",\r\n    \"beneficiary_street_address\": \"2222 Sample Dr\",\r\n    \"beneficiary_city\": \"Los Angeles\",\r\n    \"beneficiary_region\": \"CA\",\r\n    \"beneficiary_country_code\": \"US\",\r\n\r\n    \"intermediary_bank_type\":\"ABA\",\r\n\t\"intermediary_bank_routing_id\": \"321171184\",\r\n\t\"intermediary_bank_name\": \"Citibank\",\r\n\t\"intermediary_bank_street_address\": \"250 University Avenue\",\r\n\t\"intermediary_bank_city\": \"Palo Alto\",\r\n\t\"intermediary_bank_region\": \"CA\",\r\n\t\"intermediary_bank_postal\": \"94301\",\r\n\t\"intermediary_bank_country_code\": \"US\",\r\n\r\n    \"external_account_id\": \"5a6aad0b-eaae-4c6b-b971-66f98fcf1a86\"\r\n}"
+								},
+								"url": {
+									"raw": "{{url}}/api/fx/payment",
+									"host": [
+										"{{url}}"
+									],
+									"path": [
+										"api",
+										"fx",
+										"payment"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Post Internal Quote",
+							"event": [
+								{
+									"listen": "test",
+									"script": {
+										"exec": [
+											"pm.test(\"good response\", function () {\r",
+											"    pm.response.to.have.status(200);\r",
+											"});\r",
+											"\r",
+											"pm.test(\"error not message present\", function () {\r",
+											"    pm.expect(pm.response.text()).to.not.include(\"ERRORMSG\");\r",
+											"});"
+										],
+										"type": "text/javascript"
+									}
+								}
+							],
+							"protocolProfileBehavior": {
+								"disabledSystemHeaders": {
+									"accept": true
+								}
+							},
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Accept",
+										"value": "application/vnd.made.internalquote.hateoas+json",
+										"type": "text",
+										"description": "quote + hateoas",
+										"disabled": true
+									},
+									{
+										"key": "Accept",
+										"value": "application/vnd.made.internalmarketorder.hateoas+json",
+										"type": "text",
+										"description": "trade + hateoas"
+									},
+									{
+										"key": "Accept",
+										"value": "application/json",
+										"type": "text",
+										"description": "standard json",
+										"disabled": true
+									},
+									{
+										"key": "Accept",
+										"value": "application/vnd.made.internalquote+json",
+										"description": "quote",
+										"type": "text",
+										"disabled": true
+									},
+									{
+										"key": "Accept",
+										"value": "application/vnd.made.internalmarketorder+json",
+										"description": "trade",
+										"type": "text",
+										"disabled": true
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"debit_account_number\": \"1067309011\",\r\n    \"credit_account_number\": \"5091010001\",\r\n    \"currency_pair\": \"eur/usd\",\r\n    \"debit_amount\": 0,\r\n    \"credit_amount\": 1\r\n}\r\n",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{url}}/api/fx/internal/quote",
+									"host": [
+										"{{url}}"
+									],
+									"path": [
+										"api",
+										"fx",
+										"internal",
+										"quote"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Post Internal Trade",
+							"event": [
+								{
+									"listen": "test",
+									"script": {
+										"exec": [
+											"pm.test(\"good response\", function () {\r",
+											"    pm.response.to.have.status(200);\r",
+											"});\r",
+											"\r",
+											"pm.test(\"error not message present\", function () {\r",
+											"    pm.expect(pm.response.text()).to.not.include(\"ERRORMSG\");\r",
+											"});"
+										],
+										"type": "text/javascript"
+									}
+								}
+							],
+							"protocolProfileBehavior": {
+								"disabledSystemHeaders": {
+									"accept": true
+								}
+							},
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json",
+										"type": "text"
+									},
+									{
+										"key": "Accept",
+										"value": "application/vnd.made.internaltradeexecution.hateoas+json",
+										"type": "text",
+										"description": "tradeexecution + hateoas"
+									},
+									{
+										"key": "Accept",
+										"value": "application/json",
+										"type": "text",
+										"description": "standard json",
+										"disabled": true
+									},
+									{
+										"key": "Accept",
+										"value": "application/vnd.made.internaltradeexecution+json",
+										"description": "tradeexecution",
+										"type": "text",
+										"disabled": true
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"quote_id\": \"1647927296118\"\r\n}"
+								},
+								"url": {
+									"raw": "{{url}}/api/fx/internal/trade",
+									"host": [
+										"{{url}}"
+									],
+									"path": [
+										"api",
+										"fx",
+										"internal",
+										"trade"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Post Quote, RFQ - Dealt & Counter Amount Not Provided",
+							"event": [
+								{
+									"listen": "test",
+									"script": {
+										"exec": [
+											"pm.test(\"RFQ - Dealt & Counter Amount Not Provided\", function () {\r",
+											"    pm.response.to.have.status(400);\r",
+											"});\r",
+											"\r",
+											"pm.test(\"400 Bad Request, Showing error message\", function () {\r",
+											"    pm.expect(pm.response.text()).to.include(\"dealt\")\r",
+											"});\r",
+											""
+										],
+										"type": "text/javascript"
+									}
+								},
+								{
+									"listen": "prerequest",
+									"script": {
+										"exec": [
+											"const { v4: uuidv4 } = require('uuid');\r",
+											"\r",
+											"let subscriptionKey = \"4ebb9101a8a0437fa0b68dc733b23b26\";\r",
+											"let subscriptionGuid = pm.variables.get('subscriptionGuid');\r",
+											"let apiSecret = \"Q3Pk7IM1M1Ur9jDTTvdxedjnwUvpH9cl7Q7tyIFszFA=\";\r",
+											"let ver = pm.variables.get('version');\r",
+											"let tracing = pm.variables.get('tracing');\r",
+											"let utcDate = (new Date()).toISOString();\r",
+											"let nonce = uuidv4();\r",
+											"\r",
+											"let uri = pm.environment.values.substitute(pm.request.url, null, false);\r",
+											"uri = pm.collectionVariables.values.substitute(pm.request.url, null, false) + \"\";\r",
+											"\r",
+											"let uriParts = uri.replace(/#+$/, \"\").split(/\\?(.+)/)\r",
+											"let url = encodeURI(uriParts[0]);\r",
+											"if (uriParts.length > 1) {\r",
+											"    url = url + \"?\" + uriParts[1]\r",
+											"}\r",
+											"\r",
+											"let body = pm.request.body !== undefined ? pm.collectionVariables.values.substitute(pm.environment.values.substitute(pm.request.body, null, false), null, false) : \"\";\r",
+											"let rawMessage = \"made\" + \" \" + subscriptionKey + url + nonce +utcDate + ver + body;\r",
+											"\r",
+											"console.log(\"Raw message: \" + rawMessage)\r",
+											"// Generate HMAC SHA256 or 512 signature\r",
+											"let signature = CryptoJS.enc.Base64.stringify(CryptoJS.HmacSHA512(rawMessage, apiSecret));\r",
+											"\r",
+											"if (subscriptionGuid !== undefined) {\r",
+											"    pm.request.headers.upsert({\r",
+											"        key: 'X-made-Subscription-Id',\r",
+											"        value: subscriptionGuid\r",
+											"    });\r",
+											"\r",
+											"\r",
+											"    pm.request.headers.upsert({\r",
+											"        key: 'X-made-Subscription-Name',\r",
+											"        value: \"Postman local test\"\r",
+											"    });\r",
+											"}\r",
+											"\r",
+											"pm.request.headers.upsert({\r",
+											"    key: 'Ocp-Apim-Subscription-Key',\r",
+											"    value: subscriptionKey\r",
+											"}\r",
+											");\r",
+											"pm.request.headers.upsert({\r",
+											"    key: 'Ocp-Apim-Trace',\r",
+											"    value: tracing\r",
+											"}\r",
+											");\r",
+											"pm.request.headers.upsert({\r",
+											"    key: 'X-Auth-Signature',\r",
+											"    value: signature\r",
+											"}\r",
+											");\r",
+											"pm.request.headers.upsert({\r",
+											"    key: 'X-Auth-Nonce',\r",
+											"    value: nonce\r",
+											"}\r",
+											");\r",
+											"pm.request.headers.upsert({\r",
+											"    key: 'X-Auth-Timestamp',\r",
+											"    value: utcDate\r",
+											"}\r",
+											");\r",
+											"pm.request.headers.upsert({\r",
+											"    key: 'X-Auth-Version',\r",
+											"    value: ver\r",
+											"}\r",
+											");"
+										],
+										"type": "text/javascript"
+									}
+								}
+							],
+							"protocolProfileBehavior": {
+								"disabledSystemHeaders": {
+									"accept": true
+								}
+							},
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Accept",
+										"value": "application/vnd.made.quote.hateoas+json",
+										"type": "text",
+										"description": "quote + hateoas",
+										"disabled": true
+									},
+									{
+										"key": "Accept",
+										"value": "application/vnd.made.marketorder.hateoas+json",
+										"type": "text",
+										"description": "trade + hateoas",
+										"disabled": true
+									},
+									{
+										"key": "Accept",
+										"value": "application/json",
+										"type": "text",
+										"description": "standard json",
+										"disabled": true
+									},
+									{
+										"key": "Accept",
+										"value": "application/vnd.made.quote+json",
+										"description": "quote",
+										"type": "text"
+									},
+									{
+										"key": "Accept",
+										"value": "application/vnd.made.marketorder+json",
+										"description": "trade",
+										"type": "text",
+										"disabled": true
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"account_number\": \"4400009902\",\r\n    \"currency_pair\": \"eur/usd\",\r\n    \"external_account_type\": 2,\r\n    \"is_buy\": true,\r\n    \"dealt_amount\": ,\r\n    \"counter_amount\": \r\n}\r\n",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{url}}/api/fx/quote",
+									"host": [
+										"{{url}}"
+									],
+									"path": [
+										"api",
+										"fx",
+										"quote"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Post Internal Quote - Debit and credit amount not provided",
+							"event": [
+								{
+									"listen": "test",
+									"script": {
+										"exec": [
+											"pm.test(\"Internal FX Quote, Debit & credit amount not provided\", function () {\r",
+											"    pm.response.to.have.status(400);\r",
+											"});\r",
+											"\r",
+											"pm.test(\"Error Message : request field is required\", function () {\r",
+											"    pm.expect(pm.response.text()).to.include(\"field is required\");\r",
+											"});"
+										],
+										"type": "text/javascript"
+									}
+								},
+								{
+									"listen": "prerequest",
+									"script": {
+										"exec": [
+											"const { v4: uuidv4 } = require('uuid');\r",
+											"\r",
+											"let subscriptionKey = \"4ebb9101a8a0437fa0b68dc733b23b26\";\r",
+											"let subscriptionGuid = pm.variables.get('subscriptionGuid');\r",
+											"let apiSecret = \"Q3Pk7IM1M1Ur9jDTTvdxedjnwUvpH9cl7Q7tyIFszFA=\";\r",
+											"let ver = pm.variables.get('version');\r",
+											"let tracing = pm.variables.get('tracing');\r",
+											"let utcDate = (new Date()).toISOString();\r",
+											"let nonce = uuidv4();\r",
+											"\r",
+											"let uri = pm.environment.values.substitute(pm.request.url, null, false);\r",
+											"uri = pm.collectionVariables.values.substitute(pm.request.url, null, false) + \"\";\r",
+											"\r",
+											"let uriParts = uri.replace(/#+$/, \"\").split(/\\?(.+)/)\r",
+											"let url = encodeURI(uriParts[0]);\r",
+											"if (uriParts.length > 1) {\r",
+											"    url = url + \"?\" + uriParts[1]\r",
+											"}\r",
+											"\r",
+											"let body = pm.request.body !== undefined ? pm.collectionVariables.values.substitute(pm.environment.values.substitute(pm.request.body, null, false), null, false) : \"\";\r",
+											"let rawMessage = \"made\" + \" \" + subscriptionKey + url + nonce +utcDate + ver + body;\r",
+											"\r",
+											"console.log(\"Raw message: \" + rawMessage)\r",
+											"// Generate HMAC SHA256 or 512 signature\r",
+											"let signature = CryptoJS.enc.Base64.stringify(CryptoJS.HmacSHA512(rawMessage, apiSecret));\r",
+											"\r",
+											"if (subscriptionGuid !== undefined) {\r",
+											"    pm.request.headers.upsert({\r",
+											"        key: 'X-made-Subscription-Id',\r",
+											"        value: subscriptionGuid\r",
+											"    });\r",
+											"\r",
+											"\r",
+											"    pm.request.headers.upsert({\r",
+											"        key: 'X-made-Subscription-Name',\r",
+											"        value: \"Postman local test\"\r",
+											"    });\r",
+											"}\r",
+											"\r",
+											"pm.request.headers.upsert({\r",
+											"    key: 'Ocp-Apim-Subscription-Key',\r",
+											"    value: subscriptionKey\r",
+											"}\r",
+											");\r",
+											"pm.request.headers.upsert({\r",
+											"    key: 'Ocp-Apim-Trace',\r",
+											"    value: tracing\r",
+											"}\r",
+											");\r",
+											"pm.request.headers.upsert({\r",
+											"    key: 'X-Auth-Signature',\r",
+											"    value: signature\r",
+											"}\r",
+											");\r",
+											"pm.request.headers.upsert({\r",
+											"    key: 'X-Auth-Nonce',\r",
+											"    value: nonce\r",
+											"}\r",
+											");\r",
+											"pm.request.headers.upsert({\r",
+											"    key: 'X-Auth-Timestamp',\r",
+											"    value: utcDate\r",
+											"}\r",
+											");\r",
+											"pm.request.headers.upsert({\r",
+											"    key: 'X-Auth-Version',\r",
+											"    value: ver\r",
+											"}\r",
+											");"
+										],
+										"type": "text/javascript"
+									}
+								}
+							],
+							"protocolProfileBehavior": {
+								"disabledSystemHeaders": {
+									"accept": true
+								}
+							},
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Accept",
+										"value": "application/vnd.made.internalquote.hateoas+json",
+										"type": "text",
+										"description": "quote + hateoas",
+										"disabled": true
+									},
+									{
+										"key": "Accept",
+										"value": "application/vnd.made.internalmarketorder.hateoas+json",
+										"type": "text",
+										"description": "trade + hateoas"
+									},
+									{
+										"key": "Accept",
+										"value": "application/json",
+										"type": "text",
+										"description": "standard json",
+										"disabled": true
+									},
+									{
+										"key": "Accept",
+										"value": "application/vnd.made.internalquote+json",
+										"description": "quote",
+										"type": "text",
+										"disabled": true
+									},
+									{
+										"key": "Accept",
+										"value": "application/vnd.made.internalmarketorder+json",
+										"description": "trade",
+										"type": "text",
+										"disabled": true
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"debit_account_number\": \"1142409018\",\r\n    \"credit_account_number\": \"5091010001\",\r\n    \"currency_pair\": \"\",\r\n    \"debit_amount\": ,\r\n    \"credit_amount\": \r\n}\r\n",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{url}}/api/fx/internal/quote",
+									"host": [
+										"{{url}}"
+									],
+									"path": [
+										"api",
+										"fx",
+										"internal",
+										"quote"
+									]
+								}
+							},
+							"response": []
+						}
+					],
+					"description": "Post folder contains:\n 1) Post Quote\n 2) Post Trade\n 3) Post FX Payment"
+				},
+				{
+					"name": "Post Quote, RFQ - Both Dealt & Counter currency values provided",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"RFQ - both dealt and counter values provided\", function () {\r",
+									"    pm.response.to.have.status(400);\r",
+									"});\r",
+									"\r",
+									"pm.test(\"400 Bad request, showing error message\", function () {\r",
+									"    pm.expect(pm.response.text()).to.include(\"only dealt_amount\")\r",
+									"});\r",
+									""
+								],
+								"type": "text/javascript"
+							}
+						},
+						{
+							"listen": "prerequest",
+							"script": {
+								"exec": [
+									"const { v4: uuidv4 } = require('uuid');\r",
+									"\r",
+									"let subscriptionKey = \"4ebb9101a8a0437fa0b68dc733b23b26\";\r",
+									"let subscriptionGuid = pm.variables.get('subscriptionGuid');\r",
+									"let apiSecret = \"Q3Pk7IM1M1Ur9jDTTvdxedjnwUvpH9cl7Q7tyIFszFA=\";\r",
+									"let ver = pm.variables.get('version');\r",
+									"let tracing = pm.variables.get('tracing');\r",
+									"let utcDate = (new Date()).toISOString();\r",
+									"let nonce = uuidv4();\r",
+									"\r",
+									"let uri = pm.environment.values.substitute(pm.request.url, null, false);\r",
+									"uri = pm.collectionVariables.values.substitute(pm.request.url, null, false) + \"\";\r",
+									"\r",
+									"let uriParts = uri.replace(/#+$/, \"\").split(/\\?(.+)/)\r",
+									"let url = encodeURI(uriParts[0]);\r",
+									"if (uriParts.length > 1) {\r",
+									"    url = url + \"?\" + uriParts[1]\r",
+									"}\r",
+									"\r",
+									"let body = pm.request.body !== undefined ? pm.collectionVariables.values.substitute(pm.environment.values.substitute(pm.request.body, null, false), null, false) : \"\";\r",
+									"let rawMessage = \"made\" + \" \" + subscriptionKey + url + nonce +utcDate + ver + body;\r",
+									"\r",
+									"console.log(\"Raw message: \" + rawMessage)\r",
+									"// Generate HMAC SHA256 or 512 signature\r",
+									"let signature = CryptoJS.enc.Base64.stringify(CryptoJS.HmacSHA512(rawMessage, apiSecret));\r",
+									"\r",
+									"if (subscriptionGuid !== undefined) {\r",
+									"    pm.request.headers.upsert({\r",
+									"        key: 'X-made-Subscription-Id',\r",
+									"        value: subscriptionGuid\r",
+									"    });\r",
+									"\r",
+									"\r",
+									"    pm.request.headers.upsert({\r",
+									"        key: 'X-made-Subscription-Name',\r",
+									"        value: \"Postman local test\"\r",
+									"    });\r",
+									"}\r",
+									"\r",
+									"pm.request.headers.upsert({\r",
+									"    key: 'Ocp-Apim-Subscription-Key',\r",
+									"    value: subscriptionKey\r",
+									"}\r",
+									");\r",
+									"pm.request.headers.upsert({\r",
+									"    key: 'Ocp-Apim-Trace',\r",
+									"    value: tracing\r",
+									"}\r",
+									");\r",
+									"pm.request.headers.upsert({\r",
+									"    key: 'X-Auth-Signature',\r",
+									"    value: signature\r",
+									"}\r",
+									");\r",
+									"pm.request.headers.upsert({\r",
+									"    key: 'X-Auth-Nonce',\r",
+									"    value: nonce\r",
+									"}\r",
+									");\r",
+									"pm.request.headers.upsert({\r",
+									"    key: 'X-Auth-Timestamp',\r",
+									"    value: utcDate\r",
+									"}\r",
+									");\r",
+									"pm.request.headers.upsert({\r",
+									"    key: 'X-Auth-Version',\r",
+									"    value: ver\r",
+									"}\r",
+									");"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"protocolProfileBehavior": {
+						"disabledSystemHeaders": {
+							"accept": true
+						}
+					},
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/vnd.made.quote.hateoas+json",
+								"type": "text",
+								"description": "quote + hateoas",
+								"disabled": true
+							},
+							{
+								"key": "Accept",
+								"value": "application/vnd.made.marketorder.hateoas+json",
+								"type": "text",
+								"description": "trade + hateoas",
+								"disabled": true
+							},
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text",
+								"description": "standard json",
+								"disabled": true
+							},
+							{
+								"key": "Accept",
+								"value": "application/vnd.made.quote+json",
+								"description": "quote",
+								"type": "text"
+							},
+							{
+								"key": "Accept",
+								"value": "application/vnd.made.marketorder+json",
+								"description": "trade",
+								"type": "text",
+								"disabled": true
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"account_number\": \"4400009902\",\r\n    \"currency_pair\": \"eur/usd\",\r\n    \"external_account_type\": 2,\r\n    \"is_buy\": true,\r\n    \"dealt_amount\": 5,\r\n    \"counter_amount\": 5\r\n}\r\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{url}}/api/fx/quote",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"api",
+								"fx",
+								"quote"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "NA hide/show scenarios",
+			"item": [
+				{
+					"name": "Scenario Q - now NA",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"forbidden\", function () {\r",
+									"    pm.response.to.have.status(403);\r",
+									"});\r",
+									"\r",
+									"pm.test(\"data not present\", function () {\r",
+									"    pm.expect(pm.response.text()).to.not.include(\"payment_id\");\r",
+									"});\r",
+									"\r",
+									"\r",
+									"\r",
+									""
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Ocp-Apim-Subscription-Key",
+								"type": "text",
+								"value": "{{subscriptionKey}}"
+							},
+							{
+								"key": "Ocp-Apim-Trace",
+								"type": "text",
+								"value": "true"
+							},
+							{
+								"key": "X-Auth-Signature",
+								"type": "text",
+								"value": "{{signature}}"
+							},
+							{
+								"key": "X-Auth-Nonce",
+								"type": "text",
+								"value": "{{nonce}}"
+							},
+							{
+								"key": "X-Auth-Timestamp",
+								"type": "text",
+								"value": "{{date}}"
+							},
+							{
+								"key": "X-Auth-Version",
+								"type": "text",
+								"value": "{{version}}"
+							},
+							{
+								"key": "Content-Type",
+								"type": "text",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "{{url}}/api/payment/:payment-id",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"api",
+								"payment",
+								":payment-id"
+							],
+							"variable": [
+								{
+									"key": "payment-id",
+									"value": "",
+									"description": "L08OK38350ZS0WKM, L09790527G9T1ID9"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Scenario S - now NA",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"success with data\", function () {\r",
+									"    pm.response.to.have.status(200);\r",
+									"});\r",
+									"\r",
+									"pm.test(\"data present\", function () {\r",
+									"    pm.expect(pm.response.text()).to.include(\"payment_id\");\r",
+									"});\r",
+									"\r",
+									"\r",
+									""
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Ocp-Apim-Subscription-Key",
+								"type": "text",
+								"value": "{{subscriptionKey}}"
+							},
+							{
+								"key": "Ocp-Apim-Trace",
+								"type": "text",
+								"value": "true"
+							},
+							{
+								"key": "X-Auth-Signature",
+								"type": "text",
+								"value": "{{signature}}"
+							},
+							{
+								"key": "X-Auth-Nonce",
+								"type": "text",
+								"value": "{{nonce}}"
+							},
+							{
+								"key": "X-Auth-Timestamp",
+								"type": "text",
+								"value": "{{date}}"
+							},
+							{
+								"key": "X-Auth-Version",
+								"type": "text",
+								"value": "{{version}}"
+							},
+							{
+								"key": "Content-Type",
+								"type": "text",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "{{url}}/api/payment/:payment-id",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"api",
+								"payment",
+								":payment-id"
+							],
+							"variable": [
+								{
+									"key": "payment-id",
+									"value": "L09NF372752TAF57",
+									"description": "L08OK38350ZS0WKM, L09790527G9T1ID9"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Scenario EE - now NA",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"success with data\", function () {\r",
+									"    pm.response.to.have.status(200);\r",
+									"});\r",
+									"\r",
+									"pm.test(\"data present\", function () {\r",
+									"    pm.expect(pm.response.text()).to.include(\"payment_id\");\r",
+									"});\r",
+									"\r",
+									"\r",
+									""
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Ocp-Apim-Subscription-Key",
+								"type": "text",
+								"value": "{{subscriptionKey}}"
+							},
+							{
+								"key": "Ocp-Apim-Trace",
+								"type": "text",
+								"value": "true"
+							},
+							{
+								"key": "X-Auth-Signature",
+								"type": "text",
+								"value": "{{signature}}"
+							},
+							{
+								"key": "X-Auth-Nonce",
+								"type": "text",
+								"value": "{{nonce}}"
+							},
+							{
+								"key": "X-Auth-Timestamp",
+								"type": "text",
+								"value": "{{date}}"
+							},
+							{
+								"key": "X-Auth-Version",
+								"type": "text",
+								"value": "{{version}}"
+							},
+							{
+								"key": "Content-Type",
+								"type": "text",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "{{url}}/api/payment/:payment-id",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"api",
+								"payment",
+								":payment-id"
+							],
+							"variable": [
+								{
+									"key": "payment-id",
+									"value": "",
+									"description": "L08OK38350ZS0WKM, L09790527G9T1ID9"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Scenario II -  now NA",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"success with data\", function () {\r",
+									"    pm.response.to.have.status(200);\r",
+									"});\r",
+									"\r",
+									"pm.test(\"data present\", function () {\r",
+									"    pm.expect(pm.response.text()).to.include(\"payment_id\");\r",
+									"});\r",
+									"\r",
+									"\r",
+									""
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Ocp-Apim-Subscription-Key",
+								"type": "text",
+								"value": "{{subscriptionKey}}"
+							},
+							{
+								"key": "Ocp-Apim-Trace",
+								"type": "text",
+								"value": "true"
+							},
+							{
+								"key": "X-Auth-Signature",
+								"type": "text",
+								"value": "{{signature}}"
+							},
+							{
+								"key": "X-Auth-Nonce",
+								"type": "text",
+								"value": "{{nonce}}"
+							},
+							{
+								"key": "X-Auth-Timestamp",
+								"type": "text",
+								"value": "{{date}}"
+							},
+							{
+								"key": "X-Auth-Version",
+								"type": "text",
+								"value": "{{version}}"
+							},
+							{
+								"key": "Content-Type",
+								"type": "text",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "{{url}}/api/payment/:payment-id",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"api",
+								"payment",
+								":payment-id"
+							],
+							"variable": [
+								{
+									"key": "payment-id",
+									"value": "",
+									"description": "L08OK38350ZS0WKM, L09790527G9T1ID9"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Scenario NN - NA for now",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"success with data\", function () {\r",
+									"    pm.response.to.have.status(200);\r",
+									"});\r",
+									"\r",
+									"pm.test(\"data present\", function () {\r",
+									"    pm.expect(pm.response.text()).to.include(\"payment_id\");\r",
+									"});\r",
+									"\r",
+									"\r",
+									""
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Ocp-Apim-Subscription-Key",
+								"type": "text",
+								"value": "{{subscriptionKey}}"
+							},
+							{
+								"key": "Ocp-Apim-Trace",
+								"type": "text",
+								"value": "true"
+							},
+							{
+								"key": "X-Auth-Signature",
+								"type": "text",
+								"value": "{{signature}}"
+							},
+							{
+								"key": "X-Auth-Nonce",
+								"type": "text",
+								"value": "{{nonce}}"
+							},
+							{
+								"key": "X-Auth-Timestamp",
+								"type": "text",
+								"value": "{{date}}"
+							},
+							{
+								"key": "X-Auth-Version",
+								"type": "text",
+								"value": "{{version}}"
+							},
+							{
+								"key": "Content-Type",
+								"type": "text",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "{{url}}/api/payment/:payment-id",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"api",
+								"payment",
+								":payment-id"
+							],
+							"variable": [
+								{
+									"key": "payment-id",
+									"value": "",
+									"description": "L08OK38350ZS0WKM, L09790527G9T1ID9"
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Acct/#/history, Unique ID Only (Blocked)",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"GET history, Unique ID\", function () {",
+							"    pm.response.to.have.status(204);",
+							"    pm.expect(pm.response.text()).not.to.include(\"ERRORMSG\");",
+							"});",
+							"",
+							"pm.test(\"Response is 204 No Content\", function () {",
+							"    pm.expect(pm.response.text()).not.to.include(\"records\");",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Ocp-Apim-Subscription-Key",
+						"value": "{{subscriptionKey}}",
+						"type": "text"
+					},
+					{
+						"key": "Ocp-Apim-Trace",
+						"value": "true",
+						"type": "text"
+					},
+					{
+						"key": "X-Auth-Signature",
+						"value": "{{signature}}",
+						"type": "text"
+					},
+					{
+						"key": "X-Auth-Nonce",
+						"value": "{{nonce}}",
+						"type": "text"
+					},
+					{
+						"key": "X-Auth-Timestamp",
+						"value": "{{date}}",
+						"type": "text"
+					},
+					{
+						"key": "X-Auth-Version",
+						"value": "{{version}}",
+						"type": "text"
+					},
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "{{url}}/api/account/:account-number/history?is-real-time=true&unique-id=94e266ca-6278-49aa-968c-a53a3ff3f5fb",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"api",
+						"account",
+						":account-number",
+						"history"
+					],
+					"query": [
+						{
+							"key": "begin-date",
+							"value": "2022-04-01",
+							"disabled": true
+						},
+						{
+							"key": "end-date",
+							"value": "2022-04-13",
+							"disabled": true
+						},
+						{
+							"key": "sort-order",
+							"value": "a",
+							"disabled": true
+						},
+						{
+							"key": "is-real-time",
+							"value": "true"
+						},
+						{
+							"key": "page-number",
+							"value": "3",
+							"disabled": true
+						},
+						{
+							"key": "page-size",
+							"value": "1000",
+							"disabled": true
+						},
+						{
+							"key": "unique-id",
+							"value": "94e266ca-6278-49aa-968c-a53a3ff3f5fb"
+						},
+						{
+							"key": "payment-id",
+							"value": "L09UL2218A9V5SCY",
+							"disabled": true
+						}
+					],
+					"variable": [
+						{
+							"key": "account-number",
+							"value": "1234567890",
+							"description": "1234567890"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "History call to get the # of tx for baseline",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Record number baseline set as variable\", function () {",
+							"    pm.response.to.have.status(200);",
+							"    let json = pm.response.json()",
+							"    pm.collectionVariables.set(\"current_count\", json.count);",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Ocp-Apim-Subscription-Key",
+						"value": "{{subscriptionKey}}",
+						"type": "text"
+					},
+					{
+						"key": "Ocp-Apim-Trace",
+						"value": "true",
+						"type": "text"
+					},
+					{
+						"key": "X-Auth-Signature",
+						"value": "{{signature}}",
+						"type": "text"
+					},
+					{
+						"key": "X-Auth-Nonce",
+						"value": "{{nonce}}",
+						"type": "text"
+					},
+					{
+						"key": "X-Auth-Timestamp",
+						"value": "{{date}}",
+						"type": "text"
+					},
+					{
+						"key": "X-Auth-Version",
+						"value": "{{version}}",
+						"type": "text"
+					},
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "{{url}}/api/account/:account-number/history?is-real-time=true",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"api",
+						"account",
+						":account-number",
+						"history"
+					],
+					"query": [
+						{
+							"key": "begin-date",
+							"value": "2022-04-09",
+							"disabled": true
+						},
+						{
+							"key": "end-date",
+							"value": "2022-04-10",
+							"disabled": true
+						},
+						{
+							"key": "sort-order",
+							"value": "a",
+							"disabled": true
+						},
+						{
+							"key": "is-real-time",
+							"value": "true"
+						},
+						{
+							"key": "page-number",
+							"value": "3",
+							"disabled": true
+						},
+						{
+							"key": "page-size",
+							"value": "100",
+							"disabled": true
+						},
+						{
+							"key": "unique-id",
+							"value": "NDQwMDAwOTkwMQk4LzMvMjAyMQkxMC4wMAk5MDczCUwwODNDMzEwMFAwRzJBSjYJIE9VVEdPSU5HIFdJUkUgRkVF",
+							"disabled": true
+						},
+						{
+							"key": "payment-id",
+							"value": "L09UL2218A9V5SCY",
+							"disabled": true
+						}
+					],
+					"variable": [
+						{
+							"key": "account-number",
+							"value": "1234567890",
+							"description": "1234567890"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "History call to check # of tx against baseline, verify no new tx",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"GET history standard, Acct # only, must be run after transfer regression to populate history data for today\", function () {",
+							"    pm.response.to.have.status(200);",
+							"    pm.expect(pm.response.text()).not.to.include(\"ERRORMSG\");",
+							"});",
+							"",
+							"pm.test(\"Response is 200 OK, displaying an account history\", function () {",
+							"    pm.expect(pm.response.text()).to.include(\"records\");",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Ocp-Apim-Subscription-Key",
+						"value": "{{subscriptionKey}}",
+						"type": "text"
+					},
+					{
+						"key": "Ocp-Apim-Trace",
+						"value": "true",
+						"type": "text"
+					},
+					{
+						"key": "X-Auth-Signature",
+						"value": "{{signature}}",
+						"type": "text"
+					},
+					{
+						"key": "X-Auth-Nonce",
+						"value": "{{nonce}}",
+						"type": "text"
+					},
+					{
+						"key": "X-Auth-Timestamp",
+						"value": "{{date}}",
+						"type": "text"
+					},
+					{
+						"key": "X-Auth-Version",
+						"value": "{{version}}",
+						"type": "text"
+					},
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "{{url}}/api/account/:account-number/history?is-real-time=true",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"api",
+						"account",
+						":account-number",
+						"history"
+					],
+					"query": [
+						{
+							"key": "begin-date",
+							"value": "2022-04-09",
+							"disabled": true
+						},
+						{
+							"key": "end-date",
+							"value": "2022-04-10",
+							"disabled": true
+						},
+						{
+							"key": "sort-order",
+							"value": "a",
+							"disabled": true
+						},
+						{
+							"key": "is-real-time",
+							"value": "true"
+						},
+						{
+							"key": "page-number",
+							"value": "3",
+							"disabled": true
+						},
+						{
+							"key": "page-size",
+							"value": "100",
+							"disabled": true
+						},
+						{
+							"key": "unique-id",
+							"value": "NDQwMDAwOTkwMQk4LzMvMjAyMQkxMC4wMAk5MDczCUwwODNDMzEwMFAwRzJBSjYJIE9VVEdPSU5HIFdJUkUgRkVF",
+							"disabled": true
+						},
+						{
+							"key": "payment-id",
+							"value": "L09UL2218A9V5SCY",
+							"disabled": true
+						}
+					],
+					"variable": [
+						{
+							"key": "account-number",
+							"value": "1234567890",
+							"description": "1234567890"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "fx payment, ad hoc, trade-id w leading spaces",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"FX payment, Ad-Hoc, Trade-id with Leading Spaces\", function () {\r",
+							"    pm.response.to.have.status(200);\r",
+							"});\r",
+							"\r",
+							"pm.test(\"201 Returned, Payment created\", function () {\r",
+							"    pm.expect(pm.response.text()).to.include(\"payment_id\")\r",
+							"});\r",
+							"\r",
+							"pm.test(\"error not message present\", function () {\r",
+							"    pm.expect(pm.response.text()).to.not.include(\"ERRORMSG\");\r",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"protocolProfileBehavior": {
+				"disabledSystemHeaders": {
+					"accept": true,
+					"content-type": true
+				}
+			},
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Ocp-Apim-Subscription-Key",
+						"value": "{{subscriptionKey}}",
+						"type": "text"
+					},
+					{
+						"key": "Ocp-Apim-Trace",
+						"value": "true",
+						"type": "text"
+					},
+					{
+						"key": "X-Auth-Signature",
+						"value": "{{signature}}",
+						"type": "text"
+					},
+					{
+						"key": "X-Auth-Nonce",
+						"value": "{{nonce}}",
+						"type": "text"
+					},
+					{
+						"key": "X-Auth-Timestamp",
+						"value": "{{date}}",
+						"type": "text"
+					},
+					{
+						"key": "X-Auth-Version",
+						"value": "{{version}}",
+						"type": "text"
+					},
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text",
+						"disabled": true
+					},
+					{
+						"key": "Content-Type",
+						"value": "application/vnd.made.adhocfxpaymentrequest+json",
+						"type": "text",
+						"description": "adhoc"
+					},
+					{
+						"key": "Content-Type",
+						"value": "application/vnd.made.fxpaymentrequest+json",
+						"type": "text",
+						"description": "non adhoc",
+						"disabled": true
+					},
+					{
+						"key": "Accept",
+						"value": "application/vnd.made.fxpayment.hateoas+json",
+						"type": "text"
+					},
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"type": "text",
+						"disabled": true
+					},
+					{
+						"key": "Accept",
+						"value": "application/vnd.made.fxpayment+json",
+						"type": "text",
+						"disabled": true
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"trade_id\": \" {{sequential_test_trade_id3}}\",\r\n    \"purpose_of_payment\": 1,\r\n    \"memo\": \"test from api\",\r\n    \"sending_currency\": \"EUR\",\r\n    \r\n    \"beneficiary_bank_type\": \"ABA\",\r\n    \"beneficiary_bank_routing_id\": \"256074974\",\r\n    \"beneficiary_bank_name\": \"Navy Fed\",\r\n    \"beneficiary_bank_street_address\": \"1111 Sample Dr\",\r\n    \"beneficiary_bank_city\": \"JacksonVille\",\r\n    \"beneficiary_bank_region\": \"FL\",\r\n    \"beneficiary_bank_country_code\": \"US\",\r\n    \"beneficiary_bank_account_number\": \"354354566\",\r\n    \"beneficiary_bank_account_is_iban\": false,\r\n\r\n    \"beneficiary_name\": \"J JEN\",\r\n    \"beneficiary_street_address\": \"2222 Sample Dr\",\r\n    \"beneficiary_city\": \"Los Angeles\",\r\n    \"beneficiary_region\": \"CA\",\r\n    \"beneficiary_country_code\": \"US\",\r\n\r\n    \"intermediary_bank_type\":\"ABA\",\r\n\t\"intermediary_bank_routing_id\": \"321171184\",\r\n\t\"intermediary_bank_name\": \"Citibank\",\r\n\t\"intermediary_bank_street_address\": \"250 University Avenue\",\r\n\t\"intermediary_bank_city\": \"Palo Alto\",\r\n\t\"intermediary_bank_region\": \"CA\",\r\n\t\"intermediary_bank_postal\": \"94301\",\r\n\t\"intermediary_bank_country_code\": \"US\",\r\n\r\n    \"external_account_id\": \"5a6aad0b-eaae-4c6b-b971-66f98fcf1a86\"\r\n}"
+				},
+				"url": {
+					"raw": "{{url}}/api/fx/payment",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"api",
+						"fx",
+						"payment"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Payment Instructions, trade-id w leading spaces",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Success Test\", function () {\r",
+							"    pm.response.to.have.status(200);\r",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					},
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"type": "text",
+						"description": "standard json",
+						"disabled": true
+					},
+					{
+						"key": "Accept",
+						"value": "application/vnd.made.paymentinstructions+json",
+						"description": "paymentinstructions",
+						"type": "text",
+						"disabled": true
+					},
+					{
+						"key": "Accept",
+						"value": "application/vnd.made.paymentinstructions.hateoas+json",
+						"description": "paymentinstructions+hateoas",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "{{url}}/api/payment/instructions/:trade-id",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"api",
+						"payment",
+						"instructions",
+						":trade-id"
+					],
+					"variable": [
+						{
+							"key": "trade-id",
+							"value": " {{sequential_test_trade_id}}"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GET by account, general",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"GET by account, no webhooks (fail is expected if any webhook has been manually created)\", function () {",
+							"    pm.response.to.have.status(204);",
+							"});",
+							""
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Ocp-Apim-Subscription-Key",
+						"value": "{{subscriptionKey}}",
+						"type": "text"
+					},
+					{
+						"key": "Ocp-Apim-Trace",
+						"value": "true",
+						"type": "text"
+					},
+					{
+						"key": "X-Auth-Signature",
+						"value": "{{signature}}",
+						"type": "text"
+					},
+					{
+						"key": "X-Auth-Nonce",
+						"value": "{{nonce}}",
+						"type": "text"
+					},
+					{
+						"key": "X-Auth-Timestamp",
+						"value": "{{date}}",
+						"type": "text"
+					},
+					{
+						"key": "X-Auth-Version",
+						"value": "{{version}}",
+						"type": "text"
+					},
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "{{url}}/api/WebHook/?account-number=1234567890",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"api",
+						"WebHook",
+						""
+					],
+					"query": [
+						{
+							"key": "account-number",
+							"value": "1234567890"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "SEN Transfer - Profile no IT permission (IP)",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Internal Transfer not permissioned for account - 403 Forbidden\", function () {",
+							"    pm.response.to.have.status(403);",
+							"});",
+							"",
+							"pm.test(\"Error Message : Forbidden\", function () {",
+							"    pm.expect(pm.response.text()).to.include(\"Forbidden\");",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				},
+				{
+					"listen": "prerequest",
+					"script": {
+						"exec": [
+							"const { v4: uuidv4 } = require('uuid');\r",
+							"\r",
+							"let subscriptionKey = \"4ebb9101a8a0437fa0b68dc733b23b26\";\r",
+							"let subscriptionGuid = pm.variables.get('subscriptionGuid');\r",
+							"let apiSecret = \"Q3Pk7IM1M1Ur9jDTTvdxedjnwUvpH9cl7Q7tyIFszFA=\";\r",
+							"let ver = pm.variables.get('version');\r",
+							"let tracing = pm.variables.get('tracing');\r",
+							"let utcDate = (new Date()).toISOString();\r",
+							"let nonce = uuidv4();\r",
+							"\r",
+							"let uri = pm.environment.values.substitute(pm.request.url, null, false);\r",
+							"uri = pm.collectionVariables.values.substitute(pm.request.url, null, false) + \"\";\r",
+							"\r",
+							"let uriParts = uri.replace(/#+$/, \"\").split(/\\?(.+)/)\r",
+							"let url = encodeURI(uriParts[0]);\r",
+							"if (uriParts.length > 1) {\r",
+							"    url = url + \"?\" + uriParts[1]\r",
+							"}\r",
+							"\r",
+							"let body = pm.request.body !== undefined ? pm.collectionVariables.values.substitute(pm.environment.values.substitute(pm.request.body, null, false), null, false) : \"\";\r",
+							"let rawMessage = \"made\" + \" \" + subscriptionKey + url + nonce +utcDate + ver + body;\r",
+							"\r",
+							"console.log(\"Raw message: \" + rawMessage)\r",
+							"// Generate HMAC SHA256 or 512 signature\r",
+							"let signature = CryptoJS.enc.Base64.stringify(CryptoJS.HmacSHA512(rawMessage, apiSecret));\r",
+							"\r",
+							"if (subscriptionGuid !== undefined) {\r",
+							"    pm.request.headers.upsert({\r",
+							"        key: 'X-made-Subscription-Id',\r",
+							"        value: subscriptionGuid\r",
+							"    });\r",
+							"\r",
+							"\r",
+							"    pm.request.headers.upsert({\r",
+							"        key: 'X-made-Subscription-Name',\r",
+							"        value: \"Postman local test\"\r",
+							"    });\r",
+							"}\r",
+							"\r",
+							"pm.request.headers.upsert({\r",
+							"    key: 'Ocp-Apim-Subscription-Key',\r",
+							"    value: subscriptionKey\r",
+							"}\r",
+							");\r",
+							"pm.request.headers.upsert({\r",
+							"    key: 'Ocp-Apim-Trace',\r",
+							"    value: tracing\r",
+							"}\r",
+							");\r",
+							"pm.request.headers.upsert({\r",
+							"    key: 'X-Auth-Signature',\r",
+							"    value: signature\r",
+							"}\r",
+							");\r",
+							"pm.request.headers.upsert({\r",
+							"    key: 'X-Auth-Nonce',\r",
+							"    value: nonce\r",
+							"}\r",
+							");\r",
+							"pm.request.headers.upsert({\r",
+							"    key: 'X-Auth-Timestamp',\r",
+							"    value: utcDate\r",
+							"}\r",
+							");\r",
+							"pm.request.headers.upsert({\r",
+							"    key: 'X-Auth-Version',\r",
+							"    value: ver\r",
+							"}\r",
+							");"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Ocp-Apim-Subscription-Key",
+						"value": "{{subscriptionKey}}",
+						"type": "text"
+					},
+					{
+						"key": "Ocp-Apim-Trace",
+						"value": "true",
+						"type": "text"
+					},
+					{
+						"key": "X-Auth-Signature",
+						"value": "{{signature}}",
+						"type": "text"
+					},
+					{
+						"key": "X-Auth-Nonce",
+						"value": "{{nonce}}",
+						"type": "text"
+					},
+					{
+						"key": "X-Auth-Timestamp",
+						"value": "{{date}}",
+						"type": "text"
+					},
+					{
+						"key": "X-Auth-Version",
+						"value": "{{version}}",
+						"type": "text"
+					},
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					},
+					{
+						"key": "Idempotency-Key",
+						"value": "b465e15a-2bc3-48f1-b3cd-7f7cd5e03218",
+						"type": "text",
+						"disabled": true
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"account_number_from\": \"1067309011\",\r\n  \"account_number_to\": \"1234567890\",\r\n  \"currency\": \"USD\",\r\n  \"amount\": 1\r\n}"
+				},
+				"url": {
+					"raw": "{{url}}/api/transfer/internal",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"api",
+						"transfer",
+						"internal"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Internal Transfer - Profile no IT permission (IP)",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Internal Transfer not permissioned for account - 403 Forbidden\", function () {",
+							"    pm.response.to.have.status(403);",
+							"});",
+							"",
+							"pm.test(\"Error Message : Forbidden\", function () {",
+							"    pm.expect(pm.response.text()).to.include(\"Forbidden\");",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				},
+				{
+					"listen": "prerequest",
+					"script": {
+						"exec": [
+							"const { v4: uuidv4 } = require('uuid');\r",
+							"\r",
+							"let subscriptionKey = \"4ebb9101a8a0437fa0b68dc733b23b26\";\r",
+							"let subscriptionGuid = pm.variables.get('subscriptionGuid');\r",
+							"let apiSecret = \"Q3Pk7IM1M1Ur9jDTTvdxedjnwUvpH9cl7Q7tyIFszFA=\";\r",
+							"let ver = pm.variables.get('version');\r",
+							"let tracing = pm.variables.get('tracing');\r",
+							"let utcDate = (new Date()).toISOString();\r",
+							"let nonce = uuidv4();\r",
+							"\r",
+							"let uri = pm.environment.values.substitute(pm.request.url, null, false);\r",
+							"uri = pm.collectionVariables.values.substitute(pm.request.url, null, false) + \"\";\r",
+							"\r",
+							"let uriParts = uri.replace(/#+$/, \"\").split(/\\?(.+)/)\r",
+							"let url = encodeURI(uriParts[0]);\r",
+							"if (uriParts.length > 1) {\r",
+							"    url = url + \"?\" + uriParts[1]\r",
+							"}\r",
+							"\r",
+							"let body = pm.request.body !== undefined ? pm.collectionVariables.values.substitute(pm.environment.values.substitute(pm.request.body, null, false), null, false) : \"\";\r",
+							"let rawMessage = \"made\" + \" \" + subscriptionKey + url + nonce +utcDate + ver + body;\r",
+							"\r",
+							"console.log(\"Raw message: \" + rawMessage)\r",
+							"// Generate HMAC SHA256 or 512 signature\r",
+							"let signature = CryptoJS.enc.Base64.stringify(CryptoJS.HmacSHA512(rawMessage, apiSecret));\r",
+							"\r",
+							"if (subscriptionGuid !== undefined) {\r",
+							"    pm.request.headers.upsert({\r",
+							"        key: 'X-made-Subscription-Id',\r",
+							"        value: subscriptionGuid\r",
+							"    });\r",
+							"\r",
+							"\r",
+							"    pm.request.headers.upsert({\r",
+							"        key: 'X-made-Subscription-Name',\r",
+							"        value: \"Postman local test\"\r",
+							"    });\r",
+							"}\r",
+							"\r",
+							"pm.request.headers.upsert({\r",
+							"    key: 'Ocp-Apim-Subscription-Key',\r",
+							"    value: subscriptionKey\r",
+							"}\r",
+							");\r",
+							"pm.request.headers.upsert({\r",
+							"    key: 'Ocp-Apim-Trace',\r",
+							"    value: tracing\r",
+							"}\r",
+							");\r",
+							"pm.request.headers.upsert({\r",
+							"    key: 'X-Auth-Signature',\r",
+							"    value: signature\r",
+							"}\r",
+							");\r",
+							"pm.request.headers.upsert({\r",
+							"    key: 'X-Auth-Nonce',\r",
+							"    value: nonce\r",
+							"}\r",
+							");\r",
+							"pm.request.headers.upsert({\r",
+							"    key: 'X-Auth-Timestamp',\r",
+							"    value: utcDate\r",
+							"}\r",
+							");\r",
+							"pm.request.headers.upsert({\r",
+							"    key: 'X-Auth-Version',\r",
+							"    value: ver\r",
+							"}\r",
+							");"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Ocp-Apim-Subscription-Key",
+						"value": "{{subscriptionKey}}",
+						"type": "text"
+					},
+					{
+						"key": "Ocp-Apim-Trace",
+						"value": "true",
+						"type": "text"
+					},
+					{
+						"key": "X-Auth-Signature",
+						"value": "{{signature}}",
+						"type": "text"
+					},
+					{
+						"key": "X-Auth-Nonce",
+						"value": "{{nonce}}",
+						"type": "text"
+					},
+					{
+						"key": "X-Auth-Timestamp",
+						"value": "{{date}}",
+						"type": "text"
+					},
+					{
+						"key": "X-Auth-Version",
+						"value": "{{version}}",
+						"type": "text"
+					},
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					},
+					{
+						"key": "Idempotency-Key",
+						"value": "b465e15a-2bc3-48f1-b3cd-7f7cd5e03218",
+						"type": "text",
+						"disabled": true
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"account_number_from\": \"1067309011\",\r\n  \"account_number_to\": \"1234567890\",\r\n  \"currency\": \"USD\",\r\n  \"amount\": 1\r\n}"
+				},
+				"url": {
+					"raw": "{{url}}/api/transfer/internal",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"api",
+						"transfer",
+						"internal"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}

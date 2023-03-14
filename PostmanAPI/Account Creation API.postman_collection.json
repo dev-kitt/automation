@@ -1,0 +1,161 @@
+{
+	"info": {
+		"_postman_id": "00000000-0000-0000-0000-000000000000",
+		"name": "Account Creation API",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "17221433"
+	},
+	"item": [
+		{
+			"name": "POST",
+			"item": [
+				{
+					"name": "account",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Ocp-Apim-Subscription-Key",
+								"value": "{{subscriptionKey}}",
+								"type": "text"
+							},
+							{
+								"key": "Ocp-Apim-Trace",
+								"value": "true",
+								"type": "text"
+							},
+							{
+								"key": "X-Auth-Signature",
+								"value": "{{signature}}",
+								"type": "text"
+							},
+							{
+								"key": "X-Auth-Nonce",
+								"value": "{{nonce}}",
+								"type": "text"
+							},
+							{
+								"key": "X-Auth-Timestamp",
+								"value": "{{date}}",
+								"type": "text"
+							},
+							{
+								"key": "X-Auth-Version",
+								"value": "{{version}}",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"currency\" : \"USD\",\r\n    \"shortName\" : \"TEST USD\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{url}}/api/account",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"api",
+								"account"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	],
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					"const { v4: uuidv4 } = require('uuid');",
+					"",
+					"let subscriptionKey = pm.variables.get('subscriptionKey');",
+					"let subscriptionGuid = pm.variables.get('subscriptionGuid');",
+					"let apiSecret = pm.variables.get('clientSecret');",
+					"let ver = pm.variables.get('version');",
+					"let tracing = pm.variables.get('tracing');",
+					"let utcDate = (new Date()).toISOString();",
+					"let nonce = uuidv4();",
+					"",
+					"let uri = pm.environment.values.substitute(pm.request.url, null, false);",
+					"uri = pm.collectionVariables.values.substitute(pm.request.url, null, false) + \"\";",
+					"",
+					"let uriParts = uri.replace(/#+$/, \"\").split(/\\?(.+)/)",
+					"let url = encodeURI(uriParts[0]);",
+					"if (uriParts.length > 1) {",
+					"    url = url + \"?\" + uriParts[1]",
+					"}",
+					"",
+					"let body = pm.request.body !== undefined ? pm.collectionVariables.values.substitute(pm.environment.values.substitute(pm.request.body, null, false), null, false) : \"\";",
+					"let rawMessage = \"made\" + \" \" + subscriptionKey + url + nonce + utcDate + ver + body;",
+					"",
+					"console.log(\"Raw message: \" + rawMessage)",
+					"// Generate HMAC SHA256 or 512 signature",
+					"let signature = CryptoJS.enc.Base64.stringify(CryptoJS.HmacSHA512(rawMessage, apiSecret));",
+					"",
+					"if (subscriptionGuid !== undefined) {",
+					"    pm.request.headers.upsert({",
+					"        key: 'X-made-Subscription-Id',",
+					"        value: subscriptionGuid",
+					"    });",
+					"",
+					"",
+					"    pm.request.headers.upsert({",
+					"        key: 'X-made-Subscription-Name',",
+					"        value: \"Postman local test\"",
+					"    });",
+					"}",
+					"",
+					"pm.request.headers.upsert({",
+					"    key: 'Ocp-Apim-Subscription-Key',",
+					"    value: subscriptionKey",
+					"}",
+					");",
+					"pm.request.headers.upsert({",
+					"    key: 'Ocp-Apim-Trace',",
+					"    value: tracing",
+					"}",
+					");",
+					"pm.request.headers.upsert({",
+					"    key: 'X-Auth-Signature',",
+					"    value: signature",
+					"}",
+					");",
+					"pm.request.headers.upsert({",
+					"    key: 'X-Auth-Nonce',",
+					"    value: nonce",
+					"}",
+					");",
+					"pm.request.headers.upsert({",
+					"    key: 'X-Auth-Timestamp',",
+					"    value: utcDate",
+					"}",
+					");",
+					"pm.request.headers.upsert({",
+					"    key: 'X-Auth-Version',",
+					"    value: ver",
+					"}",
+					");"
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		}
+	]
+}

@@ -1,0 +1,213 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<con:testCase failOnError="true" failTestCaseOnErrors="true" id="00000000-0000-0000-0000-000000000000" keepSession="false" maxResults="0" name="BeB USD | $10M limit check" searchProperties="true" xmlns:con="http://eviware.com/soapui/config"><con:settings><con:setting id="00000000-0000-0000-0000-000000000000fileName">BeB-USD-%7C-%2410M-limit-check</con:setting></con:settings><con:testStep id="00000000-0000-0000-0000-000000000000" name="Properties" type="properties"><con:settings/><con:config xsi:type="con:PropertiesStep" saveFirst="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:properties><con:property><con:name>MID</con:name><con:value>M0CDC1529Q94AGBY</con:value></con:property><con:property><con:name>TS</con:name><con:value>2022-12-13 12:15:31.110</con:value></con:property><con:property><con:name>MSG_STS</con:name><con:value>WAIT_FRAUD</con:value></con:property><con:property><con:name>UAT</con:name></con:property></con:properties></con:config></con:testStep><con:testStep id="00000000-0000-0000-0000-000000000000" name="submitMessage - Submit FED_10" type="request"><con:settings/><con:config xsi:type="con:RequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:interface>MessageSubmitServiceSoap12Binding</con:interface><con:operation>submitMessage</con:operation><con:request id="00000000-0000-0000-0000-000000000000" incomingWss="" name="submitMessage - Submit FED_10" outgoingWss="Submit" sslKeystore="" timeout="" useWsAddressing="false" useWsReliableMessaging="false" wssPasswordType=""><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting></con:settings><con:encoding>UTF-8</con:encoding><con:endpoint>${#Project#Active_URL}/gppold/services/MessageSubmitService</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://www.w3.org/2003/05/soap-envelope" xmlns:q0="http://fundtech.com/SCL/MessageSubmitService" xmlns:q1="http://fundtech.com/SCL/CommonTypes" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+   <soapenv:Header>
+      <q2:FndtHeader xmlns:q2="http://fundtech.com/SCL/CommonTypes">
+         <q2:credentials>
+            <q2:UserID>${#Project#SecurityUser}</q2:UserID>
+            
+         </q2:credentials>
+      </q2:FndtHeader>
+   </soapenv:Header>
+   <soapenv:Body>
+      <q0:MessageSubmitRequest>
+         <q0:MsgBatch>
+            <q1:FndtHeader>
+               <q1:credentials>
+                  <q1:UserID>${#Project#SecurityUser}</q1:UserID>
+               </q1:credentials>
+            </q1:FndtHeader>
+            <q1:FndtPmntTxInf>
+               <q1:FndtMsg xmlns="http://fundtech.com/SCL/CommonTypes">
+                  <q1:Msg>
+                     <q1:Pmnt>
+                        <Document xmlns="urn:iso:std:iso:20022:tech:xsd:pacs.008.001.08">
+                           <FIToFICstmrCdtTrf>
+                              <GrpHdr>
+                                 <MsgId>3922653992</MsgId>
+                                 <CreDtTm>${#TestSuite#Date}T17:10:05</CreDtTm>
+                                 <NbOfTxs></NbOfTxs>
+                                
+                                <InstgAgt>
+							<FinInstnId>
+								<ClrSysMmbId>
+									<ClrSysId>
+										<Cd>USABA</Cd> 
+									</ClrSysId>
+									<MmbId>322286803</MmbId> 
+								</ClrSysMmbId>
+							</FinInstnId>
+						</InstgAgt>
+                                 <InstdAgt>
+                                    <FinInstnId>
+                                       <BIC></BIC>
+                                    </FinInstnId>
+                                 </InstdAgt>
+                                 <CreDtTm>${#TestSuite#Date}T20:09:17</CreDtTm>
+                              </GrpHdr>
+                              <CdtTrfTxInf>
+                                 <PmtId>
+                                    <InstrId>Auto${#Project#Rand}</InstrId>
+                                    
+                                 </PmtId>
+                                 <IntrBkSttlmAmt Ccy="USD">16000000.${#Project#AmtF}</IntrBkSttlmAmt>
+                                 <IntrBkSttlmDt>${#TestSuite#Date}</IntrBkSttlmDt>
+                                 <ChrgBr>DEBT</ChrgBr>
+                                 <Dbtr>
+							<Nm>TEST WIRE</Nm>
+							<PstlAdr>
+								<AdrLine>4250 EXECUTIVE SQUARE</AdrLine> 
+								<AdrLine>SUITE 300</AdrLine> 
+								<AdrLine>LA JOLLA, CA 92037</AdrLine> 
+							</PstlAdr>
+						</Dbtr>
+						<DbtrAcct>
+							<Id>
+								<Othr>
+									<Id>4400009901</Id>  
+								</Othr>
+							</Id>
+						</DbtrAcct>
+						<!--DbtrAgt>
+							<FinInstnId>
+								<BIC>WPACSGSGXXX</BIC>
+								<Nm>BANK OF CHINA H.O. OPERATING FUNDS-</Nm>
+							</FinInstnId>
+						</DbtrAgt-->
+						<CdtrAgt>
+							<FinInstnId>
+								<BICFI>CITIUS33XXX</BICFI>
+								<Nm></Nm>
+								<PstlAdr>
+								<AdrLine>123 SAN DIEGO ST</AdrLine> 
+								<AdrLine>SAN DIEGO CA 92101</AdrLine> 
+							</PstlAdr>
+							
+							</FinInstnId>
+						</CdtrAgt>
+						<Cdtr>
+							<Nm>gemini test</Nm> 
+							<PstlAdr>
+								<AdrLine>1</AdrLine> 
+								<AdrLine>2</AdrLine>
+							</PstlAdr>
+						</Cdtr>
+						<CdtrAcct>
+							<Id>
+								<Othr>
+									<Id>1049200114</Id>
+								</Othr>
+							</Id>
+						</CdtrAcct>
+						<rmtinf>
+							<ustrd></ustrd>
+						</rmtinf>
+                              </CdtTrfTxInf>
+                           </FIToFICstmrCdtTrf>
+                        </Document>
+                     </q1:Pmnt>
+                   <q1:Extn>
+                      <q1:XMLPersistentInfo>
+                           <!--q1:D_FIRST_IN_CDT_CHAIN_BIC>BKCHAU2AXXX</q1:D_FIRST_IN_CDT_CHAIN_BIC-->
+                        </q1:XMLPersistentInfo>
+                         <q1:ProcessingPersistentInfo>
+                           <q1:P_OFFICE>US1</q1:P_OFFICE>
+                           <q1:P_DEPARTMENT>USD</q1:P_DEPARTMENT>
+                           <q1:P_PMNT_SRC>${#TestSuite#Source}</q1:P_PMNT_SRC>
+                           <q1:P_ORIG_MSG_TYPE>FED_10</q1:P_ORIG_MSG_TYPE>
+                           <q1:DebitSide/>
+                        </q1:ProcessingPersistentInfo>
+                         <q1:OperationalSection>
+                           <q1:D_BUTTON_ID>Submit</q1:D_BUTTON_ID>
+                           <q1:D_SKIP_PERSIST_ON_ERROR>true</q1:D_SKIP_PERSIST_ON_ERROR>
+                        </q1:OperationalSection>
+             
+
+				</q1:Extn>
+                  </q1:Msg>
+               </q1:FndtMsg>
+            </q1:FndtPmntTxInf>
+         </q0:MsgBatch>
+      </q0:MessageSubmitRequest>
+   </soapenv:Body>
+</soapenv:Envelope>]]></con:request><con:assertion id="00000000-0000-0000-0000-000000000000" name="SOAP Response" type="SOAP Response"/><con:assertion id="00000000-0000-0000-0000-000000000000" name="Contains" type="Simple Contains"><con:configuration><token>&lt;P_MSG_STS>VERIFY&lt;/P_MSG_STS></token><ignoreCase>false</ignoreCase><useRegEx>false</useRegEx></con:configuration></con:assertion><con:credentials>
+          <con:selectedAuthProfile>Basic</con:selectedAuthProfile><con:addedBasicAuthenticationTypes>Basic</con:addedBasicAuthenticationTypes><con:authType>Global HTTP Settings</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:wsaConfig action="" mustUnderstand="NONE" version="200508"/><con:wsrmConfig version="1.2"/><con:environmentSpec><con:entry environmentId="00000000-0000-0000-0000-000000000000"><con:authProfile>Basic</con:authProfile></con:entry><con:entry environmentId="00000000-0000-0000-0000-000000000000"><con:authProfile>Inherit From Parent</con:authProfile></con:entry></con:environmentSpec></con:request></con:config></con:testStep><con:testStep id="00000000-0000-0000-0000-000000000000" name="Property Transfer" type="transfer"><con:settings/><con:config xsi:type="con:PropertyTransfersStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:transfers entitize="false" failOnError="true" ignoreEmpty="false" setNullOnMissingSource="true" transferChildNodes="false" transferTextContent="true" transferToAll="false"><con:name>Timestamp</con:name><con:sourceType>Response</con:sourceType><con:sourceStep>submitMessage - Submit FED_10</con:sourceStep><con:sourcePath>declare namespace soap='http://www.w3.org/2003/05/soap-envelope';
+declare namespace ns1='http://fundtech.com/SCL/CommonTypes';
+declare namespace ns2='http://fundtech.com/SCL/MessageSubmitService';
+//ns1:P_TIME_STAMP</con:sourcePath><con:targetType>TS</con:targetType><con:targetStep>Properties</con:targetStep><con:targetTransferType>XPATH</con:targetTransferType><con:upgraded>true</con:upgraded></con:transfers><con:transfers entitize="false" failOnError="true" ignoreEmpty="false" setNullOnMissingSource="true" transferChildNodes="false" transferTextContent="true" transferToAll="false"><con:name>MID</con:name><con:sourceType>Response</con:sourceType><con:sourceStep>submitMessage - Submit FED_10</con:sourceStep><con:sourcePath>declare namespace soap='http://www.w3.org/2003/05/soap-envelope';
+declare namespace ns1='http://fundtech.com/SCL/CommonTypes';
+declare namespace ns2='http://fundtech.com/SCL/MessageSubmitService';
+//ns1:P_MID</con:sourcePath><con:targetType>MID</con:targetType><con:targetStep>Properties</con:targetStep><con:targetTransferType>XPATH</con:targetTransferType><con:upgraded>true</con:upgraded></con:transfers></con:config></con:testStep><con:testStep id="00000000-0000-0000-0000-000000000000" name="submitMessage - Approve-" type="request"><con:settings/><con:config xsi:type="con:RequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:interface>MessageSubmitServiceSoap12Binding</con:interface><con:operation>submitMessage</con:operation><con:request id="00000000-0000-0000-0000-000000000000" incomingWss="" name="submitMessage - Approve-" outgoingWss="Submit2" sslKeystore="" timeout="" useWsAddressing="false" useWsReliableMessaging="false" wssPasswordType=""><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting></con:settings><con:encoding>UTF-8</con:encoding><con:endpoint>${#Project#Active_URL}/gppold/services/MessageSubmitService</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://www.w3.org/2003/05/soap-envelope" xmlns:q0="http://fundtech.com/SCL/MessageSubmitService" xmlns:q1="http://fundtech.com/SCL/CommonTypes" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+   <soapenv:Header>
+      <q1:FndtHeader>
+         <q1:credentials>
+            <q1:UserID>${#Project#SecurityUser2}</q1:UserID>
+            <!--q1:Role>SOAP</q1:Role-->
+         </q1:credentials>
+      </q1:FndtHeader>
+   </soapenv:Header>
+   <soapenv:Body>
+      <q0:MessageSubmitRequest>
+         <q0:MsgBatch>
+            <q1:FndtHeader> 
+               <q1:credentials>
+                  <q1:UserID>${#Project#SecurityUser2}</q1:UserID>
+               </q1:credentials>
+            </q1:FndtHeader>
+            <q1:FndtPmntTxInf>
+               <q1:FndtMsg>
+                 <q1:Header>       
+                 <q1:P_MID>${Properties#MID}</q1:P_MID>       
+                 </q1:Header>
+                  <q1:Msg>
+       		<q1:Pmnt/>
+                     <q1:Extn>
+                        <q1:ProcessingPersistentInfo>
+                           <q1:P_TIME_STAMP>${Properties#TS}</q1:P_TIME_STAMP>
+                        </q1:ProcessingPersistentInfo>
+                        <q1:OperationalSection>
+                           <q1:D_BUTTON_ID>Verify</q1:D_BUTTON_ID>
+                        </q1:OperationalSection>
+                     </q1:Extn>
+                  </q1:Msg>
+               </q1:FndtMsg>
+            </q1:FndtPmntTxInf>
+         </q0:MsgBatch>
+      </q0:MessageSubmitRequest>
+   </soapenv:Body>
+</soapenv:Envelope>]]></con:request><con:assertion id="00000000-0000-0000-0000-000000000000" name="SOAP Response" type="SOAP Response"/><con:credentials>
+          <con:selectedAuthProfile>Basic</con:selectedAuthProfile><con:addedBasicAuthenticationTypes>Basic</con:addedBasicAuthenticationTypes><con:authType>Global HTTP Settings</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:wsaConfig action="http://fundtech.com/SCL/MessageSubmitService/MessageSubmitServicePortType/submitMessageRequest" mustUnderstand="NONE" version="200508"/><con:wsrmConfig version="1.2"/><con:environmentSpec><con:entry environmentId="00000000-0000-0000-0000-000000000000"><con:authProfile>Basic</con:authProfile></con:entry><con:entry environmentId="00000000-0000-0000-0000-000000000000"><con:authProfile>Inherit From Parent</con:authProfile></con:entry></con:environmentSpec></con:request></con:config></con:testStep><con:testStep id="00000000-0000-0000-0000-000000000000" name="15000" type="delay"><con:settings/><con:config><delay>25000</delay></con:config></con:testStep><con:testStep id="00000000-0000-0000-0000-000000000000" name="loadMessage - Request 1" type="request"><con:settings/><con:config xsi:type="con:RequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:interface>MessageLoadServiceSoap12Binding</con:interface><con:operation>loadMessage</con:operation><con:request id="00000000-0000-0000-0000-000000000000" incomingWss="" name="loadMessage - Request 1" outgoingWss="Submit2" sslKeystore="" timeout="" useWsAddressing="false" useWsReliableMessaging="false" wssPasswordType=""><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting></con:settings><con:encoding>UTF-8</con:encoding><con:endpoint>${#Project#Active_URL}/gpp/services/MessageLoadService</con:endpoint><con:request><![CDATA[<soap:Envelope xmlns:wsse="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-secext-1.0.xsd" xmlns:soap="http://www.w3.org/2003/05/soap-envelope" xmlns:mes="http://fundtech.com/SCL/MessageLoadService" xmlns:com="http://fundtech.com/SCL/CommonTypes">
+   <soap:Header>
+      <q2:FndtHeader xmlns:q2="http://fundtech.com/SCL/CommonTypes">
+         <q2:credentials>
+            <q2:UserID>${#Project#SecurityUser2}</q2:UserID>
+            <!--q2:Role>SOAP</q2:Rol-->
+         </q2:credentials>
+      </q2:FndtHeader>
+   </soap:Header>
+   <soap:Body>
+      <PerformMessageLoadRequest xmlns="http://fundtech.com/SCL/MessageLoadService">
+         <com:P_MID>${Properties#MID}</com:P_MID>
+         <fndtMsgSubset>
+           
+            <com:document id="X_FNDT_MSG_EXT">
+               <com:field id="M_MSG_NOTES_GRID"/>
+               <com:field id="X_EXTN_DEBIT_SIDE"/>
+               <com:field id="X_EXTN_CREDIT_SIDE"/>
+               <com:field id="M_CDT_CUST_PROFILE">
+                  <com:field id="F_CDT_CUST_ABA"/>
+                  <com:field id="F_CDT_CUST_ALIAS"/>
+                  <com:field id="F_CDT_CUST_ADDRESS4"/>
+                  <com:field id="F_CDT_CUST_CUST_NAME"/>
+                  <com:field id="P_MSG_STS,P_OFFICE,P_DEPARTMENT"/>
+                  <com:field id="P_ACK_STS"/>
+                  <com:field id="P_MSG_STS"/>
+                  <com:field id="P_PAYMENT_TP"/>
+               </com:field>
+               <com:field id="X_EXTN_USR_DEF"/>
+            </com:document>
+             <com:document id="X_FNDT_MSG_PMNT" conversionType="FULL"/>
+         </fndtMsgSubset>
+      </PerformMessageLoadRequest>
+   </soap:Body>
+</soap:Envelope>]]></con:request><con:assertion id="00000000-0000-0000-0000-000000000000" name="SOAP Response" type="SOAP Response"/><con:assertion id="00000000-0000-0000-0000-000000000000" name="Status Release verification" type="Simple Contains"><con:configuration><token>&lt;P_MSG_STS>RELEASE&lt;/P_MSG_STS>
+</token><ignoreCase>false</ignoreCase><useRegEx>false</useRegEx></con:configuration></con:assertion><con:assertion id="00000000-0000-0000-0000-000000000000" name="Callback Error" type="Simple Contains"><con:configuration><token>&lt;F_MSGERR_DESC>Message was sent to RELEASE due to special instruction rules&lt;/F_MSGERR_DESC></token><ignoreCase>false</ignoreCase><useRegEx>false</useRegEx></con:configuration></con:assertion><con:credentials><con:selectedAuthProfile>Basic</con:selectedAuthProfile><con:addedBasicAuthenticationTypes>Basic</con:addedBasicAuthenticationTypes><con:authType>Global HTTP Settings</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:wsaConfig action="" mustUnderstand="NONE" version="200508"/><con:wsrmConfig version="1.2"/><con:environmentSpec><con:entry environmentId="00000000-0000-0000-0000-000000000000"><con:authProfile>Basic</con:authProfile></con:entry><con:entry environmentId="00000000-0000-0000-0000-000000000000"><con:authProfile>Inherit From Parent</con:authProfile></con:entry></con:environmentSpec></con:request></con:config></con:testStep><con:testStep disabled="true" id="00000000-0000-0000-0000-000000000000" name="Manual TestStep" type="manualTestStep"><con:description>Accept Special instructions and Verify in UI</con:description><con:settings/><con:config xsi:type="con:ManualTestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"/></con:testStep><con:properties/><con:reportParameters/><con:environmentSpec><con:entry environmentId="00000000-0000-0000-0000-000000000000"><con:authProfile>Inherit From Parent</con:authProfile></con:entry><con:entry environmentId="00000000-0000-0000-0000-000000000000"><con:authProfile>Inherit From Parent</con:authProfile></con:entry></con:environmentSpec></con:testCase>

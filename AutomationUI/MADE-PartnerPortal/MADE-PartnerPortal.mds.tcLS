@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE Nodes [
+
+<!ENTITY % NameValue "CDATA">
+<!ENTITY % PropType "(I|S|D|L|H|B)">
+<!ENTITY % VersionValue "CDATA">
+
+<!ELEMENT Prp (#PCDATA)>
+<!ELEMENT Node (Node|Prp)*>
+<!ELEMENT Nodes (Node)+>
+
+<!ATTLIST Nodes version CDATA "1">
+
+<!ATTLIST Node name CDATA #REQUIRED>
+
+<!ATTLIST Prp name CDATA #REQUIRED>
+<!ATTLIST Prp type CDATA #REQUIRED>
+<!ATTLIST Prp value CDATA #REQUIRED>
+]>
+<Nodes version="1">
+	<Node name="root">
+		<Node name="data">
+			<Node name="logs">
+				<Prp name="key" type="S" value="{B16BABC9-B88F-4F40-ACE6-8C4FEE2D5891}"/>
+				<Prp name="relpath" type="S" value="Log"/>
+			</Node>
+			<Node name="variables">
+				<Node name="datav4">
+					<Node name="var0">
+						<Node name="value">
+							<Prp name="strvalue" type="H" value="4E00300031004A0039003200360034003200490048003900510036004A004800"/>
+						</Node>
+						<Prp name="name" type="S" value="paymentID"/>
+					</Node>
+					<Node name="var1">
+						<Node name="value">
+							<Prp name="strvalue" type="H" value=" "/>
+						</Node>
+						<Prp name="name" type="S" value="madeCurrentURL"/>
+					</Node>
+					<Node name="var10">
+						<Node name="value">
+							<Prp name="strvalue" type="H" value="7000610079006D0065006E007400"/>
+						</Node>
+						<Prp name="name" type="S" value="madeCurrentTransferType"/>
+					</Node>
+					<Node name="var2">
+						<Node name="value">
+							<Prp name="strvalue" type="H" value="70006F007200740061006C00"/>
+						</Node>
+						<Prp name="name" type="S" value="madeCurrentSite"/>
+					</Node>
+					<Node name="var3">
+						<Node name="value">
+							<Prp name="strvalue" type="H" value="5400610063006F0062006F007500740020004100500049007300"/>
+						</Node>
+						<Prp name="name" type="S" value="madeNewSubAlias"/>
+					</Node>
+					<Node name="var4">
+						<Node name="value">
+							<Prp name="strvalue" type="H" value="6D006100730074006500720040007400610063006F006B0069006E0067002E0063006F006D00"/>
+						</Node>
+						<Prp name="name" type="S" value="madeNewSubEmail"/>
+					</Node>
+					<Node name="var5">
+						<Node name="value">
+							<Prp name="intvalue" type="I" value="1"/>
+						</Node>
+						<Prp name="name" type="S" value="ErrorCounter"/>
+					</Node>
+					<Node name="var6">
+						<Node name="value">
+							<Prp name="strvalue" type="H" value="540065007300740043006F006D0070006C0065007400650020004100750074006F006D006100740069006F006E00"/>
+						</Node>
+						<Prp name="name" type="S" value="madeCurrentProfile"/>
+					</Node>
+					<Node name="var7">
+						<Node name="value">
+							<Prp name="strvalue" type="H" value="5400650073007400200043006F006D0070006C006500740065002000550073006500720020003200"/>
+						</Node>
+						<Prp name="name" type="S" value="madeCurrentUser"/>
+					</Node>
+					<Node name="var8">
+						<Node name="value">
+							<Prp name="strvalue" type="H" value="530075007000650072002000410064006D0069006E00"/>
+						</Node>
+						<Prp name="name" type="S" value="madeCurrentUserRole"/>
+					</Node>
+					<Node name="var9">
+						<Node name="value">
+							<Prp name="strvalue" type="H" value="54004300200053006D00610072007400620065006100720020005300740061006E006400610072006400"/>
+						</Node>
+						<Prp name="name" type="S" value="madeCurrentAccount"/>
+					</Node>
+				</Node>
+				<Prp name="version" type="I" value="4"/>
+			</Node>
+		</Node>
+		<Prp name="signature" type="S" value="{49FC0C30-9EF7-4DBD-97A8-B7A00E79A2AF}"/>
+	</Node>
+</Nodes>

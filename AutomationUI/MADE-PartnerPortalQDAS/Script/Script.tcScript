@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Root signature="{9252F941-DB23-4FCA-AA50-858B33BB4A19}" version="11.40">
+	<children>
+		<child name="onLog" key="{F84BFCE5-0F06-49E0-A201-E2774B875891}" path="onLog.js" />
+		<child name="secInput" key="{13D78EC2-3590-429E-9CE3-30869606D236}" path="secInput.js" />
+	</children>
+</Root>
