@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE Nodes [
+
+<!ENTITY % NameValue "CDATA">
+<!ENTITY % PropType "(I|S|D|L|H|B)">
+<!ENTITY % VersionValue "CDATA">
+
+<!ELEMENT Prp (#PCDATA)>
+<!ELEMENT Node (Node|Prp)*>
+<!ELEMENT Nodes (Node)+>
+
+<!ATTLIST Nodes version CDATA "1">
+
+<!ATTLIST Node name CDATA #REQUIRED>
+
+<!ATTLIST Prp name CDATA #REQUIRED>
+<!ATTLIST Prp type CDATA #REQUIRED>
+<!ATTLIST Prp value CDATA #REQUIRED>
+]>
+<Nodes version="1">
+	<Node name="root">
+		<Node name="folders"/>
+		<Node name="logs">
+			<Node name="log idx=0000">
+				<Prp name="caption" type="S" value=""/>
+				<Prp name="datetime" type="D" value="45006.5157221412"/>
+				<Prp name="description" type="S" value=""/>
+				<Prp name="key" type="S" value="{7361B920-6D64-438B-8AAF-CA27DA04BCEF}"/>
+				<Prp name="nameofroot" type="S" value="bddAuth"/>
+				<Prp name="relpath" type="S" value="3_21_2023_12_22 PM_38_393\Description.tcLog"/>
+				<Prp name="status" type="I" value="2"/>
+			</Node>
+			<Node name="log idx=0001">
+				<Prp name="caption" type="S" value=""/>
+				<Prp name="datetime" type="D" value="45006.5199254051"/>
+				<Prp name="description" type="S" value=""/>
+				<Prp name="key" type="S" value="{5D3365AF-2DD6-4D6C-B057-7A8F5D64B805}"/>
+				<Prp name="nameofroot" type="S" value="bddAuth"/>
+				<Prp name="relpath" type="S" value="3_21_2023_12_28 PM_41_555\Description.tcLog"/>
+				<Prp name="status" type="I" value="1"/>
+			</Node>
+			<Node name="log idx=0002">
+				<Prp name="caption" type="S" value=""/>
+				<Prp name="datetime" type="D" value="45006.526404213"/>
+				<Prp name="description" type="S" value=""/>
+				<Prp name="key" type="S" value="{728621ED-D60D-4FC9-9597-AD69617A74BD}"/>
+				<Prp name="nameofroot" type="S" value="bddAuth"/>
+				<Prp name="relpath" type="S" value="3_21_2023_12_38 PM_01_324\Description.tcLog"/>
+				<Prp name="status" type="I" value="1"/>
+			</Node>
+			<Node name="log idx=0003">
+				<Prp name="caption" type="S" value=""/>
+				<Prp name="datetime" type="D" value="45006.5415309259"/>
+				<Prp name="description" type="S" value=""/>
+				<Prp name="key" type="S" value="{3A1BC0F2-7ECA-44E5-8D1E-F9D15BC3AC28}"/>
+				<Prp name="nameofroot" type="S" value="bddAuth"/>
+				<Prp name="relpath" type="S" value="3_21_2023_12_59 PM_48_272\Description.tcLog"/>
+				<Prp name="status" type="I" value="1"/>
+			</Node>
+		</Node>
+		<Prp name="signature" type="S" value="{681DCC69-A39F-4C4D-8E7D-B2D9362FAF4F}"/>
+		<Prp name="version" type="S" value="11.0"/>
+	</Node>
+</Nodes>

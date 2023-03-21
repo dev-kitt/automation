@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE Nodes [
+
+<!ENTITY % NameValue "CDATA">
+<!ENTITY % PropType "(I|S|D|L|H|B)">
+<!ENTITY % VersionValue "CDATA">
+
+<!ELEMENT Prp (#PCDATA)>
+<!ELEMENT Node (Node|Prp)*>
+<!ELEMENT Nodes (Node)+>
+
+<!ATTLIST Nodes version CDATA "1">
+
+<!ATTLIST Node name CDATA #REQUIRED>
+
+<!ATTLIST Prp name CDATA #REQUIRED>
+<!ATTLIST Prp type CDATA #REQUIRED>
+<!ATTLIST Prp value CDATA #REQUIRED>
+]>
+<Nodes version="1">
+	<Node name="root">
+		<Node name="projects">
+			<Node name="project0">
+				<Node name="tests">
+					<Node name="test0">
+						<Node name="warnings"/>
+						<Node name="errors"/>
+						<Prp name="starttime" type="D" value="45006.5264355208"/>
+						<Prp name="duration" type="I" value="8105"/>
+						<Prp name="executionpoint" type="S" value="executionpoint://ewBBADIARAA0ADEARgBGADgALQA2AEMAMwAwAC0ANABBAEQAQgAtADgANgA4ADEALQBGADcAMgBFADQAMwBCAEYAMgAzADAANQB9AC8AewAwAEMARQA3ADQARgBDADUALQBFADIAQwBEAC0ANAAyADIAMAAtADkAMwBDADIALQAzADgARAA4AEIANwBEADEAMQBCAEUAMAB9AC8AqpN8BLDIC0qKPrSbfs3IGwIAAAAvAGUAbQBwAHQAeQA="/>
+						<Prp name="durationwithoutchildren" type="I" value="8105"/>
+						<Prp name="name" type="S" value="Verify Demoblaze SignUp"/>
+						<Prp name="status" type="I" value="0"/>
+					</Node>
+					<Node name="test1">
+						<Node name="warnings"/>
+						<Node name="errors"/>
+						<Prp name="starttime" type="D" value="45006.526529838"/>
+						<Prp name="duration" type="I" value="6099"/>
+						<Prp name="executionpoint" type="S" value="executionpoint://ewBBADIARAA0ADEARgBGADgALQA2AEMAMwAwAC0ANABBAEQAQgAtADgANgA4ADEALQBGADcAMgBFADQAMwBCAEYAMgAzADAANQB9AC8AewAwAEMARQA3ADQARgBDADUALQBFADIAQwBEAC0ANAAyADIAMAAtADkAMwBDADIALQAzADgARAA4AEIANwBEADEAMQBCAEUAMAB9AC8AqpN8BLDIC0qKPrSbfs3IGxYAAAAvAGUAbQBwAHQAeQA="/>
+						<Prp name="durationwithoutchildren" type="I" value="6099"/>
+						<Prp name="name" type="S" value="Verify Demoblaze Login"/>
+						<Prp name="status" type="I" value="0"/>
+					</Node>
+					<Node name="test3">
+						<Node name="warnings">
+							<Node name="warning0">
+								<Prp name="msg" type="S" value="WARNING | SignUp failure"/>
+							</Node>
+							<Node name="warning3">
+								<Prp name="msg" type="S" value="WARNING | Alert message not found"/>
+							</Node>
+							<Node name="warning4">
+								<Prp name="msg" type="S" value="WARNING | Alert message not found"/>
+							</Node>
+							<Node name="warning2">
+								<Prp name="msg" type="S" value="WARNING | Alert message not found"/>
+							</Node>
+							<Node name="warning1">
+								<Prp name="msg" type="S" value="WARNING | SignUp failure"/>
+							</Node>
+						</Node>
+						<Node name="errors"/>
+						<Prp name="starttime" type="D" value="45006.5266614699"/>
+						<Prp name="duration" type="I" value="102993"/>
+						<Prp name="executionpoint" type="S" value="executionpoint://ewBBADIARAA0ADEARgBGADgALQA2AEMAMwAwAC0ANABBAEQAQgAtADgANgA4ADEALQBGADcAMgBFADQAMwBCAEYAMgAzADAANQB9AC8AewAwAEMARQA3ADQARgBDADUALQBFADIAQwBEAC0ANAAyADIAMAAtADkAMwBDADIALQAzADgARAA4AEIANwBEADEAMQBCAEUAMAB9AC8AqpN8BLDIC0qKPrSbfs3IGzIAAAAvAGUAbQBwAHQAeQA="/>
+						<Prp name="durationwithoutchildren" type="I" value="102993"/>
+						<Prp name="name" type="S" value="Verify Demoblaze SignUp and LogIn"/>
+						<Prp name="status" type="I" value="1"/>
+					</Node>
+					<Node name="test2">
+						<Node name="warnings"/>
+						<Node name="errors"/>
+						<Prp name="starttime" type="D" value="45006.5266009722"/>
+						<Prp name="duration" type="I" value="5153"/>
+						<Prp name="executionpoint" type="S" value="executionpoint://ewBBADIARAA0ADEARgBGADgALQA2AEMAMwAwAC0ANABBAEQAQgAtADgANgA4ADEALQBGADcAMgBFADQAMwBCAEYAMgAzADAANQB9AC8AewAwAEMARQA3ADQARgBDADUALQBFADIAQwBEAC0ANAAyADIAMAAtADkAMwBDADIALQAzADgARAA4AEIANwBEADEAMQBCAEUAMAB9AC8AqpN8BLDIC0qKPrSbfs3IGyYAAAAvAGUAbQBwAHQAeQA="/>
+						<Prp name="durationwithoutchildren" type="I" value="5153"/>
+						<Prp name="name" type="S" value="Verify Demoblaze Logout"/>
+						<Prp name="status" type="I" value="0"/>
+					</Node>
+				</Node>
+				<Prp name="starttime" type="D" value="45006.5264355208"/>
+				<Prp name="duration" type="I" value="122350"/>
+				<Prp name="warningtests" type="I" value="1"/>
+				<Prp name="failedtests" type="I" value="0"/>
+				<Prp name="name" type="S" value="DemoblazeUX"/>
+				<Prp name="incompletedtests" type="I" value="0"/>
+			</Node>
+		</Node>
+		<Prp name="user" type="S" value="SeleniumUser"/>
+		<Prp name="failedtests" type="I" value="0"/>
+		<Prp name="name" type="S" value="Demoblaze"/>
+		<Prp name="executionstatus" type="I" value="1"/>
+		<Prp name="testname" type="S" value="EventControls_OnStartTest"/>
+		<Prp name="key" type="S" value="{DADF2CEB-1354-433F-AD7F-BB57E036385D}"/>
+		<Prp name="tests" type="I" value="4"/>
+		<Prp name="warningtests" type="I" value="1"/>
+		<Prp name="stop" type="D" value="45006.5278564352"/>
+		<Prp name="host" type="S" value="W10-Selenium"/>
+		<Prp name="incompletedtests" type="I" value="0"/>
+		<Prp name="warningtestwithretries" type="I" value="0"/>
+		<Prp name="starttime" type="D" value="45006.5264189468"/>
+		<Prp name="successtestwithretries" type="I" value="0"/>
+	</Node>
+</Nodes>

@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Root signature="{9252F941-DB23-4FCA-AA50-858B33BB4A19}" version="11.40">
+	<children>
+		<folder name="Common">
+			<child name="Main" key="{3CF16597-CBCC-4DD0-A4AA-14F2DD8342CC}" path="Main.js" />
+		</folder>
+		<folder name="Bdd">
+			<child name="bdd_AboutUs" key="{6D207AAF-AC7D-4EE4-99E8-CAA16F7C8CA7}" path="bdd_AboutUs.js" />
+			<child name="bdd_Auth" key="{411E9651-DB11-431B-818C-E53F70452E21}" path="bdd_Auth.js" />
+			<child name="bdd_BrowseCatalog" key="{92B23D74-7E83-439A-9921-DC24DBA21F77}" path="bdd_BrowseCatalog.js" />
+			<child name="bdd_Checkout" key="{46076634-025F-458A-B9AB-527D7B633937}" path="bdd_Checkout.js" />
+			<child name="bdd_ContactUs" key="{671DADF6-CEB4-47EF-B3E0-D9946980ADDB}" path="bdd_ContactUs.js" />
+			<child name="bdd_ShoppingCart" key="{F24B22FB-82B3-462C-9123-63FB0B61C4F4}" path="bdd_ShoppingCart.js" />
+		</folder>
+		<folder name="Events">
+			<child name="onStart" key="{9EF8F501-C3B0-48A7-A61A-F0263ECA8ED0}" path="onStart.js" />
+			<child name="onStop" key="{4EC5CFB2-B2C0-4A69-9B87-5D872A859CA8}" path="onStop.js" />
+			<child name="onLog" key="{9A2742F8-77BD-466F-93DD-30E8BEC2A659}" path="onLog.js" />
+		</folder>
+	</children>
+</Root>

@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE Nodes [
+
+<!ENTITY % NameValue "CDATA">
+<!ENTITY % PropType "(I|S|D|L|H|B)">
+<!ENTITY % VersionValue "CDATA">
+
+<!ELEMENT Prp (#PCDATA)>
+<!ELEMENT Node (Node|Prp)*>
+<!ELEMENT Nodes (Node)+>
+
+<!ATTLIST Nodes version CDATA "1">
+
+<!ATTLIST Node name CDATA #REQUIRED>
+
+<!ATTLIST Prp name CDATA #REQUIRED>
+<!ATTLIST Prp type CDATA #REQUIRED>
+<!ATTLIST Prp value CDATA #REQUIRED>
+]>
+<Nodes version="1">
+	<Node name="root">
+		<Node name="data">
+			<Node name="{24b6fa0b-0143-461a-9758-aeb9e9a9428b}">
+				<Prp name="default project" type="S" value="{DF78EA9D-7B09-43FD-8105-245005D56395}"/>
+			</Node>
+			<Node name="{df78ea9d-7b09-43fd-8105-245005d56395}">
+				<Prp name="relpath" type="S" value="DemoblazeUX\DemoblazeUX.mds.tcLS"/>
+			</Node>
+			<Node name="logs">
+				<Prp name="key" type="S" value="{BC79C86A-CC85-481D-8C9E-527B553FC081}"/>
+				<Prp name="relpath" type="S" value="Log"/>
+			</Node>
+			<Node name="variables">
+				<Node name="datav4">
+					<Node name="var0">
+						<Node name="value">
+							<Prp name="strvalue" type="H" value="6E006F007200650070006C00790040006D006100640065002E006C006C006300"/>
+						</Node>
+						<Prp name="name" type="S" value="AlertEmail"/>
+					</Node>
+					<Node name="var1">
+						<Node name="value">
+							<Prp name="strvalue" type="H" value="3800390036003100390033004400320046003400440038003800420046003300410043003900430039004600390037004400410046004200380033003700380046003600310044004600410031004100310036004500380031003000320041003600320037004400440039003200300031004100350039004100370034004200"/>
+						</Node>
+						<Prp name="name" type="S" value="AlertPass"/>
+					</Node>
+					<Node name="var2">
+						<Node name="value">
+							<Prp name="strvalue" type="H" value="300033002F00320031002F0032003300"/>
+						</Node>
+						<Prp name="name" type="S" value="CurrentDate"/>
+					</Node>
+					<Node name="var3">
+						<Node name="value">
+							<Prp name="strvalue" type="H" value="51004100"/>
+						</Node>
+						<Prp name="name" type="S" value="Environment"/>
+					</Node>
+				</Node>
+				<Prp name="version" type="I" value="4"/>
+			</Node>
+		</Node>
+		<Prp name="signature" type="S" value="{71078212-FAEB-4856-A901-B237C89E6B5C}"/>
+	</Node>
+</Nodes>

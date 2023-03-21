@@ -1,0 +1,828 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Root Signature="{5DCBAC3B-D39C-497C-9BE8-744CBADD37AA}" NameMappingVersion="7" SaveImages="0">
+	<Storages Current="0">
+		<Child Name="Default Configuration" />
+	</Storages>
+	<Nodes Name="NameMapping" Key="{BE401E45-B2D6-4FBA-931A-C2117D5C51AD}">
+		<Children>
+			<Child Name="Sys" Key="{8F4045BA-CB17-47A3-9AAC-50841CC62910}">
+				<TypeInfo Item0="{0D57DB80-23C8-485E-BCAF-9CACA04995F9}" />
+				<Properties>
+					<Property Name="Name">
+						<Value Value="Sys" />
+					</Property>
+				</Properties>
+				<Children>
+					<Child Name="browser" Key="{2550DE4A-FD08-4F2F-9D37-399C8CBC39BD}">
+						<TypeInfo Item0="{B1B769CD-C221-4AB3-81C6-BA6748364CF7}" />
+						<Properties>
+							<Property Name="ObjectType">
+								<Value Value="Browser" />
+							</Property>
+						</Properties>
+						<Children>
+							<Child Name="pageStore" Key="{C5B8A6AF-2EDE-4083-88FE-8500FCF71AC1}">
+								<Image FileName="2047077699" Left="8" Top="79" Right="1928" Bottom="1058" />
+								<TypeInfo Item0="{CD3F56E6-B43B-47C8-B011-0B8A667C2D13}" />
+								<Properties>
+									<Property Name="ObjectType">
+										<Value Value="Page" />
+									</Property>
+									<Property Name="URL">
+										<Value Value="https://demoblaze.com/*" />
+									</Property>
+								</Properties>
+								<Children>
+									<Child Name="mainBanner" Key="{6437C7FF-2764-4859-9348-E3B1BE08DAD9}">
+										<Image FileName="-84258366" Left="8" Top="79" Right="1911" Bottom="429" />
+										<TypeInfo Item0="{7B88D2EB-A772-4C8C-806B-75F0E4C7BD8D}" />
+										<Selectors>
+											<Selector>
+												<Value Value="#narvbarx" />
+											</Selector>
+											<Selector>
+												<Value Value="nav[contains(., &apos;PRODUCT STORE&apos;)]" />
+											</Selector>
+											<Selector>
+												<Value Value="nav[contains(@class, &apos;navbar&apos;)]" />
+											</Selector>
+											<Selector>
+												<Value Value="nav" />
+											</Selector>
+										</Selectors>
+										<Children>
+											<Child Name="menu" Key="{76F3369B-5ABA-4B96-ADFD-2B2F2D65A7EB}">
+												<Image FileName="-84258366" Left="571" Top="96" Right="1394" Bottom="136" />
+												<TypeInfo Item0="{7B88D2EB-A772-4C8C-806B-75F0E4C7BD8D}" />
+												<Selectors>
+													<Selector>
+														<Value Value="#navbarExample" />
+													</Selector>
+													<Selector>
+														<Value Value="//div[contains(., &apos;Home&apos;)]" />
+													</Selector>
+													<Selector>
+														<Value Value="//div[contains(@class, &apos;navbar-collapse&apos;)]" />
+													</Selector>
+													<Selector>
+														<Value Value="//nav/div" />
+													</Selector>
+												</Selectors>
+												<Children>
+													<Child Name="user" Key="{D7CB9365-5E06-445D-8925-0CDE792D06EF}">
+														<Image FileName="1893301763" Left="1271" Top="96" Right="1394" Bottom="136" />
+														<TypeInfo Item0="{4F1679D8-96C0-4363-9499-2961D42E1DA2}" />
+														<Selectors>
+															<Selector>
+																<Value Value="#nameofuser" />
+															</Selector>
+															<Selector>
+																<Value Value="xpath=//a[.=&apos;Welcome %varUser%&apos;]" />
+															</Selector>
+															<Selector>
+																<Value Value="xpath=//a[contains(., &apos;%varUser%&apos;)]" />
+															</Selector>
+															<Selector>
+																<Value Value="//li[7]/a[contains(@class, &apos;nav-link&apos;)]" />
+															</Selector>
+															<Selector>
+																<Value Value="//div[@id=&apos;navbarExample&apos;]//li[7]/a" />
+															</Selector>
+															<Selector>
+																<Value Value="//li[7]/a" />
+															</Selector>
+														</Selectors>
+													</Child>
+													<Child Name="aboutUs" Key="{FCF2D5A1-BDF5-4355-9A92-92E3A8BD1EE1}">
+														<Image FileName="-1040882064" Left="1143" Top="96" Right="1222" Bottom="136" />
+														<TypeInfo Item0="{4F1679D8-96C0-4363-9499-2961D42E1DA2}" />
+														<Selectors>
+															<Selector>
+																<Value Value="//a[.=&apos;About us&apos;]" />
+															</Selector>
+															<Selector>
+																<Value Value="//li[3]/a[contains(@class, &apos;nav-link&apos;)]" />
+															</Selector>
+															<Selector>
+																<Value Value="//div[@id=&apos;navbarExample&apos;]//li[3]/a" />
+															</Selector>
+															<Selector>
+																<Value Value="//li[3]/a" />
+															</Selector>
+														</Selectors>
+													</Child>
+													<Child Name="cart" Key="{30BC14E3-41D0-46B7-9A4D-D61DED840A98}">
+														<Image FileName="-754939587" Left="1223" Top="96" Right="1269" Bottom="136" />
+														<TypeInfo Item0="{4F1679D8-96C0-4363-9499-2961D42E1DA2}" />
+														<Selectors>
+															<Selector>
+																<Value Value="#cartur" />
+															</Selector>
+															<Selector>
+																<Value Value="//a[.=&apos;Cart&apos;]" />
+															</Selector>
+															<Selector>
+																<Value Value="//li[4]/a[contains(@class, &apos;nav-link&apos;)]" />
+															</Selector>
+															<Selector>
+																<Value Value="//div[@id=&apos;navbarExample&apos;]//li[4]/a" />
+															</Selector>
+															<Selector>
+																<Value Value="//li[4]/a" />
+															</Selector>
+														</Selectors>
+													</Child>
+													<Child Name="contact" Key="{5528DABB-A9E0-449C-86A2-0C1955445E96}">
+														<Image FileName="-401621361" Left="1072" Top="96" Right="1143" Bottom="136" />
+														<TypeInfo Item0="{4F1679D8-96C0-4363-9499-2961D42E1DA2}" />
+														<Selectors>
+															<Selector>
+																<Value Value="//a[.=&apos;Contact&apos;]" />
+															</Selector>
+															<Selector>
+																<Value Value="//li[2]/a[contains(@class, &apos;nav-link&apos;)]" />
+															</Selector>
+															<Selector>
+																<Value Value="//div[@id=&apos;navbarExample&apos;]//li[2]/a" />
+															</Selector>
+															<Selector>
+																<Value Value="//li[2]/a" />
+															</Selector>
+														</Selectors>
+													</Child>
+													<Child Name="home" Key="{BB2B8F09-D02E-4C17-8061-4E14EA9B08D7}">
+														<Image FileName="-401621361" Left="1013" Top="96" Right="1072" Bottom="136" />
+														<TypeInfo Item0="{4F1679D8-96C0-4363-9499-2961D42E1DA2}" />
+														<Selectors>
+															<Selector>
+																<Value Value="//a[contains(text(), &apos;Home&apos;)]" />
+															</Selector>
+															<Selector>
+																<Value Value="//li/a[contains(@class, &apos;nav-link&apos;)]" />
+															</Selector>
+															<Selector>
+																<Value Value="//div[@id=&apos;navbarExample&apos;]//li/a" />
+															</Selector>
+															<Selector>
+																<Value Value="//li/a" />
+															</Selector>
+														</Selectors>
+													</Child>
+													<Child Name="logIn" Key="{76B85FB5-F07D-46C3-8332-64275BFB0B98}">
+														<Image FileName="-754939587" Left="1269" Top="96" Right="1327" Bottom="136" />
+														<TypeInfo Item0="{4F1679D8-96C0-4363-9499-2961D42E1DA2}" />
+														<Selectors>
+															<Selector>
+																<Value Value="#login2" />
+															</Selector>
+															<Selector>
+																<Value Value="//a[.=&apos;Log in&apos;]" />
+															</Selector>
+															<Selector>
+																<Value Value="//li[5]/a[contains(@class, &apos;nav-link&apos;)]" />
+															</Selector>
+															<Selector>
+																<Value Value="//div[@id=&apos;navbarExample&apos;]//li[5]/a" />
+															</Selector>
+															<Selector>
+																<Value Value="//li[5]/a" />
+															</Selector>
+														</Selectors>
+													</Child>
+													<Child Name="signUp" Key="{5D09F23C-9D00-4312-831C-D6B95BE18776}">
+														<Image FileName="-98006734" Left="1327" Top="96" Right="1395" Bottom="136" />
+														<TypeInfo Item0="{4F1679D8-96C0-4363-9499-2961D42E1DA2}" />
+														<Selectors>
+															<Selector>
+																<Value Value="#signin2" />
+															</Selector>
+															<Selector>
+																<Value Value="//a[.=&apos;Sign up&apos;]" />
+															</Selector>
+															<Selector>
+																<Value Value="//li[8]/a[contains(@class, &apos;nav-link&apos;)]" />
+															</Selector>
+															<Selector>
+																<Value Value="//div[@id=&apos;navbarExample&apos;]//li[8]/a" />
+															</Selector>
+															<Selector>
+																<Value Value="//li[8]/a" />
+															</Selector>
+														</Selectors>
+													</Child>
+													<Child Name="logOut" Key="{76AB454D-7F9F-4D79-B157-F371CE9F0699}">
+														<Image FileName="1834838239" Left="1202" Top="96" Right="1271" Bottom="136" />
+														<TypeInfo Item0="{4F1679D8-96C0-4363-9499-2961D42E1DA2}" />
+														<Selectors>
+															<Selector>
+																<Value Value="#logout2" />
+															</Selector>
+															<Selector>
+																<Value Value="//a[.=&apos;Log out&apos;]" />
+															</Selector>
+															<Selector>
+																<Value Value="//li[6]/a[contains(@class, &apos;nav-link&apos;)]" />
+															</Selector>
+															<Selector>
+																<Value Value="//div[@id=&apos;navbarExample&apos;]//li[6]/a" />
+															</Selector>
+															<Selector>
+																<Value Value="//li[6]/a" />
+															</Selector>
+														</Selectors>
+													</Child>
+												</Children>
+											</Child>
+											<Child Name="imageSlider" Key="{50ED27C6-A815-48C5-B489-E8941AD94511}">
+												<Image FileName="-161739543" Left="560" Top="156" Right="1360" Bottom="461" />
+												<TypeInfo Item0="{7B88D2EB-A772-4C8C-806B-75F0E4C7BD8D}" />
+												<Selectors>
+													<Selector>
+														<Value Value="xpath=//div[@id=&apos;contcar&apos;]" />
+													</Selector>
+													<Selector>
+														<Value Value="xpath=(//div[@id=&apos;contcar&apos;])[1]" />
+													</Selector>
+													<Selector>
+														<Value Value="xpath=//div/div[@id=&apos;carouselExampleIndicators&apos;]" />
+													</Selector>
+													<Selector>
+														<Value Value="xpath=#contcar" />
+													</Selector>
+												</Selectors>
+												<Children>
+													<Child Name="slideRight" Key="{6459B895-0F54-4CB3-B9E8-E809E5BF20D7}">
+														<Image FileName="-1669797153" Left="1320" Top="156" Right="1438" Bottom="461" />
+														<TypeInfo Item0="{4F1679D8-96C0-4363-9499-2961D42E1DA2}" />
+														<Selectors>
+															<Selector>
+																<Value Value="//a[contains(., &apos;Next&apos;)]" />
+															</Selector>
+															<Selector>
+																<Value Value="//a[contains(@class, &apos;carousel-control-next&apos;)]" />
+															</Selector>
+														</Selectors>
+														<Children>
+															<Child Name="rightArrow" Key="{9E973C60-A0B2-408C-BE08-45458393EE0D}">
+																<Image FileName="-1669797153" Left="1369" Top="298" Right="1389" Bottom="318" />
+																<TypeInfo Item0="{7B88D2EB-A772-4C8C-806B-75F0E4C7BD8D}" />
+																<Selectors>
+																	<Selector>
+																		<Value Value="//span[contains(@class, &apos;carousel-control-next-icon&apos;)]" />
+																	</Selector>
+																	<Selector>
+																		<Value Value="//a[2]/span" />
+																	</Selector>
+																</Selectors>
+															</Child>
+														</Children>
+													</Child>
+													<Child Name="slideLeft" Key="{15C19C4B-638D-4E4A-8814-2A4FD675C225}">
+														<Image FileName="866332926" Left="497" Top="156" Right="615" Bottom="461" />
+														<TypeInfo Item0="{4F1679D8-96C0-4363-9499-2961D42E1DA2}" />
+														<Selectors>
+															<Selector>
+																<Value Value="//a[contains(., &apos;Previous&apos;)]" />
+															</Selector>
+															<Selector>
+																<Value Value="//a[contains(@class, &apos;carousel-control-prev&apos;)]" />
+															</Selector>
+														</Selectors>
+														<Children>
+															<Child Name="leftArrow" Key="{F5A220AC-15A5-4948-B54E-199A945758C0}">
+																<Image FileName="866332926" Left="546" Top="298" Right="566" Bottom="318" />
+																<TypeInfo Item0="{7B88D2EB-A772-4C8C-806B-75F0E4C7BD8D}" />
+																<Selectors>
+																	<Selector>
+																		<Value Value="//span[contains(@class, &apos;carousel-control-prev-icon&apos;)]" />
+																	</Selector>
+																	<Selector>
+																		<Value Value="//div[@id=&apos;contcar&apos;]/div/a/span" />
+																	</Selector>
+																</Selectors>
+															</Child>
+														</Children>
+													</Child>
+												</Children>
+											</Child>
+											<Child Name="storeLogo" Key="{97EAB3F5-B073-4432-9ABC-AE967F451A03}">
+												<Image FileName="1448238957" Left="24" Top="87" Right="251" Bottom="145" />
+												<TypeInfo Item0="{4F1679D8-96C0-4363-9499-2961D42E1DA2}" />
+												<Selectors>
+													<Selector>
+														<Value Value="#nava" />
+													</Selector>
+													<Selector>
+														<Value Value="//a[contains(text(), &apos;PRODUCT STORE&apos;)]" />
+													</Selector>
+													<Selector>
+														<Value Value="//a[contains(@class, &apos;navbar-brand&apos;)]" />
+													</Selector>
+													<Selector>
+														<Value Value="//nav/a" />
+													</Selector>
+												</Selectors>
+											</Child>
+										</Children>
+									</Child>
+									<Child Name="panelCategories" Key="{A20E7850-CB05-41BB-8204-9D603A98EA11}">
+										<Image FileName="-366254822" Left="390" Top="81" Right="675" Bottom="1189" />
+										<TypeInfo Item0="{7B88D2EB-A772-4C8C-806B-75F0E4C7BD8D}" />
+										<Selectors>
+											<Selector>
+												<Value Value="(//div)[88]" />
+											</Selector>
+										</Selectors>
+										<Children>
+											<Child Name="linkLaptops" Key="{28EABF06-A196-406A-9CFB-A46CE15F4530}">
+												<Image FileName="-366254822" Left="405" Top="199" Right="660" Bottom="255" />
+												<TypeInfo Item0="{4F1679D8-96C0-4363-9499-2961D42E1DA2}" />
+												<Selectors>
+													<Selector>
+														<Value Value="//a[.=&apos;Laptops&apos;]" />
+													</Selector>
+												</Selectors>
+											</Child>
+											<Child Name="linkMonitors" Key="{0D29C381-1BB0-4385-932B-30C6F2961FFE}">
+												<Image FileName="622765183" Left="405" Top="254" Right="660" Bottom="310" />
+												<TypeInfo Item0="{4F1679D8-96C0-4363-9499-2961D42E1DA2}" />
+												<Selectors>
+													<Selector>
+														<Value Value="//a[.=&apos;Monitors&apos;]" />
+													</Selector>
+												</Selectors>
+											</Child>
+											<Child Name="linkPhones" Key="{BFE58EDF-320B-481D-A9C7-E1EC46D8859F}">
+												<Image FileName="-366254822" Left="405" Top="144" Right="660" Bottom="200" />
+												<TypeInfo Item0="{4F1679D8-96C0-4363-9499-2961D42E1DA2}" />
+												<Selectors>
+													<Selector>
+														<Value Value="#itemc" />
+													</Selector>
+													<Selector>
+														<Value Value="//a[.=&apos;Phones&apos;]" />
+													</Selector>
+												</Selectors>
+											</Child>
+										</Children>
+									</Child>
+									<Child Name="tbodyShop" Key="{2B06A53C-2FB8-411F-B247-4CF7F0A6E6AC}">
+										<Image FileName="-202471444" Left="675" Top="81" Right="1530" Bottom="1136" />
+										<TypeInfo Item0="{7B88D2EB-A772-4C8C-806B-75F0E4C7BD8D}" />
+										<Selectors>
+											<Selector>
+												<Value Value="#tbodyid" />
+											</Selector>
+											<Selector>
+												<Value Value="//div[contains(@class, &apos;row&apos;)]/div/div[contains(@class, &apos;row&apos;)]" />
+											</Selector>
+										</Selectors>
+										<Children>
+											<Child Name="card" Key="{7B3A4327-85C4-47C2-A8B5-41C387D825BA}">
+												<Image FileName="-76133251" Left="675" Top="543" Right="960" Bottom="871" />
+												<TypeInfo Item0="{7B88D2EB-A772-4C8C-806B-75F0E4C7BD8D}" />
+												<Selectors>
+													<Selector>
+														<Value Value="xpath=//div[@id=&apos;tbodyid&apos;]/div[contains(., &apos;%varShopItem%&apos;)]" />
+													</Selector>
+												</Selectors>
+												<Children>
+													<Child Name="image" Key="{E015C4FA-009B-4B3B-AEBB-911B80F4BC2F}">
+														<Image FileName="-1627976798" Left="691" Top="544" Right="944" Bottom="686" />
+														<TypeInfo Item0="{7B88D2EB-A772-4C8C-806B-75F0E4C7BD8D}" />
+														<Selectors>
+															<Selector>
+																<Value Value="//div//a/img[contains(@class, &apos;card-img-top&apos;)]" />
+															</Selector>
+															<Selector>
+																<Value Value="//div//a/img" />
+															</Selector>
+														</Selectors>
+													</Child>
+													<Child Name="title" Key="{D125EDB1-64B5-44C6-B5E9-3A7706FBE8C0}">
+														<Image FileName="350203217" Left="711" Top="706" Right="924" Bottom="732" />
+														<TypeInfo Item0="{7B88D2EB-A772-4C8C-806B-75F0E4C7BD8D}" />
+														<Selectors>
+															<Selector>
+																<Value Value="xpath=//h4[.=&apos;%varShopItem%&apos;]" />
+															</Selector>
+															<Selector>
+																<Value Value="//div//h4[contains(@class, &apos;card-title&apos;)]" />
+															</Selector>
+															<Selector>
+																<Value Value="xpath=//div//h4[contains(., &apos;%varShopItem%&apos;)]" />
+															</Selector>
+														</Selectors>
+													</Child>
+													<Child Name="details" Key="{4C9A03F0-950C-4515-AB89-05B8186A96E3}">
+														<Image FileName="-246911474" Left="711" Top="775" Right="924" Bottom="850" />
+														<TypeInfo Item0="{7B88D2EB-A772-4C8C-806B-75F0E4C7BD8D}" />
+														<Selectors>
+															<Selector>
+																<Value Value="#article" />
+															</Selector>
+															<Selector>
+																<Value Value="//div//p[contains(@class, &apos;card-text&apos;)]" />
+															</Selector>
+															<Selector>
+																<Value Value="//div/div/div/div/p" />
+															</Selector>
+														</Selectors>
+													</Child>
+												</Children>
+											</Child>
+										</Children>
+									</Child>
+									<Child Name="modalLogIn" Key="{A11118E4-617D-446A-8EA2-F9A3958EC529}">
+										<Image FileName="1151253691" Left="710" Top="109" Right="1210" Bottom="507" />
+										<TypeInfo Item0="{7B88D2EB-A772-4C8C-806B-75F0E4C7BD8D}" />
+										<Selectors>
+											<Selector>
+												<Value Value="css=div[id=&apos;logInModal&apos;] div[class=&apos;modal-content&apos;]" />
+											</Selector>
+											<Selector>
+												<Value Value="xpath=//div[@id=&apos;logInModal&apos;]//div[@class=&apos;modal-content&apos;]" />
+											</Selector>
+										</Selectors>
+										<Children>
+											<Child Name="buttonLogIn" Key="{CA427EED-4192-473F-808B-9F9B650A9352}">
+												<Image FileName="771238095" Left="1116" Top="453" Right="1194" Bottom="491" />
+												<TypeInfo Item0="{48227189-E1F1-4A12-BBC6-190A980F0A7B}" />
+												<Selectors>
+													<Selector>
+														<Value Value="css=button[onclick=&apos;logIn()&apos;]" />
+													</Selector>
+													<Selector>
+														<Value Value="xpath=//button[normalize-space()=&apos;Log in&apos;]" />
+													</Selector>
+												</Selectors>
+											</Child>
+											<Child Name="close" Key="{38F3EB27-63DE-43DB-96E4-45DBEA030E44}">
+												<Image FileName="771238095" Left="1033" Top="453" Right="1108" Bottom="491" />
+												<TypeInfo Item0="{48227189-E1F1-4A12-BBC6-190A980F0A7B}" />
+												<Selectors>
+													<Selector>
+														<Value Value="css=div[id=&apos;logInModal&apos;] div[class=&apos;modal-footer&apos;] button:nth-child(1)" />
+													</Selector>
+													<Selector>
+														<Value Value="xpath=//div[@id=&apos;logInModal&apos;]//button[@aria-label=&apos;Close&apos;]" />
+													</Selector>
+												</Selectors>
+											</Child>
+											<Child Name="buttonClose" Key="{2AACBA91-57EB-4C1C-BAA0-2E09DFAA59B8}">
+												<Image FileName="-957216045" Left="1033" Top="453" Right="1108" Bottom="491" />
+												<TypeInfo Item0="{48227189-E1F1-4A12-BBC6-190A980F0A7B}" />
+												<Selectors>
+													<Selector>
+														<Value Value="css=div[id=&apos;logInModal&apos;] div[class=&apos;modal-footer&apos;] button:nth-child(1)" />
+													</Selector>
+													<Selector>
+														<Value Value="xpath=//div[@id=&apos;logInModal&apos;]//button[@type=&apos;button&apos;][normalize-space()=&apos;Close&apos;]" />
+													</Selector>
+												</Selectors>
+											</Child>
+											<Child Name="username" Key="{2DCA6B02-7457-40A4-8088-3ECDDE121A20}">
+												<Image FileName="-957216045" Left="726" Top="231" Right="1194" Bottom="269" />
+												<TypeInfo Item0="{DD46B0F0-6508-4731-939D-F6DDFC24BE96}" />
+												<Selectors>
+													<Selector>
+														<Value Value="#loginusername" />
+													</Selector>
+													<Selector>
+														<Value Value="xpath=//input[@id=&apos;loginusername&apos;]" />
+													</Selector>
+												</Selectors>
+											</Child>
+											<Child Name="password" Key="{D6A5A506-328A-40FB-817D-45F4F32DE748}">
+												<Image FileName="1151253691" Left="726" Top="330" Right="1194" Bottom="368" />
+												<TypeInfo Item0="{DD46B0F0-6508-4731-939D-F6DDFC24BE96}" />
+												<Selectors>
+													<Selector>
+														<Value Value="#loginpassword" />
+													</Selector>
+													<Selector>
+														<Value Value="xpath=//input[@id=&apos;loginpassword&apos;]" />
+													</Selector>
+												</Selectors>
+											</Child>
+										</Children>
+									</Child>
+									<Child Name="modalSignUp" Key="{5CE3DDE6-BBFA-404E-8459-646046A1B9E4}">
+										<Image FileName="1943674421" Left="710" Top="109" Right="1210" Bottom="507" />
+										<Selectors>
+											<Selector>
+												<Value Value="css=div[id=&apos;signInModal&apos;] div[class=&apos;modal-content&apos;]" />
+											</Selector>
+											<Selector>
+												<Value Value="xpath=//div[@id=&apos;signInModal&apos;]//div[@class=&apos;modal-content&apos;]" />
+											</Selector>
+										</Selectors>
+										<Children>
+											<Child Name="buttonSignUp" Key="{00870139-A0C7-49BE-9D04-F44C408C3C17}">
+												<Image FileName="-239687587" Left="1105" Top="453" Right="1193" Bottom="491" />
+												<Selectors>
+													<Selector>
+														<Value Value="css=button[onclick=&apos;register()&apos;]" />
+													</Selector>
+													<Selector>
+														<Value Value="xpath=//button[normalize-space()=&apos;Sign up&apos;]" />
+													</Selector>
+												</Selectors>
+											</Child>
+											<Child Name="close" Key="{6BC2A35D-2AE0-41FF-84B4-7952FCD90DC3}">
+												<Image FileName="1943674421" Left="1179" Top="126" Right="1193" Bottom="153" />
+												<Selectors>
+													<Selector>
+														<Value Value="css=div[id=&apos;signInModal&apos;] span[aria-hidden=&apos;true&apos;]" />
+													</Selector>
+													<Selector>
+														<Value Value="xpath=//div[@id=&apos;signInModal&apos;]//span[@aria-hidden=&apos;true&apos;][normalize-space()=&apos;×&apos;]" />
+													</Selector>
+												</Selectors>
+											</Child>
+											<Child Name="buttonClose" Key="{444D383D-DD75-4991-98D8-F7E026DBF87B}">
+												<Image FileName="448563777" Left="1022" Top="453" Right="1097" Bottom="491" />
+												<Selectors>
+													<Selector>
+														<Value Value="css=div[id=&apos;signInModal&apos;] div[class=&apos;modal-footer&apos;] button:nth-child(1)" />
+													</Selector>
+													<Selector>
+														<Value Value="xpath=//div[@id=&apos;signInModal&apos;]//button[@type=&apos;button&apos;][normalize-space()=&apos;Close&apos;]" />
+													</Selector>
+												</Selectors>
+											</Child>
+											<Child Name="username" Key="{1D628622-337E-42D4-8E43-CE75135AF0D0}">
+												<Image FileName="-239687587" Left="726" Top="231" Right="1194" Bottom="269" />
+												<Selectors>
+													<Selector>
+														<Value Value="css=#sign-username" />
+													</Selector>
+													<Selector>
+														<Value Value="xpath=//input[@id=&apos;sign-username&apos;]" />
+													</Selector>
+												</Selectors>
+											</Child>
+											<Child Name="password" Key="{B645E96A-0BD3-4938-8E77-3F72208A9030}">
+												<Image FileName="862063921" Left="726" Top="330" Right="1194" Bottom="368" />
+												<Selectors>
+													<Selector>
+														<Value Value="css=#sign-password" />
+													</Selector>
+													<Selector>
+														<Value Value="xpath=//input[@id=&apos;sign-password&apos;]" />
+													</Selector>
+												</Selectors>
+											</Child>
+										</Children>
+									</Child>
+									<Child Name="modalAboutUs" Key="{644ABD97-AEF0-4282-8A14-EAA2CE9C59B1}">
+										<Image FileName="246138304" Left="710" Top="109" Right="1210" Bottom="607" />
+										<Selectors>
+											<Selector>
+												<Value Value="css=div[id=&apos;videoModal&apos;] div[class=&apos;modal-content&apos;]" />
+											</Selector>
+											<Selector>
+												<Value Value="xpath=//div[@id=&apos;videoModal&apos;]//div[@class=&apos;modal-content&apos;]" />
+											</Selector>
+										</Selectors>
+										<Children>
+											<Child Name="close" Key="{3CA506F4-5E31-4333-A5BE-605BBA9172A5}">
+												<Image FileName="1741509044" Left="1179" Top="126" Right="1193" Bottom="153" />
+												<Selectors>
+													<Selector>
+														<Value Value="css=div[id=&apos;videoModal&apos;] div[class=&apos;modal-header&apos;] span[aria-hidden=&apos;true&apos;]" />
+													</Selector>
+													<Selector>
+														<Value Value="xpath=//div[@id=&apos;videoModal&apos;]//span[@aria-hidden=&apos;true&apos;][normalize-space()=&apos;×&apos;]" />
+													</Selector>
+												</Selectors>
+											</Child>
+											<Child Name="buttonClose" Key="{AE08CDFB-742E-4FDB-AC09-2DBC8023858B}">
+												<Image FileName="-1933085784" Left="1119" Top="553" Right="1194" Bottom="591" />
+												<Selectors>
+													<Selector>
+														<Value Value="css=div[id=&apos;videoModal&apos;] div[class=&apos;modal-footer&apos;] button[type=&apos;button&apos;]" />
+													</Selector>
+													<Selector>
+														<Value Value="xpath=//div[@id=&apos;videoModal&apos;]//button[@type=&apos;button&apos;][normalize-space()=&apos;Close&apos;]" />
+													</Selector>
+												</Selectors>
+											</Child>
+											<Child Name="video" Key="{F06E637F-91CD-4580-9C4B-CB739418A41F}">
+												<Image FileName="-1519927971" Left="760" Top="186" Right="1160" Bottom="506" />
+												<Selectors>
+													<Selector>
+														<Value Value="css=#example-video" />
+													</Selector>
+													<Selector>
+														<Value Value="xpath=//div[@id=&apos;example-video&apos;]" />
+													</Selector>
+												</Selectors>
+												<Children>
+													<Child Name="buttonPlay" Key="{BF1E9C25-7958-45C2-8A4C-5E6D36724C1F}">
+														<Image FileName="-950006030" Left="762" Top="188" Right="852" Bottom="237" />
+														<TypeInfo Item0="{48227189-E1F1-4A12-BBC6-190A980F0A7B}" />
+														<Selectors>
+															<Selector>
+																<Value Value="//button[.=&apos;Play Video&apos;]" />
+															</Selector>
+															<Selector>
+																<Value Value="//button[@title=&apos;Play Video&apos;]" />
+															</Selector>
+															<Selector>
+																<Value Value="//button[contains(@class, &apos;vjs-big-play-button&apos;)]" />
+															</Selector>
+															<Selector>
+																<Value Value="//div[@id=&apos;example-video&apos;]/button" />
+															</Selector>
+															<Selector>
+																<Value Value="//div[@role=&apos;dialog&apos;]//div[2]/form//button" />
+															</Selector>
+														</Selectors>
+													</Child>
+												</Children>
+											</Child>
+										</Children>
+									</Child>
+									<Child Name="modalContactUs" Key="{7C83870E-6793-41A5-8713-857BF8BE8BC9}">
+										<Image FileName="1474036994" Left="710" Top="109" Right="1210" Bottom="573" />
+										<Selectors>
+											<Selector>
+												<Value Value="css=div[id=&apos;exampleModal&apos;] div[role=&apos;document&apos;]" />
+											</Selector>
+											<Selector>
+												<Value Value="xpath=//div[@id=&apos;exampleModal&apos;]//div[@role=&apos;document&apos;]" />
+											</Selector>
+										</Selectors>
+										<Children>
+											<Child Name="buttonSendMsg" Key="{589781B7-0746-40E5-BA71-696660BF3365}">
+												<Image FileName="1484710004" Left="1053" Top="519" Right="1194" Bottom="557" />
+												<Selectors>
+													<Selector>
+														<Value Value="css=button[onclick=&apos;send()&apos;]" />
+													</Selector>
+													<Selector>
+														<Value Value="xpath=//button[normalize-space()=&apos;Send message&apos;]" />
+													</Selector>
+												</Selectors>
+											</Child>
+											<Child Name="close" Key="{F9D411AB-0A31-44A5-9608-FF18033BA2E0}">
+												<Image FileName="1052414326" Left="1179" Top="126" Right="1193" Bottom="153" />
+												<Selectors>
+													<Selector>
+														<Value Value="css=div[id=&apos;exampleModal&apos;] span[aria-hidden=&apos;true&apos;]" />
+													</Selector>
+													<Selector>
+														<Value Value="xpath=//div[@id=&apos;exampleModal&apos;]//span[@aria-hidden=&apos;true&apos;][normalize-space()=&apos;×&apos;]" />
+													</Selector>
+												</Selectors>
+											</Child>
+											<Child Name="buttonClose" Key="{1DC1DE9C-B03A-4FDA-B76E-719EC7C59873}">
+												<Image FileName="-709840022" Left="970" Top="519" Right="1045" Bottom="557" />
+												<Selectors>
+													<Selector>
+														<Value Value="css=div[id=&apos;exampleModal&apos;] div[class=&apos;modal-footer&apos;] button:nth-child(1)" />
+													</Selector>
+													<Selector>
+														<Value Value="xpath=//div[@id=&apos;exampleModal&apos;]//button[@type=&apos;button&apos;][normalize-space()=&apos;Close&apos;]" />
+													</Selector>
+												</Selectors>
+											</Child>
+											<Child Name="name" Key="{93F8EA4B-1390-4F0A-A6C3-A9C123CCDC25}">
+												<Image FileName="-709840022" Left="726" Top="330" Right="1194" Bottom="368" />
+												<Selectors>
+													<Selector>
+														<Value Value="css=#recipient-name" />
+													</Selector>
+													<Selector>
+														<Value Value="xpath=//input[@id=&apos;recipient-name&apos;]" />
+													</Selector>
+												</Selectors>
+											</Child>
+											<Child Name="email" Key="{356C5FFD-8FB0-43C8-9A0B-F180AA9C072F}">
+												<Image FileName="1474036994" Left="726" Top="231" Right="1194" Bottom="269" />
+												<Selectors>
+													<Selector>
+														<Value Value="css=#recipient-email" />
+													</Selector>
+													<Selector>
+														<Value Value="xpath=//input[@id=&apos;recipient-email&apos;]" />
+													</Selector>
+												</Selectors>
+											</Child>
+											<Child Name="message" Key="{7DB063E3-3488-48FD-8E9B-695594B12489}">
+												<Image FileName="2115446913" Left="726" Top="414" Right="1194" Bottom="472" />
+												<Selectors>
+													<Selector>
+														<Value Value="css=#message-text" />
+													</Selector>
+													<Selector>
+														<Value Value="xpath=//textarea[@id=&apos;message-text&apos;]" />
+													</Selector>
+												</Selectors>
+											</Child>
+										</Children>
+									</Child>
+									<Child Name="Alert" Key="{7AB543CC-A909-41B4-A5FF-9EA1C5363BB5}">
+										<Image FileName="-1127441574" Left="737" Top="70" Right="1199" Bottom="214" />
+										<TypeInfo Item0="{5CC45FD2-3ED1-4E8C-933E-8C16E4AB46A8}" />
+										<Properties>
+											<Property Name="ObjectType">
+												<Value Value="Alert" />
+											</Property>
+										</Properties>
+										<Children>
+											<Child Name="buttonOk" Key="{28E919B4-4146-46FA-A945-28CE2EE23D58}">
+												<Image FileName="-1127441574" Left="1112" Top="157" Right="1176" Bottom="189" />
+												<TypeInfo Item0="{DE4D70AC-5D8B-42CD-B706-2C8BC129FC1D}" />
+												<Properties>
+													<Property Name="ObjectType">
+														<Value Value="Button" />
+													</Property>
+													<Property Name="ObjectIdentifier">
+														<Value Value="OK" />
+													</Property>
+												</Properties>
+											</Child>
+										</Children>
+									</Child>
+								</Children>
+							</Child>
+						</Children>
+					</Child>
+				</Children>
+			</Child>
+		</Children>
+	</Nodes>
+	<LogicalNodes Name="Aliases" Owner="{BE401E45-B2D6-4FBA-931A-C2117D5C51AD}">
+		<Child Name="browser" Owner="{2550DE4A-FD08-4F2F-9D37-399C8CBC39BD}">
+			<Child Name="pageStore" Owner="{C5B8A6AF-2EDE-4083-88FE-8500FCF71AC1}">
+				<Child Name="tbodyShop" Owner="{2B06A53C-2FB8-411F-B247-4CF7F0A6E6AC}">
+					<Child Name="card" Owner="{7B3A4327-85C4-47C2-A8B5-41C387D825BA}">
+						<Child Name="image" Owner="{E015C4FA-009B-4B3B-AEBB-911B80F4BC2F}" />
+						<Child Name="title" Owner="{D125EDB1-64B5-44C6-B5E9-3A7706FBE8C0}" />
+						<Child Name="details" Owner="{4C9A03F0-950C-4515-AB89-05B8186A96E3}" />
+					</Child>
+				</Child>
+				<Child Name="panelCategories" Owner="{A20E7850-CB05-41BB-8204-9D603A98EA11}">
+					<Child Name="linkLaptops" Owner="{28EABF06-A196-406A-9CFB-A46CE15F4530}" />
+					<Child Name="linkMonitors" Owner="{0D29C381-1BB0-4385-932B-30C6F2961FFE}" />
+					<Child Name="linkPhones" Owner="{BFE58EDF-320B-481D-A9C7-E1EC46D8859F}" />
+				</Child>
+				<Child Name="modalSignUp" Owner="{5CE3DDE6-BBFA-404E-8459-646046A1B9E4}">
+					<Child Name="buttonSignUp" Owner="{00870139-A0C7-49BE-9D04-F44C408C3C17}" />
+					<Child Name="close" Owner="{6BC2A35D-2AE0-41FF-84B4-7952FCD90DC3}" />
+					<Child Name="buttonClose" Owner="{444D383D-DD75-4991-98D8-F7E026DBF87B}" />
+					<Child Name="username" Owner="{1D628622-337E-42D4-8E43-CE75135AF0D0}" />
+					<Child Name="password" Owner="{B645E96A-0BD3-4938-8E77-3F72208A9030}" />
+				</Child>
+				<Child Name="modalLogIn" Owner="{A11118E4-617D-446A-8EA2-F9A3958EC529}">
+					<Child Name="buttonLogIn" Owner="{CA427EED-4192-473F-808B-9F9B650A9352}" />
+					<Child Name="close" Owner="{38F3EB27-63DE-43DB-96E4-45DBEA030E44}" />
+					<Child Name="buttonClose" Owner="{2AACBA91-57EB-4C1C-BAA0-2E09DFAA59B8}" />
+					<Child Name="username" Owner="{2DCA6B02-7457-40A4-8088-3ECDDE121A20}" />
+					<Child Name="password" Owner="{D6A5A506-328A-40FB-817D-45F4F32DE748}" />
+				</Child>
+				<Child Name="modalContactUs" Owner="{7C83870E-6793-41A5-8713-857BF8BE8BC9}">
+					<Child Name="buttonSendMsg" Owner="{589781B7-0746-40E5-BA71-696660BF3365}" />
+					<Child Name="close" Owner="{F9D411AB-0A31-44A5-9608-FF18033BA2E0}" />
+					<Child Name="buttonClose" Owner="{1DC1DE9C-B03A-4FDA-B76E-719EC7C59873}" />
+					<Child Name="name" Owner="{93F8EA4B-1390-4F0A-A6C3-A9C123CCDC25}" />
+					<Child Name="email" Owner="{356C5FFD-8FB0-43C8-9A0B-F180AA9C072F}" />
+					<Child Name="message" Owner="{7DB063E3-3488-48FD-8E9B-695594B12489}" />
+				</Child>
+				<Child Name="modalAboutUs" Owner="{644ABD97-AEF0-4282-8A14-EAA2CE9C59B1}">
+					<Child Name="close" Owner="{3CA506F4-5E31-4333-A5BE-605BBA9172A5}" />
+					<Child Name="buttonClose" Owner="{AE08CDFB-742E-4FDB-AC09-2DBC8023858B}" />
+					<Child Name="video" Owner="{F06E637F-91CD-4580-9C4B-CB739418A41F}">
+						<Child Name="buttonPlay" Owner="{BF1E9C25-7958-45C2-8A4C-5E6D36724C1F}" />
+					</Child>
+				</Child>
+				<Child Name="mainBanner" Owner="{6437C7FF-2764-4859-9348-E3B1BE08DAD9}">
+					<Child Name="menu" Owner="{76F3369B-5ABA-4B96-ADFD-2B2F2D65A7EB}">
+						<Child Name="user" Owner="{D7CB9365-5E06-445D-8925-0CDE792D06EF}" />
+						<Child Name="aboutUs" Owner="{FCF2D5A1-BDF5-4355-9A92-92E3A8BD1EE1}" />
+						<Child Name="cart" Owner="{30BC14E3-41D0-46B7-9A4D-D61DED840A98}" />
+						<Child Name="contact" Owner="{5528DABB-A9E0-449C-86A2-0C1955445E96}" />
+						<Child Name="home" Owner="{BB2B8F09-D02E-4C17-8061-4E14EA9B08D7}" />
+						<Child Name="logIn" Owner="{76B85FB5-F07D-46C3-8332-64275BFB0B98}" />
+						<Child Name="signUp" Owner="{5D09F23C-9D00-4312-831C-D6B95BE18776}" />
+						<Child Name="logOut" Owner="{76AB454D-7F9F-4D79-B157-F371CE9F0699}" />
+					</Child>
+					<Child Name="imageSlider" Owner="{50ED27C6-A815-48C5-B489-E8941AD94511}">
+						<Child Name="slideRight" Owner="{6459B895-0F54-4CB3-B9E8-E809E5BF20D7}">
+							<Child Name="rightArrow" Owner="{9E973C60-A0B2-408C-BE08-45458393EE0D}" />
+						</Child>
+						<Child Name="slideLeft" Owner="{15C19C4B-638D-4E4A-8814-2A4FD675C225}">
+							<Child Name="leftArrow" Owner="{F5A220AC-15A5-4948-B54E-199A945758C0}" />
+						</Child>
+					</Child>
+					<Child Name="storeLogo" Owner="{97EAB3F5-B073-4432-9ABC-AE967F451A03}" />
+				</Child>
+				<Child Name="Alert" Owner="{7AB543CC-A909-41B4-A5FF-9EA1C5363BB5}">
+					<Child Name="buttonOk" Owner="{28E919B4-4146-46FA-A945-28CE2EE23D58}" />
+				</Child>
+			</Child>
+		</Child>
+	</LogicalNodes>
+</Root>

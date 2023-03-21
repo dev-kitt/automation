@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Scenarios>
+	<Feature Path="bddAuth.feature" />
+	<Feature Path="bddAboutUs.feature" />
+	<Feature Path="bddBrowseCatalog.feature" />
+	<Feature Path="bddCheckout.feature" />
+	<Feature Path="bddContactUs.feature" />
+	<Feature Path="bddShoppingCart.feature" />
+</Scenarios>

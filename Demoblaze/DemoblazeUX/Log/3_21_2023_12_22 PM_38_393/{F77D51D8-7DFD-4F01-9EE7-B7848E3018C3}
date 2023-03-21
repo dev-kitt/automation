@@ -1,0 +1,1152 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE Nodes [
+
+<!ENTITY % NameValue "CDATA">
+<!ENTITY % PropType "(I|S|D|L|H|B)">
+<!ENTITY % VersionValue "CDATA">
+
+<!ELEMENT Prp (#PCDATA)>
+<!ELEMENT Node (Node|Prp)*>
+<!ELEMENT Nodes (Node)+>
+
+<!ATTLIST Nodes version CDATA "1">
+
+<!ATTLIST Node name CDATA #REQUIRED>
+
+<!ATTLIST Prp name CDATA #REQUIRED>
+<!ATTLIST Prp type CDATA #REQUIRED>
+<!ATTLIST Prp value CDATA #REQUIRED>
+]>
+<Nodes version="1">
+	<Node name="root">
+		<Node name="message 18">
+			<Node name="visualizer">
+				<Node name="current">
+					<Prp name="click point x" type="I" value="1141"/>
+					<Prp name="object right" type="I" value="1185"/>
+					<Prp name="datetime" type="D" value="45006.6824977083"/>
+					<Prp name="rect color" type="I" value="255"/>
+					<Prp name="object left" type="I" value="1097"/>
+					<Prp name="storage file name" type="S" value=""/>
+					<Prp name="object top" type="I" value="445"/>
+					<Prp name="click point y" type="I" value="464"/>
+					<Prp name="version" type="I" value="2"/>
+					<Prp name="object bottom" type="I" value="483"/>
+					<Prp name="kind" type="I" value="0"/>
+					<Prp name="signature" type="S" value="{87B03792-E854-4F5D-9F33-165F1F874209}"/>
+					<Prp name="need update" type="B" value="0"/>
+					<Prp name="object name" type="S" value="Aliases.browser.pageStore.modalSignUp.buttonSignUp"/>
+					<Prp name="image file name" type="S" value="visImage3.png"/>
+					<Prp name="line #" type="I" value="52"/>
+				</Node>
+			</Node>
+			<Prp name="pictype" type="I" value="0"/>
+			<Prp name="id" type="I" value="18"/>
+			<Prp name="picture" type="S" value=""/>
+			<Prp name="unit id" type="I" value="3"/>
+			<Prp name="line no" type="I" value="52"/>
+			<Prp name="message" type="S" value="The window was clicked with the left mouse button."/>
+			<Prp name="type" type="I" value="1"/>
+			<Prp name="as html" type="B" value="0"/>
+			<Prp name="child index" type="I" value="-1"/>
+			<Prp name="remarks" type="S" value="A click at point (44, 19) with no key pressed.&#xA;&#xA;Tested object:&#xA;Aliases.browser.pageStore.modalSignUp.buttonSignUp&#xA;(Sys.Browser(&quot;chrome&quot;).Page(&quot;https://demoblaze.com/&quot;).FindElement(&quot;css=div[id='signInModal'] div[class='modal-content']&quot;).FindElement(&quot;button[onclick='register()']&quot;))"/>
+			<Prp name="link" type="S" value=""/>
+			<Prp name="owner id" type="I" value="11"/>
+			<Prp name="priority" type="I" value="300"/>
+			<Prp name="date" type="D" value="45006.5158327778"/>
+		</Node>
+		<Node name="message 3">
+			<Prp name="pictype" type="I" value="0"/>
+			<Prp name="id" type="I" value="3"/>
+			<Prp name="picture" type="S" value=""/>
+			<Prp name="unit id" type="I" value="2"/>
+			<Prp name="line no" type="I" value="10"/>
+			<Prp name="message" type="S" value="Given The user has an open Browser on the homepage"/>
+			<Prp name="type" type="I" value="0"/>
+			<Prp name="as html" type="B" value="0"/>
+			<Prp name="child index" type="I" value="-1"/>
+			<Prp name="remarks" type="S" value=""/>
+			<Prp name="link" type="S" value=""/>
+			<Prp name="owner id" type="I" value="2"/>
+			<Prp name="priority" type="I" value="300"/>
+			<Prp name="date" type="D" value="45006.5157553588"/>
+		</Node>
+		<Node name="message 24">
+			<Prp name="pictype" type="I" value="0"/>
+			<Prp name="id" type="I" value="24"/>
+			<Prp name="picture" type="S" value=""/>
+			<Prp name="unit id" type="I" value="3"/>
+			<Prp name="line no" type="I" value="10"/>
+			<Prp name="message" type="S" value="Navigating to the https://demoblaze.com/ page."/>
+			<Prp name="type" type="I" value="1"/>
+			<Prp name="as html" type="B" value="0"/>
+			<Prp name="child index" type="I" value="-1"/>
+			<Prp name="remarks" type="S" value="URL: https://demoblaze.com/&#xA;&#xA;Aliases.browser"/>
+			<Prp name="link" type="S" value=""/>
+			<Prp name="owner id" type="I" value="23"/>
+			<Prp name="priority" type="I" value="300"/>
+			<Prp name="date" type="D" value="45006.515876713"/>
+		</Node>
+		<Node name="item 4">
+			<Prp name="stacktext" type="S" value="Then The user can logout"/>
+			<Prp name="unit id" type="I" value="2"/>
+			<Prp name="line no" type="I" value="25"/>
+		</Node>
+		<Node name="message 31">
+			<Prp name="pictype" type="I" value="0"/>
+			<Prp name="id" type="I" value="31"/>
+			<Prp name="picture" type="S" value=""/>
+			<Prp name="unit id" type="I" value="2"/>
+			<Prp name="line no" type="I" value="20"/>
+			<Prp name="message" type="S" value="Then The user can login"/>
+			<Prp name="type" type="I" value="0"/>
+			<Prp name="as html" type="B" value="0"/>
+			<Prp name="child index" type="I" value="-1"/>
+			<Prp name="remarks" type="S" value=""/>
+			<Prp name="link" type="S" value=""/>
+			<Prp name="owner id" type="I" value="22"/>
+			<Prp name="priority" type="I" value="300"/>
+			<Prp name="date" type="D" value="45006.5159062616"/>
+		</Node>
+		<Node name="message 43">
+			<Prp name="pictype" type="I" value="0"/>
+			<Prp name="id" type="I" value="43"/>
+			<Prp name="picture" type="S" value=""/>
+			<Prp name="unit id" type="I" value="3"/>
+			<Prp name="line no" type="I" value="19"/>
+			<Prp name="message" type="S" value="Navigating to the https://demoblaze.com/ page."/>
+			<Prp name="type" type="I" value="1"/>
+			<Prp name="as html" type="B" value="0"/>
+			<Prp name="child index" type="I" value="-1"/>
+			<Prp name="remarks" type="S" value="URL: https://demoblaze.com/&#xA;&#xA;Aliases.browser"/>
+			<Prp name="link" type="S" value=""/>
+			<Prp name="owner id" type="I" value="42"/>
+			<Prp name="priority" type="I" value="300"/>
+			<Prp name="date" type="D" value="45006.5159739699"/>
+		</Node>
+		<Node name="message 7">
+			<Prp name="pictype" type="I" value="0"/>
+			<Prp name="id" type="I" value="7"/>
+			<Prp name="picture" type="S" value=""/>
+			<Prp name="unit id" type="I" value="3"/>
+			<Prp name="line no" type="I" value="19"/>
+			<Prp name="message" type="S" value="Navigating to the https://demoblaze.com/ page."/>
+			<Prp name="type" type="I" value="1"/>
+			<Prp name="as html" type="B" value="0"/>
+			<Prp name="child index" type="I" value="-1"/>
+			<Prp name="remarks" type="S" value="URL: https://demoblaze.com/&#xA;&#xA;Aliases.browser"/>
+			<Prp name="link" type="S" value=""/>
+			<Prp name="owner id" type="I" value="6"/>
+			<Prp name="priority" type="I" value="300"/>
+			<Prp name="date" type="D" value="45006.5158095949"/>
+		</Node>
+		<Node name="message 21">
+			<Prp name="pictype" type="I" value="0"/>
+			<Prp name="id" type="I" value="21"/>
+			<Prp name="picture" type="S" value=""/>
+			<Prp name="unit id" type="I" value="3"/>
+			<Prp name="line no" type="I" value="54"/>
+			<Prp name="message" type="S" value="| SignUp Verified |"/>
+			<Prp name="type" type="I" value="7"/>
+			<Prp name="as html" type="B" value="0"/>
+			<Prp name="child index" type="I" value="-1"/>
+			<Prp name="remarks" type="S" value=""/>
+			<Prp name="link" type="S" value=""/>
+			<Prp name="owner id" type="I" value="11"/>
+			<Prp name="priority" type="I" value="300"/>
+			<Prp name="date" type="D" value="45006.5158534606"/>
+		</Node>
+		<Node name="message 15">
+			<Prp name="pictype" type="I" value="0"/>
+			<Prp name="id" type="I" value="15"/>
+			<Prp name="picture" type="S" value=""/>
+			<Prp name="unit id" type="I" value="3"/>
+			<Prp name="line no" type="I" value="51"/>
+			<Prp name="message" type="S" value="Improve your test performance."/>
+			<Prp name="type" type="I" value="0"/>
+			<Prp name="as html" type="B" value="-1"/>
+			<Prp name="child index" type="I" value="-1"/>
+			<Prp name="remarks" type="S" value="&lt;html&gt;&lt;style&gt;body {font-family : Segoe UI, Tahoma, Arial, Helvetica, sans-serif; font-size : 10pt; font-weight : normal; padding : 14px 8px 8px 14px; margin : 0 0 0 0;} p {margin : 4px 0 4px 0; padding : 0 0 0 0;} h4 {font-size: 10pt; font-weight : bold; margin : 12px 0 0 16px; padding : 0 0 0 0;} table {margin-left : 16px; border-top: 1px solid grey;} td {font-size : 10pt; font-weight : normal; padding-left : 8px;} &lt;/style&gt;&lt;style&gt;p, td, th{font-size: 10pt;} td, th {border-bottom: 1px solid #cdcdcd; padding: 2px 10px 2px 10px;}table.tableIntelegentFix th {text-align: left; background: #cdcdcd; font-weight : normal;}  p {padding : 0; margin : 4 0 4 0px; line-height: 16pt;} table {border: 0px;}&lt;/style&gt;&lt;body&gt;&lt;p&gt;You can improve the performance of the object search in the test.&lt;/p&gt;&lt;p&gt;The &lt;code&gt;NameMapping.&amp;#8203;Sys.&amp;#8203;browser.&amp;#8203;pageStore.&amp;#8203;modalSignUp.&amp;#8203;&lt;a href=&quot;namemapping://{03CA21C8-986C-4305-9FE1-668E8BDB458A}.{B645E96A-0BD3-4938-8E77-3F72208A9030}&quot; title=&quot;Missing object. Click to view and change its recognition settings.&quot;&gt;&lt;span style=&quot;color: red; font-weight: bold;&quot;&gt;password&lt;/span&gt;&lt;/a&gt;&lt;/code&gt; object&lt;/p&gt;&lt;p&gt;can be found faster if you make &lt;code&gt;#sign-password&lt;/code&gt; the first selector in its selector list.&lt;/p&gt;&lt;p&gt;&amp;nbsp;&lt;br/&gt;&lt;/p&gt;&lt;p&gt; &lt;style&gt; a.btn { background-color: #00b2ff; color: white; padding: 5px 20px; text-decoration: none; font-weight : bold; } &lt;/style&gt;&lt;a class=&quot;btn&quot; href=&quot;reorderselectors://54Wh5r2zAQAEAHJvb3QGAAQAdHlwZQEACwBSZWNvZ25pdGlvbgkAcHJvcGNvdW50AAAAAAQAbW9k&#xA;ZQAAAgAGAGNvbmZpZwEAFQBEZWZhdWx0IENvbmZpZ3VyYXRpb24HAHByb2plY3QBACQAMDNDQTIx&#xA;Qzh4OTg2Q3g0MzA1eDlGRTF4NjY4RThCREI0NThBAgBubQEAJABCNjQ1RTk2QXgwQkQzeDQ5Mzh4&#xA;OEU3N3gzRjcyMjA4QTkwMzAEAAUAbmFtZXMAAAAACwBmb3VuZHZhbHVlcwMAAQAwAQAwADAwMDAw&#xA;MDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMAEAMgEAwokAQDc4MDA3&#xA;MDAwNjEwMDc0MDA2ODAwM0QwMDJGMDAyRjAwNjkwMDZFMDA3MDAwNzUwMDc0MDA1QjAwNDAwMDY5&#xA;MDA2NDAwM0QwMDI3MDA3MzAwNjkwMDY3MDA2RTAwMkQwMDcwMDA2MTAwNzMwMDczMDA3NzAwNkYw&#xA;MDcyMDA2NDAwMjcwMDVEMDABADEBAEkAQDYzMDA3MzAwNzMwMDNEMDAyMzAwNzMwMDY5MDA2NzAw&#xA;NkUwMDJEMDA3MDAwNjEwMDczMDA3MzAwNzcwMDZGMDA3MjAwNjQwMAAABgB2YWx1ZXMCAAEAMAEA&#xA;SQBANjMwMDczMDA3MzAwM0QwMDIzMDA3MzAwNjkwMDY3MDA2RTAwMkQwMDcwMDA2MTAwNzMwMDcz&#xA;MDA3NzAwNkYwMDcyMDA2NDAwAQAxAQDCiQBANzgwMDcwMDA2MTAwNzQwMDY4MDAzRDAwMkYwMDJG&#xA;MDA2OTAwNkUwMDcwMDA3NTAwNzQwMDVCMDA0MDAwNjkwMDY0MDAzRDAwMjcwMDczMDA2OTAwNjcw&#xA;MDZFMDAyRDAwNzAwMDYxMDA3MzAwNzMwMDc3MDA2RjAwNzIwMDY0MDAyNzAwNUQwMAAABwBtYXRj&#xA;aGVkAAAAAA==&quot;&gt;Improve Performance&lt;/a&gt;&lt;/p&gt;&lt;br/&gt;&lt;!--p&gt;&lt;b style=&quot;color: #777;&quot;&gt;Tips&lt;/b&gt;&lt;/p&gt;&lt;ul style=&quot;margin-top: 10px&quot;&gt;&lt;li&gt;&lt;/li&gt;&lt;/ul--&gt;&lt;/body&gt;&lt;/html&gt;"/>
+			<Prp name="link" type="S" value=""/>
+			<Prp name="owner id" type="I" value="11"/>
+			<Prp name="priority" type="I" value="500"/>
+			<Prp name="date" type="D" value="45006.5158240162"/>
+		</Node>
+		<Node name="message 29">
+			<Prp name="pictype" type="I" value="0"/>
+			<Prp name="id" type="I" value="29"/>
+			<Prp name="picture" type="S" value=""/>
+			<Prp name="unit id" type="I" value="2"/>
+			<Prp name="line no" type="I" value="19"/>
+			<Prp name="message" type="S" value="When The user navbar menu is verified"/>
+			<Prp name="type" type="I" value="0"/>
+			<Prp name="as html" type="B" value="0"/>
+			<Prp name="child index" type="I" value="-1"/>
+			<Prp name="remarks" type="S" value=""/>
+			<Prp name="link" type="S" value=""/>
+			<Prp name="owner id" type="I" value="22"/>
+			<Prp name="priority" type="I" value="300"/>
+			<Prp name="date" type="D" value="45006.5159028241"/>
+		</Node>
+		<Node name="message 45">
+			<Prp name="pictype" type="I" value="0"/>
+			<Prp name="id" type="I" value="45"/>
+			<Prp name="picture" type="S" value=""/>
+			<Prp name="unit id" type="I" value="2"/>
+			<Prp name="line no" type="I" value="24"/>
+			<Prp name="message" type="S" value="When The user navbar menu is verified"/>
+			<Prp name="type" type="I" value="0"/>
+			<Prp name="as html" type="B" value="0"/>
+			<Prp name="child index" type="I" value="-1"/>
+			<Prp name="remarks" type="S" value=""/>
+			<Prp name="link" type="S" value=""/>
+			<Prp name="owner id" type="I" value="38"/>
+			<Prp name="priority" type="I" value="300"/>
+			<Prp name="date" type="D" value="45006.5159750579"/>
+		</Node>
+		<Node name="message 48">
+			<Prp name="pictype" type="I" value="0"/>
+			<Prp name="id" type="I" value="48"/>
+			<Prp name="picture" type="S" value=""/>
+			<Prp name="unit id" type="I" value="3"/>
+			<Prp name="line no" type="I" value="34"/>
+			<Prp name="message" type="S" value="| Nav Menu Verified |"/>
+			<Prp name="type" type="I" value="7"/>
+			<Prp name="as html" type="B" value="0"/>
+			<Prp name="child index" type="I" value="-1"/>
+			<Prp name="remarks" type="S" value=""/>
+			<Prp name="link" type="S" value=""/>
+			<Prp name="owner id" type="I" value="45"/>
+			<Prp name="priority" type="I" value="300"/>
+			<Prp name="date" type="D" value="45006.5159849884"/>
+		</Node>
+		<Node name="message 8">
+			<Prp name="pictype" type="I" value="0"/>
+			<Prp name="id" type="I" value="8"/>
+			<Prp name="picture" type="S" value=""/>
+			<Prp name="unit id" type="I" value="3"/>
+			<Prp name="line no" type="I" value="21"/>
+			<Prp name="message" type="S" value="| Demoblaze Webpage Active |"/>
+			<Prp name="type" type="I" value="7"/>
+			<Prp name="as html" type="B" value="0"/>
+			<Prp name="child index" type="I" value="-1"/>
+			<Prp name="remarks" type="S" value=""/>
+			<Prp name="link" type="S" value=""/>
+			<Prp name="owner id" type="I" value="6"/>
+			<Prp name="priority" type="I" value="300"/>
+			<Prp name="date" type="D" value="45006.5158102199"/>
+		</Node>
+		<Node name="item 5">
+			<Prp name="stacktext" type="S" value="Verify Demoblaze Logout"/>
+			<Prp name="unit id" type="I" value="2"/>
+			<Prp name="line no" type="I" value="22"/>
+		</Node>
+		<Node name="message 17">
+			<Prp name="pictype" type="I" value="0"/>
+			<Prp name="id" type="I" value="17"/>
+			<Prp name="picture" type="S" value=""/>
+			<Prp name="unit id" type="I" value="3"/>
+			<Prp name="line no" type="I" value="52"/>
+			<Prp name="message" type="S" value="Improve your test performance."/>
+			<Prp name="type" type="I" value="0"/>
+			<Prp name="as html" type="B" value="-1"/>
+			<Prp name="child index" type="I" value="-1"/>
+			<Prp name="remarks" type="S" value="&lt;html&gt;&lt;style&gt;body {font-family : Segoe UI, Tahoma, Arial, Helvetica, sans-serif; font-size : 10pt; font-weight : normal; padding : 14px 8px 8px 14px; margin : 0 0 0 0;} p {margin : 4px 0 4px 0; padding : 0 0 0 0;} h4 {font-size: 10pt; font-weight : bold; margin : 12px 0 0 16px; padding : 0 0 0 0;} table {margin-left : 16px; border-top: 1px solid grey;} td {font-size : 10pt; font-weight : normal; padding-left : 8px;} &lt;/style&gt;&lt;style&gt;p, td, th{font-size: 10pt;} td, th {border-bottom: 1px solid #cdcdcd; padding: 2px 10px 2px 10px;}table.tableIntelegentFix th {text-align: left; background: #cdcdcd; font-weight : normal;}  p {padding : 0; margin : 4 0 4 0px; line-height: 16pt;} table {border: 0px;}&lt;/style&gt;&lt;body&gt;&lt;p&gt;You can improve the performance of the object search in the test.&lt;/p&gt;&lt;p&gt;The &lt;code&gt;NameMapping.&amp;#8203;Sys.&amp;#8203;browser.&amp;#8203;pageStore.&amp;#8203;modalSignUp.&amp;#8203;&lt;a href=&quot;namemapping://{03CA21C8-986C-4305-9FE1-668E8BDB458A}.{00870139-A0C7-49BE-9D04-F44C408C3C17}&quot; title=&quot;Missing object. Click to view and change its recognition settings.&quot;&gt;&lt;span style=&quot;color: red; font-weight: bold;&quot;&gt;buttonSignUp&lt;/span&gt;&lt;/a&gt;&lt;/code&gt; object&lt;/p&gt;&lt;p&gt;can be found faster if you make &lt;code&gt;button[onclick='register()']&lt;/code&gt; the first selector in its selector list.&lt;/p&gt;&lt;p&gt;&amp;nbsp;&lt;br/&gt;&lt;/p&gt;&lt;p&gt; &lt;style&gt; a.btn { background-color: #00b2ff; color: white; padding: 5px 20px; text-decoration: none; font-weight : bold; } &lt;/style&gt;&lt;a class=&quot;btn&quot; href=&quot;reorderselectors://54Wh5r2zAQAEAHJvb3QGAAQAdHlwZQEACwBSZWNvZ25pdGlvbgQAbW9kZQAAAgACAG5tAQAkADAw&#xA;ODcwMTM5eEEwQzd4NDlCRXg5RDA0eEY0NEM0MDhDM0MxNwYAY29uZmlnAQAVAERlZmF1bHQgQ29u&#xA;ZmlndXJhdGlvbgcAcHJvamVjdAEAJAAwM0NBMjFDOHg5ODZDeDQzMDV4OUZFMXg2NjhFOEJEQjQ1&#xA;OEEJAHByb3Bjb3VudAAAAAAEAAYAdmFsdWVzAgABADABAMKBAEA2MzAwNzMwMDczMDAzRDAwNjIw&#xA;MDc1MDA3NDAwNzQwMDZGMDA2RTAwNUIwMDZGMDA2RTAwNjMwMDZDMDA2OTAwNjMwMDZCMDAzRDAw&#xA;MjcwMDcyMDA2NTAwNjcwMDY5MDA3MzAwNzQwMDY1MDA3MjAwMjgwMDI5MDAyNzAwNUQwMAEAMQEA&#xA;wq0AQDc4MDA3MDAwNjEwMDc0MDA2ODAwM0QwMDJGMDAyRjAwNjIwMDc1MDA3NDAwNzQwMDZGMDA2&#xA;RTAwNUIwMDZFMDA2RjAwNzIwMDZEMDA2MTAwNkMwMDY5MDA3QTAwNjUwMDJEMDA3MzAwNzAwMDYx&#xA;MDA2MzAwNjUwMDI4MDAyOTAwM0QwMDI3MDA1MzAwNjkwMDY3MDA2RTAwMjAwMDc1MDA3MDAwMjcw&#xA;MDVEMDAAAAUAbmFtZXMAAAAACwBmb3VuZHZhbHVlcwMAAQAwAQAwADAwMDAwMDAwMDAwMDAwMDAw&#xA;MDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMAEAMgEAwq0AQDc4MDA3MDAwNjEwMDc0MDA2&#xA;ODAwM0QwMDJGMDAyRjAwNjIwMDc1MDA3NDAwNzQwMDZGMDA2RTAwNUIwMDZFMDA2RjAwNzIwMDZE&#xA;MDA2MTAwNkMwMDY5MDA3QTAwNjUwMDJEMDA3MzAwNzAwMDYxMDA2MzAwNjUwMDI4MDAyOTAwM0Qw&#xA;MDI3MDA1MzAwNjkwMDY3MDA2RTAwMjAwMDc1MDA3MDAwMjcwMDVEMDABADEBAMKBAEA2MzAwNzMw&#xA;MDczMDAzRDAwNjIwMDc1MDA3NDAwNzQwMDZGMDA2RTAwNUIwMDZGMDA2RTAwNjMwMDZDMDA2OTAw&#xA;NjMwMDZCMDAzRDAwMjcwMDcyMDA2NTAwNjcwMDY5MDA3MzAwNzQwMDY1MDA3MjAwMjgwMDI5MDAy&#xA;NzAwNUQwMAAABwBtYXRjaGVkAAAAAA==&quot;&gt;Improve Performance&lt;/a&gt;&lt;/p&gt;&lt;br/&gt;&lt;!--p&gt;&lt;b style=&quot;color: #777;&quot;&gt;Tips&lt;/b&gt;&lt;/p&gt;&lt;ul style=&quot;margin-top: 10px&quot;&gt;&lt;li&gt;&lt;/li&gt;&lt;/ul--&gt;&lt;/body&gt;&lt;/html&gt;"/>
+			<Prp name="link" type="S" value=""/>
+			<Prp name="owner id" type="I" value="11"/>
+			<Prp name="priority" type="I" value="500"/>
+			<Prp name="date" type="D" value="45006.5158278588"/>
+		</Node>
+		<Node name="message 42">
+			<Prp name="pictype" type="I" value="0"/>
+			<Prp name="id" type="I" value="42"/>
+			<Prp name="picture" type="S" value=""/>
+			<Prp name="unit id" type="I" value="2"/>
+			<Prp name="line no" type="I" value="23"/>
+			<Prp name="message" type="S" value="Given The user has an active session in &quot;https://demoblaze.com/&quot;"/>
+			<Prp name="type" type="I" value="0"/>
+			<Prp name="as html" type="B" value="0"/>
+			<Prp name="child index" type="I" value="-1"/>
+			<Prp name="remarks" type="S" value=""/>
+			<Prp name="link" type="S" value=""/>
+			<Prp name="owner id" type="I" value="38"/>
+			<Prp name="priority" type="I" value="300"/>
+			<Prp name="date" type="D" value="45006.5159509838"/>
+		</Node>
+		<Node name="message 25">
+			<Prp name="pictype" type="I" value="0"/>
+			<Prp name="id" type="I" value="25"/>
+			<Prp name="picture" type="S" value=""/>
+			<Prp name="unit id" type="I" value="3"/>
+			<Prp name="line no" type="I" value="12"/>
+			<Prp name="message" type="S" value="| Browser Launched &amp; Maximized | - https://demoblaze.com/"/>
+			<Prp name="type" type="I" value="7"/>
+			<Prp name="as html" type="B" value="0"/>
+			<Prp name="child index" type="I" value="-1"/>
+			<Prp name="remarks" type="S" value=""/>
+			<Prp name="link" type="S" value=""/>
+			<Prp name="owner id" type="I" value="23"/>
+			<Prp name="priority" type="I" value="300"/>
+			<Prp name="date" type="D" value="45006.5158774074"/>
+		</Node>
+		<Node name="message 1">
+			<Prp name="pictype" type="I" value="0"/>
+			<Prp name="id" type="I" value="1"/>
+			<Prp name="picture" type="S" value=""/>
+			<Prp name="unit id" type="I" value="1"/>
+			<Prp name="line no" type="I" value="104"/>
+			<Prp name="message" type="S" value="No files were found."/>
+			<Prp name="type" type="I" value="0"/>
+			<Prp name="as html" type="B" value="0"/>
+			<Prp name="child index" type="I" value="-1"/>
+			<Prp name="remarks" type="S" value=""/>
+			<Prp name="link" type="S" value=""/>
+			<Prp name="owner id" type="I" value="-1"/>
+			<Prp name="priority" type="I" value="300"/>
+			<Prp name="date" type="D" value="45006.5157480093"/>
+		</Node>
+		<Node name="item 3">
+			<Prp name="stacktext" type="S" value="bddAuth"/>
+			<Prp name="unit id" type="I" value="2"/>
+			<Prp name="line no" type="I" value="7"/>
+		</Node>
+		<Node name="message 52">
+			<Prp name="pictype" type="I" value="0"/>
+			<Prp name="id" type="I" value="52"/>
+			<Prp name="picture" type="S" value=""/>
+			<Prp name="unit id" type="I" value="4"/>
+			<Prp name="line no" type="I" value="11"/>
+			<Prp name="message" type="S" value="STOP | Tue Mar 21 2023 12:23:11 GMT-0400 (Eastern Daylight Time)"/>
+			<Prp name="type" type="I" value="7"/>
+			<Prp name="as html" type="B" value="0"/>
+			<Prp name="child index" type="I" value="-1"/>
+			<Prp name="remarks" type="S" value=""/>
+			<Prp name="link" type="S" value=""/>
+			<Prp name="owner id" type="I" value="49"/>
+			<Prp name="priority" type="I" value="300"/>
+			<Prp name="date" type="D" value="45006.5161110764"/>
+		</Node>
+		<Node name="item 2">
+			<Prp name="stacktext" type="S" value="Verify Demoblaze Logout"/>
+			<Prp name="unit id" type="I" value="2"/>
+			<Prp name="line no" type="I" value="22"/>
+		</Node>
+		<Node name="message 32">
+			<Node name="visualizer">
+				<Node name="current">
+					<Prp name="click point x" type="I" value="1290"/>
+					<Prp name="object right" type="I" value="1319"/>
+					<Prp name="datetime" type="D" value="45006.6825759838"/>
+					<Prp name="rect color" type="I" value="255"/>
+					<Prp name="object left" type="I" value="1261"/>
+					<Prp name="storage file name" type="S" value=""/>
+					<Prp name="object top" type="I" value="88"/>
+					<Prp name="click point y" type="I" value="108"/>
+					<Prp name="version" type="I" value="2"/>
+					<Prp name="object bottom" type="I" value="128"/>
+					<Prp name="kind" type="I" value="0"/>
+					<Prp name="signature" type="S" value="{87B03792-E854-4F5D-9F33-165F1F874209}"/>
+					<Prp name="need update" type="B" value="0"/>
+					<Prp name="object name" type="S" value="Aliases.browser.pageStore.mainBanner.menu.logIn"/>
+					<Prp name="image file name" type="S" value="visImage5.png"/>
+					<Prp name="line #" type="I" value="63"/>
+				</Node>
+			</Node>
+			<Prp name="pictype" type="I" value="0"/>
+			<Prp name="id" type="I" value="32"/>
+			<Prp name="picture" type="S" value=""/>
+			<Prp name="unit id" type="I" value="3"/>
+			<Prp name="line no" type="I" value="63"/>
+			<Prp name="message" type="S" value="The window was clicked with the left mouse button."/>
+			<Prp name="type" type="I" value="1"/>
+			<Prp name="as html" type="B" value="0"/>
+			<Prp name="child index" type="I" value="-1"/>
+			<Prp name="remarks" type="S" value="A click at point (29, 20) with no key pressed.&#xA;&#xA;Tested object:&#xA;Aliases.browser.pageStore.mainBanner.menu.logIn&#xA;(Sys.Browser(&quot;chrome&quot;).Page(&quot;https://demoblaze.com/&quot;).FindElement(&quot;#narvbarx&quot;).FindElement(&quot;#navbarExample&quot;).FindElement(&quot;#login2&quot;))"/>
+			<Prp name="link" type="S" value=""/>
+			<Prp name="owner id" type="I" value="31"/>
+			<Prp name="priority" type="I" value="300"/>
+			<Prp name="date" type="D" value="45006.5159110069"/>
+		</Node>
+		<Node name="item 1">
+			<Prp name="stacktext" type="S" value="Then The user can logout"/>
+			<Prp name="unit id" type="I" value="2"/>
+			<Prp name="line no" type="I" value="25"/>
+		</Node>
+		<Node name="message 27">
+			<Prp name="pictype" type="I" value="0"/>
+			<Prp name="id" type="I" value="27"/>
+			<Prp name="picture" type="S" value=""/>
+			<Prp name="unit id" type="I" value="3"/>
+			<Prp name="line no" type="I" value="19"/>
+			<Prp name="message" type="S" value="Navigating to the https://demoblaze.com/ page."/>
+			<Prp name="type" type="I" value="1"/>
+			<Prp name="as html" type="B" value="0"/>
+			<Prp name="child index" type="I" value="-1"/>
+			<Prp name="remarks" type="S" value="URL: https://demoblaze.com/&#xA;&#xA;Aliases.browser"/>
+			<Prp name="link" type="S" value=""/>
+			<Prp name="owner id" type="I" value="26"/>
+			<Prp name="priority" type="I" value="300"/>
+			<Prp name="date" type="D" value="45006.5159017593"/>
+		</Node>
+		<Node name="message 33">
+			<Node name="visualizer">
+				<Node name="current">
+					<Prp name="click point x" type="I" value="-1"/>
+					<Prp name="object right" type="I" value="1186"/>
+					<Prp name="datetime" type="D" value="45006.682580081"/>
+					<Prp name="rect color" type="I" value="255"/>
+					<Prp name="object left" type="I" value="718"/>
+					<Prp name="storage file name" type="S" value=""/>
+					<Prp name="object top" type="I" value="194"/>
+					<Prp name="click point y" type="I" value="-1"/>
+					<Prp name="version" type="I" value="2"/>
+					<Prp name="object bottom" type="I" value="232"/>
+					<Prp name="kind" type="I" value="0"/>
+					<Prp name="signature" type="S" value="{87B03792-E854-4F5D-9F33-165F1F874209}"/>
+					<Prp name="need update" type="B" value="0"/>
+					<Prp name="object name" type="S" value="Aliases.browser.pageStore.modalLogIn.username"/>
+					<Prp name="image file name" type="S" value="visImage6.png"/>
+					<Prp name="line #" type="I" value="64"/>
+				</Node>
+			</Node>
+			<Prp name="pictype" type="I" value="0"/>
+			<Prp name="id" type="I" value="33"/>
+			<Prp name="picture" type="S" value=""/>
+			<Prp name="unit id" type="I" value="3"/>
+			<Prp name="line no" type="I" value="64"/>
+			<Prp name="message" type="S" value="The text '12342ade7e94' was entered in the text editor."/>
+			<Prp name="type" type="I" value="1"/>
+			<Prp name="as html" type="B" value="0"/>
+			<Prp name="child index" type="I" value="-1"/>
+			<Prp name="remarks" type="S" value="Tested object:&#xA;Aliases.browser.pageStore.modalLogIn.username&#xA;(Sys.Browser(&quot;chrome&quot;).Page(&quot;https://demoblaze.com/&quot;).FindElement(&quot;css=div[id='logInModal'] div[class='modal-content']&quot;).FindElement(&quot;#loginusername&quot;))"/>
+			<Prp name="link" type="S" value=""/>
+			<Prp name="owner id" type="I" value="31"/>
+			<Prp name="priority" type="I" value="300"/>
+			<Prp name="date" type="D" value="45006.5159159722"/>
+		</Node>
+		<Node name="message 36">
+			<Node name="visualizer">
+				<Node name="current">
+					<Prp name="click point x" type="I" value="1147"/>
+					<Prp name="object right" type="I" value="1186"/>
+					<Prp name="datetime" type="D" value="45006.6825900694"/>
+					<Prp name="rect color" type="I" value="255"/>
+					<Prp name="object left" type="I" value="1108"/>
+					<Prp name="storage file name" type="S" value=""/>
+					<Prp name="object top" type="I" value="445"/>
+					<Prp name="click point y" type="I" value="464"/>
+					<Prp name="version" type="I" value="2"/>
+					<Prp name="object bottom" type="I" value="483"/>
+					<Prp name="kind" type="I" value="0"/>
+					<Prp name="signature" type="S" value="{87B03792-E854-4F5D-9F33-165F1F874209}"/>
+					<Prp name="need update" type="B" value="0"/>
+					<Prp name="object name" type="S" value="Aliases.browser.pageStore.modalLogIn.buttonLogIn"/>
+					<Prp name="image file name" type="S" value="visImage8.png"/>
+					<Prp name="line #" type="I" value="66"/>
+				</Node>
+			</Node>
+			<Prp name="pictype" type="I" value="0"/>
+			<Prp name="id" type="I" value="36"/>
+			<Prp name="picture" type="S" value=""/>
+			<Prp name="unit id" type="I" value="3"/>
+			<Prp name="line no" type="I" value="66"/>
+			<Prp name="message" type="S" value="The window was clicked with the left mouse button."/>
+			<Prp name="type" type="I" value="1"/>
+			<Prp name="as html" type="B" value="0"/>
+			<Prp name="child index" type="I" value="-1"/>
+			<Prp name="remarks" type="S" value="A click at point (39, 19) with no key pressed.&#xA;&#xA;Tested object:&#xA;Aliases.browser.pageStore.modalLogIn.buttonLogIn&#xA;(Sys.Browser(&quot;chrome&quot;).Page(&quot;https://demoblaze.com/&quot;).FindElement(&quot;css=div[id='logInModal'] div[class='modal-content']&quot;).FindElement(&quot;button[onclick='logIn()']&quot;))"/>
+			<Prp name="link" type="S" value=""/>
+			<Prp name="owner id" type="I" value="31"/>
+			<Prp name="priority" type="I" value="300"/>
+			<Prp name="date" type="D" value="45006.5159251273"/>
+		</Node>
+		<Node name="message 13">
+			<Prp name="pictype" type="I" value="0"/>
+			<Prp name="id" type="I" value="13"/>
+			<Prp name="picture" type="S" value=""/>
+			<Prp name="unit id" type="I" value="3"/>
+			<Prp name="line no" type="I" value="50"/>
+			<Prp name="message" type="S" value="Improve your test performance."/>
+			<Prp name="type" type="I" value="0"/>
+			<Prp name="as html" type="B" value="-1"/>
+			<Prp name="child index" type="I" value="-1"/>
+			<Prp name="remarks" type="S" value="&lt;html&gt;&lt;style&gt;body {font-family : Segoe UI, Tahoma, Arial, Helvetica, sans-serif; font-size : 10pt; font-weight : normal; padding : 14px 8px 8px 14px; margin : 0 0 0 0;} p {margin : 4px 0 4px 0; padding : 0 0 0 0;} h4 {font-size: 10pt; font-weight : bold; margin : 12px 0 0 16px; padding : 0 0 0 0;} table {margin-left : 16px; border-top: 1px solid grey;} td {font-size : 10pt; font-weight : normal; padding-left : 8px;} &lt;/style&gt;&lt;style&gt;p, td, th{font-size: 10pt;} td, th {border-bottom: 1px solid #cdcdcd; padding: 2px 10px 2px 10px;}table.tableIntelegentFix th {text-align: left; background: #cdcdcd; font-weight : normal;}  p {padding : 0; margin : 4 0 4 0px; line-height: 16pt;} table {border: 0px;}&lt;/style&gt;&lt;body&gt;&lt;p&gt;You can improve the performance of the object search in the test.&lt;/p&gt;&lt;p&gt;The &lt;code&gt;NameMapping.&amp;#8203;Sys.&amp;#8203;browser.&amp;#8203;pageStore.&amp;#8203;modalSignUp.&amp;#8203;&lt;a href=&quot;namemapping://{03CA21C8-986C-4305-9FE1-668E8BDB458A}.{1D628622-337E-42D4-8E43-CE75135AF0D0}&quot; title=&quot;Missing object. Click to view and change its recognition settings.&quot;&gt;&lt;span style=&quot;color: red; font-weight: bold;&quot;&gt;username&lt;/span&gt;&lt;/a&gt;&lt;/code&gt; object&lt;/p&gt;&lt;p&gt;can be found faster if you make &lt;code&gt;#sign-username&lt;/code&gt; the first selector in its selector list.&lt;/p&gt;&lt;p&gt;&amp;nbsp;&lt;br/&gt;&lt;/p&gt;&lt;p&gt; &lt;style&gt; a.btn { background-color: #00b2ff; color: white; padding: 5px 20px; text-decoration: none; font-weight : bold; } &lt;/style&gt;&lt;a class=&quot;btn&quot; href=&quot;reorderselectors://54Wh5r2zAQAEAHJvb3QGAAQAdHlwZQEACwBSZWNvZ25pdGlvbgQAbW9kZQAAAgACAG5tAQAkADFE&#xA;NjI4NjIyeDMzN0V4NDJENHg4RTQzeENFNzUxMzVBRjBEMAcAcHJvamVjdAEAJAAwM0NBMjFDOHg5&#xA;ODZDeDQzMDV4OUZFMXg2NjhFOEJEQjQ1OEEGAGNvbmZpZwEAFQBEZWZhdWx0IENvbmZpZ3VyYXRp&#xA;b24JAHByb3Bjb3VudAAAAAAEAAUAbmFtZXMAAAAABgB2YWx1ZXMCAAEAMAEASQBANjMwMDczMDA3&#xA;MzAwM0QwMDIzMDA3MzAwNjkwMDY3MDA2RTAwMkQwMDc1MDA3MzAwNjUwMDcyMDA2RTAwNjEwMDZE&#xA;MDA2NTAwAQAxAQDCiQBANzgwMDcwMDA2MTAwNzQwMDY4MDAzRDAwMkYwMDJGMDA2OTAwNkUwMDcw&#xA;MDA3NTAwNzQwMDVCMDA0MDAwNjkwMDY0MDAzRDAwMjcwMDczMDA2OTAwNjcwMDZFMDAyRDAwNzUw&#xA;MDczMDA2NTAwNzIwMDZFMDA2MTAwNkQwMDY1MDAyNzAwNUQwMAAACwBmb3VuZHZhbHVlcwMAAQAw&#xA;AQAwADAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMAEAMgEA&#xA;wokAQDc4MDA3MDAwNjEwMDc0MDA2ODAwM0QwMDJGMDAyRjAwNjkwMDZFMDA3MDAwNzUwMDc0MDA1&#xA;QjAwNDAwMDY5MDA2NDAwM0QwMDI3MDA3MzAwNjkwMDY3MDA2RTAwMkQwMDc1MDA3MzAwNjUwMDcy&#xA;MDA2RTAwNjEwMDZEMDA2NTAwMjcwMDVEMDABADEBAEkAQDYzMDA3MzAwNzMwMDNEMDAyMzAwNzMw&#xA;MDY5MDA2NzAwNkUwMDJEMDA3NTAwNzMwMDY1MDA3MjAwNkUwMDYxMDA2RDAwNjUwMAAABwBtYXRj&#xA;aGVkAAAAAA==&quot;&gt;Improve Performance&lt;/a&gt;&lt;/p&gt;&lt;br/&gt;&lt;!--p&gt;&lt;b style=&quot;color: #777;&quot;&gt;Tips&lt;/b&gt;&lt;/p&gt;&lt;ul style=&quot;margin-top: 10px&quot;&gt;&lt;li&gt;&lt;/li&gt;&lt;/ul--&gt;&lt;/body&gt;&lt;/html&gt;"/>
+			<Prp name="link" type="S" value=""/>
+			<Prp name="owner id" type="I" value="11"/>
+			<Prp name="priority" type="I" value="500"/>
+			<Prp name="date" type="D" value="45006.5158200231"/>
+		</Node>
+		<Node name="message 28">
+			<Prp name="pictype" type="I" value="0"/>
+			<Prp name="id" type="I" value="28"/>
+			<Prp name="picture" type="S" value=""/>
+			<Prp name="unit id" type="I" value="3"/>
+			<Prp name="line no" type="I" value="21"/>
+			<Prp name="message" type="S" value="| Demoblaze Webpage Active |"/>
+			<Prp name="type" type="I" value="7"/>
+			<Prp name="as html" type="B" value="0"/>
+			<Prp name="child index" type="I" value="-1"/>
+			<Prp name="remarks" type="S" value=""/>
+			<Prp name="link" type="S" value=""/>
+			<Prp name="owner id" type="I" value="26"/>
+			<Prp name="priority" type="I" value="300"/>
+			<Prp name="date" type="D" value="45006.5159023495"/>
+		</Node>
+		<Node name="message 53">
+			<Prp name="pictype" type="I" value="2"/>
+			<Prp name="id" type="I" value="53"/>
+			<Prp name="stack beginning" type="I" value="4"/>
+			<Prp name="picture" type="S" value="Picture2.png"/>
+			<Prp name="unit id" type="I" value="2"/>
+			<Prp name="line no" type="I" value="25"/>
+			<Prp name="message" type="S" value="The script execution was interrupted."/>
+			<Prp name="type" type="I" value="3"/>
+			<Prp name="as html" type="B" value="0"/>
+			<Prp name="child index" type="I" value="-1"/>
+			<Prp name="stack end" type="I" value="6"/>
+			<Prp name="remarks" type="S" value="Possible reasons:&#xA; - An error or warning occurred during the test run. See the preceding log entries to locate and identify the error.&#xA; - The test run was stopped manually.&#xA; - The test run was terminated as a result of the Runner.Halt method call."/>
+			<Prp name="link" type="S" value=""/>
+			<Prp name="owner id" type="I" value="49"/>
+			<Prp name="priority" type="I" value="300"/>
+			<Prp name="date" type="D" value="45006.516113669"/>
+		</Node>
+		<Node name="message 47">
+			<Prp name="pictype" type="I" value="0"/>
+			<Prp name="id" type="I" value="47"/>
+			<Prp name="picture" type="S" value=""/>
+			<Prp name="unit id" type="I" value="3"/>
+			<Prp name="line no" type="I" value="32"/>
+			<Prp name="message" type="S" value="LOG: orphan user logged out"/>
+			<Prp name="type" type="I" value="0"/>
+			<Prp name="as html" type="B" value="0"/>
+			<Prp name="child index" type="I" value="-1"/>
+			<Prp name="remarks" type="S" value=""/>
+			<Prp name="link" type="S" value=""/>
+			<Prp name="owner id" type="I" value="45"/>
+			<Prp name="priority" type="I" value="300"/>
+			<Prp name="date" type="D" value="45006.5159847454"/>
+		</Node>
+		<Node name="message 46">
+			<Node name="visualizer">
+				<Node name="current">
+					<Prp name="click point x" type="I" value="1157"/>
+					<Prp name="object right" type="I" value="1192"/>
+					<Prp name="datetime" type="D" value="45006.6826483218"/>
+					<Prp name="rect color" type="I" value="255"/>
+					<Prp name="object left" type="I" value="1123"/>
+					<Prp name="storage file name" type="S" value=""/>
+					<Prp name="object top" type="I" value="88"/>
+					<Prp name="click point y" type="I" value="108"/>
+					<Prp name="version" type="I" value="2"/>
+					<Prp name="object bottom" type="I" value="128"/>
+					<Prp name="kind" type="I" value="0"/>
+					<Prp name="signature" type="S" value="{87B03792-E854-4F5D-9F33-165F1F874209}"/>
+					<Prp name="need update" type="B" value="0"/>
+					<Prp name="object name" type="S" value="Aliases.browser.pageStore.mainBanner.menu.logOut"/>
+					<Prp name="image file name" type="S" value="visImage9.png"/>
+					<Prp name="line #" type="I" value="31"/>
+				</Node>
+			</Node>
+			<Prp name="pictype" type="I" value="0"/>
+			<Prp name="id" type="I" value="46"/>
+			<Prp name="picture" type="S" value=""/>
+			<Prp name="unit id" type="I" value="3"/>
+			<Prp name="line no" type="I" value="31"/>
+			<Prp name="message" type="S" value="The window was clicked with the left mouse button."/>
+			<Prp name="type" type="I" value="1"/>
+			<Prp name="as html" type="B" value="0"/>
+			<Prp name="child index" type="I" value="-1"/>
+			<Prp name="remarks" type="S" value="A click at point (34, 20) with no key pressed.&#xA;&#xA;Tested object:&#xA;Aliases.browser.pageStore.mainBanner.menu.logOut&#xA;(Sys.Browser(&quot;chrome&quot;).Page(&quot;https://demoblaze.com/&quot;).FindElement(&quot;#narvbarx&quot;).FindElement(&quot;#navbarExample&quot;).FindElement(&quot;#logout2&quot;))"/>
+			<Prp name="link" type="S" value=""/>
+			<Prp name="owner id" type="I" value="45"/>
+			<Prp name="priority" type="I" value="300"/>
+			<Prp name="date" type="D" value="45006.5159837731"/>
+		</Node>
+		<Node name="message 23">
+			<Prp name="pictype" type="I" value="0"/>
+			<Prp name="id" type="I" value="23"/>
+			<Prp name="picture" type="S" value=""/>
+			<Prp name="unit id" type="I" value="2"/>
+			<Prp name="line no" type="I" value="10"/>
+			<Prp name="message" type="S" value="Given The user has an open Browser on the homepage"/>
+			<Prp name="type" type="I" value="0"/>
+			<Prp name="as html" type="B" value="0"/>
+			<Prp name="child index" type="I" value="-1"/>
+			<Prp name="remarks" type="S" value=""/>
+			<Prp name="link" type="S" value=""/>
+			<Prp name="owner id" type="I" value="22"/>
+			<Prp name="priority" type="I" value="300"/>
+			<Prp name="date" type="D" value="45006.5158547569"/>
+		</Node>
+		<Node name="message 11">
+			<Prp name="pictype" type="I" value="0"/>
+			<Prp name="id" type="I" value="11"/>
+			<Prp name="picture" type="S" value=""/>
+			<Prp name="unit id" type="I" value="2"/>
+			<Prp name="line no" type="I" value="15"/>
+			<Prp name="message" type="S" value="Then The user can signup"/>
+			<Prp name="type" type="I" value="0"/>
+			<Prp name="as html" type="B" value="0"/>
+			<Prp name="child index" type="I" value="-1"/>
+			<Prp name="remarks" type="S" value=""/>
+			<Prp name="link" type="S" value=""/>
+			<Prp name="owner id" type="I" value="2"/>
+			<Prp name="priority" type="I" value="300"/>
+			<Prp name="date" type="D" value="45006.5158119676"/>
+		</Node>
+		<Node name="message 14">
+			<Node name="visualizer">
+				<Node name="current">
+					<Prp name="click point x" type="I" value="-1"/>
+					<Prp name="object right" type="I" value="1186"/>
+					<Prp name="datetime" type="D" value="45006.6824872569"/>
+					<Prp name="rect color" type="I" value="255"/>
+					<Prp name="object left" type="I" value="718"/>
+					<Prp name="storage file name" type="S" value=""/>
+					<Prp name="object top" type="I" value="194"/>
+					<Prp name="click point y" type="I" value="-1"/>
+					<Prp name="version" type="I" value="2"/>
+					<Prp name="object bottom" type="I" value="232"/>
+					<Prp name="kind" type="I" value="0"/>
+					<Prp name="signature" type="S" value="{87B03792-E854-4F5D-9F33-165F1F874209}"/>
+					<Prp name="need update" type="B" value="0"/>
+					<Prp name="object name" type="S" value="Aliases.browser.pageStore.modalSignUp.username"/>
+					<Prp name="image file name" type="S" value="visImage1.png"/>
+					<Prp name="line #" type="I" value="50"/>
+				</Node>
+			</Node>
+			<Prp name="pictype" type="I" value="0"/>
+			<Prp name="id" type="I" value="14"/>
+			<Prp name="picture" type="S" value=""/>
+			<Prp name="unit id" type="I" value="3"/>
+			<Prp name="line no" type="I" value="50"/>
+			<Prp name="message" type="S" value="The text '12342ade7e94' was entered in the text editor."/>
+			<Prp name="type" type="I" value="1"/>
+			<Prp name="as html" type="B" value="0"/>
+			<Prp name="child index" type="I" value="-1"/>
+			<Prp name="remarks" type="S" value="Tested object:&#xA;Aliases.browser.pageStore.modalSignUp.username&#xA;(Sys.Browser(&quot;chrome&quot;).Page(&quot;https://demoblaze.com/&quot;).FindElement(&quot;css=div[id='signInModal'] div[class='modal-content']&quot;).FindElement(&quot;#sign-username&quot;))"/>
+			<Prp name="link" type="S" value=""/>
+			<Prp name="owner id" type="I" value="11"/>
+			<Prp name="priority" type="I" value="300"/>
+			<Prp name="date" type="D" value="45006.5158228356"/>
+		</Node>
+		<Node name="child data"/>
+		<Node name="message 20">
+			<Prp name="pictype" type="I" value="0"/>
+			<Prp name="id" type="I" value="20"/>
+			<Prp name="picture" type="S" value=""/>
+			<Prp name="unit id" type="I" value="1"/>
+			<Prp name="line no" type="I" value="128"/>
+			<Prp name="message" type="S" value="| Alert Message Verified |"/>
+			<Prp name="type" type="I" value="7"/>
+			<Prp name="as html" type="B" value="0"/>
+			<Prp name="child index" type="I" value="-1"/>
+			<Prp name="remarks" type="S" value=""/>
+			<Prp name="link" type="S" value=""/>
+			<Prp name="owner id" type="I" value="11"/>
+			<Prp name="priority" type="I" value="300"/>
+			<Prp name="date" type="D" value="45006.5158533333"/>
+		</Node>
+		<Node name="message 41">
+			<Prp name="pictype" type="I" value="0"/>
+			<Prp name="id" type="I" value="41"/>
+			<Prp name="picture" type="S" value=""/>
+			<Prp name="unit id" type="I" value="3"/>
+			<Prp name="line no" type="I" value="12"/>
+			<Prp name="message" type="S" value="| Browser Launched &amp; Maximized | - https://demoblaze.com/"/>
+			<Prp name="type" type="I" value="7"/>
+			<Prp name="as html" type="B" value="0"/>
+			<Prp name="child index" type="I" value="-1"/>
+			<Prp name="remarks" type="S" value=""/>
+			<Prp name="link" type="S" value=""/>
+			<Prp name="owner id" type="I" value="39"/>
+			<Prp name="priority" type="I" value="300"/>
+			<Prp name="date" type="D" value="45006.5159504977"/>
+		</Node>
+		<Node name="item 6">
+			<Prp name="stacktext" type="S" value="bddAuth"/>
+			<Prp name="unit id" type="I" value="2"/>
+			<Prp name="line no" type="I" value="7"/>
+		</Node>
+		<Node name="message 50">
+			<Prp name="pictype" type="I" value="0"/>
+			<Prp name="id" type="I" value="50"/>
+			<Prp name="picture" type="S" value=""/>
+			<Prp name="unit id" type="I" value="3"/>
+			<Prp name="line no" type="I" value="74"/>
+			<Prp name="message" type="S" value="The action may be performed incorrectly, because the control is not visible."/>
+			<Prp name="type" type="I" value="2"/>
+			<Prp name="as html" type="B" value="0"/>
+			<Prp name="child index" type="I" value="-1"/>
+			<Prp name="remarks" type="S" value="Aliases.browser.pageStore.mainBanner.menu.logOut"/>
+			<Prp name="link" type="S" value=""/>
+			<Prp name="owner id" type="I" value="49"/>
+			<Prp name="priority" type="I" value="300"/>
+			<Prp name="date" type="D" value="45006.5159889815"/>
+		</Node>
+		<Node name="message 38">
+			<Prp name="pictype" type="I" value="0"/>
+			<Prp name="id" type="I" value="38"/>
+			<Prp name="picture" type="S" value=""/>
+			<Prp name="unit id" type="I" value="2"/>
+			<Prp name="line no" type="I" value="22"/>
+			<Prp name="message" type="S" value="Verify Demoblaze Logout"/>
+			<Prp name="type" type="I" value="3"/>
+			<Prp name="as html" type="B" value="0"/>
+			<Prp name="child index" type="I" value="-1"/>
+			<Prp name="remarks" type="S" value=""/>
+			<Prp name="link" type="S" value=""/>
+			<Prp name="owner id" type="I" value="-1"/>
+			<Prp name="priority" type="I" value="300"/>
+			<Prp name="date" type="D" value="45006.5159270602"/>
+		</Node>
+		<Node name="message 35">
+			<Prp name="pictype" type="I" value="0"/>
+			<Prp name="id" type="I" value="35"/>
+			<Prp name="picture" type="S" value=""/>
+			<Prp name="unit id" type="I" value="3"/>
+			<Prp name="line no" type="I" value="66"/>
+			<Prp name="message" type="S" value="Improve your test performance."/>
+			<Prp name="type" type="I" value="0"/>
+			<Prp name="as html" type="B" value="-1"/>
+			<Prp name="child index" type="I" value="-1"/>
+			<Prp name="remarks" type="S" value="&lt;html&gt;&lt;style&gt;body {font-family : Segoe UI, Tahoma, Arial, Helvetica, sans-serif; font-size : 10pt; font-weight : normal; padding : 14px 8px 8px 14px; margin : 0 0 0 0;} p {margin : 4px 0 4px 0; padding : 0 0 0 0;} h4 {font-size: 10pt; font-weight : bold; margin : 12px 0 0 16px; padding : 0 0 0 0;} table {margin-left : 16px; border-top: 1px solid grey;} td {font-size : 10pt; font-weight : normal; padding-left : 8px;} &lt;/style&gt;&lt;style&gt;p, td, th{font-size: 10pt;} td, th {border-bottom: 1px solid #cdcdcd; padding: 2px 10px 2px 10px;}table.tableIntelegentFix th {text-align: left; background: #cdcdcd; font-weight : normal;}  p {padding : 0; margin : 4 0 4 0px; line-height: 16pt;} table {border: 0px;}&lt;/style&gt;&lt;body&gt;&lt;p&gt;You can improve the performance of the object search in the test.&lt;/p&gt;&lt;p&gt;The &lt;code&gt;NameMapping.&amp;#8203;Sys.&amp;#8203;browser.&amp;#8203;pageStore.&amp;#8203;modalLogIn.&amp;#8203;&lt;a href=&quot;namemapping://{03CA21C8-986C-4305-9FE1-668E8BDB458A}.{CA427EED-4192-473F-808B-9F9B650A9352}&quot; title=&quot;Missing object. Click to view and change its recognition settings.&quot;&gt;&lt;span style=&quot;color: red; font-weight: bold;&quot;&gt;buttonLogIn&lt;/span&gt;&lt;/a&gt;&lt;/code&gt; object&lt;/p&gt;&lt;p&gt;can be found faster if you make &lt;code&gt;button[onclick='logIn()']&lt;/code&gt; the first selector in its selector list.&lt;/p&gt;&lt;p&gt;&amp;nbsp;&lt;br/&gt;&lt;/p&gt;&lt;p&gt; &lt;style&gt; a.btn { background-color: #00b2ff; color: white; padding: 5px 20px; text-decoration: none; font-weight : bold; } &lt;/style&gt;&lt;a class=&quot;btn&quot; href=&quot;reorderselectors://54Wh5r2zAQAEAHJvb3QGAAQAdHlwZQEACwBSZWNvZ25pdGlvbgYAY29uZmlnAQAVAERlZmF1bHQg&#xA;Q29uZmlndXJhdGlvbgIAbm0BACQAQ0E0MjdFRUR4NDE5Mng0NzNGeDgwOEJ4OUY5QjY1MEE5MzUy&#xA;CQBwcm9wY291bnQAAAAABABtb2RlAAACAAcAcHJvamVjdAEAJAAwM0NBMjFDOHg5ODZDeDQzMDV4&#xA;OUZFMXg2NjhFOEJEQjQ1OEEEAAsAZm91bmR2YWx1ZXMDAAEAMAEAMAAwMDAwMDAwMDAwMDAwMDAw&#xA;MDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDABADIBAMKpAEA3ODAwNzAwMDYxMDA3NDAw&#xA;NjgwMDNEMDAyRjAwMkYwMDYyMDA3NTAwNzQwMDc0MDA2RjAwNkUwMDVCMDA2RTAwNkYwMDcyMDA2&#xA;RDAwNjEwMDZDMDA2OTAwN0EwMDY1MDAyRDAwNzMwMDcwMDA2MTAwNjMwMDY1MDAyODAwMjkwMDNE&#xA;MDAyNzAwNEMwMDZGMDA2NzAwMjAwMDY5MDA2RTAwMjcwMDVEMDABADEBAHUAQDYzMDA3MzAwNzMw&#xA;MDNEMDA2MjAwNzUwMDc0MDA3NDAwNkYwMDZFMDA1QjAwNkYwMDZFMDA2MzAwNkMwMDY5MDA2MzAw&#xA;NkIwMDNEMDAyNzAwNkMwMDZGMDA2NzAwNDkwMDZFMDAyODAwMjkwMDI3MDA1RDAwAAAGAHZhbHVl&#xA;cwIAAQAwAQB1AEA2MzAwNzMwMDczMDAzRDAwNjIwMDc1MDA3NDAwNzQwMDZGMDA2RTAwNUIwMDZG&#xA;MDA2RTAwNjMwMDZDMDA2OTAwNjMwMDZCMDAzRDAwMjcwMDZDMDA2RjAwNjcwMDQ5MDA2RTAwMjgw&#xA;MDI5MDAyNzAwNUQwMAEAMQEAwqkAQDc4MDA3MDAwNjEwMDc0MDA2ODAwM0QwMDJGMDAyRjAwNjIw&#xA;MDc1MDA3NDAwNzQwMDZGMDA2RTAwNUIwMDZFMDA2RjAwNzIwMDZEMDA2MTAwNkMwMDY5MDA3QTAw&#xA;NjUwMDJEMDA3MzAwNzAwMDYxMDA2MzAwNjUwMDI4MDAyOTAwM0QwMDI3MDA0QzAwNkYwMDY3MDAy&#xA;MDAwNjkwMDZFMDAyNzAwNUQwMAAABQBuYW1lcwAAAAAHAG1hdGNoZWQAAAAA&quot;&gt;Improve Performance&lt;/a&gt;&lt;/p&gt;&lt;br/&gt;&lt;!--p&gt;&lt;b style=&quot;color: #777;&quot;&gt;Tips&lt;/b&gt;&lt;/p&gt;&lt;ul style=&quot;margin-top: 10px&quot;&gt;&lt;li&gt;&lt;/li&gt;&lt;/ul--&gt;&lt;/body&gt;&lt;/html&gt;"/>
+			<Prp name="link" type="S" value=""/>
+			<Prp name="owner id" type="I" value="31"/>
+			<Prp name="priority" type="I" value="500"/>
+			<Prp name="date" type="D" value="45006.5159209375"/>
+		</Node>
+		<Node name="message 51">
+			<Prp name="pictype" type="I" value="2"/>
+			<Prp name="id" type="I" value="51"/>
+			<Prp name="stack beginning" type="I" value="0"/>
+			<Prp name="picture" type="S" value="Picture1.png"/>
+			<Prp name="unit id" type="I" value="3"/>
+			<Prp name="line no" type="I" value="74"/>
+			<Prp name="message" type="S" value="There was an attempt to perform an action on a zero-sized window."/>
+			<Prp name="type" type="I" value="3"/>
+			<Prp name="as html" type="B" value="0"/>
+			<Prp name="child index" type="I" value="-1"/>
+			<Prp name="stack end" type="I" value="3"/>
+			<Prp name="remarks" type="S" value="The window size is (0, 0); the screen rectangle: the left top corner is (0, 71), the right bottom corner is (0, 71).&#xA;&#xA;Tested object:&#xA;Aliases.browser.pageStore.mainBanner.menu.logOut&#xA;(Sys.Browser(&quot;chrome&quot;).Page(&quot;https://demoblaze.com/index.html&quot;).FindElement(&quot;#narvbarx&quot;).FindElement(&quot;#navbarExample&quot;).FindElement(&quot;#logout2&quot;))"/>
+			<Prp name="link" type="S" value=""/>
+			<Prp name="owner id" type="I" value="49"/>
+			<Prp name="priority" type="I" value="300"/>
+			<Prp name="date" type="D" value="45006.5161103935"/>
+		</Node>
+		<Node name="message 22">
+			<Prp name="pictype" type="I" value="0"/>
+			<Prp name="id" type="I" value="22"/>
+			<Prp name="picture" type="S" value=""/>
+			<Prp name="unit id" type="I" value="2"/>
+			<Prp name="line no" type="I" value="17"/>
+			<Prp name="message" type="S" value="Verify Demoblaze Login"/>
+			<Prp name="type" type="I" value="8"/>
+			<Prp name="as html" type="B" value="0"/>
+			<Prp name="child index" type="I" value="-1"/>
+			<Prp name="remarks" type="S" value=""/>
+			<Prp name="link" type="S" value=""/>
+			<Prp name="owner id" type="I" value="-1"/>
+			<Prp name="priority" type="I" value="300"/>
+			<Prp name="date" type="D" value="45006.5158543518"/>
+		</Node>
+		<Node name="message 0">
+			<Prp name="pictype" type="I" value="0"/>
+			<Prp name="id" type="I" value="0"/>
+			<Prp name="picture" type="S" value=""/>
+			<Prp name="unit id" type="I" value="0"/>
+			<Prp name="line no" type="I" value="12"/>
+			<Prp name="message" type="S" value="START | Tue Mar 21 2023 12:22:40 GMT-0400 (Eastern Daylight Time)"/>
+			<Prp name="type" type="I" value="7"/>
+			<Prp name="as html" type="B" value="0"/>
+			<Prp name="child index" type="I" value="-1"/>
+			<Prp name="remarks" type="S" value=""/>
+			<Prp name="link" type="S" value=""/>
+			<Prp name="owner id" type="I" value="-1"/>
+			<Prp name="priority" type="I" value="300"/>
+			<Prp name="date" type="D" value="45006.5157474884"/>
+		</Node>
+		<Node name="message 44">
+			<Prp name="pictype" type="I" value="0"/>
+			<Prp name="id" type="I" value="44"/>
+			<Prp name="picture" type="S" value=""/>
+			<Prp name="unit id" type="I" value="3"/>
+			<Prp name="line no" type="I" value="21"/>
+			<Prp name="message" type="S" value="| Demoblaze Webpage Active |"/>
+			<Prp name="type" type="I" value="7"/>
+			<Prp name="as html" type="B" value="0"/>
+			<Prp name="child index" type="I" value="-1"/>
+			<Prp name="remarks" type="S" value=""/>
+			<Prp name="link" type="S" value=""/>
+			<Prp name="owner id" type="I" value="42"/>
+			<Prp name="priority" type="I" value="300"/>
+			<Prp name="date" type="D" value="45006.5159745833"/>
+		</Node>
+		<Node name="message 30">
+			<Prp name="pictype" type="I" value="0"/>
+			<Prp name="id" type="I" value="30"/>
+			<Prp name="picture" type="S" value=""/>
+			<Prp name="unit id" type="I" value="3"/>
+			<Prp name="line no" type="I" value="34"/>
+			<Prp name="message" type="S" value="| Nav Menu Verified |"/>
+			<Prp name="type" type="I" value="7"/>
+			<Prp name="as html" type="B" value="0"/>
+			<Prp name="child index" type="I" value="-1"/>
+			<Prp name="remarks" type="S" value=""/>
+			<Prp name="link" type="S" value=""/>
+			<Prp name="owner id" type="I" value="29"/>
+			<Prp name="priority" type="I" value="300"/>
+			<Prp name="date" type="D" value="45006.5159058449"/>
+		</Node>
+		<Node name="message 19">
+			<Node name="visualizer">
+				<Node name="current">
+					<Prp name="click point x" type="I" value="1136"/>
+					<Prp name="object right" type="I" value="1168"/>
+					<Prp name="datetime" type="D" value="45006.6825176389"/>
+					<Prp name="rect color" type="I" value="255"/>
+					<Prp name="object left" type="I" value="1104"/>
+					<Prp name="storage file name" type="S" value=""/>
+					<Prp name="object top" type="I" value="149"/>
+					<Prp name="click point y" type="I" value="165"/>
+					<Prp name="version" type="I" value="2"/>
+					<Prp name="object bottom" type="I" value="181"/>
+					<Prp name="kind" type="I" value="0"/>
+					<Prp name="signature" type="S" value="{87B03792-E854-4F5D-9F33-165F1F874209}"/>
+					<Prp name="need update" type="B" value="0"/>
+					<Prp name="object name" type="S" value="Aliases.browser.pageStore.Alert.buttonOk"/>
+					<Prp name="image file name" type="S" value="visImage4.png"/>
+					<Prp name="line #" type="I" value="127"/>
+				</Node>
+			</Node>
+			<Prp name="pictype" type="I" value="0"/>
+			<Prp name="id" type="I" value="19"/>
+			<Prp name="picture" type="S" value=""/>
+			<Prp name="unit id" type="I" value="1"/>
+			<Prp name="line no" type="I" value="127"/>
+			<Prp name="message" type="S" value="The window was clicked with the left mouse button."/>
+			<Prp name="type" type="I" value="1"/>
+			<Prp name="as html" type="B" value="0"/>
+			<Prp name="child index" type="I" value="-1"/>
+			<Prp name="remarks" type="S" value="A click at point (32, 16) with no key pressed.&#xA;&#xA;Tested object:&#xA;Aliases.browser.pageStore.Alert.buttonOk&#xA;(Sys.Browser(&quot;chrome&quot;).Page(&quot;https://demoblaze.com/&quot;).Alert.Button(&quot;OK&quot;))"/>
+			<Prp name="link" type="S" value=""/>
+			<Prp name="owner id" type="I" value="11"/>
+			<Prp name="priority" type="I" value="300"/>
+			<Prp name="date" type="D" value="45006.5158525694"/>
+		</Node>
+		<Node name="message 4">
+			<Prp name="pictype" type="I" value="0"/>
+			<Prp name="id" type="I" value="4"/>
+			<Prp name="picture" type="S" value=""/>
+			<Prp name="unit id" type="I" value="3"/>
+			<Prp name="line no" type="I" value="10"/>
+			<Prp name="message" type="S" value="Navigating to the https://demoblaze.com/ page."/>
+			<Prp name="type" type="I" value="1"/>
+			<Prp name="as html" type="B" value="0"/>
+			<Prp name="child index" type="I" value="-1"/>
+			<Prp name="remarks" type="S" value="URL: https://demoblaze.com/&#xA;&#xA;Aliases.browser"/>
+			<Prp name="link" type="S" value=""/>
+			<Prp name="owner id" type="I" value="3"/>
+			<Prp name="priority" type="I" value="300"/>
+			<Prp name="date" type="D" value="45006.5157853588"/>
+		</Node>
+		<Node name="item 0">
+			<Prp name="stacktext" type="S" value=""/>
+			<Prp name="unit id" type="I" value="3"/>
+			<Prp name="line no" type="I" value="74"/>
+		</Node>
+		<Node name="message 37">
+			<Prp name="pictype" type="I" value="0"/>
+			<Prp name="id" type="I" value="37"/>
+			<Prp name="picture" type="S" value=""/>
+			<Prp name="unit id" type="I" value="3"/>
+			<Prp name="line no" type="I" value="67"/>
+			<Prp name="message" type="S" value="| LogOut Verified |"/>
+			<Prp name="type" type="I" value="7"/>
+			<Prp name="as html" type="B" value="0"/>
+			<Prp name="child index" type="I" value="-1"/>
+			<Prp name="remarks" type="S" value=""/>
+			<Prp name="link" type="S" value=""/>
+			<Prp name="owner id" type="I" value="31"/>
+			<Prp name="priority" type="I" value="300"/>
+			<Prp name="date" type="D" value="45006.5159259722"/>
+		</Node>
+		<Node name="message 9">
+			<Prp name="pictype" type="I" value="0"/>
+			<Prp name="id" type="I" value="9"/>
+			<Prp name="picture" type="S" value=""/>
+			<Prp name="unit id" type="I" value="2"/>
+			<Prp name="line no" type="I" value="14"/>
+			<Prp name="message" type="S" value="When The user navbar menu is verified"/>
+			<Prp name="type" type="I" value="0"/>
+			<Prp name="as html" type="B" value="0"/>
+			<Prp name="child index" type="I" value="-1"/>
+			<Prp name="remarks" type="S" value=""/>
+			<Prp name="link" type="S" value=""/>
+			<Prp name="owner id" type="I" value="2"/>
+			<Prp name="priority" type="I" value="300"/>
+			<Prp name="date" type="D" value="45006.5158106597"/>
+		</Node>
+		<Node name="stack"/>
+		<Node name="message 2">
+			<Prp name="pictype" type="I" value="0"/>
+			<Prp name="id" type="I" value="2"/>
+			<Prp name="picture" type="S" value=""/>
+			<Prp name="unit id" type="I" value="2"/>
+			<Prp name="line no" type="I" value="12"/>
+			<Prp name="message" type="S" value="Verify Demoblaze SignUp"/>
+			<Prp name="type" type="I" value="8"/>
+			<Prp name="as html" type="B" value="0"/>
+			<Prp name="child index" type="I" value="-1"/>
+			<Prp name="remarks" type="S" value=""/>
+			<Prp name="link" type="S" value=""/>
+			<Prp name="owner id" type="I" value="-1"/>
+			<Prp name="priority" type="I" value="300"/>
+			<Prp name="date" type="D" value="45006.5157549537"/>
+		</Node>
+		<Node name="message 5">
+			<Prp name="pictype" type="I" value="0"/>
+			<Prp name="id" type="I" value="5"/>
+			<Prp name="picture" type="S" value=""/>
+			<Prp name="unit id" type="I" value="3"/>
+			<Prp name="line no" type="I" value="12"/>
+			<Prp name="message" type="S" value="| Browser Launched &amp; Maximized | - https://demoblaze.com/"/>
+			<Prp name="type" type="I" value="7"/>
+			<Prp name="as html" type="B" value="0"/>
+			<Prp name="child index" type="I" value="-1"/>
+			<Prp name="remarks" type="S" value=""/>
+			<Prp name="link" type="S" value=""/>
+			<Prp name="owner id" type="I" value="3"/>
+			<Prp name="priority" type="I" value="300"/>
+			<Prp name="date" type="D" value="45006.5157860069"/>
+		</Node>
+		<Node name="message 49">
+			<Prp name="pictype" type="I" value="0"/>
+			<Prp name="id" type="I" value="49"/>
+			<Prp name="picture" type="S" value=""/>
+			<Prp name="unit id" type="I" value="2"/>
+			<Prp name="line no" type="I" value="25"/>
+			<Prp name="message" type="S" value="Then The user can logout"/>
+			<Prp name="type" type="I" value="3"/>
+			<Prp name="as html" type="B" value="0"/>
+			<Prp name="child index" type="I" value="-1"/>
+			<Prp name="remarks" type="S" value=""/>
+			<Prp name="link" type="S" value=""/>
+			<Prp name="owner id" type="I" value="38"/>
+			<Prp name="priority" type="I" value="300"/>
+			<Prp name="date" type="D" value="45006.515985787"/>
+		</Node>
+		<Node name="message 6">
+			<Prp name="pictype" type="I" value="0"/>
+			<Prp name="id" type="I" value="6"/>
+			<Prp name="picture" type="S" value=""/>
+			<Prp name="unit id" type="I" value="2"/>
+			<Prp name="line no" type="I" value="13"/>
+			<Prp name="message" type="S" value="Given The user has an active session in &quot;https://demoblaze.com/&quot;"/>
+			<Prp name="type" type="I" value="0"/>
+			<Prp name="as html" type="B" value="0"/>
+			<Prp name="child index" type="I" value="-1"/>
+			<Prp name="remarks" type="S" value=""/>
+			<Prp name="link" type="S" value=""/>
+			<Prp name="owner id" type="I" value="2"/>
+			<Prp name="priority" type="I" value="300"/>
+			<Prp name="date" type="D" value="45006.5157866204"/>
+		</Node>
+		<Node name="message 39">
+			<Prp name="pictype" type="I" value="0"/>
+			<Prp name="id" type="I" value="39"/>
+			<Prp name="picture" type="S" value=""/>
+			<Prp name="unit id" type="I" value="2"/>
+			<Prp name="line no" type="I" value="10"/>
+			<Prp name="message" type="S" value="Given The user has an open Browser on the homepage"/>
+			<Prp name="type" type="I" value="0"/>
+			<Prp name="as html" type="B" value="0"/>
+			<Prp name="child index" type="I" value="-1"/>
+			<Prp name="remarks" type="S" value=""/>
+			<Prp name="link" type="S" value=""/>
+			<Prp name="owner id" type="I" value="38"/>
+			<Prp name="priority" type="I" value="300"/>
+			<Prp name="date" type="D" value="45006.5159274884"/>
+		</Node>
+		<Node name="units">
+			<Prp name="unit 1" type="S" value="{3CF16597-CBCC-4DD0-A4AA-14F2DD8342CC}"/>
+			<Prp name="unit 2" type="S" value="DemoblazeUX\Scenarios\bddAuth.feature"/>
+			<Prp name="unit 4" type="S" value="{4EC5CFB2-B2C0-4A69-9B87-5D872A859CA8}"/>
+			<Prp name="unit 3" type="S" value="{411E9651-DB11-431B-818C-E53F70452E21}"/>
+			<Prp name="unit 0" type="S" value="{9EF8F501-C3B0-48A7-A61A-F0263ECA8ED0}"/>
+		</Node>
+		<Node name="message 16">
+			<Node name="visualizer">
+				<Node name="current">
+					<Prp name="click point x" type="I" value="-1"/>
+					<Prp name="object right" type="I" value="1186"/>
+					<Prp name="datetime" type="D" value="45006.6824912963"/>
+					<Prp name="rect color" type="I" value="255"/>
+					<Prp name="object left" type="I" value="718"/>
+					<Prp name="storage file name" type="S" value=""/>
+					<Prp name="object top" type="I" value="322"/>
+					<Prp name="click point y" type="I" value="-1"/>
+					<Prp name="version" type="I" value="2"/>
+					<Prp name="object bottom" type="I" value="360"/>
+					<Prp name="kind" type="I" value="0"/>
+					<Prp name="signature" type="S" value="{87B03792-E854-4F5D-9F33-165F1F874209}"/>
+					<Prp name="need update" type="B" value="0"/>
+					<Prp name="object name" type="S" value="Aliases.browser.pageStore.modalSignUp.password"/>
+					<Prp name="image file name" type="S" value="visImage2.png"/>
+					<Prp name="line #" type="I" value="51"/>
+				</Node>
+			</Node>
+			<Prp name="pictype" type="I" value="0"/>
+			<Prp name="id" type="I" value="16"/>
+			<Prp name="picture" type="S" value=""/>
+			<Prp name="unit id" type="I" value="3"/>
+			<Prp name="line no" type="I" value="51"/>
+			<Prp name="message" type="S" value="The text '1234NaN' was entered in the text editor."/>
+			<Prp name="type" type="I" value="1"/>
+			<Prp name="as html" type="B" value="0"/>
+			<Prp name="child index" type="I" value="-1"/>
+			<Prp name="remarks" type="S" value="Tested object:&#xA;Aliases.browser.pageStore.modalSignUp.password&#xA;(Sys.Browser(&quot;chrome&quot;).Page(&quot;https://demoblaze.com/&quot;).FindElement(&quot;css=div[id='signInModal'] div[class='modal-content']&quot;).FindElement(&quot;#sign-password&quot;))"/>
+			<Prp name="link" type="S" value=""/>
+			<Prp name="owner id" type="I" value="11"/>
+			<Prp name="priority" type="I" value="300"/>
+			<Prp name="date" type="D" value="45006.5158268634"/>
+		</Node>
+		<Node name="message 12">
+			<Node name="visualizer">
+				<Node name="current">
+					<Prp name="click point x" type="I" value="1353"/>
+					<Prp name="object right" type="I" value="1387"/>
+					<Prp name="datetime" type="D" value="45006.6824827083"/>
+					<Prp name="rect color" type="I" value="255"/>
+					<Prp name="object left" type="I" value="1319"/>
+					<Prp name="storage file name" type="S" value=""/>
+					<Prp name="object top" type="I" value="88"/>
+					<Prp name="click point y" type="I" value="108"/>
+					<Prp name="version" type="I" value="2"/>
+					<Prp name="object bottom" type="I" value="128"/>
+					<Prp name="kind" type="I" value="0"/>
+					<Prp name="signature" type="S" value="{87B03792-E854-4F5D-9F33-165F1F874209}"/>
+					<Prp name="need update" type="B" value="0"/>
+					<Prp name="object name" type="S" value="Aliases.browser.pageStore.mainBanner.menu.signUp"/>
+					<Prp name="image file name" type="S" value="visImage0.png"/>
+					<Prp name="line #" type="I" value="49"/>
+				</Node>
+			</Node>
+			<Prp name="pictype" type="I" value="0"/>
+			<Prp name="id" type="I" value="12"/>
+			<Prp name="picture" type="S" value=""/>
+			<Prp name="unit id" type="I" value="3"/>
+			<Prp name="line no" type="I" value="49"/>
+			<Prp name="message" type="S" value="The window was clicked with the left mouse button."/>
+			<Prp name="type" type="I" value="1"/>
+			<Prp name="as html" type="B" value="0"/>
+			<Prp name="child index" type="I" value="-1"/>
+			<Prp name="remarks" type="S" value="A click at point (34, 20) with no key pressed.&#xA;&#xA;Tested object:&#xA;Aliases.browser.pageStore.mainBanner.menu.signUp&#xA;(Sys.Browser(&quot;chrome&quot;).Page(&quot;https://demoblaze.com/&quot;).FindElement(&quot;#narvbarx&quot;).FindElement(&quot;#navbarExample&quot;).FindElement(&quot;#signin2&quot;))"/>
+			<Prp name="link" type="S" value=""/>
+			<Prp name="owner id" type="I" value="11"/>
+			<Prp name="priority" type="I" value="300"/>
+			<Prp name="date" type="D" value="45006.5158180093"/>
+		</Node>
+		<Node name="message 54">
+			<Prp name="pictype" type="I" value="2"/>
+			<Prp name="id" type="I" value="54"/>
+			<Prp name="picture" type="S" value="Picture3.png"/>
+			<Prp name="unit id" type="I" value="-1"/>
+			<Prp name="line no" type="I" value="-1"/>
+			<Prp name="message" type="S" value="The test run has stopped because your test project is configured to stop on errors."/>
+			<Prp name="type" type="I" value="3"/>
+			<Prp name="as html" type="B" value="-1"/>
+			<Prp name="child index" type="I" value="-1"/>
+			<Prp name="remarks" type="S" value="&lt;html&gt;&lt;body&gt;&lt;p&gt;The test run has stopped because --&lt;/p&gt;&lt;ul&gt;&lt;li&gt;An error message was posted to the log and&lt;/li&gt;&lt;li&gt;The &lt;a href=&quot;aqa-help://6090&quot;&gt;On error&lt;/a&gt; project property is set to &quot;Stop project&quot; or &quot;Stop current item&quot;.&lt;/li&gt;&lt;/ul&gt;&lt;p&gt;If you don't want the test to stop on errors, set this property (&lt;b&gt;Project Editor &amp;rArr; Properties &amp;rArr; Playback&lt;/b&gt;), to &quot;Continue running&quot; or change your test commands so that they do not post errors to the log automatically. For example, if a window or process was not found, use WaitWindow, WaitProcess or similar methods to get the needed object.&lt;/p&gt;&lt;p&gt;&lt;a href=&quot;aqa-help://2207&quot;&gt;Read More&lt;/a&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;"/>
+			<Prp name="link" type="S" value=""/>
+			<Prp name="owner id" type="I" value="-1"/>
+			<Prp name="priority" type="I" value="300"/>
+			<Prp name="date" type="D" value="45006.5161176736"/>
+		</Node>
+		<Node name="message 34">
+			<Node name="visualizer">
+				<Node name="current">
+					<Prp name="click point x" type="I" value="-1"/>
+					<Prp name="object right" type="I" value="1186"/>
+					<Prp name="datetime" type="D" value="45006.6825841204"/>
+					<Prp name="rect color" type="I" value="255"/>
+					<Prp name="object left" type="I" value="718"/>
+					<Prp name="storage file name" type="S" value=""/>
+					<Prp name="object top" type="I" value="322"/>
+					<Prp name="click point y" type="I" value="-1"/>
+					<Prp name="version" type="I" value="2"/>
+					<Prp name="object bottom" type="I" value="360"/>
+					<Prp name="kind" type="I" value="0"/>
+					<Prp name="signature" type="S" value="{87B03792-E854-4F5D-9F33-165F1F874209}"/>
+					<Prp name="need update" type="B" value="0"/>
+					<Prp name="object name" type="S" value="Aliases.browser.pageStore.modalLogIn.password"/>
+					<Prp name="image file name" type="S" value="visImage7.png"/>
+					<Prp name="line #" type="I" value="65"/>
+				</Node>
+			</Node>
+			<Prp name="pictype" type="I" value="0"/>
+			<Prp name="id" type="I" value="34"/>
+			<Prp name="picture" type="S" value=""/>
+			<Prp name="unit id" type="I" value="3"/>
+			<Prp name="line no" type="I" value="65"/>
+			<Prp name="message" type="S" value="The text '1234NaN' was entered in the text editor."/>
+			<Prp name="type" type="I" value="1"/>
+			<Prp name="as html" type="B" value="0"/>
+			<Prp name="child index" type="I" value="-1"/>
+			<Prp name="remarks" type="S" value="Tested object:&#xA;Aliases.browser.pageStore.modalLogIn.password&#xA;(Sys.Browser(&quot;chrome&quot;).Page(&quot;https://demoblaze.com/&quot;).FindElement(&quot;css=div[id='logInModal'] div[class='modal-content']&quot;).FindElement(&quot;#loginpassword&quot;))"/>
+			<Prp name="link" type="S" value=""/>
+			<Prp name="owner id" type="I" value="31"/>
+			<Prp name="priority" type="I" value="300"/>
+			<Prp name="date" type="D" value="45006.5159199421"/>
+		</Node>
+		<Node name="message 26">
+			<Prp name="pictype" type="I" value="0"/>
+			<Prp name="id" type="I" value="26"/>
+			<Prp name="picture" type="S" value=""/>
+			<Prp name="unit id" type="I" value="2"/>
+			<Prp name="line no" type="I" value="18"/>
+			<Prp name="message" type="S" value="Given The user has an active session in &quot;https://demoblaze.com/&quot;"/>
+			<Prp name="type" type="I" value="0"/>
+			<Prp name="as html" type="B" value="0"/>
+			<Prp name="child index" type="I" value="-1"/>
+			<Prp name="remarks" type="S" value=""/>
+			<Prp name="link" type="S" value=""/>
+			<Prp name="owner id" type="I" value="22"/>
+			<Prp name="priority" type="I" value="300"/>
+			<Prp name="date" type="D" value="45006.5158778819"/>
+		</Node>
+		<Node name="message 40">
+			<Prp name="pictype" type="I" value="0"/>
+			<Prp name="id" type="I" value="40"/>
+			<Prp name="picture" type="S" value=""/>
+			<Prp name="unit id" type="I" value="3"/>
+			<Prp name="line no" type="I" value="10"/>
+			<Prp name="message" type="S" value="Navigating to the https://demoblaze.com/ page."/>
+			<Prp name="type" type="I" value="1"/>
+			<Prp name="as html" type="B" value="0"/>
+			<Prp name="child index" type="I" value="-1"/>
+			<Prp name="remarks" type="S" value="URL: https://demoblaze.com/&#xA;&#xA;Aliases.browser"/>
+			<Prp name="link" type="S" value=""/>
+			<Prp name="owner id" type="I" value="39"/>
+			<Prp name="priority" type="I" value="300"/>
+			<Prp name="date" type="D" value="45006.5159497801"/>
+		</Node>
+		<Node name="message 10">
+			<Prp name="pictype" type="I" value="0"/>
+			<Prp name="id" type="I" value="10"/>
+			<Prp name="picture" type="S" value=""/>
+			<Prp name="unit id" type="I" value="3"/>
+			<Prp name="line no" type="I" value="34"/>
+			<Prp name="message" type="S" value="| Nav Menu Verified |"/>
+			<Prp name="type" type="I" value="7"/>
+			<Prp name="as html" type="B" value="0"/>
+			<Prp name="child index" type="I" value="-1"/>
+			<Prp name="remarks" type="S" value=""/>
+			<Prp name="link" type="S" value=""/>
+			<Prp name="owner id" type="I" value="9"/>
+			<Prp name="priority" type="I" value="300"/>
+			<Prp name="date" type="D" value="45006.5158115278"/>
+		</Node>
+		<Prp name="status" type="I" value="2"/>
+	</Node>
+</Nodes>

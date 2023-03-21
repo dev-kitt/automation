@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Root signature="{24B6FA0B-0143-461A-9758-AEB9E9A9428B}" version="15.0" key="{2F85FE00-3C6B-46E5-A6ED-B5080D19B2F4}">
+	<children>
+		<child name="DemoblazeUX" key="{DF78EA9D-7B09-43FD-8105-245005D56395}" path="DemoblazeUX\DemoblazeUX.mds" />
+	</children>
+	<testItems key="{9508EE7F-DD52-470F-82B0-A1224080B8B3}">
+		<children>
+			<testItem key="{DF78EA9D-7B09-43FD-8105-245005D56395}" enabled="True" timeout="0" stopOnError="True" description="" />
+		</children>
+	</testItems>
+	<variables key="{4CD752A7-34FE-4FB2-9805-C987EF6EA9B2}">
+		<data Version="4">
+			<Items>
+				<Variable Name="AlertEmail" Type="String" Local="True" Descr="relay email address">
+					<DefValue StrValue="noreply@made.llc" />
+				</Variable>
+				<Variable Name="AlertPass" Type="Password" Local="True" Descr="relay email password">
+					<DefValue StrValue="3800390036003100390033004400320046003400440038003800420046003300410043003900430039004600390037004400410046004200380033003700380046003600310044004600410031004100310036004500380031003000320041003600320037004400440039003200300031004100350039004100370034004200" />
+				</Variable>
+				<Variable Name="CurrentDate" Type="String" Local="True" Descr="today&apos;s date">
+					<DefValue />
+				</Variable>
+				<Variable Name="Environment" Type="String" Local="True" Descr="test environment">
+					<DefValue StrValue="QA" />
+				</Variable>
+			</Items>
+		</data>
+	</variables>
+	<analysis key="{AB6F336F-C451-4ADD-B99C-5A8D96100469}" />
+	<scc key="{C900492B-D218-429C-9AA0-264B7D78CA88}" name="Git Plugin">
+		<data />
+	</scc>
+</Root>
