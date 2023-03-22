@@ -18,6 +18,7 @@ When issues arise for any of the below mentioned areas, please contact the assoc
 Each tested application should maintain it's own NameMpping repository within the tested application's TestComplete Project. Objects should be uniquely identified using multiple xpath/css conditions, object properties, or dynamic **project** variables. See Smartbear references below for more information:
 
 Merging - [reference](https://support.smartbear.com/testcomplete/docs/testing-with/object-identification/name-mapping/how-to/merge.html)
+
 NameMapping - [reference](https://support.smartbear.com/testcomplete/docs/testing-with/object-identification/name-mapping/index.html)
 
 ![nameMapping.png](/src/assets/nameMapping.png)
