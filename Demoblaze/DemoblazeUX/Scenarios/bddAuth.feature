@@ -36,7 +36,7 @@ Feature: bddAuth
   # passwords are refs to the excrypted source    
   @ex-authHappy
   Examples:
-    | url                      | auth     | username         | password     | alert     |
+    | url                      | auth     | username          | password     | alert     |
     | "https://demoblaze.com/" | "SignUp" | "kitt0"           | "p@$$word00" | "Success" |
     | "https://demoblaze.com/" | "SignUp" | "user01"          | "p@$$word01" | "Success" |
     | "https://demoblaze.com/" | "SignUp" | "user02"          | "p@$$word02" | "Success" |
@@ -51,11 +51,11 @@ Feature: bddAuth
     | url                      | auth     | username        | password     | alert     |
     | "https://demoblaze.com/" | "SignUp" | "1234"          | "1234"       | "Failure" |
     | "https://demoblaze.com/" | "SignUp" | ""              | "p@ssword00" | "Failure" |
-    | "https://demoblaze.com/" | "SignUp" | "kitt0"          | ""           | "Failure" |
+    | "https://demoblaze.com/" | "SignUp" | "kitt0"         | ""           | "Failure" |
     | "https://demoblaze.com/" | "SignUp" | ""              | ""           | "Failure" |
     | "https://demoblaze.com/" | "Login"  | "1234"          | "p@ssword00" | "Failure" |
     | "https://demoblaze.com/" | "Login"  | ""              | "1234"       | "Failure" |
-    | "https://demoblaze.com/" | "Login"  | "kitt0"          | ""           | "Failure" |
+    | "https://demoblaze.com/" | "Login"  | "kitt0"         | ""           | "Failure" |
     | "https://demoblaze.com/" | "Login"  | ""              | ""           | "Failure" |
     
 # ISSUE
