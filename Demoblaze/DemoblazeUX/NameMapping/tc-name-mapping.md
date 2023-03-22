@@ -10,7 +10,7 @@ The Name Mapping repository stores object identification information separately 
 ## <span style="color:#555555"><u> **POINTS OF CONTACT** </u></span>
 When issues arise for any of the below mentioned areas, please contact the associated personnel for support and troubleshooting.
 
-:taco: **QA Engineering:**<span style="color:gold"> kit@made.llc </span>
+:taco: **QA Engineering:**<span style="color:gold"> kitt@made.llc </span>
 
 
 
