@@ -13,5 +13,5 @@ function EventControls_OnStartTest(Sender)
   Log.Checkpoint("START | " + startTime);
   ProjectSuite.Variables.CurrentDate = Main.getCurrentDate();
   Main.verifyFiles_MHT();
-  //Main.launchChromeBrowser(); 
+  Main.launchChromeBrowser(); 
 }
