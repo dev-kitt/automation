@@ -122,15 +122,15 @@ DAY 2 (4 hrs)
 - **DOM NameMapping** <span style="color:green"> **COMPLETE** </span>
 - **Account Auth Feature** <span style="color:green"> **COMPLETE** </span>
 - **Account Auth Scenario Outline** <span style="color:green"> **COMPLETE** </span>
-- **Testing** <span style="color:gold"> **IN-PROGRESS** </span>
-- **CleanUp Scripts and Docs** <span style="color:gold"> **IN-PROGRESS** </span>
-- **Latest Commit/Push** 
+- **Testing** <span style="color:green"> **COMPLETE** </span>
+- **CleanUp Scripts and Docs** <span style="color:green"> **COMPLETE** </span>
+- **Latest Commit/Push** <span style="color:green"> **COMPLETE** </span>
 
 
 DAY 3 (TBD)
-- **Final Commit/Push** 
-- **Updates as Needed** 
-- **Merge w/Main Branch** 
+- **Final Commit/Push** <span style="color:green"> **COMPLETE** </span>
+- **Updates as Needed** <span style="color:green"> **COMPLETE** </span>
+- **Merge w/Main Branch** <span style="color:green"> **COMPLETE** </span>
 
 
 ## <span style="color:#555555"><u> **INFRASTRUCTURE** </u></span> 
