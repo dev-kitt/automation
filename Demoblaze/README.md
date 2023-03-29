@@ -11,15 +11,18 @@ Using the BDD methodologies to focus on the specific functionaliy of user authen
 
 - [BDD Scenarios](DemoblazeUX/Scenarios)
   - [bddAuth](DemoblazeUX/Scenarios/bddAuth.feature)
-- [BDD Step Definitions](DemoblazeUX/Script/Bdd)
-  - [bdd_Auth](DemoblazeUX/Script/Bdd/bdd_Auth.js)
-- [Common Scripts](DemoblazeUX/Script/Common/Main.js)
-- [Event Handlers](DemoblazeUX/Script/Events)
+- [BDD Step Definitions](DemoblazeUX/Script)
+  - [bdd_Auth](DemoblazeUX/Script/bdd_Auth.js)
+- [Common Scripts](DemoblazeUX/Script/Main.js)
+- Event Handlers (Hooks)
+  - [onStart Events](DemoblazeUX/Script/onStart.js)
+  - [onStop Events](DemoblazeUX/Script/onStop.js)
+  - [onLog Events](DemoblazeUX/Script/onLog.js)
 - [Object Mapping](DemoblazeUX/NameMapping)
   - [Reference Doc](DemoblazeUX/NameMapping/tc-name-mapping.md)
 - [Support Batch Files](DemoblazeUX/Stores/Files)
 - [<span style="color:gold"> VIDEO: Testrun Example MP4 </span>](../Src/testrunEX.mp4)
-
+- [<span style="color:gold"> EXTRA: Cypress Auth </span>](../Cypress/cypress/e2e/3-demoblaze)
 ## <span style="color:#555555"><u> **NOTES** </u></span>
  Auth (Login/SignUp): 
 - Day 1
