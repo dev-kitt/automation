@@ -63,20 +63,20 @@ context('Account Creation', () => { // set this flag
     cy.get('#navbarExample').contains('Log out').click( {force: true} )
   })
 
-    it('the SignUp form can be closed from button', () => {
-      cy.get('#navbarExample').contains('Sign up').click()
-      cy.get('#signInModal').should('be.visible')
-      cy.get('#signInModal > .modal-dialog > .modal-content > .modal-footer > .btn-primary', {timeout: 70000}).eq(0)
+  it('the SignUp form can be closed from button', () => {
+    cy.get('#navbarExample').contains('Sign up').click()
+    cy.get('#signInModal').should('be.visible')
+    cy.get('#signInModal > .modal-dialog > .modal-content > .modal-footer > .btn-primary', {timeout: 70000}).eq(0)
         .click({ force: true })
-      cy.xpath("//div[@id='signInModal']//button[contains(., '×')]").click()
-      //cy.get('#signInModal > .modal-dialog > .modal-content > .modal-footer > .btn-secondary').click({ force: true })
-    })
+    cy.xpath("//div[@id='signInModal']//button[contains(., '×')]").click()
+    //cy.get('#signInModal > .modal-dialog > .modal-content > .modal-footer > .btn-secondary').click({ force: true })
+  })
 
-    // it('the SignUp form can be closed from X', () => {
-    //   cy.get('#signin2', { timeout: 40000 }).click()
-    //   cy.get('#signInModal > .modal-dialog > .modal-content').should('be.visible')
-    //   cy.get('#signInModal > .modal-dialog > .modal-content > .modal-header > .close > span', { timeout: 4000 }).should('be.visible').click({ force: true })
-    //   cy.get('#signInModal > .modal-dialog > .modal-content').should('not.be.visible')
-    // })
+  // it('the SignUp form can be closed from X', () => {
+  //   cy.get('#signin2', { timeout: 40000 }).click()
+  //   cy.get('#signInModal > .modal-dialog > .modal-content').should('be.visible')
+  //   cy.get('#signInModal > .modal-dialog > .modal-content > .modal-header > .close > span', { timeout: 4000 }).should('be.visible').click({ force: true })
+  //   cy.get('#signInModal > .modal-dialog > .modal-content').should('not.be.visible')
+  // })
 
 })
