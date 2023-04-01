@@ -2,12 +2,13 @@
 
 // Verify Rubicon Carbon Products UX/UI
 describe('Rubicon Carbon Products Page', () => {
-  // beforeEach(() => {
-  //   cy.visit('https://rubiconcarbon.com/products');
-  //   cy.contains('Only necessary cookies').should('be.visible').click();
-  //   cy.setCookie('cookieConsent', 'analyticsCookies=false%3B')
-  //   cy.wait(3000)
-  // });
+  beforeEach(() => {
+    cy.visit('https://rubiconcarbon.com/products');
+    cy.contains('Only necessary cookies').should('be.visible').click();
+    cy.setCookie('cookieConsent', 'analyticsCookies=false%3B')
+    cy.injectAxe();
+    cy.wait(3000)
+  });
 
   // it('should have the correct browser tab title', () => {
   //   cy.title().should('eq', 'Rubicon Carbon - Products');
@@ -77,23 +78,4 @@ describe('Rubicon Carbon Products Page', () => {
   //         .should('have.attr', 'href')
   //         .should('eq','https://share.hsforms.com/12JPmNFc3Td-kP9IM_YbTtgdy5xl');
   // });
-
-  it('should test the webpage accessability is WCAG conformant', () => {
-    const axe = require('axe-core');
-    const url = 'https://rubiconcarbon.com/products';
-
-    // use the Axe library to check the URL for WCAG conformance.
-    axe.run(url, {
-      runOnly: {
-        type: 'tag',
-        values: ['wcag2a', 'wcag2aa']
-      }
-    }, (err, results) => {
-      if (err) {
-        console.error(err);
-      } else {
-        console.log(results);
-      }
-    });
-  });
 });
