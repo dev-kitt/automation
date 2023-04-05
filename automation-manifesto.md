@@ -6,7 +6,7 @@
 ## <span style="color:#555555"><u> **OVERVIEW** </u></span>
 TestComplete (SmartBear Software) is an open test platform for easily creating, maintaining, and executing automated tests for desktop, Web, mobile, and client-server software applications. TestComplete is especially useful for teams using continuous integration and development--integrating seamlessly with popular 3rd party applications, source control, test management and CI tools. 
 
-Made, LLC is leveraging this solution for Partner Portal, FGPP, and Payments API automated regression testing, which is run via Azure Pipelines on both Self-Hosted and Microsoft-Hosted Agents. The Made, LLC test strategy will follow the guidelines set fourth and defined by [Microsoft’s Test Management Workflow](https://docs.microsoft.com/en-us/azure/devops/test/create-a-test-plan?view=azure-devops). 
+Kitt, LLC is leveraging this solution for Partner Portal, FGPP, and Payments API automated regression testing, which is run via Azure Pipelines on both Self-Hosted and Microsoft-Hosted Agents. The Kitt, LLC test strategy will follow the guidelines set fourth and defined by [Microsoft’s Test Management Workflow](https://docs.microsoft.com/en-us/azure/devops/test/create-a-test-plan?view=azure-devops). 
 
 <span style="color:#A6A6A6"> **PIPELINES** </span>
 1. <u>Regression</u> - runs the [Portal Regression Automation] Test Suite from the specified Azure Test Plan.
@@ -52,7 +52,7 @@ When issues arise for any of the below mentioned areas, please contact the assoc
 
 ## <span style="color:#555555"><u> **TIMELINE** </u></span>
 
-Below is a 3 MONTH timeline of all completed, current, and future UAT and automation efforts conducted by the Made, LLC Automation team.
+Below is a 3 MONTH timeline of all completed, current, and future UAT and automation efforts conducted by the Kitt, LLC Automation team.
 
 
 ``` mermaid
